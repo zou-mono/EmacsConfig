@@ -1,18 +1,16 @@
 
 ;; ----- smex-history -----
 (
- open-r-project
  R
- purpose-load-frame-layout
  S
  cd
  5x5
  arp
+ dbx
+ dig
 )
 
 ;; ----- smex-data -----
 (
- (purpose-load-frame-layout . 2)
- (R . 2)
- (open-r-project . 3)
+ 
 )
