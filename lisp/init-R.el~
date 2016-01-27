@@ -1,9 +1,0 @@
-(require 'window-purpose)
-(defun open-r-project ()
-  (interactive)
-  (ess-change-directory "~/Documents/R_Project/")
-  (R)
-  (purpose-load-frame-layout "~/.emacs.d/.Rlayout")
-)
-
-(global-set-key (kbd "C-c r") 'open-r-project)
