@@ -1,7 +1,7 @@
 ;; customized theme
-(load-theme 'solarized t)
-(set-frame-parameter nil 'background-mode 'dark)
-(enable-theme 'solarized)
+;;(load-theme 'solarized t)
+;;(set-frame-parameter nil 'background-mode 'dark)
+;;(enable-theme 'solarized)
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks

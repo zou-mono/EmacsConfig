@@ -1,16 +1,21 @@
 
 ;; ----- smex-history -----
 (
+ color-theme-deep-blue
+ color-theme-montz
+ dired
+ open-r-project
+ customize-themes
+ color-theme-xp
  R
- S
- cd
- 5x5
- arp
- dbx
- dig
 )
 
 ;; ----- smex-data -----
 (
- 
+ (color-theme-xp . 1)
+ (customize-themes . 1)
+ (color-theme-deep-blue . 2)
+ (open-r-project . 1)
+ (dired . 1)
+ (color-theme-montz . 1)
 )

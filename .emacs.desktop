@@ -2,116 +2,39 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Thu Jan 28 01:32:45 2016
+;; Created Tue Feb 16 14:32:31 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22184 65341 726468 238000) (desktop . "206") "mono@mono-Vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#839496") (background-color . "#002b36") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background . "grey75") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "#839496") (sticky) (environment) (frameset--id . "20DE-4F42-EE35-610F") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 50) (width . 211) (left . 0) (top . 28)) ((min-height . 4) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 76) (min-pixel-width . 180) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 19) (min-pixel-width-safe . 36)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 213) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 957) (pixel-height . 945) (total-width . 106) (total-height . 49) (normal-height . 1.0) (normal-width . 0.5) (parameters (purpose-dedicated . t)) (buffer "test1.R" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 1589) (start . 1270))) (leaf (last . t) (pixel-width . 963) (pixel-height . 945) (total-width . 107) (total-height . 49) (normal-height . 1.0) (normal-width . 0.5) (buffer "*info*" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 835) (start . 772)))))])
+(setq desktop-saved-frameset [frameset 1 (22210 49791 459240 228000) (desktop . "206") "mono@mono-vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#eeeeee") (background-color . "#102e4e") (mouse-color . "white") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground . "#506070") (scroll-bar-background . "gray") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "20DE-4F42-EE35-610F") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (viper-saved-cursor-color-in-replace-mode . "Red3") (top-toolbar-shadow-color . "#f5f5f5f5f5f5") (bottom-toolbar-shadow-color . "#7a7a7a7a7a7a") (background-toolbar-color . "#cccccccccccc") (height . 51) (width . 211) (left . 0) (top . 28)) ((min-height . 4) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 76) (min-pixel-width . 90) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 36) (min-pixel-height-safe . 19) (min-pixel-width-safe . 18)) leaf (pixel-width . 1920) (pixel-height . 951) (total-width . 213) (total-height . 50) (normal-height . 1.0) (normal-width . 1.0) (buffer "test1.org" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 663) (start . 1))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
-(setq register-alist '((48 . "ess-change-directory")))
-(setq file-name-history '("~/.emacs.d/.Rlayout" "~/.emacs.d/lisp/init-R.el" "~/.emacs" "~/dired"))
+(setq register-alist '((48 . " '(custom-safe-themes\n   (quote\n    (\"8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26\" default)))")))
+(setq file-name-history '("~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/" "~/.emacs" "~/.emacs.d/lisp/" "~/.emacs.d/lisp/init-org.el" "~/Documents/org-mode-test/test1.org" "~/Documents/R_Project/test1.R" "~/.emacs.d/.Rlayout" "~/.emacs.d/lisp/init-R.el" "~/.emacs" "~/dired"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  nil
-  "*info*"
-  'Info-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  835
-  '(25541 nil)
-  t
-  '("/home/mono/.emacs.d/el-get/el-get/el-get" "Top" ((history ("/home/mono/.emacs.d/el-get/el-get/el-get" "User Init" 25541) ("/home/mono/.emacs.d/el-get/el-get/el-get" "Before and After properties" 26228) ("/home/mono/.emacs.d/el-get/el-get/el-get" "User Init" 26181) ("/home/mono/.emacs.d/el-get/el-get/el-get" "Top" 1195) ("/home/mono/.emacs.d/el-get/el-get/el-get" "Usage" 9967) ("/home/mono/.emacs.d/el-get/el-get/el-get" "Top" 1171) ("dir" "Top" 633))))
-  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
-
-(desktop-create-buffer 206
-  "/home/mono/Documents/R_Project/test1.R"
-  "test1.R"
-  'ess-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode eldoc-mode)
-  1589
-  '(1183 nil)
+  "/home/mono/Documents/org-mode-test/test1.org"
+  "test1.org"
+  'org-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode org-indent-mode)
+  663
+  '(192 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  28
-  '(1 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-R.el"
-  "init-R.el"
-  'emacs-lisp-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  126
-  '(135 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  1490
-  '(1475 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-layout.el"
-  "init-layout.el"
-  'emacs-lisp-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  1
-  '(26 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix)))
-
-(desktop-create-buffer 206
-  nil
-  "lisp"
-  'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  515
-  '(nil nil)
-  t
-  '("/home/mono/.emacs.d/lisp/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  ".emacs.d"
-  'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  770
-  '(nil nil)
-  t
-  '("/home/mono/.emacs.d/")
-  nil)
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
 
 (desktop-create-buffer 206
   nil
   "mono"
   'dired-mode
   '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  1294
-  '(nil nil)
+  958
+  '(1457 nil)
   t
   '("/home/mono/")
   nil)
@@ -121,31 +44,64 @@
   "Documents"
   'dired-mode
   '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  171
+  274
   '(nil nil)
   t
   '("/home/mono/Documents/")
   nil)
 
 (desktop-create-buffer 206
-  "/home/mono/Documents/R_Project/test.R"
-  "test.R"
-  'ess-mode
-  '(auto-complete-mode helm-mode linum-mode global-auto-revert-mode purpose-mode eldoc-mode)
-  99
-  '(7 nil)
+  "/home/mono/.emacs.d/lisp/init-R.el"
+  "init-R.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . prefer-utf-8-unix)))
 
 (desktop-create-buffer 206
   nil
-  "R_Project"
+  "lisp"
   'dired-mode
   '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
-  373
+  438
+  '(166 nil)
+  t
+  '("/home/mono/.emacs.d/lisp/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/lisp/init-base.el"
+  "init-base.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  485
+  '(272 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  675
+  '(273 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  683
   '(nil nil)
   t
-  '("/home/mono/Documents/R_Project/")
+  '("/home/mono/.emacs.d/")
   nil)
 
