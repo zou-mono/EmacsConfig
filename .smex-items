@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
- color-theme-deep-blue
- color-theme-montz
- dired
- open-r-project
- customize-themes
- color-theme-xp
+ shell
+ ein:notebooklist-open
+ package-list-packages
+ el-get-package-menu-revert
+ list-command-history
+ open-python-project
  R
 )
 
 ;; ----- smex-data -----
 (
- (color-theme-xp . 1)
- (customize-themes . 1)
- (color-theme-deep-blue . 2)
- (open-r-project . 1)
- (dired . 1)
- (color-theme-montz . 1)
+ (open-python-project . 1)
+ (ein:notebooklist-open . 3)
+ (list-command-history . 1)
+ (el-get-package-menu-revert . 1)
+ (package-list-packages . 1)
+ (shell . 1)
 )

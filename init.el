@@ -37,10 +37,13 @@
    tabbar
    session
    color-theme-solarized
+   markdown-mode
    helm
    window-purpose
    sr-speedbar
    speedbar-extension
+   jedi
+   ein
    window-numbering	
    auto-complete))			; complete as you type with overlays
 
@@ -57,5 +60,7 @@
 (load "init-layout") ;; layout settings
 (load "init-R")  ;; r-mode settings
 (load "init-org") ;; org-mode settings
+(load "init-markdown") ;; markdown-mode settings
+(load "init-Python") ;; Python-mode settings
 
 (desktop-save-mode 1) 

@@ -225,6 +225,371 @@ Initialize the color theme package by loading color-theme-libraries.
 
 ;;;***
 
+;;;### (autoloads nil "ein/lisp/ein-connect" "ein/lisp/ein-connect.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-connect.el
+
+(autoload 'ein:connect-to-notebook-command "ein/lisp/ein-connect" "\
+Connect to notebook.  When the prefix argument is given,
+you can choose any notebook on your server including the ones
+not yet opened.  Otherwise, already chose from already opened
+notebooks.
+
+\(fn &optional NOT-YET-OPENED)" t nil)
+
+(autoload 'ein:connect-to-notebook "ein/lisp/ein-connect" "\
+Connect any buffer to notebook and its kernel.
+
+\(fn NBPATH &optional BUFFER NO-RECONNECTION)" t nil)
+
+(autoload 'ein:connect-to-notebook-buffer "ein/lisp/ein-connect" "\
+Connect any buffer to opened notebook and its kernel.
+
+\(fn BUFFER-OR-NAME)" t nil)
+
+(autoload 'ein:connect-buffer-to-notebook "ein/lisp/ein-connect" "\
+Connect BUFFER to NOTEBOOK.
+
+\(fn NOTEBOOK &optional BUFFER NO-RECONNECTION)" nil nil)
+
+(autoload 'ein:connect-to-default-notebook "ein/lisp/ein-connect" "\
+Connect to the default notebook specified by
+`ein:connect-default-notebook'.  Set this to `python-mode-hook'
+to automatically connect any python-mode buffer to the
+notebook.
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-console" "ein/lisp/ein-console.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-console.el
+
+(autoload 'ein:console-open "ein/lisp/ein-console" "\
+Open IPython console.
+To use this function, `ein:console-security-dir' and
+`ein:console-args' must be set properly.
+This function works best with the new python.el_ which is shipped
+with Emacs 24.2 or later.  If you don't have it, this function
+opens a \"plain\" command line interpreter (comint) buffer where
+you cannot use fancy stuff such as TAB completion.
+It should be possible to support python-mode.el.  Patches are welcome!
+
+.. _python.el: https://github.com/fgallina/python.el
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-dev" "ein/lisp/ein-dev.el" (22278
+;;;;;;  10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-dev.el
+
+(autoload 'ein:dev-insert-mode-map "ein/lisp/ein-dev" "\
+Insert mode-map into rst document.  For README.rst.
+
+\(fn MAP-STRING)" nil nil)
+
+(autoload 'ein:dev-start-debug "ein/lisp/ein-dev" "\
+Enable EIN debugging support.
+When the prefix argument is given, debugging support for websocket
+callback (`websocket-callback-debug-on-error') is enabled.
+
+\(fn &optional WS-CALLBACK)" t nil)
+
+(autoload 'ein:dev-stop-debug "ein/lisp/ein-dev" "\
+Disable debugging support enabled by `ein:dev-start-debug'.
+
+\(fn)" t nil)
+
+(autoload 'ein:dev-bug-report-template "ein/lisp/ein-dev" "\
+Open a buffer with bug report template.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-helm" "ein/lisp/ein-helm.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-helm.el
+
+(autoload 'anything-ein-kernel-history "ein/lisp/ein-helm" "\
+Search kernel execution history then insert the selected one.
+
+\(fn)" t nil)
+
+(autoload 'helm-ein-kernel-history "ein/lisp/ein-helm" "\
+Search kernel execution history then insert the selected one.
+
+\(fn)" t nil)
+
+(autoload 'anything-ein-notebook-buffers "ein/lisp/ein-helm" "\
+Choose opened notebook using anything.el interface.
+
+\(fn)" t nil)
+
+(autoload 'helm-ein-notebook-buffers "ein/lisp/ein-helm" "\
+Choose opened notebook using helm interface.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-iexec" "ein/lisp/ein-iexec.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-iexec.el
+
+(autoload 'ein:iexec-mode "ein/lisp/ein-iexec" "\
+Instant cell execution minor mode.
+Code cell at point will be automatically executed after any
+change in its input area.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-ipynb-mode" "ein/lisp/ein-ipynb-mode.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-ipynb-mode.el
+
+(autoload 'ein:ipynb-mode "ein/lisp/ein-ipynb-mode" "\
+A simple mode for ipynb file.
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '(".*\\.ipynb\\'" . ein:ipynb-mode))
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-jedi" "ein/lisp/ein-jedi.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-jedi.el
+
+(autoload 'ein:jedi-complete "ein/lisp/ein-jedi" "\
+Run completion using candidates calculated by EIN and Jedi.
+
+\(fn &key (expand ac-expand-on-auto-complete))" t nil)
+
+(autoload 'ein:jedi-dot-complete "ein/lisp/ein-jedi" "\
+Insert \".\" and run `ein:jedi-complete'.
+
+\(fn)" t nil)
+
+(autoload 'ein:jedi-setup "ein/lisp/ein-jedi" "\
+Setup auto-completion using EIN and Jedi.el_ together.
+
+Jedi.el_ is a Python auto-completion library for Emacs.
+To use EIN and Jedi together, add the following in your Emacs setup.::
+
+  (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+
+.. _Jedi.el: https://github.com/tkf/emacs-jedi
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-junk" "ein/lisp/ein-junk.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-junk.el
+
+(autoload 'ein:junk-new "ein/lisp/ein-junk" "\
+Open a notebook to try random thing.
+Notebook name is determined based on
+`ein:junk-notebook-name-template'.
+
+When prefix argument is given, it asks URL or port to use.
+
+\(fn NAME KERNELSPEC URL-OR-PORT)" t nil)
+
+(autoload 'ein:junk-rename "ein/lisp/ein-junk" "\
+Rename the current notebook based on `ein:junk-notebook-name-template'
+and save it immediately.
+
+\(fn NAME)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-kernel" "ein/lisp/ein-kernel.el"
+;;;;;;  (22278 10877 836691 643000))
+;;; Generated autoloads from ein/lisp/ein-kernel.el
+
+(defalias 'ein:kernel-url-or-port 'ein:$kernel-url-or-port)
+
+(defalias 'ein:kernel-id 'ein:$kernel-kernel-id)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-multilang" "ein/lisp/ein-multilang.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-multilang.el
+
+(autoload 'ein:notebook-multilang-mode "ein/lisp/ein-multilang" "\
+Notebook mode with multiple language fontification.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-notebook" "ein/lisp/ein-notebook.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-notebook.el
+
+(defalias 'ein:notebook-name 'ein:$notebook-notebook-name)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-notebooklist" "ein/lisp/ein-notebooklist.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-notebooklist.el
+
+(autoload 'ein:notebooklist-open "ein/lisp/ein-notebooklist" "\
+Open notebook list buffer.
+
+\(fn &optional URL-OR-PORT PATH NO-POPUP)" t nil)
+
+(autoload 'ein:notebooklist-reload "ein/lisp/ein-notebooklist" "\
+Reload current Notebook list.
+
+\(fn &optional NOTEBOOKLIST)" t nil)
+
+(autoload 'ein:notebooklist-new-notebook "ein/lisp/ein-notebooklist" "\
+Ask server to create a new notebook and open it in a new buffer.
+
+\(fn &optional URL-OR-PORT KERNELSPEC PATH CALLBACK CBARGS)" t nil)
+
+(autoload 'ein:notebooklist-new-notebook-with-name "ein/lisp/ein-notebooklist" "\
+Open new notebook and rename the notebook.
+
+\(fn NAME KERNELSPEC URL-OR-PORT &optional PATH)" t nil)
+
+(autoload 'ein:notebooklist-list-notebooks "ein/lisp/ein-notebooklist" "\
+Return a list of notebook path (NBPATH).  Each element NBPATH
+is a string of the format \"URL-OR-PORT/NOTEBOOK-NAME\".
+
+\(fn)" nil nil)
+
+(autoload 'ein:notebooklist-open-notebook-global "ein/lisp/ein-notebooklist" "\
+Choose notebook from all opened notebook list and open it.
+Notebook is specified by a string NBPATH whose format is
+\"URL-OR-PORT/NOTEBOOK-NAME\".
+
+When used in lisp, CALLBACK and CBARGS are passed to `ein:notebook-open'.
+
+\(fn NBPATH &optional CALLBACK CBARGS)" t nil)
+
+(autoload 'ein:notebooklist-load "ein/lisp/ein-notebooklist" "\
+Load notebook list but do not pop-up the notebook list buffer.
+
+For example, if you want to load notebook list when Emacs starts,
+add this in the Emacs initialization file::
+
+  (add-to-hook 'after-init-hook 'ein:notebooklist-load)
+
+or even this (if you want fast Emacs start-up)::
+
+  ;; load notebook list if Emacs is idle for 3 sec after start-up
+  (run-with-idle-timer 3 nil #'ein:notebooklist-load)
+
+You should setup `ein:url-or-port' or `ein:default-url-or-port'
+in order to make this code work.
+
+See also:
+`ein:connect-to-default-notebook', `ein:connect-default-notebook'.
+
+\(fn &optional URL-OR-PORT)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-org" "ein/lisp/ein-org.el" (22278
+;;;;;;  10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-org.el
+
+(autoload 'ein:org-open "ein/lisp/ein-org" "\
+Open IPython notebook specified by LINK-PATH.
+This function is to be used for FOLLOW function of
+`org-add-link-type'.
+
+\(fn LINK-PATH)" nil nil)
+
+(autoload 'ein:org-store-link "ein/lisp/ein-org" "\
+Call `org-store-link-props' when in notebook buffer.
+This function is to be used for `org-store-link-functions'.
+
+Examples::
+
+  ipynb:(:url-or-port 8888 :name \"My_Notebook\")
+  ipynb:(:url-or-port \"http://notebook-server\" :name \"My_Notebook\")
+
+Note that spaces will be escaped in org files.
+
+As how IPython development team supports multiple directory in
+IPython notebook server is unclear, it is not easy to decide the
+format for notebook links.  Current approach is to use
+S-expression based (rather verbose) serialization, so that
+extending link spec without loosing backward compatibility is
+easier.  For the examples of link format in general, see Info
+node `(org) External links' and Info node `(org) Search options'
+
+\(fn)" nil nil)
+
+(eval-after-load "org" '(progn (org-add-link-type "ipynb" 'ein:org-open) (add-hook 'org-store-link-functions 'ein:org-store-link)))
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-pseudo-console" "ein/lisp/ein-pseudo-console.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-pseudo-console.el
+
+(autoload 'ein:pseudo-console-mode "ein/lisp/ein-pseudo-console" "\
+Pseudo console mode.  Hit RET to execute code.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-shared-output" "ein/lisp/ein-shared-output.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-shared-output.el
+
+(autoload 'ein:shared-output-pop-to-buffer "ein/lisp/ein-shared-output" "\
+Open shared output buffer.
+
+\(fn)" t nil)
+
+(autoload 'ein:shared-output-show-code-cell-at-point "ein/lisp/ein-shared-output" "\
+Show code cell at point in shared-output buffer.
+It is useful when the output of the cell at point is truncated.
+See also `ein:cell-max-num-outputs'.
+
+\(fn)" t nil)
+
+(autoload 'ein:shared-output-eval-string "ein/lisp/ein-shared-output" "\
+Evaluate a piece of code.  Prompt will appear asking the code to run.
+This is handy when you want to execute something quickly without
+making a cell.  If the code outputs something, it will go to the
+shared output buffer.  You can open the buffer by the command
+`ein:shared-output-pop-to-buffer'.
+
+.. ARGS is passed to `ein:kernel-execute'.  Unlike `ein:kernel-execute',
+   `:silent' is `nil' by default.
+
+\(fn CODE &optional POPUP VERBOSE KERNEL &rest ARGS)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ein/lisp/ein-traceback" "ein/lisp/ein-traceback.el"
+;;;;;;  (22278 10877 840691 643000))
+;;; Generated autoloads from ein/lisp/ein-traceback.el
+
+(autoload 'ein:tb-show "ein/lisp/ein-traceback" "\
+Show full traceback in traceback viewer.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22185 33236
 ;;;;;;  922099 583000))
 ;;; Generated autoloads from el-get/el-get.el
@@ -405,6 +770,130 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads nil "jedi/jedi" "jedi/jedi.el" (22277 60269 400980
+;;;;;;  759000))
+;;; Generated autoloads from jedi/jedi.el
+
+(autoload 'jedi:ac-setup "jedi/jedi" "\
+Add Jedi AC sources to `ac-sources'.
+
+If auto-completion is all you need, you can call this function instead
+of `jedi:setup', like this::
+
+   (add-hook 'python-mode-hook 'jedi:ac-setup)
+
+Note that this function calls `auto-complete-mode' if it is not
+already enabled, for people who don't call `global-auto-complete-mode'
+in their Emacs configuration.
+
+\(fn)" t nil)
+
+(autoload 'jedi:complete "jedi/jedi" "\
+Complete code at point.
+
+\(fn &key (expand ac-expand-on-auto-complete))" t nil)
+
+(autoload 'jedi:auto-complete-mode "jedi/jedi" "\
+
+
+\(fn)" nil nil)
+
+(setq jedi:setup-function #'jedi:ac-setup jedi:mode-function #'jedi:auto-complete-mode)
+
+;;;***
+
+;;;### (autoloads nil "jedi/jedi-core" "jedi/jedi-core.el" (22277
+;;;;;;  60269 400980 759000))
+;;; Generated autoloads from jedi/jedi-core.el
+
+(autoload 'jedi:start-dedicated-server "jedi/jedi-core" "\
+Start Jedi server dedicated to this buffer.
+This is useful, for example, when you want to use different
+`sys.path' for some buffer.  When invoked as an interactive
+command, it asks you how to start the Jedi server.  You can edit
+the command in minibuffer to specify the way Jedi server run.
+
+If you want to setup how Jedi server is started programmatically
+per-buffer/per-project basis, make `jedi:server-command' and
+`jedi:server-args' buffer local and set it in `python-mode-hook'.
+See also: `jedi:server-args'.
+
+\(fn COMMAND)" t nil)
+
+(autoload 'helm-jedi-related-names "jedi/jedi-core" "\
+Find related names of the object at point using `helm' interface.
+
+\(fn)" t nil)
+
+(autoload 'anything-jedi-related-names "jedi/jedi-core" "\
+Find related names of the object at point using `anything' interface.
+
+\(fn)" t nil)
+
+(autoload 'jedi:setup "jedi/jedi-core" "\
+Fully setup jedi.el for current buffer.
+It setups `ac-sources' or `company-backends' and turns
+`jedi-mode' on.
+
+This function is intended to be called from `python-mode-hook',
+like this::
+
+       (add-hook 'python-mode-hook 'jedi:setup)
+
+You can also call this function as a command, to quickly test
+what jedi can do.
+
+\(fn)" t nil)
+
+(autoload 'jedi:install-server "jedi/jedi-core" "\
+This command installs Jedi server script jediepcserver.py in a
+Python environment dedicated to Emacs.  By default, the
+environment is at ``~/.emacs.d/.python-environments/default/``.
+This environment is automatically created by ``virtualenv`` if it
+does not exist.
+
+Run this command (i.e., type ``M-x jedi:install-server RET``)
+whenever Jedi.el shows a message to do so.  It is a good idea to
+run this every time after you update Jedi.el to sync version of
+Python modules used by Jedi.el and Jedi.el itself.
+
+You can modify the location of the environment by changing
+`jedi:environment-root' and/or `python-environment-directory'.  More
+specifically, Jedi.el will install Python modules under the directory
+``PYTHON-ENVIRONMENT-DIRECTORY/JEDI:ENVIRONMENT-ROOT``.  Note that you
+need command line program ``virtualenv``.  If you have the command in
+an unusual location, use `python-environment-virtualenv' to specify the
+location.
+
+.. NOTE:: jediepcserver.py is installed in a virtual environment but it
+   does not mean Jedi.el cannot recognize the modules in virtual
+   environment you are using for your Python development.  Jedi
+   EPC server recognize the virtualenv it is in (i.e., the
+   environment variable ``VIRTUAL_ENV`` in your Emacs) and then
+   add modules in that environment to its ``sys.path``.  You can
+   also add ``--virtual-env PATH/TO/ENV`` to `jedi:server-args'
+   to include modules of virtual environment even you launch
+   Emacs outside of the virtual environment.
+
+.. NOTE:: It is highly recommended to use this command to install
+   Python modules for Jedi.el.  You still can install Python
+   modules used by Jedi.el manually.  However, you are then
+   responsible for keeping Jedi.el and Python modules compatible.
+
+See also:
+
+- https://github.com/tkf/emacs-jedi/pull/72
+- https://github.com/tkf/emacs-jedi/issues/140#issuecomment-37358527
+
+\(fn)" t nil)
+
+(autoload 'jedi:install-server-block "jedi/jedi-core" "\
+Blocking version `jedi:install-server'.
+
+\(fn)" nil nil)
+
+;;;***
+
 ;;;### (autoloads nil "let-alist/let-alist" "let-alist/let-alist.el"
 ;;;;;;  (22185 31872 38070 0))
 ;;; Generated autoloads from let-alist/let-alist.el
@@ -441,6 +930,28 @@ displayed in the example above.
 \(fn ALIST &rest BODY)" nil t)
 
 (put 'let-alist 'lisp-indent-function '1)
+
+;;;***
+
+;;;### (autoloads nil "markdown-mode/markdown-mode" "markdown-mode/markdown-mode.el"
+;;;;;;  (22218 54785 85602 856000))
+;;; Generated autoloads from markdown-mode/markdown-mode.el
+
+(autoload 'markdown-mode "markdown-mode/markdown-mode" "\
+Major mode for editing Markdown files.
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(autoload 'gfm-mode "markdown-mode/markdown-mode" "\
+Major mode for editing GitHub Flavored Markdown files.
+
+\(fn)" t nil)
 
 ;;;***
 
@@ -888,19 +1399,35 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 
 ;;;### (autoloads nil nil ("auto-complete/auto-complete-pkg.el" "color-theme-solarized/color-theme-solarized-pkg.el"
 ;;;;;;  "color-theme-solarized/solarized-theme.el" "color-theme/color-theme-autoloads.el"
-;;;;;;  "el-get/el-get-autoloading.el" "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "deferred/concurrent.el"
+;;;;;;  "deferred/deferred.el" "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el"
+;;;;;;  "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el"
+;;;;;;  "ein/lisp/ein-contents-api.el" "ein/lisp/ein-core.el" "ein/lisp/ein-events.el"
+;;;;;;  "ein/lisp/ein-ipdb.el" "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
+;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
+;;;;;;  "ein/lisp/ein-node.el" "ein/lisp/ein-notification.el" "ein/lisp/ein-output-area.el"
+;;;;;;  "ein/lisp/ein-pager.el" "ein/lisp/ein-pkg.el" "ein/lisp/ein-python.el"
+;;;;;;  "ein/lisp/ein-pytools.el" "ein/lisp/ein-query.el" "ein/lisp/ein-scratchsheet.el"
+;;;;;;  "ein/lisp/ein-smartrep.el" "ein/lisp/ein-subpackages.el"
+;;;;;;  "ein/lisp/ein-utils.el" "ein/lisp/ein-websocket.el" "ein/lisp/ein-worksheet.el"
+;;;;;;  "ein/lisp/ein.el" "ein/lisp/zeroein.el" "el-get/el-get-autoloading.el"
+;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "ess/ess-autoloads.el"
-;;;;;;  "fuzzy/fuzzy.el" "let-alist/let-alist-autoloads.el" "let-alist/let-alist-pkg.el"
-;;;;;;  "popup/popup.el" "speedbar-extension/speedbar-extension.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "epc/epc.el"
+;;;;;;  "epc/epcs.el" "epc/test-epc.el" "ess/ess-autoloads.el" "fuzzy/fuzzy.el"
+;;;;;;  "jedi/test-jedi.el" "jedi/tryout-jedi.el" "let-alist/let-alist-autoloads.el"
+;;;;;;  "let-alist/let-alist-pkg.el" "popup/popup.el" "python-environment/python-environment.el"
+;;;;;;  "python-environment/test-python-environment.el" "request/request-deferred.el"
+;;;;;;  "request/request.el" "speedbar-extension/speedbar-extension.el"
 ;;;;;;  "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el" "tabbar/aquamacs-tools.el"
 ;;;;;;  "tabbar/one-buffer-one-frame.el" "tabbar/tabbar-window.el"
-;;;;;;  "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
+;;;;;;  "websocket/websocket-functional-test.el" "websocket/websocket-test.el"
+;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22185 50742 124573
-;;;;;;  125000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22278 10905 234282
+;;;;;;  676000))
 
 ;;;***
 

@@ -1,7 +1,8 @@
 ;; customized theme
 ;;(load-theme 'solarized t)
+
 ;;(set-frame-parameter nil 'background-mode 'dark)
-;;(enable-theme 'solarized)
+;;;;(enable-theme 'solarized)
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks
@@ -53,7 +54,4 @@
 
 (winner-mode t)
 
-(add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
-(add-to-list 'auto-mode-alist '("\\.r$" . R-mode))
-(add-to-list 'auto-mode-alist '("\\.Rd$" . Rd-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw$" . noweb-mode))
+
