@@ -1,4 +1,0 @@
-(require 'markdown-mode)
-
-(add-to-list 'auto-mode-alist '("\\.[m][d]$" . markdown-mode))
-
