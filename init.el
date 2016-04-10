@@ -1,8 +1,8 @@
 ;; init.el
 ;; 把目录lisp/添加到搜索路径中去
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(add-to-list 'load-path "~/.emacs.d/lisp") 
 
+(add-to-list 'load-path "~/.emacs.d/lisp") 
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -36,11 +36,14 @@
    smex
    tabbar
    session
+   color-theme-solarized
+   markdown-mode
    helm
    window-purpose
    sr-speedbar
    speedbar-extension
-   color-theme-solarized
+   jedi
+   ein
    window-numbering	
    auto-complete))			; complete as you type with overlays
 
@@ -55,6 +58,9 @@
 (load "init-base") ;; base settings
 (load "init-tabbar") ;; Tabbar settings
 (load "init-layout") ;; layout settings
-(load "init-R")
+(load "init-R")  ;; r-mode settings
+(load "init-org") ;; org-mode settings
+(load "init-markdown") ;; markdown-mode settings
+(load "init-Python") ;; Python-mode settings
 
 (desktop-save-mode 1) 
