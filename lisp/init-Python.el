@@ -20,7 +20,7 @@
 
 (defun open-python-project ()
   (interactive)
-  (purpose-load-frame-layout "~/.emacs.d/.Playout")
+  (purpose-load-frame-layout-file "~/.emacs.d/.Playout")
 )
 
 (global-set-key (kbd "C-c p") 'open-python-project)

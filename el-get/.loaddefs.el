@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads nil "auto-complete/auto-complete" "auto-complete/auto-complete.el"
-;;;;;;  (22185 33919 718114 382000))
+;;;;;;  (22281 48779 261599 354000))
 ;;; Generated autoloads from auto-complete/auto-complete.el
 
 (autoload 'auto-complete "auto-complete/auto-complete" "\
@@ -41,7 +41,7 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 ;;;***
 
 ;;;### (autoloads nil "auto-complete/auto-complete-config" "auto-complete/auto-complete-config.el"
-;;;;;;  (22185 33919 718114 382000))
+;;;;;;  (22281 48779 261599 354000))
 ;;; Generated autoloads from auto-complete/auto-complete-config.el
 
 (autoload 'ac-config-default "auto-complete/auto-complete-config" "\
@@ -52,8 +52,8 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 ;;;***
 
 ;;;### (autoloads nil "color-theme-solarized/color-theme-solarized"
-;;;;;;  "color-theme-solarized/color-theme-solarized.el" (22185 33894
-;;;;;;  802113 842000))
+;;;;;;  "color-theme-solarized/color-theme-solarized.el" (22281 48004
+;;;;;;  333623 804000))
 ;;; Generated autoloads from color-theme-solarized/color-theme-solarized.el
 
 (autoload 'color-theme-solarized "color-theme-solarized/color-theme-solarized" "\
@@ -81,8 +81,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads nil "color-theme-solarized/solarized-definitions"
-;;;;;;  "color-theme-solarized/solarized-definitions.el" (22185 33894
-;;;;;;  806113 842000))
+;;;;;;  "color-theme-solarized/solarized-definitions.el" (22281 48004
+;;;;;;  341623 803000))
 ;;; Generated autoloads from color-theme-solarized/solarized-definitions.el
 
 (when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
@@ -226,7 +226,7 @@ Initialize the color theme package by loading color-theme-libraries.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-connect" "ein/lisp/ein-connect.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-connect.el
 
 (autoload 'ein:connect-to-notebook-command "ein/lisp/ein-connect" "\
@@ -263,7 +263,7 @@ notebook.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-console" "ein/lisp/ein-console.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-console.el
 
 (autoload 'ein:console-open "ein/lisp/ein-console" "\
@@ -282,8 +282,8 @@ It should be possible to support python-mode.el.  Patches are welcome!
 
 ;;;***
 
-;;;### (autoloads nil "ein/lisp/ein-dev" "ein/lisp/ein-dev.el" (22278
-;;;;;;  10877 836691 643000))
+;;;### (autoloads nil "ein/lisp/ein-dev" "ein/lisp/ein-dev.el" (22281
+;;;;;;  48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-dev.el
 
 (autoload 'ein:dev-insert-mode-map "ein/lisp/ein-dev" "\
@@ -311,7 +311,7 @@ Open a buffer with bug report template.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-helm" "ein/lisp/ein-helm.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-helm.el
 
 (autoload 'anything-ein-kernel-history "ein/lisp/ein-helm" "\
@@ -337,7 +337,7 @@ Choose opened notebook using helm interface.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-iexec" "ein/lisp/ein-iexec.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-iexec.el
 
 (autoload 'ein:iexec-mode "ein/lisp/ein-iexec" "\
@@ -350,7 +350,7 @@ change in its input area.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-ipynb-mode" "ein/lisp/ein-ipynb-mode.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-ipynb-mode.el
 
 (autoload 'ein:ipynb-mode "ein/lisp/ein-ipynb-mode" "\
@@ -363,7 +363,7 @@ A simple mode for ipynb file.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-jedi" "ein/lisp/ein-jedi.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-jedi.el
 
 (autoload 'ein:jedi-complete "ein/lisp/ein-jedi" "\
@@ -391,7 +391,7 @@ To use EIN and Jedi together, add the following in your Emacs setup.::
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-junk" "ein/lisp/ein-junk.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-junk.el
 
 (autoload 'ein:junk-new "ein/lisp/ein-junk" "\
@@ -412,7 +412,7 @@ and save it immediately.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-kernel" "ein/lisp/ein-kernel.el"
-;;;;;;  (22278 10877 836691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-kernel.el
 
 (defalias 'ein:kernel-url-or-port 'ein:$kernel-url-or-port)
@@ -422,7 +422,7 @@ and save it immediately.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-multilang" "ein/lisp/ein-multilang.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-multilang.el
 
 (autoload 'ein:notebook-multilang-mode "ein/lisp/ein-multilang" "\
@@ -433,7 +433,7 @@ Notebook mode with multiple language fontification.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-notebook" "ein/lisp/ein-notebook.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-notebook.el
 
 (defalias 'ein:notebook-name 'ein:$notebook-notebook-name)
@@ -441,7 +441,7 @@ Notebook mode with multiple language fontification.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-notebooklist" "ein/lisp/ein-notebooklist.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-notebooklist.el
 
 (autoload 'ein:notebooklist-open "ein/lisp/ein-notebooklist" "\
@@ -502,8 +502,8 @@ See also:
 
 ;;;***
 
-;;;### (autoloads nil "ein/lisp/ein-org" "ein/lisp/ein-org.el" (22278
-;;;;;;  10877 840691 643000))
+;;;### (autoloads nil "ein/lisp/ein-org" "ein/lisp/ein-org.el" (22281
+;;;;;;  48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-org.el
 
 (autoload 'ein:org-open "ein/lisp/ein-org" "\
@@ -539,7 +539,7 @@ node `(org) External links' and Info node `(org) Search options'
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-pseudo-console" "ein/lisp/ein-pseudo-console.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 145596 234000))
 ;;; Generated autoloads from ein/lisp/ein-pseudo-console.el
 
 (autoload 'ein:pseudo-console-mode "ein/lisp/ein-pseudo-console" "\
@@ -550,7 +550,7 @@ Pseudo console mode.  Hit RET to execute code.
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-shared-output" "ein/lisp/ein-shared-output.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 149596 233000))
 ;;; Generated autoloads from ein/lisp/ein-shared-output.el
 
 (autoload 'ein:shared-output-pop-to-buffer "ein/lisp/ein-shared-output" "\
@@ -580,7 +580,7 @@ shared output buffer.  You can open the buffer by the command
 ;;;***
 
 ;;;### (autoloads nil "ein/lisp/ein-traceback" "ein/lisp/ein-traceback.el"
-;;;;;;  (22278 10877 840691 643000))
+;;;;;;  (22281 48878 149596 233000))
 ;;; Generated autoloads from ein/lisp/ein-traceback.el
 
 (autoload 'ein:tb-show "ein/lisp/ein-traceback" "\
@@ -590,8 +590,8 @@ Show full traceback in traceback viewer.
 
 ;;;***
 
-;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22185 33236
-;;;;;;  922099 583000))
+;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22281 46933
+;;;;;;  293657 597000))
 ;;; Generated autoloads from el-get/el-get.el
 
 (autoload 'el-get-version "el-get/el-get" "\
@@ -691,7 +691,7 @@ already installed packages is considered.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-bundle" "el-get/el-get-bundle.el"
-;;;;;;  (22185 33236 918099 583000))
+;;;;;;  (22281 46933 285657 597000))
 ;;; Generated autoloads from el-get/el-get-bundle.el
 
 (autoload 'el-get-bundle-el-get "el-get/el-get-bundle" "\
@@ -741,7 +741,7 @@ required.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-check" "el-get/el-get-check.el"
-;;;;;;  (22185 33236 918099 583000))
+;;;;;;  (22281 46933 285657 597000))
 ;;; Generated autoloads from el-get/el-get-check.el
 
 (autoload 'el-get-check-recipe "el-get/el-get-check" "\
@@ -760,7 +760,7 @@ object or a file path.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-list-packages" "el-get/el-get-list-packages.el"
-;;;;;;  (22185 33236 918099 583000))
+;;;;;;  (22281 46933 285657 597000))
 ;;; Generated autoloads from el-get/el-get-list-packages.el
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
@@ -770,8 +770,8 @@ Display a list of packages.
 
 ;;;***
 
-;;;### (autoloads nil "jedi/jedi" "jedi/jedi.el" (22277 60269 400980
-;;;;;;  759000))
+;;;### (autoloads nil "jedi/jedi" "jedi/jedi.el" (22281 48825 853597
+;;;;;;  883000))
 ;;; Generated autoloads from jedi/jedi.el
 
 (autoload 'jedi:ac-setup "jedi/jedi" "\
@@ -802,8 +802,8 @@ Complete code at point.
 
 ;;;***
 
-;;;### (autoloads nil "jedi/jedi-core" "jedi/jedi-core.el" (22277
-;;;;;;  60269 400980 759000))
+;;;### (autoloads nil "jedi/jedi-core" "jedi/jedi-core.el" (22281
+;;;;;;  48825 853597 883000))
 ;;; Generated autoloads from jedi/jedi-core.el
 
 (autoload 'jedi:start-dedicated-server "jedi/jedi-core" "\
@@ -895,7 +895,7 @@ Blocking version `jedi:install-server'.
 ;;;***
 
 ;;;### (autoloads nil "let-alist/let-alist" "let-alist/let-alist.el"
-;;;;;;  (22185 31872 38070 0))
+;;;;;;  (22182 19191 906065 419000))
 ;;; Generated autoloads from let-alist/let-alist.el
 
 (autoload 'let-alist "let-alist/let-alist" "\
@@ -934,7 +934,7 @@ displayed in the example above.
 ;;;***
 
 ;;;### (autoloads nil "markdown-mode/markdown-mode" "markdown-mode/markdown-mode.el"
-;;;;;;  (22218 54785 85602 856000))
+;;;;;;  (22281 48025 437623 138000))
 ;;; Generated autoloads from markdown-mode/markdown-mode.el
 
 (autoload 'markdown-mode "markdown-mode/markdown-mode" "\
@@ -942,11 +942,9 @@ Major mode for editing Markdown files.
 
 \(fn)" t nil)
 
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode) t)
 
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode) t)
 
 (autoload 'gfm-mode "markdown-mode/markdown-mode" "\
 Major mode for editing GitHub Flavored Markdown files.
@@ -955,37 +953,8 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
-;;;### (autoloads nil "session/lisp/session" "session/lisp/session.el"
-;;;;;;  (19876 9989 0 0))
-;;; Generated autoloads from session/lisp/session.el
-
-(autoload 'session-jump-to-last-change "session/lisp/session" "\
-Jump to the position of the last change.
-Without prefix arg, jump successively to previous change positions which
-differ by at least `session-jump-undo-threshold' characters by repeated
-invocation of this command.  With prefix argument 0, jump to end of last
-change.  With numeric prefix argument, jump to start of first change in
-the ARG's undo block in the `buffer-undo-list'.
-
-With non-numeric prefix argument (\\[universal-argument] only), set
-point as oldest change position.  It might change slightly if you jump
-to it due to intermediate insert/delete elements in the
-`buffer-undo-list'.
-
-\(fn &optional ARG)" t nil)
-
-(autoload 'session-initialize "session/lisp/session" "\
-Initialize package session and read previous session file.
-Setup hooks and load `session-save-file', see variable `session-initialize'.  At
-best, this function is called at the end of the Emacs startup, i.e., add
-this function to `after-init-hook'.
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "smex/smex" "smex/smex.el" (22185 33563 74106
-;;;;;;  652000))
+;;;### (autoloads nil "smex/smex" "smex/smex.el" (22281 47926 629626
+;;;;;;  255000))
 ;;; Generated autoloads from smex/smex.el
 
 (autoload 'smex "smex/smex" "\
@@ -1006,7 +975,7 @@ Like `smex', but limited to commands that are relevant to the active major mode.
 ;;;***
 
 ;;;### (autoloads nil "sr-speedbar/sr-speedbar" "sr-speedbar/sr-speedbar.el"
-;;;;;;  (22185 33809 398111 991000))
+;;;;;;  (22281 48138 69619 584000))
 ;;; Generated autoloads from sr-speedbar/sr-speedbar.el
 
 (autoload 'sr-speedbar-toggle "sr-speedbar/sr-speedbar" "\
@@ -1026,8 +995,8 @@ Create `sr-speedbar' window.
 
 ;;;***
 
-;;;### (autoloads nil "tabbar/revive" "tabbar/revive.el" (22185 33567
-;;;;;;  362106 745000))
+;;;### (autoloads nil "tabbar/revive" "tabbar/revive.el" (22281 47947
+;;;;;;  885625 585000))
 ;;; Generated autoloads from tabbar/revive.el
 
 (autoload 'current-window-configuration-printable "tabbar/revive" "\
@@ -1084,8 +1053,8 @@ though uses `desktop' to restore buffers.
 
 ;;;***
 
-;;;### (autoloads nil "tabbar/tabbar" "tabbar/tabbar.el" (22185 33567
-;;;;;;  362106 745000))
+;;;### (autoloads nil "tabbar/tabbar" "tabbar/tabbar.el" (22281 47947
+;;;;;;  885625 585000))
 ;;; Generated autoloads from tabbar/tabbar.el
 
 (autoload 'tabbar-backward "tabbar/tabbar" "\
@@ -1248,7 +1217,7 @@ Returns non-nil if the new state is enabled.
 ;;;***
 
 ;;;### (autoloads nil "window-numbering/window-numbering" "window-numbering/window-numbering.el"
-;;;;;;  (22185 33898 650113 925000))
+;;;;;;  (22281 48901 721595 490000))
 ;;; Generated autoloads from window-numbering/window-numbering.el
 
 (defvar window-numbering-mode nil "\
@@ -1268,7 +1237,7 @@ A minor mode that assigns a number to each window.
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose" "window-purpose/window-purpose.el"
-;;;;;;  (22185 33805 430111 905000))
+;;;;;;  (22281 48115 165620 307000))
 ;;; Generated autoloads from window-purpose/window-purpose.el
 
 (defvar purpose-mode nil "\
@@ -1288,31 +1257,32 @@ Toggle Purpose mode on or off according to the regular rules.
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose-configuration"
-;;;;;;  "window-purpose/window-purpose-configuration.el" (22185 33805
-;;;;;;  430111 905000))
+;;;;;;  "window-purpose/window-purpose-configuration.el" (22281 48115
+;;;;;;  165620 307000))
 ;;; Generated autoloads from window-purpose/window-purpose-configuration.el
 
 (autoload 'purpose-set-extension-configuration "window-purpose/window-purpose-configuration" "\
 Set an extension's entry in `purpose-extended-configuration'.
-KEYWORD should be a keyword used to identify the extension.
+EXT-KEYWORD should be a keyword used to identify the extension.
 CONFIG is a `purpose-conf' object containing the extension's purpose
 configuration.
 Example:
  (purpose-set-extension-configuration
      :python
-     (purpose-conf :mode-purposes
+     (purpose-conf \"py\"
+                   :mode-purposes
                    '((python-mode . python)
-                     (python-inferior-mode . interpreter))))
+                     (inferior-python-mode . interpreter))))
 
 This function calls `purpose-compile-extended-configuration' when its
 done.
 
-\(fn KEYWORD CONFIG)" nil nil)
+\(fn EXT-KEYWORD CONFIG)" nil nil)
 
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose-x" "window-purpose/window-purpose-x.el"
-;;;;;;  (22185 33805 430111 905000))
+;;;;;;  (22281 48115 165620 307000))
 ;;; Generated autoloads from window-purpose/window-purpose-x.el
 
 (autoload 'purpose-x-code1-setup "window-purpose/window-purpose-x" "\
@@ -1426,8 +1396,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22278 10905 234282
-;;;;;;  676000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22282 22121 694431
+;;;;;;  76000))
 
 ;;;***
 

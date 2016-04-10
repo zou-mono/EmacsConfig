@@ -11,7 +11,7 @@
   (setq ess-ask-for-ess-directory nil)
   (setq ess-directory "~/Documents/R_Project/")
   (R)
-  (purpose-load-frame-layout "~/.emacs.d/.Rlayout")
+  (purpose-load-frame-layout-file "~/.emacs.d/.Rlayout")
 )
 
 (global-set-key (kbd "C-c r") 'open-r-project)

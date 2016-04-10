@@ -1,21 +1,16 @@
 
 ;; ----- smex-history -----
 (
- shell
- ein:notebooklist-open
- package-list-packages
- el-get-package-menu-revert
- list-command-history
- open-python-project
  R
+ S
+ cd
+ 5x5
+ arp
+ dbx
+ dig
 )
 
 ;; ----- smex-data -----
 (
- (open-python-project . 1)
- (ein:notebooklist-open . 3)
- (list-command-history . 1)
- (el-get-package-menu-revert . 1)
- (package-list-packages . 1)
- (shell . 1)
+ 
 )

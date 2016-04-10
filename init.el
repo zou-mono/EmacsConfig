@@ -18,14 +18,17 @@
 		 (setq smex-save-file "~/.emacs.d/.smex-items")
 		 (global-set-key (kbd "M-x") 'smex)
 		 (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
-   (:name ESS
+   (:name ess
 	:before (progn
-		 (autoload 'R "ess-site.el" "ESS" t))
+		 (autoload 'R "ess-site.el" "ESS" t)))
    (:name session
-	:after (progn
-	  (add-hook 'after-init-hook 'session-initialize)))
+	  :before (progn
+		    (autoload 'session-initialize "session" nil t)
+		    (autoload 'session-jump-to-last-change "session" nil t))
+	  :after (progn
+		   (add-hook 'after-init-hook 'session-initialize)))
    (:name helm
-	:features (helm-config)))))
+	:features (helm-config))))
 
 ;; now set our own packages
 (setq
@@ -41,7 +44,7 @@
    helm
    window-purpose
    sr-speedbar
-   speedbar-extension
+   ;;speedbar-extension
    jedi
    ein
    window-numbering	
@@ -62,5 +65,11 @@
 (load "init-org") ;; org-mode settings
 (load "init-markdown") ;; markdown-mode settings
 (load "init-Python") ;; Python-mode settings
+
+;;(autoload 'session-jump-to-last-change "session" nil t)
+;;(autoload 'session-initialize "session" nil t)
+;;(eval-after-load "cus-load"
+;;   '(progn (custom-add-load 'data 'session)
+;;           (custom-add-load 'session 'session)))
 
 (desktop-save-mode 1) 

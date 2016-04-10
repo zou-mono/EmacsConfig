@@ -1,4 +1,6 @@
-*.desktop
+/el-get
 *.lock
 *~*
-
+/el-get/.status.el
+*.gitignore*
+*#*
