@@ -1,16 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ el-get-install
+ el-get-remove
+ color-theme-deep-blue
+ color-theme-solarized
  R
  S
  cd
- 5x5
- arp
- dbx
- dig
 )
 
 ;; ----- smex-data -----
 (
- 
+ (color-theme-solarized . 1)
+ (color-theme-deep-blue . 1)
+ (el-get-remove . 1)
+ (el-get-install . 1)
 )

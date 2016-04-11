@@ -66,10 +66,21 @@
 (load "init-markdown") ;; markdown-mode settings
 (load "init-Python") ;; Python-mode settings
 
-;;(autoload 'session-jump-to-last-change "session" nil t)
-;;(autoload 'session-initialize "session" nil t)
-;;(eval-after-load "cus-load"
-;;   '(progn (custom-add-load 'data 'session)
-;;           (custom-add-load 'session 'session)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(sr-speedbar-max-width 20)
+ '(sr-speedbar-right-side nil)
+ '(sr-speedbar-skip-other-window-p)
+ '(sr-speedbar-width-x 10)
+ '(tabbar-separator (quote (0.5))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 (desktop-save-mode 1) 
