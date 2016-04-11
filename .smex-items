@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ dired
+ open-python-project
  el-get-install
  el-get-remove
  color-theme-deep-blue
  color-theme-solarized
  R
- S
- cd
 )
 
 ;; ----- smex-data -----
@@ -16,4 +16,6 @@
  (color-theme-deep-blue . 1)
  (el-get-remove . 1)
  (el-get-install . 1)
+ (open-python-project . 1)
+ (dired . 1)
 )

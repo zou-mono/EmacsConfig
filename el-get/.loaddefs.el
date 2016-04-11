@@ -1268,7 +1268,7 @@ A minor mode that assigns a number to each window.
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose" "window-purpose/window-purpose.el"
-;;;;;;  (22185 33805 430111 905000))
+;;;;;;  (22283 22049 775779 955000))
 ;;; Generated autoloads from window-purpose/window-purpose.el
 
 (defvar purpose-mode nil "\
@@ -1288,31 +1288,32 @@ Toggle Purpose mode on or off according to the regular rules.
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose-configuration"
-;;;;;;  "window-purpose/window-purpose-configuration.el" (22185 33805
-;;;;;;  430111 905000))
+;;;;;;  "window-purpose/window-purpose-configuration.el" (22283 22049
+;;;;;;  771779 955000))
 ;;; Generated autoloads from window-purpose/window-purpose-configuration.el
 
 (autoload 'purpose-set-extension-configuration "window-purpose/window-purpose-configuration" "\
 Set an extension's entry in `purpose-extended-configuration'.
-KEYWORD should be a keyword used to identify the extension.
+EXT-KEYWORD should be a keyword used to identify the extension.
 CONFIG is a `purpose-conf' object containing the extension's purpose
 configuration.
 Example:
  (purpose-set-extension-configuration
      :python
-     (purpose-conf :mode-purposes
+     (purpose-conf \"py\"
+                   :mode-purposes
                    '((python-mode . python)
-                     (python-inferior-mode . interpreter))))
+                     (inferior-python-mode . interpreter))))
 
 This function calls `purpose-compile-extended-configuration' when its
 done.
 
-\(fn KEYWORD CONFIG)" nil nil)
+\(fn EXT-KEYWORD CONFIG)" nil nil)
 
 ;;;***
 
 ;;;### (autoloads nil "window-purpose/window-purpose-x" "window-purpose/window-purpose-x.el"
-;;;;;;  (22185 33805 430111 905000))
+;;;;;;  (22283 22049 775779 955000))
 ;;; Generated autoloads from window-purpose/window-purpose-x.el
 
 (autoload 'purpose-x-code1-setup "window-purpose/window-purpose-x" "\
@@ -1422,8 +1423,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22283 17982 232329
-;;;;;;  243000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22283 22076 23820
+;;;;;;  823000))
 
 ;;;***
 
