@@ -18,9 +18,13 @@
 (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
 (purpose-compile-user-configuration)
 
-(defun open-python-project ()
+(defun open-python-perspective ()
   (interactive)
   (purpose-load-frame-layout-file "~/.emacs.d/.Playout")
 )
 
-(global-set-key (kbd "C-c p") 'open-python-project)
+(global-set-key (kbd "C-M-r") 'python-shell-send-region)
+(global-set-key (kbd "C-c p") 'open-python-perspective)
+
+(load "init-cedet")
+(add-hook 'python-mode-hook 'my-cedet-hook)

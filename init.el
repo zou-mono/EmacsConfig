@@ -33,20 +33,21 @@
 ;; now set our own packages
 (setq
  my:el-get-packages
- '(el-get				; el-get is self-hosting
-   let-alist
-   ess                                  ; ESS
-   smex
-   tabbar
-   session
+ '(el-get			       	; el-get is self-hosting
+   let-alist                            ; Easily let-bind values of an assoc-list by their names
+   ess                                  ; Emacs Speaks Statistics
+   smex                                 ; a M-x enhancement for Emacs
+   tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs 
+   session                              
    color-theme-solarized
    markdown-mode
    helm
    window-purpose
    sr-speedbar
    ;;speedbar-extension
-   jedi
-   ein
+   jedi                                 ; Python auto-completion for Emacs
+   cedet                                ; Collection of Emacs Development Environment Tools
+   ein                                  ; Emacs IPython Notebook    
    window-numbering	
    auto-complete))			; complete as you type with overlays
 
@@ -58,9 +59,11 @@
 
 (helm-mode 1)
 
+(load "gtags")
 (load "init-base") ;; base settings
 (load "init-tabbar") ;; Tabbar settings
 (load "init-layout") ;; layout settings
+(load "init-cedet")
 (load "init-R")  ;; r-mode settings
 (load "init-org") ;; org-mode settings
 (load "init-markdown") ;; markdown-mode settings

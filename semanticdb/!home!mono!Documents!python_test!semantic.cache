@@ -1,0 +1,51 @@
+;; Object python_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python_test/"
+  :tables
+  (list
+    (semanticdb-table "test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 20])
+            ("pdb" include nil nil [1 20])
+            ("sys" include nil nil [1 20])
+            ("IPython.core" include nil nil [21 53])
+            ("sys" variable nil nil [54 138])
+            ("Main" function nil nil [140 190])
+            ("a" variable nil nil [195 202])
+            ("b" variable nil nil [203 210])
+            ("c" variable nil nil [211 219])
+            ("d" variable nil nil [220 231])
+            ("i" variable nil nil [233 238])
+            ("print" code nil nil [246 257])
+            ("if" code nil nil [259 296])
+            ("print" code nil nil [301 317])
+            ("for" code nil nil [319 354])
+            ("s" variable nil nil [355 421])
+            ("f1" function nil nil [423 476])
+            ("parrot" function (:arguments 
+              ( ("voltage" variable nil (reparse-symbol function_parameters) [488 495])
+                ("state" variable nil (reparse-symbol function_parameters) [502 507])
+                ("action" variable nil (reparse-symbol function_parameters) [518 524])
+                ("type" variable nil (reparse-symbol function_parameters) [533 537]))              ) nil [477 728])
+            ("parrot" code nil nil [730 738])
+            ("d" code nil nil [739 740]))          
+      :file "test.py"
+      :pointmax 755
+      :fsize 754
+      :lastmodtime '(22287 20044 129573 234000)
+      :unmatched-syntax nil)
+    (semanticdb-table "1.pY"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [1 14])
+            ("sys" include nil nil [1 14])
+            ("test" include nil nil [15 33])
+            ("sys" code nil nil [34 45])
+            ("parrot" code nil nil [47 55]))          
+      :file "1.pY"
+      :pointmax 64
+      :unmatched-syntax '((NAME 47 . 53) ($EOI 64 . 64) ($EOI 63 . 63))))
+  :file "!home!mono!Documents!python_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

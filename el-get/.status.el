@@ -6,6 +6,38 @@
 			 (add-to-list 'ac-dictionary-directories
 				      (expand-file-name "dict" default-directory))
 			 (ac-config-default))))
+ (cedet status "installed" recipe
+	(:name cedet :website "http://cedet.sourceforge.net/" :description "CEDET is a Collection of Emacs Development Environment Tools written with the end goal of creating an advanced development environment in Emacs." :type git :url "http://git.code.sf.net/p/cedet/git" :build
+	       `(("sh" "-c" "touch `find . -name Makefile`")
+		 ("make" ,(format "EMACS=%s"
+				  (shell-quote-argument el-get-emacs))
+		  "clean-all")
+		 ("make" ,(format "EMACS=%s"
+				  (shell-quote-argument el-get-emacs)))
+		 ("make" ,(format "EMACS=%s"
+				  (shell-quote-argument el-get-emacs))
+		  "-C" "contrib"))
+	       :build/berkeley-unix
+	       `(("sh" "-c" "touch `find . -name Makefile`")
+		 ("gmake" ,(format "EMACS=%s"
+				   (shell-quote-argument el-get-emacs))
+		  "clean-all")
+		 ("gmake" ,(format "EMACS=%s"
+				   (shell-quote-argument el-get-emacs)))
+		 ("gmake" ,(format "EMACS=%s"
+				   (shell-quote-argument el-get-emacs))
+		  "-C" "contrib"))
+	       :build/windows-nt
+	       `(("sh" "-c" "touch `/usr/bin/find . -name Makefile` && make FIND=/usr/bin/find"))
+	       :features nil :lazy nil :post-init
+	       (if
+		   (or
+		    (featurep 'cedet-devel-load)
+		    (featurep 'eieio))
+		   (message
+		    (concat "Emacs' built-in CEDET has already been loaded!  Restart" " Emacs to load CEDET from el-get instead."))
+		 (load
+		  (expand-file-name "cedet-devel-load.el" pdir)))))
  (cl-lib status "installed" recipe
 	 (:name cl-lib :builtin "24.3" :type elpa :description "Properly prefixed CL functions and macros" :url "http://elpa.gnu.org/packages/cl-lib.html"))
  (color-theme status "installed" recipe
@@ -25,6 +57,7 @@
 	 (:name ctable :description "Table Component for elisp" :type github :pkgname "kiwanami/emacs-ctable"))
  (deferred status "installed" recipe
    (:name deferred :description "Simple asynchronous functions for emacs lisp." :type github :pkgname "kiwanami/emacs-deferred"))
+ (ecb status "required" recipe nil)
  (ein status "installed" recipe
       (:name ein :description "IPython notebook client in Emacs" :type github :pkgname "millejoh/emacs-ipython-notebook" :depends
 	     (websocket request auto-complete)

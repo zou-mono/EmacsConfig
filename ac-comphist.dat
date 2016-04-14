@@ -1,8 +1,20 @@
-((("progn" .
-   [1 0 0 0 0])
-  (":before" .
-   [1 0 0 0 0 0 0])
+((("semantic/sb" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("open-r-perspective" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("open-python-perspective" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("color-theme-solarized" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("require" .
    [1 0 0 0 0 0 0])
-  ("color-theme-solarized" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  (":before" .
+   [1 0 0 0 0 0 0])
+  ("progn" .
+   [1 0 0 0 0])
+  ("b" .
+   [2])))

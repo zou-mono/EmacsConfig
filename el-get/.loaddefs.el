@@ -52,8 +52,8 @@ See `auto-complete-mode' for more information on Auto-Complete mode.
 ;;;***
 
 ;;;### (autoloads nil "color-theme-solarized/color-theme-solarized"
-;;;;;;  "color-theme-solarized/color-theme-solarized.el" (22283 17956
-;;;;;;  807691 243000))
+;;;;;;  "color-theme-solarized/color-theme-solarized.el" (22284 37521
+;;;;;;  890229 99000))
 ;;; Generated autoloads from color-theme-solarized/color-theme-solarized.el
 
 (autoload 'color-theme-solarized "color-theme-solarized/color-theme-solarized" "\
@@ -81,8 +81,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
 ;;;***
 
 ;;;### (autoloads nil "color-theme-solarized/solarized-definitions"
-;;;;;;  "color-theme-solarized/solarized-definitions.el" (22283 17956
-;;;;;;  811691 243000))
+;;;;;;  "color-theme-solarized/solarized-definitions.el" (22284 37521
+;;;;;;  890229 99000))
 ;;; Generated autoloads from color-theme-solarized/solarized-definitions.el
 
 (when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
@@ -222,6 +222,65 @@ Submit your color-theme to the maintainer.
 Initialize the color theme package by loading color-theme-libraries.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ecb/ecb" "ecb/ecb.el" (22287 21457 441603
+;;;;;;  866000))
+;;; Generated autoloads from ecb/ecb.el
+
+(autoload 'ecb-activate "ecb/ecb" "\
+Activates ECB and creates the special buffers for the choosen layout.
+For the layout see `ecb-layout-name'. This function raises always the
+ECB-frame if called from another frame. This is the same as calling
+`ecb-minor-mode' with a positive argument.
+
+\(fn)" t nil)
+
+(autoload 'ecb-minor-mode "ecb/ecb" "\
+Toggle ECB minor mode.
+With prefix argument ARG, turn on if positive, otherwise off. Return non-nil
+if the minor mode is enabled.
+
+\\{ecb-mode-map}
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'ecb-byte-compile "ecb/ecb" "\
+Byte-compiles the ECB package.
+This is done for all lisp-files of ECB if FORCE-ALL is not nil or for each
+lisp-file FILE.el which is either newer than FILE.elc or if FILE.elc doesn't
+exist.
+
+\(fn &optional FORCE-ALL)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ecb/ecb-help" "ecb/ecb-help.el" (22287 21457
+;;;;;;  385603 865000))
+;;; Generated autoloads from ecb/ecb-help.el
+
+(autoload 'ecb-show-help "ecb/ecb-help" "\
+Shows the online help of ECB in Info or HTML-format.
+The format depends on the setting in `ecb-show-help-format'. If called with
+prefix argument, i.e. if FORMAT is not nil then the user is prompted to choose
+the format of the help (Info or Html).
+
+If an error about not finding the needed help-file occurs please take a look
+at the options `ecb-help-info-start-file' and `ecb-help-html-start-file'!
+
+Note: If you got ECB as a standard XEmacs-package maybe the
+HTML-online-documentation is not included.
+
+\(fn &optional FORMAT)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ecb/ecb-util" "ecb/ecb-util.el" (22287 21457
+;;;;;;  441603 866000))
+;;; Generated autoloads from ecb/ecb-util.el
+
+(defconst ecb-running-xemacs (featurep 'xemacs))
 
 ;;;***
 
@@ -1398,13 +1457,27 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 
 ;;;***
 
-;;;### (autoloads nil nil ("auto-complete/auto-complete-pkg.el" "color-theme-solarized/color-theme-solarized-pkg.el"
+;;;### (autoloads nil nil ("auto-complete/auto-complete-pkg.el" "cedet/cedet-build.el"
+;;;;;;  "cedet/cedet-devel-load.el" "cedet/cedet-ediff.el" "cedet/cedet-emacs-merge.el"
+;;;;;;  "cedet/cedet-remove-builtin.el" "cedet/cedet-update-changelog.el"
+;;;;;;  "cedet/cedet-update-version.el" "color-theme-solarized/color-theme-solarized-pkg.el"
 ;;;;;;  "color-theme-solarized/solarized-theme.el" "color-theme/color-theme-autoloads.el"
 ;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "deferred/concurrent.el"
-;;;;;;  "deferred/deferred.el" "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el"
-;;;;;;  "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el"
-;;;;;;  "ein/lisp/ein-contents-api.el" "ein/lisp/ein-core.el" "ein/lisp/ein-events.el"
-;;;;;;  "ein/lisp/ein-ipdb.el" "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
+;;;;;;  "deferred/deferred.el" "ecb/ecb-advice-test.el" "ecb/ecb-analyse.el"
+;;;;;;  "ecb/ecb-autogen.el" "ecb/ecb-autoloads.el" "ecb/ecb-buffertab.el"
+;;;;;;  "ecb/ecb-cedet-wrapper.el" "ecb/ecb-common-browser.el" "ecb/ecb-compatibility.el"
+;;;;;;  "ecb/ecb-compilation.el" "ecb/ecb-create-layout.el" "ecb/ecb-cycle.el"
+;;;;;;  "ecb/ecb-eshell.el" "ecb/ecb-examples.el" "ecb/ecb-face.el"
+;;;;;;  "ecb/ecb-file-browser.el" "ecb/ecb-jde.el" "ecb/ecb-layout-defs.el"
+;;;;;;  "ecb/ecb-layout.el" "ecb/ecb-method-browser.el" "ecb/ecb-mode-line.el"
+;;;;;;  "ecb/ecb-multiframe.el" "ecb/ecb-navigate.el" "ecb/ecb-semantic-wrapper.el"
+;;;;;;  "ecb/ecb-semantic.el" "ecb/ecb-speedbar.el" "ecb/ecb-symboldef.el"
+;;;;;;  "ecb/ecb-tod.el" "ecb/ecb-upgrade.el" "ecb/ecb-winman-support.el"
+;;;;;;  "ecb/silentcomp.el" "ecb/tree-buffer.el" "ein/lisp/debug-ein.el"
+;;;;;;  "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el"
+;;;;;;  "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
+;;;;;;  "ein/lisp/ein-core.el" "ein/lisp/ein-events.el" "ein/lisp/ein-ipdb.el"
+;;;;;;  "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
 ;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
 ;;;;;;  "ein/lisp/ein-node.el" "ein/lisp/ein-notification.el" "ein/lisp/ein-output-area.el"
 ;;;;;;  "ein/lisp/ein-pager.el" "ein/lisp/ein-pkg.el" "ein/lisp/ein-python.el"
@@ -1423,8 +1496,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22283 22076 23820
-;;;;;;  823000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22287 21487 900510
+;;;;;;  308000))
 
 ;;;***
 

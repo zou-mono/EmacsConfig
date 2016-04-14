@@ -1,21 +1,18 @@
 
 ;; ----- smex-history -----
 (
- dired
- open-python-project
- el-get-install
- el-get-remove
+ open-python-perspective
+ highlight-changes-mode
  color-theme-deep-blue
- color-theme-solarized
  R
+ S
+ cd
+ 5x5
 )
 
 ;; ----- smex-data -----
 (
- (color-theme-solarized . 1)
  (color-theme-deep-blue . 1)
- (el-get-remove . 1)
- (el-get-install . 1)
- (open-python-project . 1)
- (dired . 1)
+ (highlight-changes-mode . 1)
+ (open-python-perspective . 1)
 )

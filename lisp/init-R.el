@@ -6,7 +6,7 @@
 (add-to-list 'auto-mode-alist '("\\.Rd$" . Rd-mode))
 (add-to-list 'auto-mode-alist '("\\.Rnw$" . noweb-mode))
 
-(defun open-r-project ()
+(defun open-r-perspective ()
   (interactive)
   (setq ess-ask-for-ess-directory nil)
   (setq ess-directory "~/Documents/R_Project/")
@@ -14,4 +14,4 @@
   (purpose-load-frame-layout-file "~/.emacs.d/.Rlayout")
 )
 
-(global-set-key (kbd "C-c r") 'open-r-project)
+(global-set-key (kbd "C-c r") 'open-r-perspective)
