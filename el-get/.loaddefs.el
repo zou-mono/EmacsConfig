@@ -225,65 +225,6 @@ Initialize the color theme package by loading color-theme-libraries.
 
 ;;;***
 
-;;;### (autoloads nil "ecb/ecb" "ecb/ecb.el" (22287 21457 441603
-;;;;;;  866000))
-;;; Generated autoloads from ecb/ecb.el
-
-(autoload 'ecb-activate "ecb/ecb" "\
-Activates ECB and creates the special buffers for the choosen layout.
-For the layout see `ecb-layout-name'. This function raises always the
-ECB-frame if called from another frame. This is the same as calling
-`ecb-minor-mode' with a positive argument.
-
-\(fn)" t nil)
-
-(autoload 'ecb-minor-mode "ecb/ecb" "\
-Toggle ECB minor mode.
-With prefix argument ARG, turn on if positive, otherwise off. Return non-nil
-if the minor mode is enabled.
-
-\\{ecb-mode-map}
-
-\(fn &optional ARG)" t nil)
-
-(autoload 'ecb-byte-compile "ecb/ecb" "\
-Byte-compiles the ECB package.
-This is done for all lisp-files of ECB if FORCE-ALL is not nil or for each
-lisp-file FILE.el which is either newer than FILE.elc or if FILE.elc doesn't
-exist.
-
-\(fn &optional FORCE-ALL)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ecb/ecb-help" "ecb/ecb-help.el" (22287 21457
-;;;;;;  385603 865000))
-;;; Generated autoloads from ecb/ecb-help.el
-
-(autoload 'ecb-show-help "ecb/ecb-help" "\
-Shows the online help of ECB in Info or HTML-format.
-The format depends on the setting in `ecb-show-help-format'. If called with
-prefix argument, i.e. if FORMAT is not nil then the user is prompted to choose
-the format of the help (Info or Html).
-
-If an error about not finding the needed help-file occurs please take a look
-at the options `ecb-help-info-start-file' and `ecb-help-html-start-file'!
-
-Note: If you got ECB as a standard XEmacs-package maybe the
-HTML-online-documentation is not included.
-
-\(fn &optional FORMAT)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ecb/ecb-util" "ecb/ecb-util.el" (22287 21457
-;;;;;;  441603 866000))
-;;; Generated autoloads from ecb/ecb-util.el
-
-(defconst ecb-running-xemacs (featurep 'xemacs))
-
-;;;***
-
 ;;;### (autoloads nil "ein/lisp/ein-connect" "ein/lisp/ein-connect.el"
 ;;;;;;  (22278 10877 836691 643000))
 ;;; Generated autoloads from ein/lisp/ein-connect.el
@@ -826,6 +767,47 @@ object or a file path.
 Display a list of packages.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "ggtags/ggtags" "ggtags/ggtags.el" (22296 29708
+;;;;;;  644332 740000))
+;;; Generated autoloads from ggtags/ggtags.el
+
+(autoload 'ggtags-find-project "ggtags/ggtags" "\
+
+
+\(fn)" nil nil)
+
+(autoload 'ggtags-find-tag-dwim "ggtags/ggtags" "\
+Find NAME by context.
+If point is at a definition tag, find references, and vice versa.
+If point is at a line that matches `ggtags-include-pattern', find
+the include file instead.
+
+When called interactively with a prefix arg, always find
+definition tags.
+
+\(fn NAME &optional WHAT)" t nil)
+
+(autoload 'ggtags-mode "ggtags/ggtags" "\
+Toggle Ggtags mode on or off.
+With a prefix argument ARG, enable Ggtags mode if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil, and toggle it if ARG is `toggle'.
+\\{ggtags-mode-map}
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'ggtags-build-imenu-index "ggtags/ggtags" "\
+A function suitable for `imenu-create-index-function'.
+
+\(fn)" nil nil)
+
+(autoload 'ggtags-try-complete-tag "ggtags/ggtags" "\
+A function suitable for `hippie-expand-try-functions-list'.
+
+\(fn OLD)" nil nil)
 
 ;;;***
 
@@ -1463,21 +1445,10 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "cedet/cedet-update-version.el" "color-theme-solarized/color-theme-solarized-pkg.el"
 ;;;;;;  "color-theme-solarized/solarized-theme.el" "color-theme/color-theme-autoloads.el"
 ;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "deferred/concurrent.el"
-;;;;;;  "deferred/deferred.el" "ecb/ecb-advice-test.el" "ecb/ecb-analyse.el"
-;;;;;;  "ecb/ecb-autogen.el" "ecb/ecb-autoloads.el" "ecb/ecb-buffertab.el"
-;;;;;;  "ecb/ecb-cedet-wrapper.el" "ecb/ecb-common-browser.el" "ecb/ecb-compatibility.el"
-;;;;;;  "ecb/ecb-compilation.el" "ecb/ecb-create-layout.el" "ecb/ecb-cycle.el"
-;;;;;;  "ecb/ecb-eshell.el" "ecb/ecb-examples.el" "ecb/ecb-face.el"
-;;;;;;  "ecb/ecb-file-browser.el" "ecb/ecb-jde.el" "ecb/ecb-layout-defs.el"
-;;;;;;  "ecb/ecb-layout.el" "ecb/ecb-method-browser.el" "ecb/ecb-mode-line.el"
-;;;;;;  "ecb/ecb-multiframe.el" "ecb/ecb-navigate.el" "ecb/ecb-semantic-wrapper.el"
-;;;;;;  "ecb/ecb-semantic.el" "ecb/ecb-speedbar.el" "ecb/ecb-symboldef.el"
-;;;;;;  "ecb/ecb-tod.el" "ecb/ecb-upgrade.el" "ecb/ecb-winman-support.el"
-;;;;;;  "ecb/silentcomp.el" "ecb/tree-buffer.el" "ein/lisp/debug-ein.el"
-;;;;;;  "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el"
-;;;;;;  "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
-;;;;;;  "ein/lisp/ein-core.el" "ein/lisp/ein-events.el" "ein/lisp/ein-ipdb.el"
-;;;;;;  "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
+;;;;;;  "deferred/deferred.el" "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el"
+;;;;;;  "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el"
+;;;;;;  "ein/lisp/ein-contents-api.el" "ein/lisp/ein-core.el" "ein/lisp/ein-events.el"
+;;;;;;  "ein/lisp/ein-ipdb.el" "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
 ;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
 ;;;;;;  "ein/lisp/ein-node.el" "ein/lisp/ein-notification.el" "ein/lisp/ein-output-area.el"
 ;;;;;;  "ein/lisp/ein-pager.el" "ein/lisp/ein-pkg.el" "ein/lisp/ein-python.el"
@@ -1496,8 +1467,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22287 21487 900510
-;;;;;;  308000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22296 29709 511490
+;;;;;;  820000))
 
 ;;;***
 

@@ -14,4 +14,6 @@
   (purpose-load-frame-layout-file "~/.emacs.d/.Rlayout")
 )
 
+(setq ess-ask-about-transfile nil)
+
 (global-set-key (kbd "C-c r") 'open-r-perspective)

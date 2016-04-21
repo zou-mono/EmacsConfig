@@ -47,7 +47,7 @@
 
 ;;语法高亮
 (global-font-lock-mode t)
-
+ 
 (show-paren-mode 1)
 
 (window-numbering-mode 1)

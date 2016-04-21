@@ -37,7 +37,7 @@
    let-alist                            ; Easily let-bind values of an assoc-list by their names
    ess                                  ; Emacs Speaks Statistics
    smex                                 ; a M-x enhancement for Emacs
-   tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs 
+   tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    session                              
    color-theme-solarized
    markdown-mode
@@ -45,6 +45,7 @@
    window-purpose
    sr-speedbar
    ;;speedbar-extension
+   ggtags                               ; Emacs frontend to GNU Global source code tagging system
    jedi                                 ; Python auto-completion for Emacs
    cedet                                ; Collection of Emacs Development Environment Tools
    ein                                  ; Emacs IPython Notebook    
@@ -59,7 +60,7 @@
 
 (helm-mode 1)
 
-(load "gtags")
+;;(autoload 'gtags-mode "gtags" "" t)
 (load "init-base") ;; base settings
 (load "init-tabbar") ;; Tabbar settings
 (load "init-layout") ;; layout settings
@@ -85,5 +86,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(global-set-key (kbd "M-s") 'sr-speedbar-open)
 
 (desktop-save-mode 1) 

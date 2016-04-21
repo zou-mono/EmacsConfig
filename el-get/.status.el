@@ -103,6 +103,8 @@
 	       (autoload 'Rnw-mode "ess-site" nil t))))
  (fuzzy status "installed" recipe
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
+ (ggtags status "installed" recipe
+	 (:name ggtags :description "Use GNU Global in Emacs." :type github :pkgname "leoliu/ggtags"))
  (helm status "installed" recipe
        (:name helm :features
 	      (helm-config)

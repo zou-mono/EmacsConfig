@@ -21,10 +21,10 @@
 (defun open-python-perspective ()
   (interactive)
   (purpose-load-frame-layout-file "~/.emacs.d/.Playout")
+  (sr-speedbar-open)
 )
 
 (global-set-key (kbd "C-M-r") 'python-shell-send-region)
 (global-set-key (kbd "C-c p") 'open-python-perspective)
 
-(load "init-cedet")
-(add-hook 'python-mode-hook 'my-cedet-hook)
+

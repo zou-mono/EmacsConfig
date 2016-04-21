@@ -1,18 +1,16 @@
 
 ;; ----- smex-history -----
 (
- open-python-perspective
- highlight-changes-mode
- color-theme-deep-blue
+ ggtags-mode
  R
  S
  cd
  5x5
+ arp
+ dbx
 )
 
 ;; ----- smex-data -----
 (
- (color-theme-deep-blue . 1)
- (highlight-changes-mode . 1)
- (open-python-perspective . 1)
+ (ggtags-mode . 1)
 )
