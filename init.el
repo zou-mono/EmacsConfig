@@ -87,6 +87,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-(global-set-key (kbd "M-s") 'sr-speedbar-open)
+(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
 
 (desktop-save-mode 1) 

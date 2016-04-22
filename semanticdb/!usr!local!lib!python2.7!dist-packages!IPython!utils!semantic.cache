@@ -1,0 +1,82 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables
+  (list
+    (semanticdb-table "py3compat.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"Compatibility tricks for Python 3. Mainly to do with unicode.\"\"\"" code nil nil [17 84])
+            ("functools" include nil nil [85 101])
+            ("os" include nil nil [102 111])
+            ("sys" include nil nil [112 122])
+            ("re" include nil nil [123 132])
+            ("shutil" include nil nil [133 146])
+            ("types" include nil nil [147 159])
+            ("DEFAULT_ENCODING" include nil nil [176 199])
+            ("no_code" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [213 214])
+                ("encoding" variable nil (reparse-symbol function_parameters) [216 224]))              ) nil [201 245])
+            ("decode" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [257 258])
+                ("encoding" variable nil (reparse-symbol function_parameters) [260 268]))              ) nil [246 361])
+            ("encode" function (:arguments 
+              ( ("u" variable nil (reparse-symbol function_parameters) [373 374])
+                ("encoding" variable nil (reparse-symbol function_parameters) [376 384]))              ) nil [362 477])
+            ("cast_unicode" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [496 497])
+                ("encoding" variable nil (reparse-symbol function_parameters) [499 507]))              ) nil [479 592])
+            ("cast_bytes" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [608 609])
+                ("encoding" variable nil (reparse-symbol function_parameters) [611 619]))              ) nil [593 708])
+            ("buffer_to_bytes" function
+               (:documentation "Cast a buffer object to bytes"
+                :arguments 
+                  ( ("buf" variable nil (reparse-symbol function_parameters) [729 732]))                  )
+                nil [709 850])
+            ("_modify_str_or_docstring" function (:arguments 
+              ( ("str_change_func" variable nil (reparse-symbol function_parameters) [880 895]))              ) nil [851 1422])
+            ("safe_unicode" function
+               (:documentation "unicode(e) with various fallbacks. Used for exceptions, which may not be
+    safe to call unicode() on.
+    "
+                :arguments 
+                  ( ("e" variable nil (reparse-symbol function_parameters) [1440 1441]))                  )
+                nil [1423 1858])
+            ("_shutil_which" function
+               (:documentation "Given a command, mode, and a PATH string, return the path which
+    conforms to the given mode on the PATH, or None if there is no such
+    file.
+
+    `mode` defaults to os.F_OK | os.X_OK. `path` defaults to the result
+    of os.environ.get(\"PATH\"), or can be overridden with a custom search
+    path.
+    
+    This is a backport of shutil.which from Python 3.4
+    "
+                :arguments 
+                  ( ("cmd" variable nil (reparse-symbol function_parameters) [1908 1911])
+                    ("mode" variable nil (reparse-symbol function_parameters) [1913 1917])
+                    ("path" variable nil (reparse-symbol function_parameters) [1937 1941]))                  )
+                nil [1890 4280])
+            ("if" code nil nil [4281 9080])
+            ("PY2" code nil nil [9082 9095])
+            ("annotate" function
+               (:documentation "Python 3 compatible function annotation for Python 2."
+                :arguments 
+                  ( ("kwargs" variable nil (reparse-symbol function_parameters) [9111 9119]))                  )
+                nil [9098 9507])
+            ("with_metaclass" function
+               (:documentation "Create a base class with a metaclass."
+                :arguments 
+                  ( ("meta" variable nil (reparse-symbol function_parameters) [10660 10664])
+                    ("bases" variable nil (reparse-symbol function_parameters) [10666 10672]))                  )
+                nil [10641 10762]))          
+      :file "py3compat.py"
+      :pointmax 10762
+      :fsize 10761
+      :lastmodtime '(22278 4369 472808 196000)
+      :unmatched-syntax '((NAME 8033 . 8036) (IF 8043 . 8045) (ELSE 8064 . 8068) (NAME 5277 . 5280) (IF 5287 . 5289) (ELSE 5308 . 5312) (FROM 161 . 165) (PERIOD 166 . 167))))
+  :file "!usr!local!lib!python2.7!dist-packages!IPython!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
