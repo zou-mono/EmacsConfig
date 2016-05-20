@@ -2,24 +2,15 @@
 ;; ----- smex-history -----
 (
  open-python-perspective
- purpose-save-frame-layout-file
- purpose-save-window-layout-file
- purpose-toggle-window-purpose-dedicated
- info-apropos
- open-r-perspective
- tabbar-local-mode
+ R
+ S
+ cd
+ 5x5
+ arp
+ dbx
 )
 
 ;; ----- smex-data -----
 (
- (ggtags-mode . 1)
- (tar-mode . 1)
- (tabbar-mode . 2)
- (tabbar-local-mode . 1)
- (open-r-perspective . 2)
- (open-python-perspective . 4)
- (purpose-toggle-window-purpose-dedicated . 7)
- (purpose-save-frame-layout-file . 2)
- (info-apropos . 2)
- (purpose-save-window-layout-file . 1)
+ (open-python-perspective . 1)
 )

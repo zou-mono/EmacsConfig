@@ -1,6 +1,15 @@
 (require 'python)
 (require 'window-purpose)
 (require 'ein)
+;(require 'virtualenvwrapper)
+(require 'pyenv)
+
+(global-pyenv-mode)
+
+;; (venv-initialize-interactive-shells) ;; if you want interactive shell support
+;; (if (eq nil (file-directory-p "/home/mono/.virtualenvs/"))
+;;     (make-directory "/home/mono/.virtualenvs/"))
+;; (setq venv-location "/home/mono/.virtualenvs/")
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
 (setq python-shell-interpreter "ipython"

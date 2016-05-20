@@ -42,8 +42,10 @@
    color-theme-solarized
    markdown-mode
    helm
+   pyenv
    window-purpose
    sr-speedbar
+   virtualenvwrapper
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    jedi                                 ; Python auto-completion for Emacs

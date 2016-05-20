@@ -996,6 +996,41 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
+;;;### (autoloads nil "pyenv/pyenv" "pyenv/pyenv.el" (22333 38957
+;;;;;;  485895 441000))
+;;; Generated autoloads from pyenv/pyenv.el
+
+(autoload 'pyenv-use-global "pyenv/pyenv" "\
+activate pyenv global python
+
+\(fn)" t nil)
+
+(autoload 'pyenv-use-corresponding "pyenv/pyenv" "\
+search for .python-version and activate the corresponding python
+
+\(fn)" t nil)
+
+(autoload 'pyenv-use "pyenv/pyenv" "\
+choose what python you want to activate
+
+\(fn PYTHON-VERSION)" t nil)
+
+(defvar global-pyenv-mode nil "\
+Non-nil if Global-Pyenv mode is enabled.
+See the command `global-pyenv-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-pyenv-mode'.")
+
+(custom-autoload 'global-pyenv-mode "pyenv/pyenv" nil)
+
+(autoload 'global-pyenv-mode "pyenv/pyenv" "\
+use pyenv to configure the python version used by your Emacs.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "session/lisp/session" "session/lisp/session.el"
 ;;;;;;  (22283 16507 663659 834000))
 ;;; Generated autoloads from session/lisp/session.el
@@ -1288,6 +1323,83 @@ Returns non-nil if the new state is enabled.
 
 ;;;***
 
+;;;### (autoloads nil "virtualenvwrapper/virtualenvwrapper" "virtualenvwrapper/virtualenvwrapper.el"
+;;;;;;  (22316 3312 785934 654000))
+;;; Generated autoloads from virtualenvwrapper/virtualenvwrapper.el
+
+(autoload 'venv-deactivate "virtualenvwrapper/virtualenvwrapper" "\
+Deactivate the current venv.
+
+\(fn)" t nil)
+
+(autoload 'venv-set-location "virtualenvwrapper/virtualenvwrapper" "\
+Set where to look for virtual environments to LOCATION.
+This is useful e.g. when using tox.
+
+\(fn &optional LOCATION)" t nil)
+
+(autoload 'venv-workon "virtualenvwrapper/virtualenvwrapper" "\
+Interactively switch to virtualenv NAME. Prompts for name if called
+interactively.
+
+\(fn &optional NAME)" t nil)
+
+(autoload 'venv-mkvirtualenv "virtualenvwrapper/virtualenvwrapper" "\
+Create new virtualenvs NAMES. If venv-location is a single
+directory, the new virtualenvs are made there; if it is a list of
+directories, the new virtualenvs are made in the current
+default-directory.
+
+\(fn &rest NAMES)" t nil)
+
+(autoload 'venv-rmvirtualenv "virtualenvwrapper/virtualenvwrapper" "\
+Delete virtualenvs NAMES.
+
+\(fn &rest NAMES)" t nil)
+
+(autoload 'venv-lsvirtualenv "virtualenvwrapper/virtualenvwrapper" "\
+List all available virtualenvs in a temp buffer.
+
+\(fn)" t nil)
+
+(autoload 'venv-cdvirtualenv "virtualenvwrapper/virtualenvwrapper" "\
+Change to the directory of current virtualenv. If
+SUBDIR is passed, append that to the path such that
+we are immediately in that directory.
+
+\(fn &optional SUBDIR)" t nil)
+
+(autoload 'venv-cpvirtualenv "virtualenvwrapper/virtualenvwrapper" "\
+Copy virtualenv NAME to NEWNAME. Any arguments not passed will be
+prompted for This comes with the same caveat as cpvirtualenv in the
+original virtualenvwrapper, which is that is far from guarenteed to
+work well. Many packages hardcode absolute paths in various places an
+will break if moved to a new location. Use with caution. If used with
+a single virtualenv directory, behaves just like cpvirtualenv in
+virtualenvwrapper.sh.  If used with virtualenvs spread around the
+filesystem, creates the new virtualenv in the current default
+directory.
+
+\(fn &optional NAME NEWNAME)" t nil)
+
+(autoload 'venv-shell-init "virtualenvwrapper/virtualenvwrapper" "\
+Activate the current virtualenv in a newly opened shell.
+
+\(fn PROCESS)" nil nil)
+
+(autoload 'venv-initialize-interactive-shells "virtualenvwrapper/virtualenvwrapper" "\
+Configure interactive shells for use with
+virtualenvwrapper.el.
+
+\(fn)" nil nil)
+
+(autoload 'venv-initialize-eshell "virtualenvwrapper/virtualenvwrapper" "\
+Configure eshell for use with virtualenvwrapper.el.
+
+\(fn)" nil nil)
+
+;;;***
+
 ;;;### (autoloads nil "window-numbering/window-numbering" "window-numbering/window-numbering.el"
 ;;;;;;  (22185 33898 650113 925000))
 ;;; Generated autoloads from window-numbering/window-numbering.el
@@ -1444,11 +1556,12 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "cedet/cedet-remove-builtin.el" "cedet/cedet-update-changelog.el"
 ;;;;;;  "cedet/cedet-update-version.el" "color-theme-solarized/color-theme-solarized-pkg.el"
 ;;;;;;  "color-theme-solarized/solarized-theme.el" "color-theme/color-theme-autoloads.el"
-;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "deferred/concurrent.el"
-;;;;;;  "deferred/deferred.el" "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el"
-;;;;;;  "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el"
-;;;;;;  "ein/lisp/ein-contents-api.el" "ein/lisp/ein-core.el" "ein/lisp/ein-events.el"
-;;;;;;  "ein/lisp/ein-ipdb.el" "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
+;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "dash/dash-functional.el"
+;;;;;;  "dash/dash.el" "deferred/concurrent.el" "deferred/deferred.el"
+;;;;;;  "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el"
+;;;;;;  "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
+;;;;;;  "ein/lisp/ein-core.el" "ein/lisp/ein-events.el" "ein/lisp/ein-ipdb.el"
+;;;;;;  "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
 ;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
 ;;;;;;  "ein/lisp/ein-node.el" "ein/lisp/ein-notification.el" "ein/lisp/ein-output-area.el"
 ;;;;;;  "ein/lisp/ein-pager.el" "ein/lisp/ein-pkg.el" "ein/lisp/ein-python.el"
@@ -1458,17 +1571,17 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "ein/lisp/ein.el" "ein/lisp/zeroein.el" "epc/epc.el" "epc/epcs.el"
 ;;;;;;  "epc/test-epc.el" "ess/ess-autoloads.el" "fuzzy/fuzzy.el"
 ;;;;;;  "jedi/test-jedi.el" "jedi/tryout-jedi.el" "let-alist/let-alist-autoloads.el"
-;;;;;;  "let-alist/let-alist-pkg.el" "popup/popup.el" "python-environment/python-environment.el"
-;;;;;;  "python-environment/test-python-environment.el" "request/request-deferred.el"
-;;;;;;  "request/request.el" "speedbar-extension/speedbar-extension.el"
-;;;;;;  "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el" "tabbar/aquamacs-tools.el"
-;;;;;;  "tabbar/one-buffer-one-frame.el" "tabbar/tabbar-window.el"
-;;;;;;  "websocket/websocket-functional-test.el" "websocket/websocket-test.el"
-;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
-;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
-;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22296 29709 511490
-;;;;;;  820000))
+;;;;;;  "let-alist/let-alist-pkg.el" "popup/popup.el" "pyenv/pyenv-pkg.el"
+;;;;;;  "python-environment/python-environment.el" "python-environment/test-python-environment.el"
+;;;;;;  "request/request-deferred.el" "request/request.el" "s/s.el"
+;;;;;;  "speedbar-extension/speedbar-extension.el" "tabbar/aquamacs-compat.el"
+;;;;;;  "tabbar/aquamacs-tabbar.el" "tabbar/aquamacs-tools.el" "tabbar/one-buffer-one-frame.el"
+;;;;;;  "tabbar/tabbar-window.el" "websocket/websocket-functional-test.el"
+;;;;;;  "websocket/websocket-test.el" "websocket/websocket.el" "window-numbering/tests.el"
+;;;;;;  "window-purpose/window-purpose-core.el" "window-purpose/window-purpose-fixes.el"
+;;;;;;  "window-purpose/window-purpose-layout.el" "window-purpose/window-purpose-prefix-overload.el"
+;;;;;;  "window-purpose/window-purpose-switch.el" "window-purpose/window-purpose-utils.el")
+;;;;;;  (22333 38957 732987 394000))
 
 ;;;***
 

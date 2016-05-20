@@ -18,97 +18,104 @@
             ("d" variable nil nil [246 257])
             ("i" variable nil nil [260 265])
             ("print" code nil nil [273 284])
-            ("if" code nil nil [286 323])
-            ("print" code nil nil [328 344])
-            ("for" code nil nil [346 381])
-            ("s" variable nil nil [382 448])
-            ("t" variable nil nil [449 492])
-            ("f1" function nil nil [494 547])
+            ("if" code nil nil [306 343])
+            ("print" code nil nil [348 364])
+            ("for" code nil nil [366 401])
+            ("s" variable nil nil [402 468])
+            ("t" variable nil nil [469 512])
+            ("f1" function nil nil [514 567])
             ("parrot" function (:arguments 
-              ( ("voltage" variable nil (reparse-symbol function_parameters) [559 566])
-                ("state" variable nil (reparse-symbol function_parameters) [573 578])
-                ("action" variable nil (reparse-symbol function_parameters) [589 595])
-                ("type" variable nil (reparse-symbol function_parameters) [604 608]))              ) nil [548 799])
-            ("print_test" function nil nil [800 861])
-            ("print_test2" function nil nil [862 925])
-            ("print_test3" function nil nil [926 989])
-            ("print_test4" function nil nil [990 1053])
-            ("parrot" code nil nil [1058 1066])
+              ( ("voltage" variable nil (reparse-symbol function_parameters) [579 586])
+                ("state" variable nil (reparse-symbol function_parameters) [593 598])
+                ("action" variable nil (reparse-symbol function_parameters) [609 615])
+                ("type" variable nil (reparse-symbol function_parameters) [624 628]))              ) nil [568 819])
+            ("print_test" function nil nil [820 881])
+            ("print_test2" function nil nil [882 945])
+            ("print_test3" function nil nil [946 1009])
+            ("print_test4" function nil nil [1010 1073])
+            ("parrot" code nil nil [1078 1086])
             ("tupleVarArgs" function (:arguments 
-              ( ("arg1" variable nil (reparse-symbol function_parameters) [1085 1089])
-                ("arg2" variable nil (reparse-symbol function_parameters) [1091 1095])
-                ("theRest" variable nil (reparse-symbol function_parameters) [1108 1116]))              ) nil [1068 1258])
+              ( ("arg1" variable nil (reparse-symbol function_parameters) [1105 1109])
+                ("arg2" variable nil (reparse-symbol function_parameters) [1111 1115])
+                ("theRest" variable nil (reparse-symbol function_parameters) [1128 1136]))              ) nil [1088 1278])
             ("dictVarArgs" function (:arguments 
-              ( ("arg1" variable nil (reparse-symbol function_parameters) [1275 1279])
-                ("arg2" variable nil (reparse-symbol function_parameters) [1281 1285])
-                ("theRest" variable nil (reparse-symbol function_parameters) [1298 1307]))              ) nil [1259 1487])
-            ("mylist" variable nil nil [1488 1499])
-            ("mylist" code nil nil [1500 1520])
-            ("mylist" code nil nil [1521 1537])
-            ("mylist" code nil nil [1538 1556])
-            ("print" code nil nil [1557 1572])
-            ("print" code nil nil [1573 1588])
-            ("print" code nil nil [1589 1604])
-            ("for" code nil nil [1606 1635])
+              ( ("arg1" variable nil (reparse-symbol function_parameters) [1295 1299])
+                ("arg2" variable nil (reparse-symbol function_parameters) [1301 1305])
+                ("theRest" variable nil (reparse-symbol function_parameters) [1318 1327]))              ) nil [1279 1507])
+            ("mylist" variable nil nil [1508 1519])
+            ("mylist" code nil nil [1520 1540])
+            ("mylist" code nil nil [1541 1557])
+            ("mylist" code nil nil [1558 1576])
+            ("print" code nil nil [1577 1592])
+            ("print" code nil nil [1593 1608])
+            ("print" code nil nil [1609 1624])
+            ("for" code nil nil [1626 1655])
             ("printMax" function (:arguments 
-              ( ("x" variable nil (reparse-symbol function_parameters) [1649 1650])
-                ("y" variable nil (reparse-symbol function_parameters) [1652 1653]))              ) nil [1636 1884])
-            ("printMax" code nil nil [1893 1907])
-            ("print" code nil nil [1908 1930])
-            ("d" variable nil nil [1932 1975])
-            ("d" code nil nil [1976 1988])
-            ("abstract" function nil nil [1990 2048])
-            ("Car" type
+              ( ("x" variable nil (reparse-symbol function_parameters) [1669 1670])
+                ("y" variable nil (reparse-symbol function_parameters) [1672 1673]))              ) nil [1656 1904])
+            ("printMax" code nil nil [1913 1927])
+            ("print" code nil nil [1928 1950])
+            ("d" variable nil nil [1952 1995])
+            ("d" code nil nil [1996 2008])
+            ("parent" type
                (:members 
-                  ( ("__init__" function
-                       (:suite 
-                          ( ("if" code nil (reparse-symbol indented_block_body) [2092 2141])
-                            ("print" code nil (reparse-symbol indented_block_body) [2149 2160]))                          
-                        :parent "dummy"
+                  ( ("pprt" function
+                       (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2077 2081]))                          
-                        :constructor-flag t)
-                        (reparse-symbol indented_block_body) [2064 2161]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2556 2560]))                          )
+                        (reparse-symbol indented_block_body) [2547 2583]))                  
                 :type "class")
-                nil [2049 2161])
-            ("BMW" type
-               (:superclasses ("Car")
+                nil [2529 2583])
+            ("child" type
+               (:superclasses ("parent")
                 :members 
-                  ( ("__init__" function
-                       (:suite 
-                          ( ("Car" code nil (reparse-symbol indented_block_body) [2218 2236])
-                            ("print" code nil (reparse-symbol indented_block_body) [2245 2256]))                          
-                        :parent "dummy"
+                  ( ("cprt" function
+                       (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2203 2207]))                          
-                        :constructor-flag t)
-                        (reparse-symbol indented_block_body) [2190 2257]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2618 2622]))                          )
+                        (reparse-symbol indented_block_body) [2609 2645]))                  
                 :type "class")
-                nil [2170 2257])
-            ("bmw" variable nil nil [2266 2277])
-            ("Car" code nil nil [2287 2292]))          
+                nil [2584 2645])
+            ("c" variable nil nil [2646 2655])
+            ("c" code nil nil [2656 2664])
+            ("c" code nil nil [2665 2673])
+            ("p" variable nil nil [2674 2684])
+            ("p" code nil nil [2685 2693])
+            ("wx" include nil nil [2695 2704])
+            ("App" type
+               (:superclasses ("wx.App")
+                :members 
+                  ( ("OnInit" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2739 2743]))                          )
+                        (reparse-symbol indented_block_body) [2728 2858]))                  
+                :type "class")
+                nil [2705 2858])
+            ("app" variable nil nil [2858 2867])
+            ("app" code nil nil [2868 2882]))          
       :file "test.py"
-      :pointmax 2346
-      :fsize 2377
-      :lastmodtime '(22297 62362 150574 352000)
-      :unmatched-syntax '(($EOI 2346 . 2346) ($EOI 2322 . 2322) (INDENT_BLOCK 2261 . 2268)))
+      :pointmax 2894
+      :fsize 2925
+      :lastmodtime '(22334 35412 124785 306000)
+      :unmatched-syntax nil)
     (semanticdb-table "1.py"
       :major-mode 'python-mode
       :tags 
-        '( ("os" include nil nil [1 14])
-            ("sys" include nil nil [1 14])
-            ("test" include nil nil [15 26])
-            ("print" code nil nil [28 45])
-            ("parrot" code nil nil [47 55])
-            ("print_test" code nil nil [57 69])
-            ("print_test2" code nil nil [70 83])
-            ("print_test3" code nil nil [84 97])
-            ("print_test4" code nil nil [98 111]))          
+        '( ("os" include nil nil [2 15])
+            ("sys" include nil nil [2 15])
+            ("test" include nil nil [16 27])
+            ("print" code nil nil [29 46])
+            ("parrot" code nil nil [48 56])
+            ("print_test" code nil nil [58 70])
+            ("print_test2" code nil nil [71 84])
+            ("print_test3" code nil nil [85 98])
+            ("print_test4" code nil nil [99 112]))          
       :file "1.py"
       :pointmax 121
       :fsize 120
-      :lastmodtime '(22297 39624 954981 532000)
-      :unmatched-syntax '(($EOI 121 . 121))))
+      :lastmodtime '(22334 35579 248782 313000)
+      :unmatched-syntax nil))
   :file "!home!mono!Documents!python_test!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

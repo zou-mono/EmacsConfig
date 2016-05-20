@@ -55,6 +55,8 @@
 				 (autoload 'color-theme-solarized-dark "color-theme-solarized" "color-theme: solarized-dark" t))))
  (ctable status "installed" recipe
 	 (:name ctable :description "Table Component for elisp" :type github :pkgname "kiwanami/emacs-ctable"))
+ (dash status "installed" recipe
+       (:name dash :description "A modern list api for Emacs. No 'cl required." :type github :pkgname "magnars/dash.el"))
  (deferred status "installed" recipe
    (:name deferred :description "Simple asynchronous functions for emacs lisp." :type github :pkgname "kiwanami/emacs-deferred"))
  (ecb status "required" recipe nil)
@@ -157,6 +159,8 @@
 ("SC" . "http://joseito.republika.pl/sunrise-commander/"))))))
 (popup status "installed" recipe
 (:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :depends cl-lib :pkgname "auto-complete/popup-el"))
+(pyenv status "installed" recipe
+(:name pyenv :description "Emacs integration for pyenv" :type github :pkgname "shellbj/pyenv.el" :compile "pyenv.el"))
 (python-environment status "installed" recipe
 (:name python-environment :description "Python virtualenv API for Emacs Lisp" :type github :pkgname "tkf/emacs-python-environment" :depends
 (deferred)))
@@ -165,6 +169,8 @@
 (deferred)
 :provide
 (request-deferred)))
+(s status "installed" recipe
+(:name s :description "The long lost Emacs string manipulation library." :type github :pkgname "magnars/s.el"))
 (session status "installed" recipe
 (:name session :before
 (progn
@@ -199,6 +205,9 @@
 'sr-speedbar-toggle)))
 (tabbar status "installed" recipe
 (:name tabbar :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
+(virtualenvwrapper status "installed" recipe
+(:name virtualenvwrapper :type github :website "https://github.com/porterjamesj/virtualenvwrapper.el" :description "virtualenv tool for emacs" :pkgname "porterjamesj/virtualenvwrapper.el" :depends
+(dash s)))
 (websocket status "installed" recipe
 (:name websocket :description "A websocket implementation in elisp, for emacs." :type github :pkgname "ahyatt/emacs-websocket"))
 (window-numbering status "installed" recipe
