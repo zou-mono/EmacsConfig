@@ -38,6 +38,7 @@
    ess                                  ; Emacs Speaks Statistics
    smex                                 ; a M-x enhancement for Emacs
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
+   dired+
    session                              
    color-theme-solarized
    markdown-mode
@@ -50,7 +51,9 @@
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    jedi                                 ; Python auto-completion for Emacs
    cedet                                ; Collection of Emacs Development Environment Tools
-   ein                                  ; Emacs IPython Notebook    
+   ein                                  ; Emacs IPython Notebook
+   js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
+   web-mode
    window-numbering	
    auto-complete))			; complete as you type with overlays
 
@@ -63,6 +66,7 @@
 (helm-mode 1)
 
 ;;(autoload 'gtags-mode "gtags" "" t)
+(load "init-web") ;; base settings
 (load "init-base") ;; base settings
 (load "init-tabbar") ;; Tabbar settings
 (load "init-layout") ;; layout settings
@@ -90,5 +94,7 @@
  )
 
 (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
+
+(require 'dired+)
 
 (desktop-save-mode 1) 

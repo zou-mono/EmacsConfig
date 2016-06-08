@@ -1,0 +1,20 @@
+;; Object js_projects/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "js_projects/"
+  :tables
+  (list
+    (semanticdb-table "test.js"
+      :major-mode 'js-mode
+      :tags 
+        '( ("result" variable nil nil [1 12])
+            ("sum" function (:arguments 
+              ( ("x" variable nil (reparse-symbol FormalParameterList) [27 28])
+                ("y" variable nil (reparse-symbol FormalParameterList) [29 30]))              ) nil [14 72]))          
+      :file "test.js"
+      :pointmax 75
+      :fsize 74
+      :lastmodtime '(22358 21883 586968 741000)
+      :unmatched-syntax nil))
+  :file "!home!mono!Documents!js_projects!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

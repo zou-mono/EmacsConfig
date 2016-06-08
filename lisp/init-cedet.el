@@ -10,15 +10,26 @@
 (global-semantic-mru-bookmark-mode 1)
 ;;(setq semantic-idle-scheduler-idle-time 3)
 
-;; gnu global support
+;;gnu global support
 (add-hook 'python-mode-hook
    '(lambda ()
       (ggtags-mode 1)))
 
+(add-hook 'js2-mode-hook
+   '(lambda ()
+      (ggtags-mode 1)))
+
+(add-hook 'web-mode-hook
+   '(lambda ()
+      (ggtags-mode 1)))
+
+
 (setq cedet-global-command "global") ; Change to path of global as needed
      (when (cedet-gnu-global-version-check t)  ; Is it ok?
        ;; Configurations for GNU Global and CEDET
-       (semanticdb-enable-gnu-global-databases 'python-mode))
+       (semanticdb-enable-gnu-global-databases 'python-mode t)
+       (semanticdb-enable-gnu-global-databases 'js2-mode t)
+       (semanticdb-enable-gnu-global-databases 'web-mode t))
 
 ;;(setq gtags-suggested-key-mapping t)
 
@@ -28,6 +39,7 @@
   (local-set-key "\C-cj" 'semantic-ia-fast-jump)
   )
 
+(add-hook 'js2-mode-hook 'my-cedet-hook)
 (add-hook 'python-mode-hook 'my-cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-cedet-hook)
 

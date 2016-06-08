@@ -59,6 +59,8 @@
        (:name dash :description "A modern list api for Emacs. No 'cl required." :type github :pkgname "magnars/dash.el"))
  (deferred status "installed" recipe
    (:name deferred :description "Simple asynchronous functions for emacs lisp." :type github :pkgname "kiwanami/emacs-deferred"))
+ (dired+ status "installed" recipe
+	 (:name dired+ :description "Extensions to Dired" :type emacswiki :features dired+))
  (ecb status "required" recipe nil)
  (ein status "installed" recipe
       (:name ein :description "IPython notebook client in Emacs" :type github :pkgname "millejoh/emacs-ipython-notebook" :depends
@@ -127,6 +129,9 @@
 (jedi status "installed" recipe
 (:name jedi :description "An awesome Python auto-completion for Emacs" :type github :pkgname "tkf/emacs-jedi" :submodule nil :depends
 (epc auto-complete python-environment)))
+(js2-mode status "installed" recipe
+(:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare
+(autoload 'js2-mode "js2-mode" nil t)))
 (let-alist status "installed" recipe
 (:name let-alist :description "Easily let-bind values of an assoc-list by their names." :builtin "25.0.50" :type elpa :url "https://elpa.gnu.org/packages/let-alist.html"))
 (markdown-mode status "installed" recipe
@@ -184,6 +189,10 @@
 :load-path
 ("lisp")
 :url "http://downloads.sourceforge.net/project/emacs-session/session/session-2.3a.tar.gz"))
+(smart-tab status "required" recipe
+(:name smart-tab :description "Intelligent tab completion and indentation." :type github :pkgname "genehack/smart-tab" :features smart-tab))
+(smarttabs status "installed" recipe
+(:name smarttabs :website "https://github.com/jcsalomon/smarttabs" :description "Emacs smart tabs - indent with tabs, align with spaces!" :type github :pkgname "jcsalomon/smarttabs"))
 (smex status "installed" recipe
 (:name smex :after
 (progn
@@ -208,6 +217,8 @@
 (virtualenvwrapper status "installed" recipe
 (:name virtualenvwrapper :type github :website "https://github.com/porterjamesj/virtualenvwrapper.el" :description "virtualenv tool for emacs" :pkgname "porterjamesj/virtualenvwrapper.el" :depends
 (dash s)))
+(web-mode status "installed" recipe
+(:name web-mode :description "emacs major mode for editing PHP/JSP/ASP HTML templates (with embedded CSS and JS blocks)" :type github :pkgname "fxbois/web-mode"))
 (websocket status "installed" recipe
 (:name websocket :description "A websocket implementation in elisp, for emacs." :type github :pkgname "ahyatt/emacs-websocket"))
 (window-numbering status "installed" recipe

@@ -2,7 +2,7 @@
 			      "xelatex -interaction nonstopmode %f"))
 
  (setf org-html-mathjax-options
-       '((path "./MathJax/MathJax.js")
+       '((path "http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js")
          (scale "100") 
          (align "center") 
          (indent "2em")

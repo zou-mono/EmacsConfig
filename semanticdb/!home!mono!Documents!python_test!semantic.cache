@@ -97,7 +97,7 @@
       :file "test.py"
       :pointmax 2894
       :fsize 2925
-      :lastmodtime '(22334 35412 124785 306000)
+      :lastmodtime '(22358 16852 838779 304000)
       :unmatched-syntax nil)
     (semanticdb-table "1.py"
       :major-mode 'python-mode
@@ -110,11 +110,12 @@
             ("print_test" code nil nil [58 70])
             ("print_test2" code nil nil [71 84])
             ("print_test3" code nil nil [85 98])
-            ("print_test4" code nil nil [99 112]))          
+            ("print_test4" code nil nil [99 112])
+            ("kkt" function nil nil [114 143]))          
       :file "1.py"
-      :pointmax 121
-      :fsize 120
-      :lastmodtime '(22334 35579 248782 313000)
+      :pointmax 151
+      :fsize 150
+      :lastmodtime '(22358 35092 275466 125000)
       :unmatched-syntax nil))
   :file "!home!mono!Documents!python_test!semantic.cache"
   :semantic-tag-version "2.0"

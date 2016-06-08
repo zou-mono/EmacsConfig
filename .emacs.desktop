@@ -2,148 +2,225 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri May 20 14:39:43 2016
+;; Created Wed Jun  8 19:40:14 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22334 45359 766058 526000) (desktop . "206") "mono@mono-vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#eeeeee") (background-color . "#102e4e") (mouse-color . "white") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground . "#506070") (scroll-bar-background . "gray") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "8A2C-6ACF-0F6D-17AA") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (maximized) (visibility . t) (height . 50) (width . 211) (left . 0) (top . 28)) ((min-height . 8) (min-width . 20) (min-height-ignore . 6) (min-width-ignore . 8) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 152) (min-pixel-width . 180) (min-pixel-height-ignore . 114) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 38) (min-pixel-width-safe . 36)) vc (pixel-width . 1920) (pixel-height . 945) (total-width . 213) (total-height . 50) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1920) (pixel-height . 584) (total-width . 213) (total-height . 31) (normal-height . 0.6179894179894181) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 360) (pixel-height . 584) (total-width . 40) (total-height . 31) (normal-height . 1.0) (normal-width . 0.1875) (parameters (purpose-dedicated . t)) (buffer "*SPEEDBAR*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 1) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated . t) (point . 51) (start . 1))) (leaf (last . t) (pixel-width . 1560) (pixel-height . 584) (total-width . 173) (total-height . 31) (normal-height . 1.0) (normal-width . 0.8125) (buffer "1.py" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 113) (start . 1)))) (leaf (last . t) (pixel-width . 1920) (pixel-height . 361) (total-width . 213) (total-height . 19) (normal-height . 0.382010582010582) (normal-width . 1.0) (parameters (purpose-dedicated . t)) (buffer " *Python Internal [c0593018489da24980655d141e87046c]*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 445) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22360 1054 794991 994000) (desktop . "206") "mono@mono-vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#eeeeee") (background-color . "#102e4e") (mouse-color . "white") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground . "#506070") (scroll-bar-background . "gray") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "E149-F522-D87C-2875") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 50) (width . 211) (left . 0) (top . 28)) ((min-height . 4) (min-width . 30) (min-height-ignore . 4) (min-width-ignore . 12) (min-height-safe . 1) (min-width-safe . 6) (min-pixel-height . 76) (min-pixel-width . 270) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 108) (min-pixel-height-safe . 19) (min-pixel-width-safe . 54)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 213) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 360) (pixel-height . 945) (total-width . 40) (total-height . 49) (normal-height . 1.0) (normal-width . 0.1875) (buffer "*SPEEDBAR*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 1) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated . t) (point . 51) (start . 1))) (leaf (pixel-width . 777) (pixel-height . 945) (total-width . 86) (total-height . 49) (normal-height . 1.0) (normal-width . 0.40625) (buffer "*Help*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 221) (start . 1))) (leaf (last . t) (pixel-width . 783) (pixel-height . 945) (total-width . 87) (total-height . 49) (normal-height . 1.0) (normal-width . 0.40625) (buffer "test1.org" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 109) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("pyenv" "key" "window" "font-lock" "ggtags" "gtags" "h" "hi" "gtags-mode-map" "gtags-prefix-key" "gtags-suggested-key-mapping" " nil" "global" "helm-gtags" "ec" "ecb"))
-(setq regexp-search-ring '("pyenv" "\\<ess\\>" "<ess>" "\\<ess\343\200\201\343\200\213"))
-(setq register-alist '((48 . " 'import IPython; IPython.terminal.ipapp.launch_new_instance()")))
-(setq file-name-history '("~/.pyenv/versions/3.5.1/lib/python3.5/encodings/aliases.py" "~/.pyenv/versions/3.5.1/lib/python3.5/locale.py" "~/.pyenv/versions/3.5.1/lib/python3.5/struct.py" "~/.pyenv/versions/3.5.1/lib/python3.5/genericpath.py" "~/.pyenv/versions/3.5.1/lib/python3.5/codecs.py" "~/.pyenv/versions/3.5.1/lib/python3.5/weakref.py" "~/.pyenv/versions/3.5.1/lib/python3.5/__future__.py" "~/.pyenv/versions/3.5.1/lib/python3.5/gettext.py" "~/.pyenv/versions/3.5.1/lib/python3.5/textwrap.py" "~/.pyenv/versions/3.5.1/lib/python3.5/copy.py" "~/.pyenv/versions/3.5.1/lib/python3.5/posixpath.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_constants.py" "~/.pyenv/versions/3.5.1/lib/python3.5/_weakrefset.py" "~/.pyenv/versions/3.5.1/lib/python3.5/operator.py" "~/.pyenv/versions/3.5.1/lib/python3.5/warnings.py" "~/.pyenv/versions/3.5.1/lib/python3.5/token.py" "~/.pyenv/versions/3.5.1/lib/python3.5/tokenize.py" "~/.pyenv/versions/3.5.1/lib/python3.5/importlib/machinery.py" "~/.pyenv/versions/3.5.1/lib/python3.5/collections/abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/ast.py" "~/.pyenv/versions/3.5.1/lib/python3.5/enum.py" "~/.pyenv/versions/3.5.1/lib/python3.5/functools.py" "~/.pyenv/versions/3.5.1/lib/python3.5/codeop.py" "~/.pyenv/versions/3.5.1/lib/python3.5/argparse.py" "~/.pyenv/versions/3.5.1/lib/python3.5/opcode.py" "~/.pyenv/versions/3.5.1/lib/python3.5/io.py" "~/.pyenv/versions/3.5.1/lib/python3.5/types.py" "~/.pyenv/versions/3.5.1/lib/python3.5/fnmatch.py" "~/.pyenv/versions/3.5.1/lib/python3.5/string.py" "~/.pyenv/versions/3.5.1/lib/python3.5/copyreg.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_parse.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_compile.py" "~/.pyenv/versions/3.5.1/lib/python3.5/abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/linecache.py" "~/.pyenv/versions/3.5.1/lib/python3.5/traceback.py" "~/.pyenv/versions/3.5.1/lib/python3.5/inspect.py" "~/.pyenv/versions/3.5.1/lib/python3.5/signal.py" "~/.pyenv/versions/3.5.1/lib/python3.5/pprint.py" "~/.pyenv/versions/3.5.1/lib/python3.5/glob.py" "~/.pyenv/versions/3.5.1/lib/python3.5/code.py" "~/.pyenv/versions/3.5.1/lib/python3.5/dis.py" "~/.pyenv/versions/3.5.1/lib/python3.5/bdb.py" "~/.pyenv/versions/3.5.1/lib/python3.5/cmd.py" "~/.pyenv/versions/3.5.1/lib/python3.5/re.py" "~/.pyenv/versions/3.5.1/lib/python3.5/_collections_abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/stat.py" "~/.pyenv/versions/3.5.1/lib/python3.5/pdb.py" "~/.pyenv/versions/3.5.1/lib/python3.5/os.py" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/init.el" "~/[A" "~/.emacs.d/elpa/pyenv-mode-20160221.1123/pyenv-mode-autoloads.el" "~/.emacs.d/elpa/pythonic-20160221.1123/pythonic-autoloads.el" "~/.emacs.d/elpa/f-20160426.527/f-autoloads.el" "~/.emacs.d/elpa/s-20160508.2357/s-autoloads.el" "~/.emacs.d/elpa/dash-20160510.1127/dash-autoloads.el" "~/.emacs.d/el-get/.loaddefs.el" "~/Documents/python_test/test.py" "/usr/local/lib/python2.7/dist-packages/IPython/core/magics/execution.py" "/usr/local/lib/python2.7/dist-packages/IPython/utils/py3compat.py" "/usr/local/share/emacs/24.5/lisp/window.el.gz" "~/.emacs.d/.Playout" "~/.emacs.d/el-get/ess/lisp/ess-mode.el" "~/Documents/R_Project/test1.R" "/usr/local/share/emacs/24.5/lisp/progmodes/python.el.gz" "~/Documents/python_test/" "~/.emacs.d/el-get/sr-speedbar/sr-speedbar.el" "~/Documents/" "~/Documents/Java_projects/src/HelloWorld.java" "/usr/local/var/games/emacs/snake-scores" "~/.emacs.d/lisp/init-R.el" "~/.emacs.d/lisp/" "~/Documents/python_test/1.py" "~/Downloads/global-6.5.4/gtags-cscope/Makefile.am" "~/Downloads/global-6.5.4/script/Makefile.am" "~/Downloads/global-6.5.4/jquery/images/Makefile.am" "~/Downloads/global-6.5.4/jquery/Makefile.am" "~/Downloads/global-6.5.4/icons/Makefile.am" "~/Downloads/global-6.5.4/doc/Makefile.am" "~/Downloads/global-6.5.4/globash/Makefile.am" "~/Downloads/global-6.5.4/htags-server/Makefile.am" "~/Downloads/global-6.5.4/htags-refkit/Makefile.am" "~/Downloads/global-6.5.4/htags/Makefile.am" "~/Downloads/global-6.5.4/gtags/Makefile.am" "~/Downloads/global-6.5.4/gozilla/Makefile.am" "~/Downloads/global-6.5.4/global/Makefile.am" "~/Downloads/global-6.5.4/libdb/Makefile.am" "~/Downloads/global-6.5.4/plugin-factory/Makefile.am" "~/Downloads/global-6.5.4/libltdl/Makefile.am" "~/Downloads/global-6.5.4/libparser/Makefile.am" "~/Downloads/global-6.5.4/libutil/Makefile.am" "~/Downloads/global-6.5.4/libglibc/Makefile.am" "~/Downloads/global-6.5.4/Makefile.am" "~/Downloads/global-6.5.4/plugin-factory/Makefile" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/lisp/gtags.el" "~/.emacs.d/lisp" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/lisp/init.el" "~/.emacs.d/lisp/init-cedet.el" "~/Documents/python_test/GRTAGS" "~/Documents/python_test/GPATH" "~/Documents/python_test/GTAGS" "/usr/local/lib/python2.7/dist-packages/IPython/core/ultratb.py" "~/.emacs.d/ede-projects.el" "~/.emacs.d/.gitignore~" "~/.emacs" "~/Documents/python_test/1.pY" "~/.emacs.d/" "~/.emacs.d/el-get/window-purpose/window-purpose.el" "~/.emacs.d/el-get/window-purpose/window-purpose-core.el" "~/.emacs.d/el-get/window-purpose/window-purpose-layout.el" "~/.emacs.d/el-get/window-purpose/window-purpose-x.el" "~/.emacs.d/el-get/window-purpose/window-purpose-configuration.el" "~/" "/usr/local/share/emacs/24.5/lisp/isearch.el.gz" "~/.emacs.d/el-get/cedet/lisp/cedet/semantic.el" "~/.emacs.d/el-get/cedet/lisp/cedet/semantic/mru-bookmark.el" "~/.emacs.d/el-get/cedet/lisp/cedet/cedet.el" "/usr/local/share/emacs/24.5/lisp/cedet/semantic/mru-bookmark.el.gz" "~/.emacs.d/el-get/speedbar-extension/speedbar-extension.el" "~/.emacs.d/el-get/el-get/test/caching-speedtest.el" "~/.emacs.d/el-get/el-get/test/check-recipe.el" "~/.emacs.d/el-get/el-get/.dir-locals.el" "~/.emacs.d/el-get/.status.el" "~/Documents/python_test/Untitled.ipynb" "~/.emacs.d/elpa/dracula-theme-20160228.1913/dracula-theme-autoloads.el" "/usr/lib/python2.7/sre_constants.py" "/usr/lib/python2.7/warnings.py" "/usr/lib/python2.7/sre_parse.py" "/usr/lib/python2.7/sre_compile.py" "/usr/lib/python2.7/fnmatch.py" "/usr/lib/python2.7/string.py" "/usr/lib/python2.7/types.py" "/usr/lib/python2.7/traceback.py" "/usr/lib/python2.7/pprint.py" "/usr/lib/python2.7/re.py" "/usr/lib/python2.7/repr.py" "/usr/lib/python2.7/bdb.py" "/usr/lib/python2.7/cmd.py" "/usr/lib/python2.7/linecache.py" "/usr/lib/python2.7/copy_reg.py" "/usr/lib/python2.7/pdb.py" "/usr/lib/python2.7/os.py" "~/.ipython/profile_default/ipython_kernel_config.py" "~/.ipython/profile_default/ipython_config.py" "~/.IPython/ipy_user_conf.py" "~/Documents/Python_Project/test.py"))
+(setq search-ring '("function keys" "function" "web-mode-buffer-indent" "key" "syntax" "-" "whitespace" "^" "s" "white" "rescan" "smart" "web-mode" "smart-tab" "Doc	" "delete"))
+(setq regexp-search-ring '("\\wel\\w" "\\<el\\>" "\\'el\\'" "\\bwindows\\b" "pyenv" "\\<ess\\>" "<ess>" "\\<ess\343\200\201\343\200\213"))
+(setq register-alist '((48 . "org-html-postamble \\\"<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'><a href='javascript: editAtGithub();'>Edit Me at Github</a> - <a href='javascript: editAtGithub(true)'>Org Source</a> - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>\\\"")))
+(setq file-name-history '("~/Documents/org-mode-test/test1.org" "~/Documents/org-mode-test/" "~/Documents/blog/test/source/_posts/emacs‘³£‘ÓÃ‘¿ì‘½Ý‘¼ü_20160608.org" "~/.emacs.d/el-get/web-mode/web-mode.el" "~/Documents/js_projects/GRTAGS" "~/Documents/js_projects/GTAGS" "~/Documents/js_projects/index.html" "~/.emacs.d/el-get/js2-mode/js2-mode.el" "~/Documents/python_test/1.py" "~/Documents/python_test/" "~/Documents/org-mode-test/test1.html" "~/Documents/js_projects/test.js" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/" "~/.emacs.d/el-get/.loaddefs.el" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-js.el" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/source/_posts/test-article2.org" "~/Documents/blog/test/source/_posts/test_article.org" "~/.pyenv/versions/3.5.1/lib/python3.5/encodings/aliases.py" "~/.pyenv/versions/3.5.1/lib/python3.5/locale.py" "~/.pyenv/versions/3.5.1/lib/python3.5/struct.py" "~/.pyenv/versions/3.5.1/lib/python3.5/genericpath.py" "~/.pyenv/versions/3.5.1/lib/python3.5/codecs.py" "~/.pyenv/versions/3.5.1/lib/python3.5/weakref.py" "~/.pyenv/versions/3.5.1/lib/python3.5/__future__.py" "~/.pyenv/versions/3.5.1/lib/python3.5/gettext.py" "~/.pyenv/versions/3.5.1/lib/python3.5/textwrap.py" "~/.pyenv/versions/3.5.1/lib/python3.5/copy.py" "~/.pyenv/versions/3.5.1/lib/python3.5/posixpath.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_constants.py" "~/.pyenv/versions/3.5.1/lib/python3.5/_weakrefset.py" "~/.pyenv/versions/3.5.1/lib/python3.5/operator.py" "~/.pyenv/versions/3.5.1/lib/python3.5/warnings.py" "~/.pyenv/versions/3.5.1/lib/python3.5/token.py" "~/.pyenv/versions/3.5.1/lib/python3.5/tokenize.py" "~/.pyenv/versions/3.5.1/lib/python3.5/importlib/machinery.py" "~/.pyenv/versions/3.5.1/lib/python3.5/collections/abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/ast.py" "~/.pyenv/versions/3.5.1/lib/python3.5/enum.py" "~/.pyenv/versions/3.5.1/lib/python3.5/functools.py" "~/.pyenv/versions/3.5.1/lib/python3.5/codeop.py" "~/.pyenv/versions/3.5.1/lib/python3.5/argparse.py" "~/.pyenv/versions/3.5.1/lib/python3.5/opcode.py" "~/.pyenv/versions/3.5.1/lib/python3.5/io.py" "~/.pyenv/versions/3.5.1/lib/python3.5/types.py" "~/.pyenv/versions/3.5.1/lib/python3.5/fnmatch.py" "~/.pyenv/versions/3.5.1/lib/python3.5/string.py" "~/.pyenv/versions/3.5.1/lib/python3.5/copyreg.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_parse.py" "~/.pyenv/versions/3.5.1/lib/python3.5/sre_compile.py" "~/.pyenv/versions/3.5.1/lib/python3.5/abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/linecache.py" "~/.pyenv/versions/3.5.1/lib/python3.5/traceback.py" "~/.pyenv/versions/3.5.1/lib/python3.5/inspect.py" "~/.pyenv/versions/3.5.1/lib/python3.5/signal.py" "~/.pyenv/versions/3.5.1/lib/python3.5/pprint.py" "~/.pyenv/versions/3.5.1/lib/python3.5/glob.py" "~/.pyenv/versions/3.5.1/lib/python3.5/code.py" "~/.pyenv/versions/3.5.1/lib/python3.5/dis.py" "~/.pyenv/versions/3.5.1/lib/python3.5/bdb.py" "~/.pyenv/versions/3.5.1/lib/python3.5/cmd.py" "~/.pyenv/versions/3.5.1/lib/python3.5/re.py" "~/.pyenv/versions/3.5.1/lib/python3.5/_collections_abc.py" "~/.pyenv/versions/3.5.1/lib/python3.5/stat.py" "~/.pyenv/versions/3.5.1/lib/python3.5/pdb.py" "~/.pyenv/versions/3.5.1/lib/python3.5/os.py" "~/.emacs.d/init.el" "~/[A" "~/.emacs.d/elpa/pyenv-mode-20160221.1123/pyenv-mode-autoloads.el" "~/.emacs.d/elpa/pythonic-20160221.1123/pythonic-autoloads.el" "~/.emacs.d/elpa/f-20160426.527/f-autoloads.el" "~/.emacs.d/elpa/s-20160508.2357/s-autoloads.el" "~/.emacs.d/elpa/dash-20160510.1127/dash-autoloads.el" "/usr/local/lib/python2.7/dist-packages/IPython/core/magics/execution.py" "/usr/local/lib/python2.7/dist-packages/IPython/utils/py3compat.py" "/usr/local/share/emacs/24.5/lisp/window.el.gz" "~/.emacs.d/.Playout" "~/.emacs.d/el-get/ess/lisp/ess-mode.el" "~/Documents/R_Project/test1.R" "/usr/local/share/emacs/24.5/lisp/progmodes/python.el.gz" "~/.emacs.d/el-get/sr-speedbar/sr-speedbar.el" "~/Documents/" "~/Documents/Java_projects/src/HelloWorld.java" "/usr/local/var/games/emacs/snake-scores" "~/.emacs.d/lisp/init-R.el" "~/Downloads/global-6.5.4/gtags-cscope/Makefile.am" "~/Downloads/global-6.5.4/script/Makefile.am" "~/Downloads/global-6.5.4/jquery/images/Makefile.am" "~/Downloads/global-6.5.4/jquery/Makefile.am" "~/Downloads/global-6.5.4/icons/Makefile.am" "~/Downloads/global-6.5.4/doc/Makefile.am" "~/Downloads/global-6.5.4/globash/Makefile.am" "~/Downloads/global-6.5.4/htags-server/Makefile.am" "~/Downloads/global-6.5.4/htags-refkit/Makefile.am" "~/Downloads/global-6.5.4/htags/Makefile.am" "~/Downloads/global-6.5.4/gtags/Makefile.am" "~/Downloads/global-6.5.4/gozilla/Makefile.am"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/mono/Documents/org-mode-test/test1.org"
+  "test1.org"
+  'org-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode org-indent-mode)
+  109
+  '(86 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/blog/test/source/_posts/emacs‘³£‘ÓÃ‘¿ì‘½Ý‘¼ü_20160608.org"
+  "emacs‘³£‘ÓÃ‘¿ì‘½Ý‘¼ü_20160608.org"
+  'org-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  926
+  '(908 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  nil
+  "org-mode-test"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  341
+  '(nil nil)
+  t
+  '("/home/mono/Documents/org-mode-test/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "_posts"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  415
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/test/source/_posts/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "source"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  224
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/test/source/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "test"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  845
+  '(518 nil)
+  t
+  '("/home/mono/Documents/blog/test/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/js_projects/index.html"
+  "index.html"
+  'web-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  326
+  '(317 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . chinese-iso-8bit-unix)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/org-mode-test/test1.html"
+  "test1.html"
+  'web-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  3272
+  '(8342 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  519
+  '(1592 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/lisp/init-Python.el"
+  "init-Python.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  128
+  '(374 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/el-get/web-mode/web-mode.el"
+  "web-mode.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  87602
+  '(87540 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/lisp/init-cedet.el"
+  "init-cedet.el"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  1057
+  '(814 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  28
+  '(504 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
 (desktop-create-buffer 206
   "/home/mono/Documents/python_test/1.py"
   "1.py"
   'python-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode ggtags-mode)
-  113
-  '(58 nil)
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  28
+  '(114 nil)
   nil
   nil
   '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode)))
 
 (desktop-create-buffer 206
+  nil
+  "js_projects"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  431
+  '(nil nil)
+  t
+  '("/home/mono/Documents/js_projects/")
+  nil)
+
+(desktop-create-buffer 206
   "/home/mono/Documents/python_test/test.py"
   "test.py"
   'python-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode ggtags-mode)
-  388
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  305
   '(2450 nil)
   nil
   nil
   '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode)))
 
 (desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-cedet.el"
-  "init-cedet.el"
+  nil
+  "lisp"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  682
+  '(1 nil)
+  t
+  '("/home/mono/.emacs.d/lisp/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/lisp/init-org.el"
+  "init-org.el"
   'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  847
-  '(370 nil)
+  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode)
+  267
+  '(214 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix)))
 
 (desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-Python.el"
-  "init-Python.el"
-  'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  374
-  '(129 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  1519
-  '(1556 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  nil
-  "*info*"
-  'Info-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  76701
-  '(1 nil)
-  t
-  '("/usr/local/share/info/emacs" "Keys" ((history ("*Apropos*" "Index for `key'" 4159) ("*Apropos*" "Index for `ggtags'" 57) ("/usr/local/share/info/emacs" "Top" 1138) ("/usr/local/share/info/emacs" "Top" 2181) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Customizing startup" 71343) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Saving transcripts" 83224) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Customizing startup" 72554) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "S+elsewhere and ESS-elsewhere" 68143) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "ESS processes on Remote Computers" 63992) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Multiple ESS processes" 62940) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Starting up" 62115) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Interactive ESS" 61893) ("/home/mono/.emacs.d/el-get/ess/doc/info/ess" "Top" 1479) ("dir" "Top" 552))))
-  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs"
-  ".emacs"
-  'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  28
-  '(28 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-base.el"
-  "init-base.el"
-  'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  465
-  '(831 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-R.el"
-  "init-R.el"
-  'emacs-lisp-mode
-  '(helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  533
-  '(427 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode)))
-
-(desktop-create-buffer 206
-  nil
-  "R_Project"
-  'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  381
-  '(381 nil)
-  t
-  '("/home/mono/Documents/R_Project/")
-  nil)
-
-(desktop-create-buffer 206
-  nil
-  "Documents"
-  'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  585
-  '(585 nil)
-  t
-  '("/home/mono/Documents/")
-  nil)
-
-(desktop-create-buffer 206
   nil
   "python_test"
   'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  362
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  541
   '(nil nil)
   t
   '("/home/mono/Documents/python_test/")
@@ -151,23 +228,89 @@
 
 (desktop-create-buffer 206
   nil
-  "src"
+  "Documents"
   'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  285
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  643
   '(nil nil)
   t
-  '("/home/mono/Documents/Java_projects/src/")
+  '("/home/mono/Documents/")
   nil)
 
 (desktop-create-buffer 206
   nil
-  "Java_projects"
+  "blog"
   'dired-mode
-  '(helm-mode linum-mode global-auto-revert-mode purpose-mode ggtags-navigation-mode)
-  381
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  167
   '(nil nil)
   t
-  '("/home/mono/Documents/Java_projects/")
+  '("/home/mono/Documents/blog/")
   nil)
+
+(desktop-create-buffer 206
+  nil
+  ".emacs.d"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  774
+  '(774 nil)
+  t
+  '("/home/mono/.emacs.d/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "mono"
+  'dired-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  1413
+  '(1413 nil)
+  t
+  '("/home/mono/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "*info*<2>"
+  'Info-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  1594
+  '(nil nil)
+  t
+  '("dir" "Top" nil)
+  '((tab-width . 8) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*<3>"
+  'Info-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  635
+  '(nil nil)
+  t
+  '("dir" "Top" nil)
+  '((tab-width . 8) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*<4>"
+  'Info-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  1074
+  '(nil nil)
+  t
+  '("dir" "Top" ((history ("/usr/local/share/info/elisp" "Function Keys" 1010575) ("/usr/local/share/info/elisp" "Function Keys" 1011838) ("/usr/local/share/info/elisp" "*Index for `function keys'*" 194) ("/usr/local/share/info/elisp" "Top" 1110) ("/usr/local/share/info/elisp" "Function Keys" 1010317) ("/usr/local/share/info/elisp" "Top" 3402) ("/usr/local/share/info/emacs" "Top" 1548) ("/usr/local/share/info/emacs" "Windows" 528028) ("/usr/local/share/info/emacs" "Buffers" 501350) ("/usr/local/share/info/emacs" "Files" 410904) ("/usr/local/share/info/emacs" "Keyboard Macros" 388216) ("/usr/local/share/info/emacs" "Files" 410201) ("/usr/local/share/info/emacs" "Keyboard Macros" 386858) ("/usr/local/share/info/emacs" "Fixit" 370725) ("/usr/local/share/info/emacs" "Search" 309728) ("/usr/local/share/info/emacs" "Display" 243867) ("/usr/local/share/info/emacs" "Registers" 230648) ("/usr/local/share/info/emacs" "Killing" 193058) ("/usr/local/share/info/emacs" "Mark" 173644) ("/usr/local/share/info/emacs" "Help" 150608) ("/usr/local/share/info/emacs" "M-x" 149195) ("/usr/local/share/info/emacs" "Minibuffer" 115624) ("/usr/local/share/info/emacs" "Basic" 85959) ("/usr/local/share/info/emacs" "Exiting" 83218) ("/usr/local/share/info/emacs" "Entering Emacs" 79737) ("/usr/local/share/info/emacs" "Commands" 77419) ("/usr/local/share/info/emacs" "Keys" 76468) ("/usr/local/share/info/emacs" "User Input" 73871) ("/usr/local/share/info/emacs" "Top" 2675) ("dir" "Top" 632))))
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  '(helm-mode linum-mode global-auto-revert-mode purpose-mode)
+  48715
+  '(1138 nil)
+  t
+  '("/usr/local/share/info/emacs" "Top" ((history ("dir" "Top" 632) ("/usr/local/share/info/elisp" "Function Keys" 1010575) ("/usr/local/share/info/elisp" "Function Keys" 1011838) ("/usr/local/share/info/elisp" "*Index for `function keys'*" 194) ("/usr/local/share/info/elisp" "Top" 1110) ("/usr/local/share/info/elisp" "Function Keys" 1010317) ("/usr/local/share/info/elisp" "Top" 3402) ("/usr/local/share/info/emacs" "Top" 1548) ("/usr/local/share/info/emacs" "Windows" 528028) ("/usr/local/share/info/emacs" "Buffers" 501350) ("/usr/local/share/info/emacs" "Files" 410904) ("/usr/local/share/info/emacs" "Keyboard Macros" 388216) ("/usr/local/share/info/emacs" "Files" 410201) ("/usr/local/share/info/emacs" "Keyboard Macros" 386858) ("/usr/local/share/info/emacs" "Fixit" 370725) ("/usr/local/share/info/emacs" "Search" 309728) ("/usr/local/share/info/emacs" "Display" 243867) ("/usr/local/share/info/emacs" "Registers" 230648) ("/usr/local/share/info/emacs" "Killing" 193058) ("/usr/local/share/info/emacs" "Mark" 173644) ("/usr/local/share/info/emacs" "Help" 150608) ("/usr/local/share/info/emacs" "M-x" 149195) ("/usr/local/share/info/emacs" "Minibuffer" 115624) ("/usr/local/share/info/emacs" "Basic" 85959) ("/usr/local/share/info/emacs" "Exiting" 83218) ("/usr/local/share/info/emacs" "Entering Emacs" 79737) ("/usr/local/share/info/emacs" "Commands" 77419) ("/usr/local/share/info/emacs" "Keys" 76468) ("/usr/local/share/info/emacs" "User Input" 73871) ("/usr/local/share/info/emacs" "Top" 2675) ("dir" "Top" 632))))
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t)))
 
