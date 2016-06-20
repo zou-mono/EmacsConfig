@@ -116,7 +116,20 @@
       :pointmax 151
       :fsize 150
       :lastmodtime '(22358 35092 275466 125000)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+    (semanticdb-table "scrapy_test.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("urllib2" include nil nil [15 29])
+            ("getHtml" function (:arguments 
+              ( ("url" variable nil (reparse-symbol function_parameters) [43 46]))              ) nil [31 167])
+            ("html" variable nil nil [168 223])
+            ("print" code nil nil [225 236]))          
+      :file "scrapy_test.py"
+      :pointmax 237
+      :fsize 236
+      :lastmodtime '(22366 35069 446648 128000)
+      :unmatched-syntax '(($EOI 238 . 238) ($EOI 229 . 229) ($EOI 225 . 225) ($EOI 224 . 224) ($EOI 214 . 214) ($EOI 211 . 211) ($EOI 211 . 211) ($EOI 212 . 212) ($EOI 200 . 200) (NAME 52 . 58) (NEWLINE 59 . 60))))
   :file "!home!mono!Documents!python_test!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

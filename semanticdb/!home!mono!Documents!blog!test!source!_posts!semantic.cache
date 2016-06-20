@@ -1,0 +1,9 @@
+;; Object _posts/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "_posts/"
+  :tables
+  (list
+)
+  :file "!home!mono!Documents!blog!test!source!_posts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

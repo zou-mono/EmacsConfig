@@ -1,20 +1,16 @@
 
 ;; ----- smex-history -----
 (
- dired
- list-matching-lines
- web-mode
- js2-mode
- tabbar-mode
+ ielm
  R
  S
+ cd
+ 5x5
+ arp
+ dbx
 )
 
 ;; ----- smex-data -----
 (
- (tabbar-mode . 2)
- (js2-mode . 1)
- (web-mode . 1)
- (list-matching-lines . 1)
- (dired . 1)
+ (ielm . 1)
 )

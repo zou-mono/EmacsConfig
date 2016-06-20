@@ -10,6 +10,14 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list
+   'package-archives
+   '("melpa" . "http://melpa.org/packages/")
+   t)
+  (package-initialize))
+
 ;; set local recipes
 (setq
  el-get-sources
@@ -34,6 +42,7 @@
 (setq
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
+   org-mode
    let-alist                            ; Easily let-bind values of an assoc-list by their names
    ess                                  ; Emacs Speaks Statistics
    smex                                 ; a M-x enhancement for Emacs
@@ -97,4 +106,4 @@
 
 (require 'dired+)
 
-(desktop-save-mode 1) 
+

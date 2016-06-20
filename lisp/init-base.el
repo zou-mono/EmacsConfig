@@ -54,4 +54,10 @@
 
 (winner-mode t)
 
+(desktop-save-mode 1)
+
+(global-visual-line-mode t)
+
+(setq shell-command-switch "-ic") ;; 设置bash为交互模式，让emacs的bash可以读取~/.bashrc
+
 

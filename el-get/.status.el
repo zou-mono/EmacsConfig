@@ -138,6 +138,25 @@
 (:name markdown-mode :description "Major mode to edit Markdown files in Emacs" :website "http://jblevins.org/projects/markdown-mode/" :type git :url "git://jblevins.org/git/markdown-mode.git" :prepare
 (add-to-list 'auto-mode-alist
 '("\\.\\(md\\|mdown\\|markdown\\)\\'" . markdown-mode))))
+(org-mode status "installed" recipe
+(:name org-mode :website "http://orgmode.org/" :description "Org-mode is for keeping notes, maintaining ToDo lists, doing project planning, and authoring with a fast and effective plain-text system." :type git :url "git://orgmode.org/org-mode.git" :info "doc" :build/berkeley-unix `,(mapcar
+(lambda
+(target)
+(list "gmake" target
+(concat "EMACS="
+(shell-quote-argument el-get-emacs))))
+'("oldorg"))
+:build `,(mapcar
+(lambda
+(target)
+(list "make" target
+(concat "EMACS="
+(shell-quote-argument el-get-emacs))))
+'("oldorg"))
+:load-path
+("." "contrib/lisp" "lisp")
+:load
+("lisp/org-loaddefs.el")))
 (package status "installed" recipe
 (:name package :description "ELPA implementation (\"package.el\") from Emacs 24" :builtin "24" :type http :url "http://repo.or.cz/w/emacs.git/blob_plain/ba08b24186711eaeb3748f3d1f23e2c2d9ed0d09:/lisp/emacs-lisp/package.el" :shallow nil :features package :post-init
 (progn
@@ -191,7 +210,7 @@
 :url "http://downloads.sourceforge.net/project/emacs-session/session/session-2.3a.tar.gz"))
 (smart-tab status "required" recipe
 (:name smart-tab :description "Intelligent tab completion and indentation." :type github :pkgname "genehack/smart-tab" :features smart-tab))
-(smarttabs status "installed" recipe
+(smarttabs status "required" recipe
 (:name smarttabs :website "https://github.com/jcsalomon/smarttabs" :description "Emacs smart tabs - indent with tabs, align with spaces!" :type github :pkgname "jcsalomon/smarttabs"))
 (smex status "installed" recipe
 (:name smex :after
