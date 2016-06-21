@@ -1,4 +1,18 @@
-((auto-complete status "installed" recipe
+((auctex status "installed" recipe
+	 (:name auctex :website "http://www.gnu.org/software/auctex/" :description "AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs. It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and docTeX (dtx files)." :type git :module "auctex" :url "git://git.savannah.gnu.org/auctex.git" :build
+		`(("./autogen.sh")
+		  ("./configure" "--without-texmf-dir" "--with-packagelispdir=$(pwd)" "--with-packagedatadir=$(pwd)" ,(concat "--with-emacs=" el-get-emacs))
+		  ("make"))
+		:build/darwin
+		`(("./autogen.sh")
+		  ("./configure" "--without-texmf-dir" "--with-packagelispdir=$(pwd)" "--with-packagedatadir=$(pwd)" "--with-lispdir=$(pwd)" ,(concat "--with-emacs=" el-get-emacs))
+		  ("make"))
+		:load-path
+		(".")
+		:load
+		("tex-site.el" "preview-latex.el")
+		:info "doc"))
+ (auto-complete status "installed" recipe
 		(:name auto-complete :website "https://github.com/auto-complete/auto-complete" :description "The most intelligent auto-completion extension." :type github :pkgname "auto-complete/auto-complete" :depends
 		       (popup fuzzy)
 		       :features auto-complete-config :post-init
@@ -105,6 +119,10 @@
 	       (autoload 'R-mode "ess-site" nil t)
 	       (autoload 'Rd-mode "ess-site" nil t)
 	       (autoload 'Rnw-mode "ess-site" nil t))))
+ (f status "installed" recipe
+    (:name f :website "https://github.com/rejeep/f.el" :description "Modern API for working with files and directories in Emacs" :depends
+	   (s dash)
+	   :type github :pkgname "rejeep/f.el"))
  (fuzzy status "installed" recipe
 	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (ggtags status "installed" recipe
@@ -138,6 +156,10 @@
 (:name markdown-mode :description "Major mode to edit Markdown files in Emacs" :website "http://jblevins.org/projects/markdown-mode/" :type git :url "git://jblevins.org/git/markdown-mode.git" :prepare
 (add-to-list 'auto-mode-alist
 '("\\.\\(md\\|mdown\\|markdown\\)\\'" . markdown-mode))))
+(nvm status "installed" recipe
+(:name nvm :after nil :depends
+(dash s f)
+:website "git@github.com:rejeep/nvm.el.git" :description "Manage Node versions within Emacs" :type github :pkgname "rejeep/nvm.el"))
 (org-mode status "installed" recipe
 (:name org-mode :website "http://orgmode.org/" :description "Org-mode is for keeping notes, maintaining ToDo lists, doing project planning, and authoring with a fast and effective plain-text system." :type git :url "git://orgmode.org/org-mode.git" :info "doc" :build/berkeley-unix `,(mapcar
 (lambda

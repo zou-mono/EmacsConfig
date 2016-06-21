@@ -10,13 +10,13 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   '("melpa" . "http://melpa.org/packages/")
-   t)
-  (package-initialize))
+;; (when (>= emacs-major-version 24)
+;;   (require 'package)
+;;   (add-to-list
+;;    'package-archives
+;;    '("melpa" . "http://melpa.org/packages/")
+;;    t)
+;;   (package-initialize))
 
 ;; set local recipes
 (setq
@@ -48,6 +48,7 @@
    smex                                 ; a M-x enhancement for Emacs
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    dired+
+   auctex
    session                              
    color-theme-solarized
    markdown-mode
@@ -69,10 +70,11 @@
 ;; add customized recipts
 (add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
 
+;; Locally defined recipe
+(el-get-bundle nvm)
+
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
-
-(helm-mode 1)
 
 ;;(autoload 'gtags-mode "gtags" "" t)
 (load "init-web") ;; base settings
@@ -84,26 +86,4 @@
 (load "init-org") ;; org-mode settings
 (load "init-markdown") ;; markdown-mode settings
 (load "init-Python") ;; Python-mode settings
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(sr-speedbar-max-width 20)
- '(sr-speedbar-right-side nil)
- '(sr-speedbar-skip-other-window-p)
- '(sr-speedbar-width-x 10)
- '(tabbar-separator (quote (0.5))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
-(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
-
-(require 'dired+)
-
 

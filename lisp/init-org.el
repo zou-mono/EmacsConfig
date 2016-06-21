@@ -70,6 +70,6 @@
 #+OPTIONS: toc:nil
 #+STARTUP: indent
 #+LATEX_HEADER: \\usepackage{xeCJK}
-#+LATEX_HEADER: \\setCJKmainfont{WenQuanYi Micro Hei Mon}
+#+LATEX_HEADER: \\setCJKmainfont{WenQuanYi Micro Hei Mono}
 #+BIND: org-html-postamble \"<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %%a - Last Updated %%C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %%c</div>\"
 "  post-name (format-time-string "%Y-%m-%d %H:%M:%S"))))

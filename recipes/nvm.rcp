@@ -1,0 +1,7 @@
+(:name nvm
+  :website "git@github.com:rejeep/nvm.el.git"
+  :description
+  "Manage Node versions within Emacs"
+  :type github
+  :pkgname "rejeep/nvm.el"
+  :depends (f s dash))

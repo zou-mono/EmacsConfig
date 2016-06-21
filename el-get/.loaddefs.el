@@ -3,6 +3,370 @@
 ;;; Code:
 
 
+;;;### (autoloads nil "auctex/bib-cite" "auctex/bib-cite.el" (22376
+;;;;;;  42863 620358 981000))
+;;; Generated autoloads from auctex/bib-cite.el
+
+(autoload 'bib-cite-minor-mode "auctex/bib-cite" "\
+Toggle bib-cite mode.
+When bib-cite mode is enabled, citations, labels and refs are highlighted
+when the mouse is over them.  Clicking on these highlights with [mouse-2]
+runs bib-find, and [mouse-3] runs bib-display.
+
+\(fn ARG)" t nil)
+
+(autoload 'turn-on-bib-cite "auctex/bib-cite" "\
+Unconditionally turn on Bib Cite mode.
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/context" "auctex/context.el" (22376
+;;;;;;  42863 624358 981000))
+;;; Generated autoloads from auctex/context.el
+
+(defalias 'ConTeXt-mode 'context-mode)
+
+(autoload 'context-mode "auctex/context" "\
+Major mode in AUCTeX for editing ConTeXt files.
+
+Special commands:
+\\{ConTeXt-mode-map}
+
+Entering `context-mode' calls the value of `text-mode-hook',
+then the value of `TeX-mode-hook', and then the value
+of ConTeXt-mode-hook.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/context-en" "auctex/context-en.el"
+;;;;;;  (22376 42863 624358 981000))
+;;; Generated autoloads from auctex/context-en.el
+
+(autoload 'context-en-mode "auctex/context-en" "\
+Major mode for editing files for ConTeXt using its english interface.
+
+Special commands:
+\\{ConTeXt-mode-map}
+
+Entering `context-mode' calls the value of `text-mode-hook',
+then the value of TeX-mode-hook, and then the value
+of context-mode-hook.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/context-nl" "auctex/context-nl.el"
+;;;;;;  (22376 42863 624358 981000))
+;;; Generated autoloads from auctex/context-nl.el
+
+(autoload 'context-nl-mode "auctex/context-nl" "\
+Major mode for editing files for ConTeXt using its dutch interface.
+
+Special commands:
+\\{ConTeXt-mode-map}
+
+Entering `context-mode' calls the value of `text-mode-hook',
+then the value of TeX-mode-hook, and then the value
+of context-mode-hook.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/font-latex" "auctex/font-latex.el"
+;;;;;;  (22376 42863 632358 981000))
+;;; Generated autoloads from auctex/font-latex.el
+
+(autoload 'font-latex-setup "auctex/font-latex" "\
+Setup this buffer for LaTeX font-lock.  Usually called from a hook.
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/latex" "auctex/latex.el" (22376 42863
+;;;;;;  636358 980000))
+;;; Generated autoloads from auctex/latex.el
+
+(autoload 'BibTeX-auto-store "auctex/latex" "\
+This function should be called from `bibtex-mode-hook'.
+It will setup BibTeX to store keys in an auto file.
+
+\(fn)" nil nil)
+
+(add-to-list 'auto-mode-alist '("\\.drv\\'" . latex-mode))
+
+(add-to-list 'auto-mode-alist '("\\.hva\\'" . latex-mode))
+
+(autoload 'TeX-latex-mode "auctex/latex" "\
+Major mode in AUCTeX for editing LaTeX files.
+See info under AUCTeX for full documentation.
+
+Special commands:
+\\{LaTeX-mode-map}
+
+Entering LaTeX mode calls the value of `text-mode-hook',
+then the value of `TeX-mode-hook', and then the value
+of `LaTeX-mode-hook'.
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.dtx\\'" . doctex-mode))
+
+(autoload 'docTeX-mode "auctex/latex" "\
+Major mode in AUCTeX for editing .dtx files derived from `LaTeX-mode'.
+Runs `LaTeX-mode', sets a few variables and
+runs the hooks in `docTeX-mode-hook'.
+
+\(fn)" t nil)
+
+(defalias 'TeX-doctex-mode 'docTeX-mode)
+
+;;;***
+
+;;;### (autoloads nil "auctex/multi-prompt" "auctex/multi-prompt.el"
+;;;;;;  (22376 42863 640358 980000))
+;;; Generated autoloads from auctex/multi-prompt.el
+
+(autoload 'multi-prompt "auctex/multi-prompt" "\
+Completing prompt for a list of strings.  
+The first argument SEPARATOR should be the string (of length 1) to
+separate the elements in the list.  The second argument UNIQUE should
+be non-nil, if each element must be unique.  The remaining elements
+are the arguments to `completing-read'.  See that.
+
+\(fn SEPARATOR UNIQUE PROMPT TABLE &optional MP-PREDICATE REQUIRE-MATCH INITIAL HISTORY)" nil nil)
+
+(autoload 'multi-prompt-key-value "auctex/multi-prompt" "\
+Read multiple strings, with completion and key=value support.
+PROMPT is a string to prompt with, usually ending with a colon
+and a space.  TABLE is an alist.  The car of each element should
+be a string representing a key and the optional cdr should be a
+list with strings to be used as values for the key.
+
+See the documentation for `completing-read' for details on the
+other arguments: PREDICATE, REQUIRE-MATCH, INITIAL-INPUT, HIST,
+DEF, and INHERIT-INPUT-METHOD.
+
+The return value is the string as entered in the minibuffer.
+
+\(fn PROMPT TABLE &optional PREDICATE REQUIRE-MATCH INITIAL-INPUT HIST DEF INHERIT-INPUT-METHOD)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/plain-tex" "auctex/plain-tex.el" (22376
+;;;;;;  42863 640358 980000))
+;;; Generated autoloads from auctex/plain-tex.el
+
+(autoload 'TeX-plain-tex-mode "auctex/plain-tex" "\
+Major mode in AUCTeX for editing plain TeX files.
+See info under AUCTeX for documentation.
+
+Special commands:
+\\{plain-TeX-mode-map}
+
+Entering `plain-tex-mode' calls the value of `text-mode-hook',
+then the value of `TeX-mode-hook', and then the value
+of plain-TeX-mode-hook.
+
+\(fn)" t nil)
+
+(autoload 'ams-tex-mode "auctex/plain-tex" "\
+Major mode in AUCTeX for editing AmS-TeX files.
+See info under AUCTeX for documentation.
+
+Special commands:
+\\{AmSTeX-mode-map}
+
+Entering AmS-tex-mode calls the value of `text-mode-hook',
+then the value of `TeX-mode-hook', and then the value
+of `AmS-TeX-mode-hook'.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/preview" "auctex/preview.el" (22376
+;;;;;;  42883 716358 621000))
+;;; Generated autoloads from auctex/preview.el
+
+(autoload 'preview-install-styles "auctex/preview" "\
+Installs the TeX style files into a permanent location.
+This must be in the TeX search path.  If FORCE-OVERWRITE is greater
+than 1, files will get overwritten without query, if it is less
+than 1 or nil, the operation will fail.  The default of 1 for interactive
+use will query.
+
+Similarly FORCE-SAVE can be used for saving
+`preview-TeX-style-dir' to record the fact that the uninstalled
+files are no longer needed in the search path.
+
+\(fn DIR &optional FORCE-OVERWRITE FORCE-SAVE)" t nil)
+
+(autoload 'LaTeX-preview-setup "auctex/preview" "\
+Hook function for embedding the preview package into AUCTeX.
+This is called by `LaTeX-mode-hook' and changes AUCTeX variables
+to add the preview functionality.
+
+\(fn)" nil nil)
+
+(autoload 'preview-report-bug "auctex/preview" "\
+Report a bug in the preview-latex package.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex" "auctex/tex.el" (22376 42863 676358
+;;;;;;  980000))
+;;; Generated autoloads from auctex/tex.el
+
+(defalias 'TeX-assoc-string (symbol-function (if (featurep 'xemacs) 'assoc 'assoc-string)))
+
+(autoload 'TeX-tex-mode "auctex/tex" "\
+Major mode in AUCTeX for editing TeX or LaTeX files.
+Tries to guess whether this file is for plain TeX or LaTeX.
+
+The algorithm is as follows:
+
+   1) if the file is empty or `TeX-force-default-mode' is not set to nil,
+      `TeX-default-mode' is chosen
+   2) If \\documentstyle or \\begin{, \\section{, \\part{ or \\chapter{ is
+      found, `latex-mode' is selected.
+   3) Otherwise, use `plain-tex-mode'
+
+\(fn)" t nil)
+
+(autoload 'TeX-auto-generate "auctex/tex" "\
+Generate style file for TEX and store it in AUTO.
+If TEX is a directory, generate style files for all files in the directory.
+
+\(fn TEX AUTO)" t nil)
+
+(autoload 'TeX-auto-generate-global "auctex/tex" "\
+Create global auto directory for global TeX macro definitions.
+
+\(fn)" t nil)
+
+(autoload 'TeX-submit-bug-report "auctex/tex" "\
+Submit a bug report on AUCTeX via mail.
+
+Don't hesitate to report any problems or inaccurate documentation.
+
+If you don't have setup sending mail from (X)Emacs, please copy the
+output buffer into your mail program, as it gives us important
+information about your AUCTeX version and AUCTeX configuration.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex-bar" "auctex/tex-bar.el" (22376
+;;;;;;  42863 668358 980000))
+;;; Generated autoloads from auctex/tex-bar.el
+
+(autoload 'TeX-install-toolbar "auctex/tex-bar" "\
+Install toolbar buttons for TeX mode.
+
+\(fn)" t nil)
+
+(autoload 'LaTeX-install-toolbar "auctex/tex-bar" "\
+Install toolbar buttons for LaTeX mode.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex-fold" "auctex/tex-fold.el" (22376
+;;;;;;  42863 672358 980000))
+;;; Generated autoloads from auctex/tex-fold.el
+ (autoload 'TeX-fold-mode "tex-fold" "Minor mode for hiding and revealing macros and environments." t)
+
+(defalias 'tex-fold-mode 'TeX-fold-mode)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex-font" "auctex/tex-font.el" (22376
+;;;;;;  42863 672358 980000))
+;;; Generated autoloads from auctex/tex-font.el
+
+(autoload 'tex-font-setup "auctex/tex-font" "\
+Setup font lock support for TeX.
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex-info" "auctex/tex-info.el" (22376
+;;;;;;  42863 672358 980000))
+;;; Generated autoloads from auctex/tex-info.el
+
+(defalias 'Texinfo-mode 'texinfo-mode)
+
+(autoload 'TeX-texinfo-mode "auctex/tex-info" "\
+Major mode in AUCTeX for editing Texinfo files.
+
+Special commands:
+\\{Texinfo-mode-map}
+
+Entering Texinfo mode calls the value of `text-mode-hook'  and then the
+value of `Texinfo-mode-hook'.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/tex-jp" "auctex/tex-jp.el" (22376 42863
+;;;;;;  672358 980000))
+;;; Generated autoloads from auctex/tex-jp.el
+
+(autoload 'japanese-plain-tex-mode "auctex/tex-jp" "\
+Major mode in AUCTeX for editing Japanese plain TeX files.
+Set `japanese-TeX-mode' to t, and enter `TeX-plain-tex-mode'.
+
+\(fn)" t nil)
+
+(autoload 'japanese-latex-mode "auctex/tex-jp" "\
+Major mode in AUCTeX for editing Japanese LaTeX files.
+Set `japanese-TeX-mode' to t, and enter `TeX-latex-mode'.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/texmathp" "auctex/texmathp.el" (22376
+;;;;;;  42863 676358 980000))
+;;; Generated autoloads from auctex/texmathp.el
+
+(autoload 'texmathp "auctex/texmathp" "\
+Determine if point is inside (La)TeX math mode.
+Returns t or nil.  Additional info is placed into `texmathp-why'.
+The functions assumes that you have (almost) syntactically correct (La)TeX in
+the buffer.
+See the variable `texmathp-tex-commands' about which commands are checked.
+
+\(fn)" t nil)
+
+(autoload 'texmathp-match-switch "auctex/texmathp" "\
+Search backward for any of the math switches.
+Limit searched to BOUND.
+
+\(fn BOUND)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "auctex/toolbar-x" "auctex/toolbar-x.el" (22376
+;;;;;;  42863 676358 980000))
+;;; Generated autoloads from auctex/toolbar-x.el
+ (autoload 'toolbarx-install-toolbar "toolbar-x")
+
+;;;***
+
 ;;;### (autoloads nil "auto-complete/auto-complete" "auto-complete/auto-complete.el"
 ;;;;;;  (22185 33919 718114 382000))
 ;;; Generated autoloads from auto-complete/auto-complete.el
@@ -2580,8 +2944,8 @@ Show full traceback in traceback viewer.
 
 ;;;***
 
-;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22283 14250
-;;;;;;  775610 917000))
+;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22376 43483
+;;;;;;  364347 882000))
 ;;; Generated autoloads from el-get/el-get.el
 
 (autoload 'el-get-version "el-get/el-get" "\
@@ -2681,7 +3045,7 @@ already installed packages is considered.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-bundle" "el-get/el-get-bundle.el"
-;;;;;;  (22283 14250 771610 917000))
+;;;;;;  (22376 43483 360347 882000))
 ;;; Generated autoloads from el-get/el-get-bundle.el
 
 (autoload 'el-get-bundle-el-get "el-get/el-get-bundle" "\
@@ -2731,7 +3095,7 @@ required.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-check" "el-get/el-get-check.el"
-;;;;;;  (22283 14250 771610 917000))
+;;;;;;  (22376 43483 360347 882000))
 ;;; Generated autoloads from el-get/el-get-check.el
 
 (autoload 'el-get-check-recipe "el-get/el-get-check" "\
@@ -2750,7 +3114,7 @@ object or a file path.
 ;;;***
 
 ;;;### (autoloads nil "el-get/el-get-list-packages" "el-get/el-get-list-packages.el"
-;;;;;;  (22283 14250 775610 917000))
+;;;;;;  (22376 43483 360347 882000))
 ;;; Generated autoloads from el-get/el-get-list-packages.el
 
 (autoload 'el-get-list-packages "el-get/el-get-list-packages" "\
@@ -4903,15 +5267,20 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 
 ;;;***
 
-;;;### (autoloads nil nil ("auto-complete/auto-complete-pkg.el" "cedet/cedet-build.el"
-;;;;;;  "cedet/cedet-devel-load.el" "cedet/cedet-ediff.el" "cedet/cedet-emacs-merge.el"
-;;;;;;  "cedet/cedet-remove-builtin.el" "cedet/cedet-update-changelog.el"
-;;;;;;  "cedet/cedet-update-version.el" "color-theme-solarized/color-theme-solarized-pkg.el"
-;;;;;;  "color-theme-solarized/solarized-theme.el" "color-theme/color-theme-autoloads.el"
-;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "dash/dash-functional.el"
-;;;;;;  "dash/dash.el" "deferred/concurrent.el" "deferred/deferred.el"
-;;;;;;  "ein/lisp/debug-ein.el" "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el"
-;;;;;;  "ein/lisp/ein-cell.el" "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
+;;;### (autoloads nil nil ("auctex/auctex.el" "auctex/auto-loads.el"
+;;;;;;  "auctex/lpath.el" "auctex/preview-latex.el" "auctex/prv-emacs.el"
+;;;;;;  "auctex/prv-install.el" "auctex/prv-xemacs.el" "auctex/tex-buf.el"
+;;;;;;  "auctex/tex-mik.el" "auctex/tex-site.el" "auctex/tex-style.el"
+;;;;;;  "auctex/tex-wizard.el" "auto-complete/auto-complete-pkg.el"
+;;;;;;  "cedet/cedet-build.el" "cedet/cedet-devel-load.el" "cedet/cedet-ediff.el"
+;;;;;;  "cedet/cedet-emacs-merge.el" "cedet/cedet-remove-builtin.el"
+;;;;;;  "cedet/cedet-update-changelog.el" "cedet/cedet-update-version.el"
+;;;;;;  "color-theme-solarized/color-theme-solarized-pkg.el" "color-theme-solarized/solarized-theme.el"
+;;;;;;  "color-theme/color-theme-autoloads.el" "ctable/ctable.el"
+;;;;;;  "ctable/test-ctable.el" "dash/dash-functional.el" "dash/dash.el"
+;;;;;;  "deferred/concurrent.el" "deferred/deferred.el" "ein/lisp/debug-ein.el"
+;;;;;;  "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el"
+;;;;;;  "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
 ;;;;;;  "ein/lisp/ein-core.el" "ein/lisp/ein-events.el" "ein/lisp/ein-ipdb.el"
 ;;;;;;  "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
 ;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
@@ -4920,41 +5289,45 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "ein/lisp/ein-pytools.el" "ein/lisp/ein-query.el" "ein/lisp/ein-scratchsheet.el"
 ;;;;;;  "ein/lisp/ein-smartrep.el" "ein/lisp/ein-subpackages.el"
 ;;;;;;  "ein/lisp/ein-utils.el" "ein/lisp/ein-websocket.el" "ein/lisp/ein-worksheet.el"
-;;;;;;  "ein/lisp/ein.el" "ein/lisp/zeroein.el" "epc/epc.el" "epc/epcs.el"
-;;;;;;  "epc/test-epc.el" "ess/ess-autoloads.el" "fuzzy/fuzzy.el"
-;;;;;;  "jedi/test-jedi.el" "jedi/tryout-jedi.el" "js2-mode/js2-old-indent.el"
-;;;;;;  "let-alist/let-alist-autoloads.el" "let-alist/let-alist-pkg.el"
-;;;;;;  "org-mode/contrib/lisp/ob-eukleides.el" "org-mode/contrib/lisp/ob-fomus.el"
-;;;;;;  "org-mode/contrib/lisp/ob-julia.el" "org-mode/contrib/lisp/ob-mathematica.el"
-;;;;;;  "org-mode/contrib/lisp/ob-mathomatic.el" "org-mode/contrib/lisp/ob-oz.el"
-;;;;;;  "org-mode/contrib/lisp/ob-stata.el" "org-mode/contrib/lisp/ob-tcl.el"
-;;;;;;  "org-mode/contrib/lisp/org-bibtex-extras.el" "org-mode/contrib/lisp/org-bookmark.el"
-;;;;;;  "org-mode/contrib/lisp/org-checklist.el" "org-mode/contrib/lisp/org-choose.el"
-;;;;;;  "org-mode/contrib/lisp/org-collector.el" "org-mode/contrib/lisp/org-contribdir.el"
-;;;;;;  "org-mode/contrib/lisp/org-depend.el" "org-mode/contrib/lisp/org-download.el"
-;;;;;;  "org-mode/contrib/lisp/org-drill.el" "org-mode/contrib/lisp/org-ebib.el"
-;;;;;;  "org-mode/contrib/lisp/org-effectiveness.el" "org-mode/contrib/lisp/org-elisp-symbol.el"
-;;;;;;  "org-mode/contrib/lisp/org-eval-light.el" "org-mode/contrib/lisp/org-eval.el"
-;;;;;;  "org-mode/contrib/lisp/org-eww.el" "org-mode/contrib/lisp/org-expiry.el"
-;;;;;;  "org-mode/contrib/lisp/org-git-link.el" "org-mode/contrib/lisp/org-index.el"
-;;;;;;  "org-mode/contrib/lisp/org-interactive-query.el" "org-mode/contrib/lisp/org-invoice.el"
-;;;;;;  "org-mode/contrib/lisp/org-learn.el" "org-mode/contrib/lisp/org-license.el"
-;;;;;;  "org-mode/contrib/lisp/org-mac-iCal.el" "org-mode/contrib/lisp/org-mac-link.el"
-;;;;;;  "org-mode/contrib/lisp/org-mairix.el" "org-mode/contrib/lisp/org-man.el"
-;;;;;;  "org-mode/contrib/lisp/org-mew.el" "org-mode/contrib/lisp/org-mime.el"
-;;;;;;  "org-mode/contrib/lisp/org-notify.el" "org-mode/contrib/lisp/org-notmuch.el"
-;;;;;;  "org-mode/contrib/lisp/org-panel.el" "org-mode/contrib/lisp/org-screen.el"
-;;;;;;  "org-mode/contrib/lisp/org-secretary.el" "org-mode/contrib/lisp/org-static-mathjax.el"
-;;;;;;  "org-mode/contrib/lisp/org-sudoku.el" "org-mode/contrib/lisp/org-velocity.el"
-;;;;;;  "org-mode/contrib/lisp/org-vm.el" "org-mode/contrib/lisp/org-wikinodes.el"
-;;;;;;  "org-mode/contrib/lisp/org-wl.el" "org-mode/contrib/lisp/orgtbl-sqlinsert.el"
-;;;;;;  "org-mode/contrib/lisp/ox-bibtex.el" "org-mode/contrib/lisp/ox-confluence.el"
-;;;;;;  "org-mode/contrib/lisp/ox-deck.el" "org-mode/contrib/lisp/ox-extra.el"
-;;;;;;  "org-mode/contrib/lisp/ox-gfm.el" "org-mode/contrib/lisp/ox-groff.el"
-;;;;;;  "org-mode/contrib/lisp/ox-s5.el" "org-mode/lisp/ob-C.el"
-;;;;;;  "org-mode/lisp/ob-J.el" "org-mode/lisp/ob-R.el" "org-mode/lisp/ob-abc.el"
-;;;;;;  "org-mode/lisp/ob-asymptote.el" "org-mode/lisp/ob-awk.el"
-;;;;;;  "org-mode/lisp/ob-calc.el" "org-mode/lisp/ob-clojure.el"
+;;;;;;  "ein/lisp/ein.el" "ein/lisp/zeroein.el" "el-get/el-get-autoloading.el"
+;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
+;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "epc/epc.el"
+;;;;;;  "epc/epcs.el" "epc/test-epc.el" "ess/ess-autoloads.el" "f/f.el"
+;;;;;;  "fuzzy/fuzzy.el" "jedi/test-jedi.el" "jedi/tryout-jedi.el"
+;;;;;;  "js2-mode/js2-old-indent.el" "let-alist/let-alist-autoloads.el"
+;;;;;;  "let-alist/let-alist-pkg.el" "nvm/nvm.el" "org-mode/contrib/lisp/ob-eukleides.el"
+;;;;;;  "org-mode/contrib/lisp/ob-fomus.el" "org-mode/contrib/lisp/ob-julia.el"
+;;;;;;  "org-mode/contrib/lisp/ob-mathematica.el" "org-mode/contrib/lisp/ob-mathomatic.el"
+;;;;;;  "org-mode/contrib/lisp/ob-oz.el" "org-mode/contrib/lisp/ob-stata.el"
+;;;;;;  "org-mode/contrib/lisp/ob-tcl.el" "org-mode/contrib/lisp/org-bibtex-extras.el"
+;;;;;;  "org-mode/contrib/lisp/org-bookmark.el" "org-mode/contrib/lisp/org-checklist.el"
+;;;;;;  "org-mode/contrib/lisp/org-choose.el" "org-mode/contrib/lisp/org-collector.el"
+;;;;;;  "org-mode/contrib/lisp/org-contribdir.el" "org-mode/contrib/lisp/org-depend.el"
+;;;;;;  "org-mode/contrib/lisp/org-download.el" "org-mode/contrib/lisp/org-drill.el"
+;;;;;;  "org-mode/contrib/lisp/org-ebib.el" "org-mode/contrib/lisp/org-effectiveness.el"
+;;;;;;  "org-mode/contrib/lisp/org-elisp-symbol.el" "org-mode/contrib/lisp/org-eval-light.el"
+;;;;;;  "org-mode/contrib/lisp/org-eval.el" "org-mode/contrib/lisp/org-eww.el"
+;;;;;;  "org-mode/contrib/lisp/org-expiry.el" "org-mode/contrib/lisp/org-git-link.el"
+;;;;;;  "org-mode/contrib/lisp/org-index.el" "org-mode/contrib/lisp/org-interactive-query.el"
+;;;;;;  "org-mode/contrib/lisp/org-invoice.el" "org-mode/contrib/lisp/org-learn.el"
+;;;;;;  "org-mode/contrib/lisp/org-license.el" "org-mode/contrib/lisp/org-mac-iCal.el"
+;;;;;;  "org-mode/contrib/lisp/org-mac-link.el" "org-mode/contrib/lisp/org-mairix.el"
+;;;;;;  "org-mode/contrib/lisp/org-man.el" "org-mode/contrib/lisp/org-mew.el"
+;;;;;;  "org-mode/contrib/lisp/org-mime.el" "org-mode/contrib/lisp/org-notify.el"
+;;;;;;  "org-mode/contrib/lisp/org-notmuch.el" "org-mode/contrib/lisp/org-panel.el"
+;;;;;;  "org-mode/contrib/lisp/org-screen.el" "org-mode/contrib/lisp/org-secretary.el"
+;;;;;;  "org-mode/contrib/lisp/org-static-mathjax.el" "org-mode/contrib/lisp/org-sudoku.el"
+;;;;;;  "org-mode/contrib/lisp/org-velocity.el" "org-mode/contrib/lisp/org-vm.el"
+;;;;;;  "org-mode/contrib/lisp/org-wikinodes.el" "org-mode/contrib/lisp/org-wl.el"
+;;;;;;  "org-mode/contrib/lisp/orgtbl-sqlinsert.el" "org-mode/contrib/lisp/ox-bibtex.el"
+;;;;;;  "org-mode/contrib/lisp/ox-confluence.el" "org-mode/contrib/lisp/ox-deck.el"
+;;;;;;  "org-mode/contrib/lisp/ox-extra.el" "org-mode/contrib/lisp/ox-gfm.el"
+;;;;;;  "org-mode/contrib/lisp/ox-groff.el" "org-mode/contrib/lisp/ox-s5.el"
+;;;;;;  "org-mode/lisp/ob-C.el" "org-mode/lisp/ob-J.el" "org-mode/lisp/ob-R.el"
+;;;;;;  "org-mode/lisp/ob-abc.el" "org-mode/lisp/ob-asymptote.el"
+;;;;;;  "org-mode/lisp/ob-awk.el" "org-mode/lisp/ob-calc.el" "org-mode/lisp/ob-clojure.el"
 ;;;;;;  "org-mode/lisp/ob-comint.el" "org-mode/lisp/ob-coq.el" "org-mode/lisp/ob-core.el"
 ;;;;;;  "org-mode/lisp/ob-css.el" "org-mode/lisp/ob-ditaa.el" "org-mode/lisp/ob-dot.el"
 ;;;;;;  "org-mode/lisp/ob-ebnf.el" "org-mode/lisp/ob-emacs-lisp.el"
@@ -4986,8 +5359,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "org-mode/lisp/org-habit.el" "org-mode/lisp/org-id.el" "org-mode/lisp/org-indent.el"
 ;;;;;;  "org-mode/lisp/org-info.el" "org-mode/lisp/org-inlinetask.el"
 ;;;;;;  "org-mode/lisp/org-install.el" "org-mode/lisp/org-irc.el"
-;;;;;;  "org-mode/lisp/org-list.el" "org-mode/lisp/org-loaddefs.el"
-;;;;;;  "org-mode/lisp/org-macro.el" "org-mode/lisp/org-mhe.el" "org-mode/lisp/org-mobile.el"
+;;;;;;  "org-mode/lisp/org-list.el" "org-mode/lisp/org-macro.el"
+;;;;;;  "org-mode/lisp/org-mhe.el" "org-mode/lisp/org-mobile.el"
 ;;;;;;  "org-mode/lisp/org-mouse.el" "org-mode/lisp/org-pcomplete.el"
 ;;;;;;  "org-mode/lisp/org-plot.el" "org-mode/lisp/org-protocol.el"
 ;;;;;;  "org-mode/lisp/org-rmail.el" "org-mode/lisp/org-src.el" "org-mode/lisp/org-table.el"
@@ -5005,8 +5378,8 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
 ;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
 ;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22366 14855 582590
-;;;;;;  665000))
+;;;;;;  "window-purpose/window-purpose-utils.el") (22376 63554 504013
+;;;;;;  303000))
 
 ;;;***
 

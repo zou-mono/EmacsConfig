@@ -1,16 +1,16 @@
 
 ;; ----- smex-history -----
 (
- ielm
  R
  S
  cd
  5x5
  arp
  dbx
+ dig
 )
 
 ;; ----- smex-data -----
 (
- (ielm . 1)
+ 
 )
