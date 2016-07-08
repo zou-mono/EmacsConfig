@@ -3,6 +3,9 @@
 
 ;;(set-frame-parameter nil 'background-mode 'dark)
 ;;;;(enable-theme 'solarized)
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+(set-fontset-font (frame-parameter nil 'font)
+                  charset (font-spec :family "WenQuanYi Micro Hei Mono"))
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks

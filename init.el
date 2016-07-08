@@ -86,4 +86,4 @@
 (load "init-org") ;; org-mode settings
 (load "init-markdown") ;; markdown-mode settings
 (load "init-Python") ;; Python-mode settings
-
+(load "init-tex")  ;;auctex-mode settings

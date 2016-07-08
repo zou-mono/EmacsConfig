@@ -16,13 +16,6 @@
 (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f"
 			      "xelatex -interaction nonstopmode %f"))
 
-(defun mono/hexo-auto-publish (commit-msg)
-  "git add --all & git commit & git push & hexo d -g"
-  (interactive "sInput commit message:")
-  (async-shell-command (format "cd %s ;git add . ;git commit -m \"%s\" ;git push origin source;hexo d -g"
-			 hexo-dir
-			 commit-msg)))
-
 (setq org-html-mathjax-options
        '((path "http://cdn.bootcss.com/mathjax/2.6.1/MathJax.js")
          (scale "100") 
@@ -58,7 +51,14 @@
 ;; 	 :html-postamble (concat "INSERT HTML CODE HERE FOR POSTAMBLE"))
 ;; 	("site" :components ("site-content"))))
 
-(defun mono/hexo-org-new-open-draft (post-name)
+(defun hexo/auto-deploy (commit-msg)
+  (format "cd %s; git add --all & git commit & git push & hexo d -g" hexo-dir)
+  (interactive "sInput commit message:")
+  (async-shell-command (format "cd %s ;git add . ;git commit -m \"%s\" ;git push origin source;hexo d -g"
+			 hexo-dir
+			 commit-msg)))
+
+(defun hexo/org-new-draft (post-name)
   "create a hexo org draft"
   (interactive "sInput draft name:")
   (find-file (format "%s/source/_drafts/%s.org" hexo-dir post-name))
@@ -73,3 +73,19 @@
 #+LATEX_HEADER: \\setCJKmainfont{WenQuanYi Micro Hei Mono}
 #+BIND: org-html-postamble \"<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %%a - Last Updated %%C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %%c</div>\"
 "  post-name (format-time-string "%Y-%m-%d %H:%M:%S"))))
+
+(defun hexo/publish (post-name)
+  "overwrite hexo publish in org-mode."
+  (interactive "f")
+  (copy-file post-name (replace-regexp-in-string "_drafts" "_posts" (diredp-parent-dir post-name)) 1))
+
+(defun hexo/server ()
+  (interactive)
+  (async-shell-command (format "cd %s; hexo g; hexo s" hexo-dir)))
+
+(defun hexo/test ()
+  (interactive)
+  (async-shell-command (format "cd %s; hexo s --draft" hexo-dir)))
+
+
+
