@@ -12,14 +12,6 @@
 		:load
 		("tex-site.el" "preview-latex.el")
 		:info "doc"))
- (auto-complete status "installed" recipe
-		(:name auto-complete :website "https://github.com/auto-complete/auto-complete" :description "The most intelligent auto-completion extension." :type github :pkgname "auto-complete/auto-complete" :depends
-		       (popup fuzzy)
-		       :features auto-complete-config :post-init
-		       (progn
-			 (add-to-list 'ac-dictionary-directories
-				      (expand-file-name "dict" default-directory))
-			 (ac-config-default))))
  (cedet status "installed" recipe
 	(:name cedet :website "http://cedet.sourceforge.net/" :description "CEDET is a Collection of Emacs Development Environment Tools written with the end goal of creating an advanced development environment in Emacs." :type git :url "http://git.code.sf.net/p/cedet/git" :build
 	       `(("sh" "-c" "touch `find . -name Makefile`")
@@ -67,6 +59,22 @@
 				 (add-to-list 'custom-theme-load-path default-directory)
 				 (autoload 'color-theme-solarized-light "color-theme-solarized" "color-theme: solarized-light" t)
 				 (autoload 'color-theme-solarized-dark "color-theme-solarized" "color-theme: solarized-dark" t))))
+ (company-jedi status "installed" recipe
+	       (:name company-jedi :description "Company backend for Python jedi." :website "https://github.com/syohex/emacs-company-jedi" :type github :pkgname "syohex/emacs-company-jedi"))
+ (company-math status "installed" recipe
+	       (:name company-math :description "Completion back-ends for for math unicode symbols and latex tags" :website "https://github.com/vspinu/company-math" :type github :depends
+		      (company-mode math-symbol-lists)
+		      :pkgname "vspinu/company-math"))
+ (company-mode status "installed" recipe
+	       (:name company-mode :website "http://company-mode.github.io/" :description "Modular in-buffer completion framework for Emacs" :type github :pkgname "company-mode/company-mode"))
+ (company-tern status "installed" recipe
+	       (:name company-tern :description "Tern backend for company-mode." :type github :pkgname "proofit404/company-tern" :depends
+		      (dash company-mode s tern)
+		      :post-init
+		      (eval-after-load 'company
+			'(add-to-list 'company-backends 'company-tern))))
+ (company-web status "installed" recipe
+	      (:name company-web :description "Company-web is an alternative emacs plugin for autocompletion in html-mode, web-mode, jade-mode, slim-mode and use data of ac-html. It uses company-mode." :website "https://github.com/osv/company-web" :type github :pkgname "osv/company-web"))
  (ctable status "installed" recipe
 	 (:name ctable :description "Table Component for elisp" :type github :pkgname "kiwanami/emacs-ctable"))
  (dash status "installed" recipe
@@ -76,12 +84,6 @@
  (dired+ status "installed" recipe
 	 (:name dired+ :description "Extensions to Dired" :type emacswiki :features dired+))
  (ecb status "required" recipe nil)
- (ein status "installed" recipe
-      (:name ein :description "IPython notebook client in Emacs" :type github :pkgname "millejoh/emacs-ipython-notebook" :depends
-	     (websocket request auto-complete)
-	     :load-path
-	     ("lisp")
-	     :submodule nil :features ein))
  (el-get status "installed" recipe
 	 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "master" :pkgname "dimitri/el-get" :info "." :compile
 		("el-get.*\\.el$" "methods/")
@@ -119,6 +121,8 @@
 	       (autoload 'R-mode "ess-site" nil t)
 	       (autoload 'Rd-mode "ess-site" nil t)
 	       (autoload 'Rnw-mode "ess-site" nil t))))
+ (exec-path-from-shell status "installed" recipe
+		       (:name exec-path-from-shell :website "https://github.com/purcell/exec-path-from-shell" :description "Emacs plugin for dynamic PATH loading" :type github :pkgname "purcell/exec-path-from-shell"))
  (f status "installed" recipe
     (:name f :website "https://github.com/rejeep/f.el" :description "Modern API for working with files and directories in Emacs" :depends
 	   (s dash)
@@ -144,9 +148,9 @@
 	      nil)
        :post-init
        (helm-mode)))
-(jedi status "installed" recipe
-(:name jedi :description "An awesome Python auto-completion for Emacs" :type github :pkgname "tkf/emacs-jedi" :submodule nil :depends
-(epc auto-complete python-environment)))
+(jedi-core status "installed" recipe
+(:name jedi-core :website "https://github.com/tkf/emacs-jedi" :description "Python auto-completion for Emacs." :type http :url "https://github.com/tkf/emacs-jedi/raw/master/jedi-core.el" :minimum-emacs-version "24" :depends
+(epc python-environment cl-lib)))
 (js2-mode status "installed" recipe
 (:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare
 (autoload 'js2-mode "js2-mode" nil t)))
@@ -156,6 +160,8 @@
 (:name markdown-mode :description "Major mode to edit Markdown files in Emacs" :website "http://jblevins.org/projects/markdown-mode/" :type git :url "git://jblevins.org/git/markdown-mode.git" :prepare
 (add-to-list 'auto-mode-alist
 '("\\.\\(md\\|mdown\\|markdown\\)\\'" . markdown-mode))))
+(math-symbol-lists status "installed" recipe
+(:name math-symbol-lists :description "Lists of Unicode mathematical symbols and latex commands" :website "https://github.com/vspinu/math-symbol-lists" :type github :depends nil :pkgname "vspinu/math-symbol-lists"))
 (nvm status "installed" recipe
 (:name nvm :after nil :depends
 (dash s f)
@@ -203,8 +209,6 @@
 ("gnu" . "http://elpa.gnu.org/packages/")
 ("marmalade" . "http://marmalade-repo.org/packages/")
 ("SC" . "http://joseito.republika.pl/sunrise-commander/"))))))
-(popup status "installed" recipe
-(:name popup :website "https://github.com/auto-complete/popup-el" :description "Visual Popup Interface Library for Emacs" :type github :submodule nil :depends cl-lib :pkgname "auto-complete/popup-el"))
 (pyenv status "installed" recipe
 (:name pyenv :description "Emacs integration for pyenv" :type github :pkgname "shellbj/pyenv.el" :compile "pyenv.el"))
 (python-environment status "installed" recipe
@@ -255,9 +259,21 @@
 'sr-speedbar-toggle)))
 (tabbar status "installed" recipe
 (:name tabbar :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
+(tern status "installed" recipe
+(:name tern :description "A JavaScript code analyzer for deep, cross-editor language support." :type github :pkgname "marijnh/tern" :build
+'(("npm" "--production" "install"))
+:prepare
+(add-to-list 'auto-mode-alist
+'("\\.tern-\\(project\\|\\config\\)\\'" . json-mode))
+:load-path
+("emacs")))
 (virtualenvwrapper status "installed" recipe
 (:name virtualenvwrapper :type github :website "https://github.com/porterjamesj/virtualenvwrapper.el" :description "virtualenv tool for emacs" :pkgname "porterjamesj/virtualenvwrapper.el" :depends
 (dash s)))
+(web-beautify status "installed" recipe
+(:name web-beautify :after nil :website "git@github.com:yasuyk/web-beautify.git" :description "web-beautify is a formatting package of HTML, CSS and JavaScript/JSON for Emacs." :type github :pkgname "yasuyk/web-beautify"))
+(web-completion-data status "installed" recipe
+(:name web-completion-data :description "Shared completion data for ac-html and company-web" :type github :pkgname "osv/web-completion-data"))
 (web-mode status "installed" recipe
 (:name web-mode :description "emacs major mode for editing PHP/JSP/ASP HTML templates (with embedded CSS and JS blocks)" :type github :pkgname "fxbois/web-mode"))
 (websocket status "installed" recipe

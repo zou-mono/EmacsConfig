@@ -1,0 +1,6 @@
+(:name web-beautify
+  :website "git@github.com:yasuyk/web-beautify.git"
+  :description
+  "web-beautify is a formatting package of HTML, CSS and JavaScript/JSON for Emacs."
+  :type github
+  :pkgname "yasuyk/web-beautify")

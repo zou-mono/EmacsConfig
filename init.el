@@ -43,12 +43,16 @@
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
    org-mode
+   company-mode                         ; complete as you type with overlays
+   ;; popup
    let-alist                            ; Easily let-bind values of an assoc-list by their names
+   exec-path-from-shell
    ess                                  ; Emacs Speaks Statistics
    smex                                 ; a M-x enhancement for Emacs
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    dired+
    auctex
+   company-math
    session                              
    color-theme-solarized
    markdown-mode
@@ -59,19 +63,22 @@
    virtualenvwrapper
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
-   jedi                                 ; Python auto-completion for Emacs
-   cedet                                ; Collection of Emacs Development Environment Tools
-   ein                                  ; Emacs IPython Notebook
+   company-jedi                                 ; Python auto-completion for Emacs
+                                   ; Collection of Emacs Development Environment Tools
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
    web-mode
-   window-numbering	
-   auto-complete))			; complete as you type with overlays
+   company-web
+   company-tern
+   window-numbering))		
 
 ;; add customized recipts
 (add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
 
 ;; Locally defined recipe
 (el-get-bundle nvm)
+(el-get-bundle web-beautify)
+(el-get-bundle company-jedi :depends (jedi-core company-mode))
+(el-get-bundle company-web :depends (web-completion-data company-mode))
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)

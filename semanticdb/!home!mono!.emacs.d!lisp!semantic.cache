@@ -1,0 +1,192 @@
+;; Object lisp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "lisp/"
+  :tables
+  (list
+    (semanticdb-table "init-base.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("set-fontset-font" code nil nil [131 247])
+            ("setq" code nil nil [278 308])
+            ("global-linum-mode" code nil nil [337 358])
+            ("column-number-mode" code nil nil [385 407])
+            ("tool-bar-mode" code nil nil [445 463])
+            ("cua-mode" code nil nil [571 581])
+            ("scroll-bar-mode" code nil nil [583 604])
+            ("set-scroll-bar-mode" code nil nil [606 631])
+            ("transient-mark-mode" code nil nil [632 655])
+            ("speedbar-extension" function
+               (:prototype-flag t
+                :user-visible-flag t)
+                nil [679 753])
+            ("custom-set-variables" code nil nil [754 901])
+            ("setq" code nil nil [902 947])
+            ("global-set-key" code nil nil [958 1006])
+            ("global-set-key" code nil nil [1007 1063])
+            ("fset" code nil nil [1085 1114])
+            ("auto-image-file-mode" code nil nil [1127 1151])
+            ("setq" code nil nil [1184 1220])
+            ("global-auto-revert-mode" code nil nil [1408 1435])
+            ("global-font-lock-mode" code nil nil [1444 1469])
+            ("show-paren-mode" code nil nil [1472 1491])
+            ("window-numbering-mode" code nil nil [1493 1518])
+            ("winner-mode" code nil nil [1520 1535])
+            ("desktop-save-mode" code nil nil [1537 1558])
+            ("global-visual-line-mode" code nil nil [1560 1587])
+            ("setq" code nil nil [1589 1622])
+            ("custom-set-variables" code nil nil [1664 2067])
+            ("custom-set-faces" code nil nil [2068 2307])
+            ("global-set-key" code nil nil [2309 2357])
+            ("dired+" include nil nil [2359 2376])
+            ("helm-mode" code nil nil [2378 2391])
+            ("add-hook" code nil nil [2393 2441]))          
+      :file "init-base.el"
+      :pointmax 2443
+      :fsize 2558
+      :lastmodtime '(22408 39524 494459 427000)
+      :unmatched-syntax '((number 604 . 605)))
+    (semanticdb-table "init-cedet.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("cedet" include nil nil [1 17])
+            ("cedet-global" include nil nil [18 41])
+            ("semantic" include nil nil [42 61])
+            ("add-hook" code nil nil [63 128])
+            ("semantic-mode" code nil nil [153 170])
+            ("global-ede-mode" code nil nil [171 190])
+            ("global-semanticdb-minor-mode" code nil nil [191 223])
+            ("global-semantic-highlight-func-mode" code nil nil [224 263])
+            ("global-semantic-mru-bookmark-mode" code nil nil [264 301])
+            ("global-semantic-idle-completions-mode" code nil nil [302 343])
+            ("add-hook" code nil nil [411 477])
+            ("add-hook" code nil nil [479 542])
+            ("add-hook" code nil nil [544 607])
+            ("setq" code nil nil [610 646])
+            ("when" code nil nil [689 976])
+            ("my-cedet-hook" function nil nil [1033 1170])
+            ("add-hook" code nil nil [1172 1212])
+            ("add-hook" code nil nil [1213 1256])
+            ("add-hook" code nil nil [1257 1304]))          
+      :file "init-cedet.el"
+      :pointmax 1520
+      :fsize 1519
+      :lastmodtime '(22407 16548 668044 505000)
+      :unmatched-syntax nil)
+    (semanticdb-table "init-web.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("js2-mode" include nil nil [1 20])
+            ("web-mode" include nil nil [21 40])
+            ("nvm" include nil nil [41 55])
+            ("company-web-html" include nil nil [56 83])
+            ("company-web-jade" include nil nil [152 179])
+            ("company-web-slim" include nil nil [238 265])
+            ("add-to-list" code nil nil [325 378])
+            ("add-to-list" code nil nil [379 437])
+            ("add-to-list" code nil nil [438 500])
+            ("add-to-list" code nil nil [501 561])
+            ("add-to-list" code nil nil [562 622])
+            ("add-to-list" code nil nil [623 679])
+            ("add-to-list" code nil nil [680 741])
+            ("add-to-list" code nil nil [742 801])
+            ("add-to-list" code nil nil [802 860])
+            ("web-beautify" include nil nil [886 909])
+            ("eval-after-load" code nil nil [911 998])
+            ("eval-after-load" code nil nil [999 1088])
+            ("eval-after-load" code nil nil [1089 1179])
+            ("eval-after-load" code nil nil [1180 1268])
+            ("my-web-mode-hook" function nil nil [1448 1633])
+            ("add-hook" code nil nil [1634 1677])
+            ("add-hook" code nil nil [1678 1714])
+            ("company-tern" function (:arguments ("before" "web-mode-set-up-ac-sources" "activate")) nil [1782 2278])
+            ("define-key" code nil nil [2303 2358])
+            ("setq" code nil nil [2371 2444])
+            ("do-nvm-use" function (:arguments ("version")) nil [2445 2522]))          
+      :file "init-web.el"
+      :pointmax 2523
+      :fsize 2522
+      :lastmodtime '(22408 40402 750443 699000)
+      :unmatched-syntax nil)
+    (semanticdb-table "init-Python.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("python" include nil nil [1 18])
+            ("window-purpose" include nil nil [19 44])
+            ("ein" include nil nil [45 59])
+            ("pyenv" include nil nil [90 106])
+            ("global-pyenv-mode" code nil nil [108 127])
+            ("add-to-list" code nil nil [376 438])
+            ("setq" code nil nil [439 521])
+            ("my/python-mode-hook" function nil nil [775 853])
+            ("add-hook" code nil nil [854 903])
+            ("purpose-mode" code nil nil [905 919])
+            ("add-to-list" code nil nil [920 981])
+            ("add-to-list" code nil nil [982 1057])
+            ("purpose-compile-user-configuration" code nil nil [1058 1094])
+            ("open-python-perspective" function nil nil [1096 1225])
+            ("global-set-key" code nil nil [1227 1283])
+            ("global-set-key" code nil nil [1284 1339]))          
+      :file "init-Python.el"
+      :pointmax 1342
+      :fsize 1341
+      :lastmodtime '(22408 40588 702440 369000)
+      :unmatched-syntax nil)
+    (semanticdb-table "init-org.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("org" include nil nil [1 15])
+            ("ox-publish" include nil nil [16 37])
+            ("setq" code nil nil [39 78])
+            ("setq" code nil nil [79 119])
+            ("setq" code nil nil [120 153])
+            ("setq" code nil nil [155 191])
+            ("website-html-postamble" function nil nil [213 558])
+            ("setq" code nil nil [560 610])
+            ("setq" code nil nil [612 728])
+            ("setq" code nil nil [730 933])
+            ("org-insert-src-block" function
+               (:user-visible-flag t
+                :arguments ("src-code-type"))
+                nil [935 1681])
+            ("hexo/auto-deploy" function
+               (:user-visible-flag t
+                :arguments ("commit-msg"))
+                nil [2019 2312])
+            ("hexo/org-new-blog-draft" function
+               (:user-visible-flag t
+                :arguments ("post-name"))
+                nil [2314 3028])
+            ("hexo/publish" function
+               (:user-visible-flag t
+                :arguments ("post-name"))
+                nil [3030 3224])
+            ("hexo/server" function nil nil [3226 3330])
+            ("hexo/test" function nil nil [3332 3434]))          
+      :file "init-org.el"
+      :pointmax 3438
+      :fsize 3459
+      :lastmodtime '(22405 61747 789582 325000)
+      :unmatched-syntax nil)
+    (semanticdb-table "init-tex.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("load" code nil nil [1 27])
+            ("load" code nil nil [28 61])
+            ("setq" code nil nil [63 85])
+            ("setq" code nil nil [86 109])
+            ("setq-default" code nil nil [110 139])
+            ("add-hook" code nil nil [141 186])
+            ("add-hook" code nil nil [187 229])
+            ("add-hook" code nil nil [230 274])
+            ("add-hook" code nil nil [276 319])
+            ("setq" code nil nil [320 352])
+            ("add-hook" code nil nil [354 833])
+            ("global-set-key" code nil nil [946 984]))          
+      :file "init-tex.el"
+      :pointmax 986
+      :fsize 985
+      :lastmodtime '(22399 24209 115030 142000)
+      :unmatched-syntax nil))
+  :file "!home!mono!.emacs.d!lisp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

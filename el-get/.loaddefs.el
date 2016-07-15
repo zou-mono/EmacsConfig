@@ -367,54 +367,6 @@ Limit searched to BOUND.
 
 ;;;***
 
-;;;### (autoloads nil "auto-complete/auto-complete" "auto-complete/auto-complete.el"
-;;;;;;  (22185 33919 718114 382000))
-;;; Generated autoloads from auto-complete/auto-complete.el
-
-(autoload 'auto-complete "auto-complete/auto-complete" "\
-Start auto-completion at current point.
-
-\(fn &optional SOURCES)" t nil)
-
-(autoload 'auto-complete-mode "auto-complete/auto-complete" "\
-AutoComplete mode
-
-\(fn &optional ARG)" t nil)
-
-(defvar global-auto-complete-mode nil "\
-Non-nil if Global-Auto-Complete mode is enabled.
-See the command `global-auto-complete-mode' for a description of this minor mode.
-Setting this variable directly does not take effect;
-either customize it (see the info node `Easy Customization')
-or call the function `global-auto-complete-mode'.")
-
-(custom-autoload 'global-auto-complete-mode "auto-complete/auto-complete" nil)
-
-(autoload 'global-auto-complete-mode "auto-complete/auto-complete" "\
-Toggle Auto-Complete mode in all buffers.
-With prefix ARG, enable Global-Auto-Complete mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
-
-Auto-Complete mode is enabled in all buffers where
-`auto-complete-mode-maybe' would do it.
-See `auto-complete-mode' for more information on Auto-Complete mode.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "auto-complete/auto-complete-config" "auto-complete/auto-complete-config.el"
-;;;;;;  (22185 33919 718114 382000))
-;;; Generated autoloads from auto-complete/auto-complete-config.el
-
-(autoload 'ac-config-default "auto-complete/auto-complete-config" "\
-
-
-\(fn)" nil nil)
-
-;;;***
-
 ;;;### (autoloads nil "color-theme-solarized/color-theme-solarized"
 ;;;;;;  "color-theme-solarized/color-theme-solarized.el" (22284 37521
 ;;;;;;  890229 99000))
@@ -586,6 +538,369 @@ Submit your color-theme to the maintainer.
 Initialize the color theme package by loading color-theme-libraries.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-jedi/company-jedi" "company-jedi/company-jedi.el"
+;;;;;;  (22408 36935 178505 796000))
+;;; Generated autoloads from company-jedi/company-jedi.el
+
+(autoload 'company-jedi "company-jedi/company-jedi" "\
+`company-mode' completion back-end for `jedi-code.el'.
+Provide completion info according to COMMAND and ARG.  IGNORED, not used.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-math/company-math" "company-math/company-math.el"
+;;;;;;  (22408 36929 130505 905000))
+;;; Generated autoloads from company-math/company-math.el
+
+(autoload 'company-latex-commands "company-math/company-math" "\
+Company backend for latex commands.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+(autoload 'company-math-symbols-latex "company-math/company-math" "\
+Company backend for LaTeX mathematical symbols.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+(autoload 'company-math-symbols-unicode "company-math/company-math" "\
+Company backend for insertion of Unicode mathematical symbols.
+See the unicode-math page [1] for a list of fonts that have a
+good support for mathematical symbols.
+
+ [1] http://ftp.snt.utwente.nl/pub/software/tex/help/Catalogue/entries/unicode-math.html
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company" "company-mode/company.el"
+;;;;;;  (22408 36916 330506 134000))
+;;; Generated autoloads from company-mode/company.el
+
+(autoload 'company-mode "company-mode/company" "\
+\"complete anything\"; is an in-buffer completion framework.
+Completion starts automatically, depending on the values
+`company-idle-delay' and `company-minimum-prefix-length'.
+
+Completion can be controlled with the commands:
+`company-complete-common', `company-complete-selection', `company-complete',
+`company-select-next', `company-select-previous'.  If these commands are
+called before `company-idle-delay', completion will also start.
+
+Completions can be searched with `company-search-candidates' or
+`company-filter-candidates'.  These can be used while completion is
+inactive, as well.
+
+The completion data is retrieved using `company-backends' and displayed
+using `company-frontends'.  If you want to start a specific backend, call
+it interactively or use `company-begin-backend'.
+
+By default, the completions list is sorted alphabetically, unless the
+backend chooses otherwise, or `company-transformers' changes it later.
+
+regular keymap (`company-mode-map'):
+
+\\{company-mode-map}
+keymap during active completions (`company-active-map'):
+
+\\{company-active-map}
+
+\(fn &optional ARG)" t nil)
+
+(defvar global-company-mode nil "\
+Non-nil if Global-Company mode is enabled.
+See the command `global-company-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-company-mode'.")
+
+(custom-autoload 'global-company-mode "company-mode/company" nil)
+
+(autoload 'global-company-mode "company-mode/company" "\
+Toggle Company mode in all buffers.
+With prefix ARG, enable Global-Company mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
+
+Company mode is enabled in all buffers where
+`company-mode-on' would do it.
+See `company-mode' for more information on Company mode.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'company-manual-begin "company-mode/company" "\
+
+
+\(fn)" t nil)
+
+(autoload 'company-complete "company-mode/company" "\
+Insert the common part of all candidates or the current selection.
+The first time this is called, the common part is inserted, the second
+time, or when the selection has been changed, the selected candidate is
+inserted.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-abbrev" "company-mode/company-abbrev.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-abbrev.el
+
+(autoload 'company-abbrev "company-mode/company-abbrev" "\
+`company-mode' completion backend for abbrev.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-bbdb" "company-mode/company-bbdb.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-bbdb.el
+
+(autoload 'company-bbdb "company-mode/company-bbdb" "\
+`company-mode' completion backend for BBDB.
+
+\(fn COMMAND &optional ARG &rest IGNORE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-css" "company-mode/company-css.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-css.el
+
+(autoload 'company-css "company-mode/company-css" "\
+`company-mode' completion backend for `css-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-dabbrev" "company-mode/company-dabbrev.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-dabbrev.el
+
+(autoload 'company-dabbrev "company-mode/company-dabbrev" "\
+dabbrev-like `company-mode' completion backend.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-dabbrev-code" "company-mode/company-dabbrev-code.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-dabbrev-code.el
+
+(autoload 'company-dabbrev-code "company-mode/company-dabbrev-code" "\
+dabbrev-like `company-mode' backend for code.
+The backend looks for all symbols in the current buffer that aren't in
+comments or strings.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-elisp" "company-mode/company-elisp.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-elisp.el
+
+(autoload 'company-elisp "company-mode/company-elisp" "\
+`company-mode' completion backend for Emacs Lisp.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-etags" "company-mode/company-etags.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-etags.el
+
+(autoload 'company-etags "company-mode/company-etags" "\
+`company-mode' completion backend for etags.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-files" "company-mode/company-files.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-files.el
+
+(autoload 'company-files "company-mode/company-files" "\
+`company-mode' completion backend existing file names.
+Completions works for proper absolute and relative files paths.
+File paths with spaces are only supported inside strings.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-gtags" "company-mode/company-gtags.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-gtags.el
+
+(autoload 'company-gtags "company-mode/company-gtags" "\
+`company-mode' completion backend for GNU Global.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-ispell" "company-mode/company-ispell.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-ispell.el
+
+(autoload 'company-ispell "company-mode/company-ispell" "\
+`company-mode' completion backend using Ispell.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-keywords" "company-mode/company-keywords.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-keywords.el
+
+(autoload 'company-keywords "company-mode/company-keywords" "\
+`company-mode' backend for programming language keywords.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-nxml" "company-mode/company-nxml.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-nxml.el
+
+(autoload 'company-nxml "company-mode/company-nxml" "\
+`company-mode' completion backend for `nxml-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-oddmuse" "company-mode/company-oddmuse.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-oddmuse.el
+
+(autoload 'company-oddmuse "company-mode/company-oddmuse" "\
+`company-mode' completion backend for `oddmuse-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-semantic" "company-mode/company-semantic.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-semantic.el
+
+(autoload 'company-semantic "company-mode/company-semantic" "\
+`company-mode' completion backend using CEDET Semantic.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-tempo" "company-mode/company-tempo.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-tempo.el
+
+(autoload 'company-tempo "company-mode/company-tempo" "\
+`company-mode' completion backend for tempo.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-xcode" "company-mode/company-xcode.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-xcode.el
+
+(autoload 'company-xcode "company-mode/company-xcode" "\
+`company-mode' completion backend for Xcode projects.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-yasnippet" "company-mode/company-yasnippet.el"
+;;;;;;  (22408 36916 326506 134000))
+;;; Generated autoloads from company-mode/company-yasnippet.el
+
+(autoload 'company-yasnippet "company-mode/company-yasnippet" "\
+`company-mode' backend for `yasnippet'.
+
+This backend should be used with care, because as long as there are
+snippets defined for the current major mode, this backend will always
+shadow backends that come after it.  Recommended usages:
+
+* In a buffer-local value of `company-backends', grouped with a backend or
+  several that provide actual text completions.
+
+  (add-hook 'js-mode-hook
+            (lambda ()
+              (set (make-local-variable 'company-backends)
+                   '((company-dabbrev-code company-yasnippet)))))
+
+* After keyword `:with', grouped with other backends.
+
+  (push '(company-semantic :with company-yasnippet) company-backends)
+
+* Not in `company-backends', just bound to a key.
+
+  (global-set-key (kbd \"C-c y\") 'company-yasnippet)
+
+\(fn COMMAND &optional ARG &rest IGNORE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-tern/company-tern" "company-tern/company-tern.el"
+;;;;;;  (22408 37040 874503 904000))
+;;; Generated autoloads from company-tern/company-tern.el
+
+(autoload 'company-tern "company-tern/company-tern" "\
+Tern backend for company-mode.
+See `company-backends' for more info about COMMAND and ARG.
+
+\(fn COMMAND &optional ARG &rest ARGS)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-web/company-web-html" "company-web/company-web-html.el"
+;;;;;;  (22408 36940 770505 696000))
+;;; Generated autoloads from company-web/company-web-html.el
+
+(autoload 'company-web-html "company-web/company-web-html" "\
+`company-mode' completion back-end for `html-mode' and `web-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-web/company-web-jade" "company-web/company-web-jade.el"
+;;;;;;  (22408 36940 770505 696000))
+;;; Generated autoloads from company-web/company-web-jade.el
+
+(autoload 'company-web-jade "company-web/company-web-jade" "\
+`company-mode' completion back-end for `jade-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-web/company-web-slim" "company-web/company-web-slim.el"
+;;;;;;  (22408 36940 770505 696000))
+;;; Generated autoloads from company-web/company-web-slim.el
+
+(autoload 'company-web-slim "company-web/company-web-slim" "\
+`company-mode' completion back-end for `slim-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
 
 ;;;***
 
@@ -2579,371 +2894,6 @@ Send a bug report about a Dired+ problem.
 
 ;;;***
 
-;;;### (autoloads nil "ein/lisp/ein-connect" "ein/lisp/ein-connect.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-connect.el
-
-(autoload 'ein:connect-to-notebook-command "ein/lisp/ein-connect" "\
-Connect to notebook.  When the prefix argument is given,
-you can choose any notebook on your server including the ones
-not yet opened.  Otherwise, already chose from already opened
-notebooks.
-
-\(fn &optional NOT-YET-OPENED)" t nil)
-
-(autoload 'ein:connect-to-notebook "ein/lisp/ein-connect" "\
-Connect any buffer to notebook and its kernel.
-
-\(fn NBPATH &optional BUFFER NO-RECONNECTION)" t nil)
-
-(autoload 'ein:connect-to-notebook-buffer "ein/lisp/ein-connect" "\
-Connect any buffer to opened notebook and its kernel.
-
-\(fn BUFFER-OR-NAME)" t nil)
-
-(autoload 'ein:connect-buffer-to-notebook "ein/lisp/ein-connect" "\
-Connect BUFFER to NOTEBOOK.
-
-\(fn NOTEBOOK &optional BUFFER NO-RECONNECTION)" nil nil)
-
-(autoload 'ein:connect-to-default-notebook "ein/lisp/ein-connect" "\
-Connect to the default notebook specified by
-`ein:connect-default-notebook'.  Set this to `python-mode-hook'
-to automatically connect any python-mode buffer to the
-notebook.
-
-\(fn)" nil nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-console" "ein/lisp/ein-console.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-console.el
-
-(autoload 'ein:console-open "ein/lisp/ein-console" "\
-Open IPython console.
-To use this function, `ein:console-security-dir' and
-`ein:console-args' must be set properly.
-This function works best with the new python.el_ which is shipped
-with Emacs 24.2 or later.  If you don't have it, this function
-opens a \"plain\" command line interpreter (comint) buffer where
-you cannot use fancy stuff such as TAB completion.
-It should be possible to support python-mode.el.  Patches are welcome!
-
-.. _python.el: https://github.com/fgallina/python.el
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-dev" "ein/lisp/ein-dev.el" (22278
-;;;;;;  10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-dev.el
-
-(autoload 'ein:dev-insert-mode-map "ein/lisp/ein-dev" "\
-Insert mode-map into rst document.  For README.rst.
-
-\(fn MAP-STRING)" nil nil)
-
-(autoload 'ein:dev-start-debug "ein/lisp/ein-dev" "\
-Enable EIN debugging support.
-When the prefix argument is given, debugging support for websocket
-callback (`websocket-callback-debug-on-error') is enabled.
-
-\(fn &optional WS-CALLBACK)" t nil)
-
-(autoload 'ein:dev-stop-debug "ein/lisp/ein-dev" "\
-Disable debugging support enabled by `ein:dev-start-debug'.
-
-\(fn)" t nil)
-
-(autoload 'ein:dev-bug-report-template "ein/lisp/ein-dev" "\
-Open a buffer with bug report template.
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-helm" "ein/lisp/ein-helm.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-helm.el
-
-(autoload 'anything-ein-kernel-history "ein/lisp/ein-helm" "\
-Search kernel execution history then insert the selected one.
-
-\(fn)" t nil)
-
-(autoload 'helm-ein-kernel-history "ein/lisp/ein-helm" "\
-Search kernel execution history then insert the selected one.
-
-\(fn)" t nil)
-
-(autoload 'anything-ein-notebook-buffers "ein/lisp/ein-helm" "\
-Choose opened notebook using anything.el interface.
-
-\(fn)" t nil)
-
-(autoload 'helm-ein-notebook-buffers "ein/lisp/ein-helm" "\
-Choose opened notebook using helm interface.
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-iexec" "ein/lisp/ein-iexec.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-iexec.el
-
-(autoload 'ein:iexec-mode "ein/lisp/ein-iexec" "\
-Instant cell execution minor mode.
-Code cell at point will be automatically executed after any
-change in its input area.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-ipynb-mode" "ein/lisp/ein-ipynb-mode.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-ipynb-mode.el
-
-(autoload 'ein:ipynb-mode "ein/lisp/ein-ipynb-mode" "\
-A simple mode for ipynb file.
-
-\(fn)" t nil)
-
-(add-to-list 'auto-mode-alist '(".*\\.ipynb\\'" . ein:ipynb-mode))
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-jedi" "ein/lisp/ein-jedi.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-jedi.el
-
-(autoload 'ein:jedi-complete "ein/lisp/ein-jedi" "\
-Run completion using candidates calculated by EIN and Jedi.
-
-\(fn &key (expand ac-expand-on-auto-complete))" t nil)
-
-(autoload 'ein:jedi-dot-complete "ein/lisp/ein-jedi" "\
-Insert \".\" and run `ein:jedi-complete'.
-
-\(fn)" t nil)
-
-(autoload 'ein:jedi-setup "ein/lisp/ein-jedi" "\
-Setup auto-completion using EIN and Jedi.el_ together.
-
-Jedi.el_ is a Python auto-completion library for Emacs.
-To use EIN and Jedi together, add the following in your Emacs setup.::
-
-  (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
-
-.. _Jedi.el: https://github.com/tkf/emacs-jedi
-
-\(fn)" nil nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-junk" "ein/lisp/ein-junk.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-junk.el
-
-(autoload 'ein:junk-new "ein/lisp/ein-junk" "\
-Open a notebook to try random thing.
-Notebook name is determined based on
-`ein:junk-notebook-name-template'.
-
-When prefix argument is given, it asks URL or port to use.
-
-\(fn NAME KERNELSPEC URL-OR-PORT)" t nil)
-
-(autoload 'ein:junk-rename "ein/lisp/ein-junk" "\
-Rename the current notebook based on `ein:junk-notebook-name-template'
-and save it immediately.
-
-\(fn NAME)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-kernel" "ein/lisp/ein-kernel.el"
-;;;;;;  (22278 10877 836691 643000))
-;;; Generated autoloads from ein/lisp/ein-kernel.el
-
-(defalias 'ein:kernel-url-or-port 'ein:$kernel-url-or-port)
-
-(defalias 'ein:kernel-id 'ein:$kernel-kernel-id)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-multilang" "ein/lisp/ein-multilang.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-multilang.el
-
-(autoload 'ein:notebook-multilang-mode "ein/lisp/ein-multilang" "\
-Notebook mode with multiple language fontification.
-
-\(fn)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-notebook" "ein/lisp/ein-notebook.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-notebook.el
-
-(defalias 'ein:notebook-name 'ein:$notebook-notebook-name)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-notebooklist" "ein/lisp/ein-notebooklist.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-notebooklist.el
-
-(autoload 'ein:notebooklist-open "ein/lisp/ein-notebooklist" "\
-Open notebook list buffer.
-
-\(fn &optional URL-OR-PORT PATH NO-POPUP)" t nil)
-
-(autoload 'ein:notebooklist-reload "ein/lisp/ein-notebooklist" "\
-Reload current Notebook list.
-
-\(fn &optional NOTEBOOKLIST)" t nil)
-
-(autoload 'ein:notebooklist-new-notebook "ein/lisp/ein-notebooklist" "\
-Ask server to create a new notebook and open it in a new buffer.
-
-\(fn &optional URL-OR-PORT KERNELSPEC PATH CALLBACK CBARGS)" t nil)
-
-(autoload 'ein:notebooklist-new-notebook-with-name "ein/lisp/ein-notebooklist" "\
-Open new notebook and rename the notebook.
-
-\(fn NAME KERNELSPEC URL-OR-PORT &optional PATH)" t nil)
-
-(autoload 'ein:notebooklist-list-notebooks "ein/lisp/ein-notebooklist" "\
-Return a list of notebook path (NBPATH).  Each element NBPATH
-is a string of the format \"URL-OR-PORT/NOTEBOOK-NAME\".
-
-\(fn)" nil nil)
-
-(autoload 'ein:notebooklist-open-notebook-global "ein/lisp/ein-notebooklist" "\
-Choose notebook from all opened notebook list and open it.
-Notebook is specified by a string NBPATH whose format is
-\"URL-OR-PORT/NOTEBOOK-NAME\".
-
-When used in lisp, CALLBACK and CBARGS are passed to `ein:notebook-open'.
-
-\(fn NBPATH &optional CALLBACK CBARGS)" t nil)
-
-(autoload 'ein:notebooklist-load "ein/lisp/ein-notebooklist" "\
-Load notebook list but do not pop-up the notebook list buffer.
-
-For example, if you want to load notebook list when Emacs starts,
-add this in the Emacs initialization file::
-
-  (add-to-hook 'after-init-hook 'ein:notebooklist-load)
-
-or even this (if you want fast Emacs start-up)::
-
-  ;; load notebook list if Emacs is idle for 3 sec after start-up
-  (run-with-idle-timer 3 nil #'ein:notebooklist-load)
-
-You should setup `ein:url-or-port' or `ein:default-url-or-port'
-in order to make this code work.
-
-See also:
-`ein:connect-to-default-notebook', `ein:connect-default-notebook'.
-
-\(fn &optional URL-OR-PORT)" nil nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-org" "ein/lisp/ein-org.el" (22278
-;;;;;;  10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-org.el
-
-(autoload 'ein:org-open "ein/lisp/ein-org" "\
-Open IPython notebook specified by LINK-PATH.
-This function is to be used for FOLLOW function of
-`org-add-link-type'.
-
-\(fn LINK-PATH)" nil nil)
-
-(autoload 'ein:org-store-link "ein/lisp/ein-org" "\
-Call `org-store-link-props' when in notebook buffer.
-This function is to be used for `org-store-link-functions'.
-
-Examples::
-
-  ipynb:(:url-or-port 8888 :name \"My_Notebook\")
-  ipynb:(:url-or-port \"http://notebook-server\" :name \"My_Notebook\")
-
-Note that spaces will be escaped in org files.
-
-As how IPython development team supports multiple directory in
-IPython notebook server is unclear, it is not easy to decide the
-format for notebook links.  Current approach is to use
-S-expression based (rather verbose) serialization, so that
-extending link spec without loosing backward compatibility is
-easier.  For the examples of link format in general, see Info
-node `(org) External links' and Info node `(org) Search options'
-
-\(fn)" nil nil)
-
-(eval-after-load "org" '(progn (org-add-link-type "ipynb" 'ein:org-open) (add-hook 'org-store-link-functions 'ein:org-store-link)))
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-pseudo-console" "ein/lisp/ein-pseudo-console.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-pseudo-console.el
-
-(autoload 'ein:pseudo-console-mode "ein/lisp/ein-pseudo-console" "\
-Pseudo console mode.  Hit RET to execute code.
-
-\(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-shared-output" "ein/lisp/ein-shared-output.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-shared-output.el
-
-(autoload 'ein:shared-output-pop-to-buffer "ein/lisp/ein-shared-output" "\
-Open shared output buffer.
-
-\(fn)" t nil)
-
-(autoload 'ein:shared-output-show-code-cell-at-point "ein/lisp/ein-shared-output" "\
-Show code cell at point in shared-output buffer.
-It is useful when the output of the cell at point is truncated.
-See also `ein:cell-max-num-outputs'.
-
-\(fn)" t nil)
-
-(autoload 'ein:shared-output-eval-string "ein/lisp/ein-shared-output" "\
-Evaluate a piece of code.  Prompt will appear asking the code to run.
-This is handy when you want to execute something quickly without
-making a cell.  If the code outputs something, it will go to the
-shared output buffer.  You can open the buffer by the command
-`ein:shared-output-pop-to-buffer'.
-
-.. ARGS is passed to `ein:kernel-execute'.  Unlike `ein:kernel-execute',
-   `:silent' is `nil' by default.
-
-\(fn CODE &optional POPUP VERBOSE KERNEL &rest ARGS)" t nil)
-
-;;;***
-
-;;;### (autoloads nil "ein/lisp/ein-traceback" "ein/lisp/ein-traceback.el"
-;;;;;;  (22278 10877 840691 643000))
-;;; Generated autoloads from ein/lisp/ein-traceback.el
-
-(autoload 'ein:tb-show "ein/lisp/ein-traceback" "\
-Show full traceback in traceback viewer.
-
-\(fn)" t nil)
-
-;;;***
-
 ;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22376 43483
 ;;;;;;  364347 882000))
 ;;; Generated autoloads from el-get/el-get.el
@@ -3124,6 +3074,40 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads nil "exec-path-from-shell/exec-path-from-shell"
+;;;;;;  "exec-path-from-shell/exec-path-from-shell.el" (22407 23891
+;;;;;;  271913 13000))
+;;; Generated autoloads from exec-path-from-shell/exec-path-from-shell.el
+
+(autoload 'exec-path-from-shell-copy-envs "exec-path-from-shell/exec-path-from-shell" "\
+Set the environment variables with NAMES from the user's shell.
+
+As a special case, if the variable is $PATH, then `exec-path' and
+`eshell-path-env' are also set appropriately.  The result is an alist,
+as described by `exec-path-from-shell-getenvs'.
+
+\(fn NAMES)" nil nil)
+
+(autoload 'exec-path-from-shell-copy-env "exec-path-from-shell/exec-path-from-shell" "\
+Set the environment variable $NAME from the user's shell.
+
+As a special case, if the variable is $PATH, then `exec-path' and
+`eshell-path-env' are also set appropriately.  Return the value
+of the environment variable.
+
+\(fn NAME)" t nil)
+
+(autoload 'exec-path-from-shell-initialize "exec-path-from-shell/exec-path-from-shell" "\
+Initialize environment from the user's shell.
+
+The values of all the environment variables named in
+`exec-path-from-shell-variables' are set from the corresponding
+values used in the user's shell.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "ggtags/ggtags" "ggtags/ggtags.el" (22296 29708
 ;;;;;;  644332 740000))
 ;;; Generated autoloads from ggtags/ggtags.el
@@ -3165,43 +3149,11 @@ A function suitable for `hippie-expand-try-functions-list'.
 
 ;;;***
 
-;;;### (autoloads nil "jedi/jedi" "jedi/jedi.el" (22277 60269 400980
-;;;;;;  759000))
-;;; Generated autoloads from jedi/jedi.el
+;;;### (autoloads nil "jedi-core/jedi-core" "jedi-core/jedi-core.el"
+;;;;;;  (22408 37942 602487 755000))
+;;; Generated autoloads from jedi-core/jedi-core.el
 
-(autoload 'jedi:ac-setup "jedi/jedi" "\
-Add Jedi AC sources to `ac-sources'.
-
-If auto-completion is all you need, you can call this function instead
-of `jedi:setup', like this::
-
-   (add-hook 'python-mode-hook 'jedi:ac-setup)
-
-Note that this function calls `auto-complete-mode' if it is not
-already enabled, for people who don't call `global-auto-complete-mode'
-in their Emacs configuration.
-
-\(fn)" t nil)
-
-(autoload 'jedi:complete "jedi/jedi" "\
-Complete code at point.
-
-\(fn &key (expand ac-expand-on-auto-complete))" t nil)
-
-(autoload 'jedi:auto-complete-mode "jedi/jedi" "\
-
-
-\(fn)" nil nil)
-
-(setq jedi:setup-function #'jedi:ac-setup jedi:mode-function #'jedi:auto-complete-mode)
-
-;;;***
-
-;;;### (autoloads nil "jedi/jedi-core" "jedi/jedi-core.el" (22277
-;;;;;;  60269 400980 759000))
-;;; Generated autoloads from jedi/jedi-core.el
-
-(autoload 'jedi:start-dedicated-server "jedi/jedi-core" "\
+(autoload 'jedi:start-dedicated-server "jedi-core/jedi-core" "\
 Start Jedi server dedicated to this buffer.
 This is useful, for example, when you want to use different
 `sys.path' for some buffer.  When invoked as an interactive
@@ -3215,17 +3167,17 @@ See also: `jedi:server-args'.
 
 \(fn COMMAND)" t nil)
 
-(autoload 'helm-jedi-related-names "jedi/jedi-core" "\
+(autoload 'helm-jedi-related-names "jedi-core/jedi-core" "\
 Find related names of the object at point using `helm' interface.
 
 \(fn)" t nil)
 
-(autoload 'anything-jedi-related-names "jedi/jedi-core" "\
+(autoload 'anything-jedi-related-names "jedi-core/jedi-core" "\
 Find related names of the object at point using `anything' interface.
 
 \(fn)" t nil)
 
-(autoload 'jedi:setup "jedi/jedi-core" "\
+(autoload 'jedi:setup "jedi-core/jedi-core" "\
 Fully setup jedi.el for current buffer.
 It setups `ac-sources' or `company-backends' and turns
 `jedi-mode' on.
@@ -3240,7 +3192,7 @@ what jedi can do.
 
 \(fn)" t nil)
 
-(autoload 'jedi:install-server "jedi/jedi-core" "\
+(autoload 'jedi:install-server "jedi-core/jedi-core" "\
 This command installs Jedi server script jediepcserver.py in a
 Python environment dedicated to Emacs.  By default, the
 environment is at ``~/.emacs.d/.python-environments/default/``.
@@ -3282,7 +3234,7 @@ See also:
 
 \(fn)" t nil)
 
-(autoload 'jedi:install-server-block "jedi/jedi-core" "\
+(autoload 'jedi:install-server-block "jedi-core/jedi-core" "\
 Blocking version `jedi:install-server'.
 
 \(fn)" nil nil)
@@ -5028,6 +4980,33 @@ Returns non-nil if the new state is enabled.
 
 ;;;***
 
+;;;### (autoloads nil "tern/emacs/tern" "tern/emacs/tern.el" (22408
+;;;;;;  37006 550504 518000))
+;;; Generated autoloads from tern/emacs/tern.el
+
+(autoload 'tern-use-server "tern/emacs/tern" "\
+
+
+\(fn PORT SERVER)" t nil)
+
+(autoload 'tern-mode "tern/emacs/tern" "\
+Minor mode binding to the Tern JavaScript analyzer
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "tern/emacs/tern-auto-complete" "tern/emacs/tern-auto-complete.el"
+;;;;;;  (22408 37006 550504 518000))
+;;; Generated autoloads from tern/emacs/tern-auto-complete.el
+
+(autoload 'tern-ac-setup "tern/emacs/tern-auto-complete" "\
+Setup auto-complete for tern-mode.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "virtualenvwrapper/virtualenvwrapper" "virtualenvwrapper/virtualenvwrapper.el"
 ;;;;;;  (22316 3312 785934 654000))
 ;;; Generated autoloads from virtualenvwrapper/virtualenvwrapper.el
@@ -5100,6 +5079,48 @@ virtualenvwrapper.el.
 
 (autoload 'venv-initialize-eshell "virtualenvwrapper/virtualenvwrapper" "\
 Configure eshell for use with virtualenvwrapper.el.
+
+\(fn)" nil nil)
+
+;;;***
+
+;;;### (autoloads nil "web-beautify/web-beautify" "web-beautify/web-beautify.el"
+;;;;;;  (22408 39284 258463 729000))
+;;; Generated autoloads from web-beautify/web-beautify.el
+
+(autoload 'web-beautify-html "web-beautify/web-beautify" "\
+Format region if active, otherwise the current buffer.
+
+Formatting is done according to the html-beautify command.
+
+\(fn)" t nil)
+
+(autoload 'web-beautify-html-buffer "web-beautify/web-beautify" "\
+Format the current buffer according to the html-beautify command.
+
+\(fn)" nil nil)
+
+(autoload 'web-beautify-css "web-beautify/web-beautify" "\
+Format region if active, otherwise the current buffer.
+
+Formatting is done according to the css-beautify command.
+
+\(fn)" t nil)
+
+(autoload 'web-beautify-css-buffer "web-beautify/web-beautify" "\
+Format the current buffer according to the css-beautify command.
+
+\(fn)" nil nil)
+
+(autoload 'web-beautify-js "web-beautify/web-beautify" "\
+Format region if active, otherwise the current buffer.
+
+Formatting is done according to the js-beautify command.
+
+\(fn)" t nil)
+
+(autoload 'web-beautify-js-buffer "web-beautify/web-beautify" "\
+Format the current buffer according to the js-beautify command.
 
 \(fn)" nil nil)
 
@@ -5276,28 +5297,20 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "cedet/cedet-emacs-merge.el" "cedet/cedet-remove-builtin.el"
 ;;;;;;  "cedet/cedet-update-changelog.el" "cedet/cedet-update-version.el"
 ;;;;;;  "color-theme-solarized/color-theme-solarized-pkg.el" "color-theme-solarized/solarized-theme.el"
-;;;;;;  "color-theme/color-theme-autoloads.el" "ctable/ctable.el"
-;;;;;;  "ctable/test-ctable.el" "dash/dash-functional.el" "dash/dash.el"
-;;;;;;  "deferred/concurrent.el" "deferred/deferred.el" "ein/lisp/debug-ein.el"
-;;;;;;  "ein/lisp/ein-ac.el" "ein/lisp/ein-cell-output.el" "ein/lisp/ein-cell.el"
-;;;;;;  "ein/lisp/ein-completer.el" "ein/lisp/ein-contents-api.el"
-;;;;;;  "ein/lisp/ein-core.el" "ein/lisp/ein-events.el" "ein/lisp/ein-ipdb.el"
-;;;;;;  "ein/lisp/ein-kernelinfo.el" "ein/lisp/ein-kill-ring.el"
-;;;;;;  "ein/lisp/ein-loaddefs.el" "ein/lisp/ein-log.el" "ein/lisp/ein-multilang-fontify.el"
-;;;;;;  "ein/lisp/ein-node.el" "ein/lisp/ein-notification.el" "ein/lisp/ein-output-area.el"
-;;;;;;  "ein/lisp/ein-pager.el" "ein/lisp/ein-pkg.el" "ein/lisp/ein-python.el"
-;;;;;;  "ein/lisp/ein-pytools.el" "ein/lisp/ein-query.el" "ein/lisp/ein-scratchsheet.el"
-;;;;;;  "ein/lisp/ein-smartrep.el" "ein/lisp/ein-subpackages.el"
-;;;;;;  "ein/lisp/ein-utils.el" "ein/lisp/ein-websocket.el" "ein/lisp/ein-worksheet.el"
-;;;;;;  "ein/lisp/ein.el" "ein/lisp/zeroein.el" "el-get/el-get-autoloading.el"
-;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "color-theme/color-theme-autoloads.el" "company-mode/company-capf.el"
+;;;;;;  "company-mode/company-clang.el" "company-mode/company-cmake.el"
+;;;;;;  "company-mode/company-eclim.el" "company-mode/company-template.el"
+;;;;;;  "company-mode/company-tests.el" "company-web/company-web.el"
+;;;;;;  "ctable/ctable.el" "ctable/test-ctable.el" "dash/dash-functional.el"
+;;;;;;  "dash/dash.el" "deferred/concurrent.el" "deferred/deferred.el"
+;;;;;;  "el-get/el-get-autoloading.el" "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
 ;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
 ;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
 ;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "epc/epc.el"
 ;;;;;;  "epc/epcs.el" "epc/test-epc.el" "ess/ess-autoloads.el" "f/f.el"
-;;;;;;  "fuzzy/fuzzy.el" "jedi/test-jedi.el" "jedi/tryout-jedi.el"
-;;;;;;  "js2-mode/js2-old-indent.el" "let-alist/let-alist-autoloads.el"
-;;;;;;  "let-alist/let-alist-pkg.el" "nvm/nvm.el" "org-mode/contrib/lisp/ob-eukleides.el"
+;;;;;;  "fuzzy/fuzzy.el" "js2-mode/js2-old-indent.el" "let-alist/let-alist-autoloads.el"
+;;;;;;  "let-alist/let-alist-pkg.el" "math-symbol-lists/math-symbol-lists.el"
+;;;;;;  "math-symbol-lists/msl-build.el" "nvm/nvm.el" "org-mode/contrib/lisp/ob-eukleides.el"
 ;;;;;;  "org-mode/contrib/lisp/ob-fomus.el" "org-mode/contrib/lisp/ob-julia.el"
 ;;;;;;  "org-mode/contrib/lisp/ob-mathematica.el" "org-mode/contrib/lisp/ob-mathomatic.el"
 ;;;;;;  "org-mode/contrib/lisp/ob-oz.el" "org-mode/contrib/lisp/ob-stata.el"
@@ -5374,12 +5387,12 @@ The relation between `purpose-x-persp-switch-buffer-other-frame' and
 ;;;;;;  "request/request.el" "s/s.el" "speedbar-extension/speedbar-extension.el"
 ;;;;;;  "tabbar/aquamacs-compat.el" "tabbar/aquamacs-tabbar.el" "tabbar/aquamacs-tools.el"
 ;;;;;;  "tabbar/one-buffer-one-frame.el" "tabbar/tabbar-window.el"
-;;;;;;  "websocket/websocket-functional-test.el" "websocket/websocket-test.el"
-;;;;;;  "websocket/websocket.el" "window-numbering/tests.el" "window-purpose/window-purpose-core.el"
-;;;;;;  "window-purpose/window-purpose-fixes.el" "window-purpose/window-purpose-layout.el"
-;;;;;;  "window-purpose/window-purpose-prefix-overload.el" "window-purpose/window-purpose-switch.el"
-;;;;;;  "window-purpose/window-purpose-utils.el") (22376 63554 504013
-;;;;;;  303000))
+;;;;;;  "web-completion-data/web-completion-data.el" "websocket/websocket-functional-test.el"
+;;;;;;  "websocket/websocket-test.el" "websocket/websocket.el" "window-numbering/tests.el"
+;;;;;;  "window-purpose/window-purpose-core.el" "window-purpose/window-purpose-fixes.el"
+;;;;;;  "window-purpose/window-purpose-layout.el" "window-purpose/window-purpose-prefix-overload.el"
+;;;;;;  "window-purpose/window-purpose-switch.el" "window-purpose/window-purpose-utils.el")
+;;;;;;  (22408 41965 152879 364000))
 
 ;;;***
 

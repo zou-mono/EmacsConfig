@@ -1,19 +1,16 @@
 
 ;; ----- smex-history -----
 (
- info-apropos
- occur
- apropos
- org-indent-mode
  R
  S
  cd
+ 5x5
+ arp
+ dbx
+ dig
 )
 
 ;; ----- smex-data -----
 (
- (org-indent-mode . 1)
- (apropos . 4)
- (info-apropos . 3)
- (occur . 1)
+ 
 )

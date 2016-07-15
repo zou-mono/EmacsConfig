@@ -7,13 +7,24 @@
       :major-mode 'js-mode
       :tags 
         '( ("result" variable nil nil [1 12])
-            ("sum" function (:arguments 
-              ( ("x" variable nil (reparse-symbol FormalParameterList) [27 28])
-                ("y" variable nil (reparse-symbol FormalParameterList) [29 30]))              ) nil [14 72]))          
+            ("myFunction" function nil nil [14 117])
+            ("myFunction2" function nil nil [119 223])
+            ("myFunction3" function nil nil [225 336]))          
       :file "test.js"
-      :pointmax 75
-      :fsize 74
-      :lastmodtime '(22358 21883 586968 741000)
+      :pointmax 341
+      :fsize 337
+      :lastmodtime '(22407 17296 420031 114000)
+      :unmatched-syntax nil)
+    (semanticdb-table "index.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("My Web Page" section (:members 
+              ( ("My Web Page" section nil nil [78 246]))              ) nil [70 246])
+            ("" section nil nil [246 323]))          
+      :file "index.html"
+      :pointmax 323
+      :fsize 360
+      :lastmodtime '(22407 21036 507964 136000)
       :unmatched-syntax nil))
   :file "!home!mono!Documents!js_projects!semantic.cache"
   :semantic-tag-version "2.0"

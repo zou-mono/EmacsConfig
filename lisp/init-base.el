@@ -3,9 +3,8 @@
 
 ;;(set-frame-parameter nil 'background-mode 'dark)
 ;;;;(enable-theme 'solarized)
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
 (set-fontset-font (frame-parameter nil 'font)
-                  charset (font-spec :family "WenQuanYi Micro Hei Mono"))
+                  'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks
@@ -63,7 +62,6 @@
 
 (setq shell-command-switch "-ic") ;; 设置bash为交互模式，让emacs的bash可以读取~/.bashrc
 
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -87,4 +85,5 @@
 
 (helm-mode 1)
 
+(add-hook 'after-init-hook 'global-company-mode)
 

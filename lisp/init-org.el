@@ -5,6 +5,8 @@
 (setq hexo-dir "~/Documents/blog/test/")
 (setq org-support-shift-select t)
 
+(setq org-list-allow-alphabetical t) ;; 允许列表使用字母，例如a, a)
+
 (defun website-html-postamble()
  (format "
 <div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'>
@@ -58,7 +60,7 @@
 			 hexo-dir
 			 commit-msg)))
 
-(defun hexo/org-new-draft (post-name)
+(defun hexo/org-new-blog-draft (post-name)
   "create a hexo org draft"
   (interactive "sInput draft name:")
   (find-file (format "%s/source/_drafts/%s.org" hexo-dir post-name))

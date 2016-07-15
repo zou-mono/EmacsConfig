@@ -1,0 +1,45 @@
+;; Object .emacs.d/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file ".emacs.d/"
+  :tables
+  (list
+    (semanticdb-table "init.el"
+      :major-mode 'emacs-lisp-mode
+      :tags 
+        '( ("add-to-list" code nil nil [34 76])
+            ("add-to-list" code nil nil [78 129])
+            ("unless" code nil nil [130 366])
+            ("setq" code nil nil [577 1143])
+            ("setq" code nil nil [1173 2370])
+            ("add-to-list" code nil nil [2400 2454])
+            ("el-get-bundle" code nil nil [2482 2501])
+            ("el-get-bundle" code nil nil [2502 2530])
+            ("el-get-bundle" code nil nil [2531 2593])
+            ("el-get-bundle" code nil nil [2594 2665])
+            ("el-get" code nil nil [2727 2760])
+            ("load" code nil nil [2800 2817])
+            ("load" code nil nil [2835 2853])
+            ("load" code nil nil [2871 2891])
+            ("load" code nil nil [2911 2931])
+            ("load" code nil nil [2951 2970])
+            ("load" code nil nil [2971 2986])
+            ("load" code nil nil [3007 3024])
+            ("load" code nil nil [3046 3068])
+            ("load" code nil nil [3095 3115])
+            ("load" code nil nil [3140 3157]))          
+      :file "init.el"
+      :pointmax 3182
+      :fsize 3207
+      :lastmodtime '(22408 40597 426440 213000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ede-projects.el"
+      :major-mode 'emacs-lisp-mode
+      :tags nil
+      :file "ede-projects.el"
+      :pointmax 86
+      :fsize 85
+      :lastmodtime '(22408 40622 598439 762000)
+      :unmatched-syntax nil))
+  :file "!home!mono!.emacs.d!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

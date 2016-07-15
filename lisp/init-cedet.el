@@ -2,12 +2,15 @@
 (require 'cedet-global)
 (require 'semantic)
 
+(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+
 ;; basic configuration
 (semantic-mode 1)
 (global-ede-mode 1)
 (global-semanticdb-minor-mode 1)
 (global-semantic-highlight-func-mode 1)
 (global-semantic-mru-bookmark-mode 1)
+(global-semantic-idle-completions-mode t)
 ;;(setq semantic-idle-scheduler-idle-time 3)
 
 ;;gnu global support

@@ -115,7 +115,7 @@
       :file "1.py"
       :pointmax 151
       :fsize 150
-      :lastmodtime '(22358 35092 275466 125000)
+      :lastmodtime '(22408 47957 442308 409000)
       :unmatched-syntax nil)
     (semanticdb-table "scrapy_test.py"
       :major-mode 'python-mode
@@ -128,8 +128,8 @@
       :file "scrapy_test.py"
       :pointmax 237
       :fsize 236
-      :lastmodtime '(22366 35069 446648 128000)
-      :unmatched-syntax '(($EOI 238 . 238) ($EOI 229 . 229) ($EOI 225 . 225) ($EOI 224 . 224) ($EOI 214 . 214) ($EOI 211 . 211) ($EOI 211 . 211) ($EOI 212 . 212) ($EOI 200 . 200) (NAME 52 . 58) (NEWLINE 59 . 60))))
+      :lastmodtime '(22408 47932 26308 864000)
+      :unmatched-syntax '(($EOI 237 . 237))))
   :file "!home!mono!Documents!python_test!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

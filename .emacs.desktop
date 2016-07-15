@@ -2,49 +2,38 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Fri Jul  8 17:29:37 2016
+;; Created Fri Jul 15 20:37:01 2016
 ;; Desktop file format version 206
 ;; Emacs version 24.5.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22399 29313 488019 672000) (desktop . "206") "mono@mono-vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#eeeeee") (background-color . "#102e4e") (mouse-color . "white") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground . "#506070") (scroll-bar-background . "gray") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "2168-BC62-BE70-1E20") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 50) (width . 211) (left . 0) (top . 28)) ((min-height . 4) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 76) (min-pixel-width . 180) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 19) (min-pixel-width-safe . 36)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 213) (total-height . 49) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 957) (pixel-height . 945) (total-width . 106) (total-height . 49) (normal-height . 1.0) (normal-width . 0.5) (buffer "*info*" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 3) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 670621) (start . 667972))) (leaf (last . t) (pixel-width . 963) (pixel-height . 945) (total-width . 107) (total-height . 49) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Occur*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 1) (scroll-bars 0 0 t nil) (vscroll . 0) (dedicated) (point . 1) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22408 55533 961893 910000) (desktop . "206") "mono@mono-vm" nil nil ((((font-backend xft x) (font . "-unknown-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (foreground-color . "#eeeeee") (background-color . "#102e4e") (mouse-color . "white") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground . "#506070") (scroll-bar-background . "gray") (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (fullscreen . maximized) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "green") (sticky) (environment) (frameset--id . "2168-BC62-BE70-1E20") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (visibility . t) (height . 50) (width . 211) (left . 0) (top . 28)) ((min-height . 4) (min-width . 20) (min-height-ignore . 4) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 76) (min-pixel-width . 180) (min-pixel-height-ignore . 76) (min-pixel-width-ignore . 72) (min-pixel-height-safe . 19) (min-pixel-width-safe . 36)) hc (pixel-width . 1920) (pixel-height . 945) (total-width . 213) (total-height . 50) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 957) (pixel-height . 945) (total-width . 106) (total-height . 50) (normal-height . 1.0) (normal-width . 0.5) (buffer "test.js" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 176) (start . 1))) (leaf (last . t) (pixel-width . 963) (pixel-height . 945) (total-width . 107) (total-height . 50) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Messages*" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars 0 0 nil nil) (vscroll . 0) (dedicated) (point . 3465) (start . 2240)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("search" "scale" "font" "include" "right" "enumerate" "enmereate" "tabincell" "text" "table" "c-u" "‘»»" "nth" "ntheorem" "definition" "amsthm"))
+(setq search-ring '("back" "auto-complete" "ein" "auto-complete" "web-beautify" "jedi" "company" "exec-path-from-shell" "web-b" "web" "web-" "around" "licensedd" "table" "minibuffer" "local-ch"))
 (setq regexp-search-ring '("\\<org\\>" "\\<\\>" "\\wel\\w" "\\<el\\>" "\\'el\\'" "\\bwindows\\b" "pyenv" "\\<ess\\>" "<ess>" "\\<ess\343\200\201\343\200\213"))
-(setq register-alist '((48 . "Microsoft Yahei")))
-(setq file-name-history '("~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/org-mode-test/test1.org" "~/.emacs" "~/.emacs.d/init.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/org-mode-test/test1.org" "~/.emacs" "~/.emacs.d/init.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/org-mode-test/test1.org" "~/.emacs" "~/.emacs.d/init.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/org-mode-test/test1.org" "~/.emacs" "~/.emacs.d/init.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/lisp/init-tex.el" "~/Documents/tex_projects/beamer_test/bt.tex" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/beamer_test/bt.tex" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/Documents/tex_projects/aalborg_v1.4.0/aalborgtheme.tex" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/beamer_test/bt.tex" "~/Documents/tex_projects/aalborg_v1.4.0/aalborgtheme.tex" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/python_test/test.py" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/beamer_test/bt.tex" "~/Documents/tex_projects/aalborg_v1.4.0/aalborgtheme.tex" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/.emacs.d/ede-projects.el" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/_region_.tex" "~/Documents/tex_projects/aalborg_v1.4.0/aalborgtheme.tex" "~/Documents/tex_projects/" "~/Documents/tex_projects/oldslide.tex" "~/Documents/tex_projects/beamer_test/" "~/Documents/tex_projects/beamer_test/bt.tex" "~/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.tex" "~/Documents/python_test/test.py" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/tex_projects/test/111.tex" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/public/css/main.css" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/public/index.html" "~/.emacs.d/lisp/init-Python.el" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/.emacs.d/ede-projects.el" "~/Documents/python_test/test.py" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/tex_projects/test/111.tex" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/Documents/blog/test/public/css/main.css" "~/Documents/blog/test/source/_posts/hello-world.md" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/Documents/org-mode-test/test2.org" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/public/index.html" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/themes/next/_config.yml" "~/.emacs.d/ede-projects.el" "~/Documents/blog/test/source/_posts/hello-world.md" "~/Documents/blog/test/" "~/Documents/blog/test/public/index.html" "~/Documents/blog/test/" "~/Documents/blog/test/public/css/main.css" "~/Documents/blog/test/" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_posts/" "~/Documents/python_test/test.py" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/python_test/scrapy_test.py" "~/Documents/tex_projects/test/111.tex" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs" "~/Documents/org-mode-test/test2.org" "~/Documents/org-mode-test/test1.org" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/blog" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Documents/blog/test/source/_posts/" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/python_test/test.py" "~/Documents/org-mode-test/test1.html" "~/Documents/python_test/1.py" "~/Documents/python_test/scrapy_test.py" "~/Documents/tex_projects/test/111.tex" "~/.emacs.d/lisp/init-tex.el" "~/Documents/js_projects/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/org-mode-test/test2.org" "~/.emacs.d/lisp/init-base.el" "~/.emacs"))
+(setq register-alist '((97 file-query "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" 1) (48 . "getElementById")))
+(setq file-name-history '("~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/.emacs" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/.emacs" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-org.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/.emacs.d/lisp/init-tex.el" "~/.emacs" "~/.emacs.d/lisp/init-web.el" "~/Documents/js_projects/index.html" "~/Documents/js_projects/test.js" "~/.emacs.d/ede-projects.el" "~/.emacs.d/el-get/tern/emacs/tern.el" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-org.el" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/lisp/init-tex.el" "~/Documents/python_test/test.py" "~/Documents/js_projects/test.js" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs" "~/Documents/js_projects/index.html" "~/.emacs.d/ede-projects.el" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-org.el" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/lisp/init-tex.el" "~/Documents/python_test/test.py" "~/Documents/js_projects/index.html" "~/Documents/js_projects/test.js" "~/.emacs.d/lisp/init-web.el" "~/Documents/python_test/scrapy_test.py" "~/.emacs.d/lisp/init-Python.el" "~/Documents/python_test/1.py" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/.emacs.d/ede-projects.el" "~/.emacs.d/el-get/web-completion-data/html-stuff/html-attributes-list/script" "~/.emacs.d/el-get/web-completion-data/html-stuff/html-attributes-list/global" "~/.emacs.d/el-get/web-completion-data/html-stuff/html-attributes-list/script" "~/.emacs.d/el-get/web-completion-data/html-stuff/html-attributes-list/global" "~/.emacs.d/el-get/web-completion-data/html-stuff/html-tag-list" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-org.el" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/js_projects/index.html" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/init.el" "~/Documents/js_projects/test.js" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-web.el" "~/Documents/python_test/test.py" "~/Documents/python_test/1.py" "~/.emacs.d/ede-projects.el" "~/.emacs.d/el-get/.loaddefs.el" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-org.el" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/js_projects/index.html" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/init.el" "~/Documents/js_projects/test.js" "~/.emacs.d/lisp/init-tex.el" "~/Documents/python_test/1.py" "~/.emacs.d/lisp/init-Python.el" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/ede-projects.el" "~/.emacs.d/el-get/.loaddefs.el" "/usr/local/share/emacs/24.5/lisp/progmodes/python.el.gz" "~/.emacs.d/el-get/tern/emacs/tern.el" "/usr/local/share/emacs/24.5/lisp/subr.el.gz" "~/Documents/python_test/test.py" "~/Documents/python_test/scrapy_test.py" "~/Documents/org-mode-test/test1.org" "~/.emacs.d/lisp/init-tex.el" "~/.emacs.d/lisp/init-org.el" "~/Documents/js_projects/public/index.html" "~/Documents/blog/test/source/_posts/20160616_emacs_common_short.org" "~/.emacs.d/lisp/init-cedet.el" "~/.emacs.d/init.el" "~/.emacs.d/lisp/init-base.el" "~/.emacs" "~/Documents/python_test/1.py" "~/Documents/js_projects/index.html" "~/Documents/js_projects/test.js" "~/.emacs.d/lisp/init-Python.el" "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT" "~/.emacs.d/lisp/init-web.el" "~/.emacs.d/ede-projects.el" "~/.emacs.d/el-get/el-get/el-get-bundle.el" "~/.emacs.d/el-get/company-tern/company-tern.el" "~/.emacs.d/el-get/el-get/el-get.el" "~/Documents/js_projects/" "~/Documents/" "~/Documents/blog/test/source/_posts/" "~/.emacs.d/el-get/org-mode/lisp/org-table.el" "~/.emacs.d/el-get/org-mode/lisp/org.el" "~/Documents/blog/test/themes/next/_config.yml" "~/Documents/tex_projects/201607_\345\271\264\344\270\255\346\261\207\346\212\245/slide.log" "~/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org" "~/Downloads/ctags-5.8/asm.o" "~/Downloads/ctags-5.8/asp.c" "~/Downloads/ctags-5.8/awk.c" "~/Documents/blog/test/source/_posts/#20160616_emacs_common_short.org#" "~/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org" "~/Documents/org-mode-test/test1.html"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  nil
-  "*info*"
-  'Info-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  670621
-  '(1 nil)
-  t
-  '("/home/mono/.emacs.d/el-get/org-mode/doc/org" "In-buffer settings" ((history ("*Apropos*" "Index for `key'" 4371) ("/usr/local/share/info/emacs" "Glossary" 1820560) ("/usr/local/share/info/emacs" "Glossary" 1878948) ("/usr/local/share/info/emacs" "Windows Fonts" 1766015) ("/usr/local/share/info/emacs" "Named ASCII Chars" 1506366) ("/usr/local/share/info/emacs" "Keymaps" 1489047) ("/usr/local/share/info/emacs" "Terminal emulator" 1360874) ("/usr/local/share/info/emacs" "Revision Tags" 1006249) ("/usr/local/share/info/emacs" "VC Delete/Rename" 1005584) ("/usr/local/share/info/emacs" "Change Logs and VC" 1002687) ("/usr/local/share/info/emacs" "VC With A Merging VCS" 961957) ("/usr/local/share/info/emacs" "Basic VC Editing" 960282) ("/usr/local/share/info/emacs" "ForIndent Vars" 871617) ("/usr/local/share/info/emacs" "Fortran" 860048) ("/usr/local/share/info/emacs" "Scrolling" 246643) ("/usr/local/share/info/emacs" "Top" 1138) ("dir" "Top" 853))))
-  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/Documents/org-mode-test/test1.org"
-  "test1.org"
-  'org-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode org-indent-mode)
-  313
-  '(269 nil)
+  "/home/mono/Documents/js_projects/test.js"
+  "test.js"
+  'js2-mode
+  '(visual-line-mode helm-mode company-mode tern-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  176
+  '(148 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+  '((buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
   "/home/mono/.emacs"
   ".emacs"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  536
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  28
   '(342 nil)
   nil
   nil
@@ -54,130 +43,97 @@
   "/home/mono/.emacs.d/lisp/init-base.el"
   "init-base.el"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  811
-  '(131 nil)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  1299
+  '(2443 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/home/mono/Documents/blog/test/source/_drafts/20160622_vmware_shared_folder.org"
-  "20160622_vmware_shared_folder.org"
-  'org-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode org-indent-mode)
-  632
-  '(1576 nil)
+  "/home/mono/Documents/js_projects/index.html"
+  "index.html"
+  'web-mode
+  '(visual-line-mode helm-mode company-mode tern-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  309
+  '(340 nil)
   nil
   nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/home/mono/Documents/blog/test/source/_posts/20160622_vmware_shared_folder.org"
-  "20160622_vmware_shared_folder.org"
-  'org-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode org-indent-mode)
-  1569
-  '(1668 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/Documents/blog/test/source/_posts/20160616_emacs_common_short.org"
-  "20160616_emacs_common_short.org"
-  'org-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode org-indent-mode)
-  493
-  '(951 nil)
-  nil
-  nil
-  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-cedet.el"
-  "init-cedet.el"
+  "/home/mono/.emacs.d/lisp/init-web.el"
+  "init-web.el"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  992
-  '(814 nil)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  1935
+  '(1921 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/home/mono/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  1256
-  '(2464 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
   "/home/mono/.emacs.d/lisp/init-tex.el"
   "init-tex.el"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  848
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  751
   '(186 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
+  "/home/mono/.emacs.d/el-get/tern/emacs/tern.el"
+  "tern.el"
+  'emacs-lisp-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  23986
+  '(24033 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . prefer-utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
   "/home/mono/.emacs.d/lisp/init-org.el"
   "init-org.el"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  3159
-  '(3269 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/.emacs.d/lisp/init-web.el"
-  "init-web.el"
-  'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  714
-  '(637 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/Documents/python_test/test.py"
-  "test.py"
-  'python-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode ggtags-mode)
-  259
-  '(2450 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
-
-(desktop-create-buffer 206
-  "/home/mono/Documents/blog/test/themes/next/_config.yml"
-  "_config.yml"
-  'fundamental-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  8588
-  '(7730 nil)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  901
+  '(186 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
+  "/home/mono/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  367
+  '(2216 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/python_test/1.py"
+  "1.py"
+  'python-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  57
+  '(114 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
   "/home/mono/.emacs.d/lisp/init-Python.el"
   "init-Python.el"
   'emacs-lisp-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode)
-  188
-  '(374 nil)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  1235
+  '(1258 nil)
   nil
   nil
   '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
@@ -186,32 +142,197 @@
   "/home/mono/Documents/python_test/scrapy_test.py"
   "scrapy_test.py"
   'python-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode ggtags-mode)
-  166
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  223
   '(31 nil)
   nil
   nil
   '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/home/mono/Documents/python_test/1.py"
-  "1.py"
+  "/home/mono/Documents/python_test/test.py"
+  "test.py"
   'python-mode
-  '(visual-line-mode helm-mode auto-complete-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode ggtags-mode)
-  142
-  '(114 nil)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  44
+  '(2450 nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (overwrite-mode) (truncate-lines)))
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
 
 (desktop-create-buffer 206
-  "/home/mono/Documents/tex_projects/201607_‘Äê‘ÖÐ‘»ã‘±¨/slide.log"
-  "slide.log"
+  nil
+  "source"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  179
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/test/source/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  "/usr/local/share/emacs/24.5/etc/THE-GNU-PROJECT"
+  "THE-GNU-PROJECT"
   'fundamental-mode
-  '(visual-line-mode helm-mode linum-mode global-auto-revert-mode purpose-mode TeX-PDF-mode reftex-mode)
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode view-mode goto-address-mode)
   1
   '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mono/.emacs.d/lisp/init-cedet.el"
+  "init-cedet.el"
+  'emacs-lisp-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  1057
+  '(302 nil)
   nil
   nil
-  '((buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+  '((buffer-file-coding-system . prefer-utf-8-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/blog/test/source/_posts/20160616_emacs_common_short.org"
+  "20160616_emacs_common_short.org"
+  'org-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode org-indent-mode)
+  497
+  '(497 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/js_projects/public/index.html"
+  "index.html"
+  'web-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode ggtags-mode)
+  12548
+  '(17359 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "js_projects"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  378
+  '(nil nil)
+  t
+  '("/home/mono/Documents/js_projects/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "Documents"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  587
+  '(nil nil)
+  t
+  '("/home/mono/Documents/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  "/home/mono/Documents/org-mode-test/test1.org"
+  "test1.org"
+  'org-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode org-indent-mode)
+  866
+  '(1040 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (overwrite-mode) (truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "_posts"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  230
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/test/source/_posts/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "ctags-5.8"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  546
+  '(446 nil)
+  t
+  '("/home/mono/Downloads/ctags-5.8/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "Downloads"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  713
+  '(nil nil)
+  t
+  '("/home/mono/Downloads/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "mono"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  1166
+  '(nil nil)
+  t
+  '("/home/mono/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "blog"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  167
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "test"
+  'dired-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  177
+  '(nil nil)
+  t
+  '("/home/mono/Documents/blog/test/")
+  '((truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*<2>"
+  'Info-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  227
+  '(nil nil)
+  t
+  '("dir" "Top" ((history ("*Apropos*" "Index for `org-table-insert-column'" 176) ("/usr/local/share/info/emacs" "Top" 1138) ("dir" "Top" 853) ("/usr/local/share/info/emacs" "Quitting" 1535458) ("/usr/local/share/info/emacs" "Rebinding" 1496097) ("/usr/local/share/info/emacs" "Minibuffer Maps" 1494068) ("*Apropos*" "Index for `cal'" 18673) ("*Apropos*" "Index for `modern'" 57) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "Basic Embedded Mode" 1090185) ("/usr/local/share/info/calc" "Embedded Mode" 1088849) ("/usr/local/share/info/calc" "Top" 3429) ("/usr/local/share/info/calc" "Lisp Function Index" 1660073) ("/usr/local/share/info/calc" "Lisp Function Index" 1660073) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "GNU Free Documentation License" 1320659) ("/usr/local/share/info/calc" "Top" 3628) ("/usr/local/share/info/calc" "*Index for `with-extra-prec'*" 4) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "Computational Lisp Functions" 1229327) ("/usr/local/share/info/calc" "Top" 1032) ("dir" "Top" 2339) ("/usr/local/share/info/emacs" "Quitting" 1535361) ("/usr/local/share/info/emacs" "Concept Index" 2199231) ("/usr/local/share/info/emacs" "Quitting" 1532780) ("/usr/local/share/info/emacs" "Quitting" 1533161) ("/usr/local/share/info/emacs" "Quitting" 1533161))))
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*<3>"
+  'Info-mode
+  '(visual-line-mode helm-mode company-mode linum-mode global-auto-revert-mode purpose-mode)
+  706
+  '(nil nil)
+  t
+  '("dir" "Top" ((history ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Built-in table editor" 84959) ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Sparse trees" 56241) ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Conventions" 37243) ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Summary" 26853) ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Introduction" 24161) ("/home/mono/.emacs.d/el-get/org-mode/doc/org" "Top" 3561) ("dir" "Top" 706) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Earlier Kills" 206285) ("/usr/local/share/info/emacs" "Yanking" 203494) ("/usr/local/share/info/emacs" "Top" 1138) ("/usr/local/share/info/emacs" "Top" 1138) ("dir" "Top" 853) ("*Apropos*" "Index for `org-table-insert-column'" 176) ("/usr/local/share/info/emacs" "Top" 1138) ("dir" "Top" 853) ("/usr/local/share/info/emacs" "Quitting" 1535458) ("/usr/local/share/info/emacs" "Rebinding" 1496097) ("/usr/local/share/info/emacs" "Minibuffer Maps" 1494068) ("*Apropos*" "Index for `cal'" 18673) ("*Apropos*" "Index for `modern'" 57) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "Basic Embedded Mode" 1090185) ("/usr/local/share/info/calc" "Embedded Mode" 1088849) ("/usr/local/share/info/calc" "Top" 3429) ("/usr/local/share/info/calc" "Lisp Function Index" 1660073) ("/usr/local/share/info/calc" "Lisp Function Index" 1660073) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "GNU Free Documentation License" 1320659) ("/usr/local/share/info/calc" "Top" 3628) ("/usr/local/share/info/calc" "*Index for `with-extra-prec'*" 4) ("/usr/local/share/info/calc" "Top" 1032) ("/usr/local/share/info/calc" "Computational Lisp Functions" 1229327) ("/usr/local/share/info/calc" "Top" 1032) ("dir" "Top" 2339) ("/usr/local/share/info/emacs" "Quitting" 1535361) ("/usr/local/share/info/emacs" "Concept Index" 2199231) ("/usr/local/share/info/emacs" "Quitting" 1532780) ("/usr/local/share/info/emacs" "Quitting" 1533161) ("/usr/local/share/info/emacs" "Quitting" 1533161))))
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix) (case-fold-search . t) (truncate-lines)))
 

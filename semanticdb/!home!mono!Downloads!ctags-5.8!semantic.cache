@@ -1,0 +1,133 @@
+;; Object ctags-5.8/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ctags-5.8/"
+  :tables
+  (list
+    (semanticdb-table "awk.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("general.h" include nil nil [315 335])
+            ("string.h" include (:system-flag t) nil [367 386])
+            ("parse.h" include nil nil [388 406])
+            ("read.h" include nil nil [407 424])
+            ("vstring.h" include nil nil [425 445])
+            ("eAwkKinds" type
+               (:members 
+                  ( ("K_FUNCTION" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [500 512]))                  
+                :type "enum")
+                nil [474 521])
+            ("awkKind" type
+               (:typedef ("eAwkKinds" type (:type "enum") nil nil)
+                :type "typedef")
+                nil [474 521])
+            ("AwkKinds" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	{ TRUE, 'f', \"function\", \"functions\" }
+}"
+                :type ("kindOption" type (:type "class") nil nil))
+                nil [523 599])
+            ("findAwkTags" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [658 663]))                  
+                :type "void")
+                nil [633 1276])
+            ("AwkParser" function
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("parserDefinition" type (:type "class") nil nil))
+                nil [1278 1585]))          
+      :file "awk.c"
+      :pointmax 1624
+      :fsize 1623
+      :lastmodtime '(17709 46576 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "general.h"
+      :file "general.h"
+      :fsize 2585
+      :lastmodtime '(17977 21796 0 0))
+    (semanticdb-table "parse.h"
+      :file "parse.h"
+      :fsize 5104
+      :lastmodtime '(17709 46576 0 0))
+    (semanticdb-table "read.h"
+      :file "read.h"
+      :fsize 3568
+      :lastmodtime '(18455 53077 0 0))
+    (semanticdb-table "vstring.h"
+      :file "vstring.h"
+      :fsize 2896
+      :lastmodtime '(19026 50484 0 0))
+    (semanticdb-table "asp.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("general.h" include nil nil [381 401])
+            ("string.h" include (:system-flag t) nil [433 452])
+            ("parse.h" include nil nil [454 472])
+            ("read.h" include nil nil [473 490])
+            ("vstring.h" include nil nil [491 511])
+            ("aspKind" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("K_CONST" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [556 564])
+                          ("K_CLASS" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [565 573])
+                          ("K_FUNCTION" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [574 585])
+                          ("K_SUB" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [586 592])
+                          ("K_DIM" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [593 600]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [540 609])
+            ("AspKinds" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	{ TRUE, 'd', \"constant\",   \"constants\"},
+	{ TRUE, 'c', \"class\",      \"classes\"}, 
+	{ TRUE, 'f', \"function\",   \"functions\"},
+	{ TRUE, 's', \"subroutine\", \"subroutines\"},
+	{ TRUE, 'v', \"variable\",   \"variables\"}
+}"
+                :type ("kindOption" type (:type "class") nil nil))
+                nil [611 857])
+            ("findAspTags" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [916 921]))                  
+                :type "void")
+                nil [891 6883])
+            ("AspParser" function
+               (:pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6921 6926]))                  
+                :type ("parserDefinition" type (:type "class") nil nil))
+                nil [6885 7187]))          
+      :file "asp.c"
+      :pointmax 7227
+      :fsize 7226
+      :lastmodtime '(19023 35004 0 0)
+      :unmatched-syntax nil))
+  :file "!home!mono!Downloads!ctags-5.8!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

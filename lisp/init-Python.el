@@ -1,6 +1,6 @@
 (require 'python)
 (require 'window-purpose)
-(require 'ein)
+(require 'company-jedi)
 ;(require 'virtualenvwrapper)
 (require 'pyenv)
 
@@ -15,12 +15,15 @@
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i")
 
-(add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
-(setq ein:use-auto-complete t)
+;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
+;; (setq ein:use-auto-complete t)
 
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)                      ; optional
-(setq jedi:complete-on-dot t)                 ; optional
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:setup-keys t)                      ; optional
+;; (setq jedi:complete-on-dot t)                 ; optional
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+(add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (purpose-mode)
 (add-to-list 'purpose-user-mode-purposes '(python-mode . py))
