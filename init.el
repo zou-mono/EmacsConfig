@@ -22,12 +22,12 @@
 (setq
  el-get-sources
  '((:name smex				; a better (ido like) M-x
-	:after (progn
+	  :after (progn
 		 (setq smex-save-file "~/.emacs.d/.smex-items")
 		 (global-set-key (kbd "M-x") 'smex)
 		 (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
    (:name ess
-	:before (progn
+	  :before (progn
 		 (autoload 'R "ess-site.el" "ESS" t)))
    (:name session
 	  :before (progn
@@ -36,7 +36,7 @@
 	  :after (progn
 		   (add-hook 'after-init-hook 'session-initialize)))
    (:name helm
-	:features (helm-config))))
+	  :features (helm-config))))
 
 ;; now set our own packages
 (setq
@@ -64,7 +64,6 @@
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    company-jedi                                 ; Python auto-completion for Emacs
-                                   ; Collection of Emacs Development Environment Tools
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
    web-mode
    company-web

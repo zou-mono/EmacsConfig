@@ -5,6 +5,11 @@
 (setq hexo-dir "~/Documents/blog/test/")
 (setq org-support-shift-select t)
 
+;;修改emphasis的限制字符
+(setcar org-emphasis-regexp-components " \t('\".{[:nonascii:]") 
+(setcar (nthcdr 1 org-emphasis-regexp-components) "- \t.,:!?;'\")}\\[:nonascii:]")
+(org-set-emph-re 'org-emphasis-regexp-components org-emphasis-regexp-components)
+
 (setq org-list-allow-alphabetical t) ;; 允许列表使用字母，例如a, a)
 
 (defun website-html-postamble()
@@ -69,8 +74,8 @@
 #+TAGS:
 #+LAYOUT:post
 #+CATEGORIES:
-#+OPTIONS: toc:nil
-#+STARTUP: indent
+#+OPTIONS: toc:nil ^:{}
+#+STARTUP: indent align
 #+LATEX_HEADER: \\usepackage{xeCJK}
 #+LATEX_HEADER: \\setCJKmainfont{WenQuanYi Micro Hei Mono}
 #+BIND: org-html-postamble \"<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %%a - Last Updated %%C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %%c</div>\"

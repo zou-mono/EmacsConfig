@@ -32,7 +32,7 @@
 
 (defun open-python-perspective ()
   (interactive)
-  (purpose-load-frame-layout-file "~/.emacs.d/.Playout")
+  (purpose-load-window-layout-file "~/.emacs.d/.Playout")
   (sr-speedbar-open)
 )
 
