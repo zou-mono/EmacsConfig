@@ -92,6 +92,11 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 
+;;自动保存
+(require 'auto-save)            ;; 加载自动保存模块
+(auto-save-enable)              ;; 开启自动保存功能
+(setq auto-save-slient t)       ;; 自动保存的时候静悄悄的， 不要打扰我
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;    indent/unindent region as a block using the tab key
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

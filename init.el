@@ -42,7 +42,7 @@
 (setq
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
-   org-mode
+   ;;org-mode
    company-mode                         ; complete as you type with overlays
    ;; popup
    let-alist                            ; Easily let-bind values of an assoc-list by their names
