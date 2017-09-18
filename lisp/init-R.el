@@ -6,6 +6,17 @@
 (add-to-list 'auto-mode-alist '("\\.Rd$" . Rd-mode))
 (add-to-list 'auto-mode-alist '("\\.Rnw$" . ess-noweb-mode))
 
+;; 取消输入"_"变为"<-"的设定
+(ess-toggle-underscore nil)
+
+;; 设置knitr的编译器为xelatex
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ess-swv-pdflatex-commands (quote ("xelatex" "texi2pdf" "pdflatex" "make"))))
+
 '(ess-R-font-lock-keywords
   (quote
    ((ess-R-fl-keyword:modifiers . t)

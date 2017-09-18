@@ -6,6 +6,10 @@
 (set-fontset-font (frame-parameter nil 'font)
                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
+;; 设置emamcs和系统shell使用的环境变量一致
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks
 (global-linum-mode 1)			; have line numbers and
@@ -16,8 +20,11 @@
 ;; copy/paste with C-c and C-v and C-x, check out C-RET too
 (cua-mode)
 
-(scroll-bar-mode nil)1
+;; 关闭滚动条
+(scroll-bar-mode nil)
 (set-scroll-bar-mode nil)
+
+;; 非持久性标记模式
 (transient-mark-mode t)  
 
 ;;tree file browser
@@ -26,7 +33,9 @@
  '(sr-speedbar-right-side nil)
  '(sr-speedbar-skip-other-window-p t)
  '(sr-speedbar-max-width 20)
- '(sr-speedbar-width-x 10))
+ '(sr-speedbar-width-x 10)
+ ;; minibuffer窗口随显示内容改变
+ '(resize-mini-windows t))
 (setq speedbar-directory-unshown-regexp "^$")
 
 ;; 绑定快捷键
@@ -66,23 +75,6 @@
 ;;(setenv "PATH" (shell-command-to-string "source ~/.bashrc; echo -n $PATH"))
 ;;(setq shell-file-name "bash")
 ;;(setq shell-command-switch "-c") ;; 设置bash模式，让emacs的bash可以读取~/.bashrc
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(sr-speedbar-max-width 20)
- '(sr-speedbar-right-side nil)
- '(sr-speedbar-skip-other-window-p)
- '(sr-speedbar-width-x 10)
- '(tabbar-separator (quote (0.5))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
 
