@@ -42,7 +42,6 @@
 (setq
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
-   ;;org-mode
    company-mode                         ; complete as you type with overlays
    ;; popup
    let-alist                            ; Easily let-bind values of an assoc-list by their names
@@ -52,6 +51,7 @@
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    dired+
    auctex
+   polymode
    company-math
    session                              
    color-theme-solarized
