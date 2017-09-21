@@ -33,7 +33,8 @@
 (defun open-python-perspective ()
   (interactive)
   (purpose-load-window-layout-file "~/.emacs.d/.Playout")
-  (sr-speedbar-open)
+  (python-shell-switch-to-shell)
+  ;;(sr-speedbar-open)
 )
 
 (global-set-key (kbd "C-M-r") 'python-shell-send-region)
