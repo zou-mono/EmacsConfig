@@ -44,6 +44,7 @@
  '(el-get			       	; el-get is self-hosting
    company-mode                         ; complete as you type with overlays
    ;; popup
+   smart-mode-line
    let-alist                            ; Easily let-bind values of an assoc-list by their names
    exec-path-from-shell
    ess                                  ; Emacs Speaks Statistics
@@ -93,3 +94,7 @@
 (load "init-markdown") ;; markdown-mode settings
 (load "init-Python") ;; Python-mode settings
 (load "init-tex")  ;;auctex-mode settings
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
+(sml/setup)
