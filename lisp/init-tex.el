@@ -22,6 +22,11 @@
             (imenu-add-menubar-index)
             (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
 
+(setq reftex-file-extensions
+      '(("Snw" "Rnw" "nw" "tex" ".tex" ".ltx") ("bib" ".bib")))
+(setq TeX-file-extensions
+      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+
 ;(add-hook 'reftex-load-hook 'imenu-add-menubar-index)
 ;(add-hook 'reftex-mode-hook 'imenu-add-menubar-index)
 

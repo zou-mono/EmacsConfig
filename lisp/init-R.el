@@ -1,11 +1,17 @@
 (require 'window-purpose)
 (require 'ess-site)
-(require 'poly-R)
+;;(require 'poly-R)
 
+(defun Rnw-mode ()
+  (require 'ess-noweb)
+  (ess-noweb-mode)
+  (if (fboundp 'R-mode)
+      (setq ess-noweb-default-code-mode 'R-mode)))
 (add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.r$" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.Rd$" . Rd-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw$" . poly-noweb+r-mode))
+;;(add-to-list 'auto-mode-alist '("\\.Rnw$" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw$" . Rnw-mode))
 
 ;; 设置Purpose
 (add-to-list 'purpose-user-mode-purposes '(ess-mode . r))
@@ -30,7 +36,7 @@
      (ess-R-fl-keyword:assign-ops . t)
      (ess-R-fl-keyword:constants . t)
      (ess-fl-keyword:fun-calls . t)
-     (ess-fl-keyword:numbers . t)
+     (ess-fl-keyword:numbers . nil)
      (ess-fl-keyword:operators . t)
      (ess-fl-keyword:delimiters . t)
      (ess-fl-keyword:= . t)
