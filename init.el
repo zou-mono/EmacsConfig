@@ -95,6 +95,7 @@
 (load "init-Python") ;; Python-mode settings
 (load "init-tex")  ;;auctex-mode settings
 
+(setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
 (sml/setup)
