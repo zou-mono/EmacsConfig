@@ -6,6 +6,14 @@
 (set-fontset-font (frame-parameter nil 'font)
                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
+;; undo-tree
+(global-undo-tree-mode)
+;; make ctrl-z undo
+(global-set-key (kbd "C-z") 'undo)
+;; make ctrl-Z redo
+(defalias 'redo 'undo-tree-redo)`
+(global-set-key (kbd "C-S-z") 'redo)
+
 ;; 设置emamcs和系统shell使用的环境变量一致
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
@@ -28,7 +36,7 @@
 (transient-mark-mode t)  
 
 ;;tree file browser
-(autoload 'speedbar-extension "speedbar-extension.el" "speed-extension" t)
+;;(autoload 'speedbar-extension "speedbar-extension.el" "speed-extension" t)
 (custom-set-variables
  '(sr-speedbar-right-side nil)
  '(sr-speedbar-skip-other-window-p t)
