@@ -53,7 +53,8 @@
    dired+
    auctex
    polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
-   undo-tree                            ; 
+   undo-tree                            ; treats undo history as a branching tree of changes
+   which-key
    company-math
    session                              
    color-theme-solarized

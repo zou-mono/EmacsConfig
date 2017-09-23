@@ -14,6 +14,9 @@
 (defalias 'redo 'undo-tree-redo)`
 (global-set-key (kbd "C-S-z") 'redo)
 
+;; which-key
+(which-key-mode)
+
 ;; 设置emamcs和系统shell使用的环境变量一致
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))

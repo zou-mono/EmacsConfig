@@ -1,4 +1,4 @@
-(require 'window-purpose)
+;;(require 'window-purpose)
 (require 'ess-site)
 (require 'poly-R)
 
@@ -20,10 +20,6 @@
 (add-to-list 'auto-mode-alist '("\\.Rcpp$" . poly-r+c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cppR$" . poly-c++r-mode))
 
-;; 设置Purpose
-(add-to-list 'purpose-user-mode-purposes '(ess-mode . r))
-(add-to-list 'purpose-user-mode-purposes '(inferior-ess-mode . r-repl))
-(purpose-compile-user-configuration)
 
 ;; 取消输入"_"变为"<-"的设定
 (ess-toggle-underscore nil)
@@ -50,16 +46,15 @@
      (ess-R-fl-keyword:F&T . t)
      (ess-R-fl-keyword:%op% . t)))))
 
-(defun open-r-perspective ()
+(defun open-r()
   (interactive)
   (setq ess-ask-for-ess-directory nil)
   (setq ess-directory "~/Documents/R_Project/")
   (R)
-  (purpose-mode)
-  (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
-  (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout")
-)
+  (perspective-R))
+  ;; (purpose-mode)
+  ;; (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
+  ;; (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
 
 ;; (setq ess-ask-about-transfile nil)
-
-(global-set-key (kbd "C-c r") 'open-r-perspective)
+(global-set-key (kbd "C-c r") 'open-r)
