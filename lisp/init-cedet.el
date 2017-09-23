@@ -14,33 +14,27 @@
 ;;(setq semantic-idle-scheduler-idle-time 3)
 
 ;;gnu global support
-(add-hook 'python-mode-hook
-   '(lambda ()
-      (ggtags-mode 1)))
-
-(add-hook 'js2-mode-hook
-   '(lambda ()
-      (ggtags-mode 1)))
-
-(add-hook 'web-mode-hook
-   '(lambda ()
-      (ggtags-mode 1)))
-
+(add-hook 'emacs-lisp-mode-hook 'ggtags-mode)
+(add-hook 'python-mode-hook 'ggtags-mode)
+(add-hook 'js2-mode-hook 'ggtags-mode)
+(add-hook 'web-mode-hook 'ggtags-mode)
+(add-hook 'java-mode-hook 'ggtags-mode)
 
 (setq cedet-global-command "global") ; Change to path of global as needed
      (when (cedet-gnu-global-version-check t)  ; Is it ok?
        ;; Configurations for GNU Global and CEDET
        (semanticdb-enable-gnu-global-databases 'python-mode t)
        (semanticdb-enable-gnu-global-databases 'js2-mode t)
-       (semanticdb-enable-gnu-global-databases 'web-mode t))
+       (semanticdb-enable-gnu-global-databases 'web-mode t)
+       (semanticdb-enable-gnu-global-databases 'emacs-lisp-mode t)
+       (semanticdb-enable-gnu-global-databases 'java-mode t))
 
 ;;(setq gtags-suggested-key-mapping t)
 
 ;; key binding
 (defun my-cedet-hook ()
   (local-set-key (kbd "C-c s b") 'semantic-mrub-switch-tags)
-  (local-set-key "\C-cj" 'semantic-ia-fast-jump)
-  )
+  (local-set-key "\C-cj" 'semantic-ia-fast-jump))
 
 (add-hook 'js2-mode-hook 'my-cedet-hook)
 (add-hook 'python-mode-hook 'my-cedet-hook)

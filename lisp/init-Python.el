@@ -12,7 +12,7 @@
 ;; (setq venv-location "/home/mono/.virtualenvs/")
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
-(setq python-shell-interpreter "ipython"
+(setq python-shell-interpreter "python"
       python-shell-interpreter-args "-i")
 
 ;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)

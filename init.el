@@ -39,7 +39,7 @@
 	  :features (helm-config))))
 
 ;; now set our own packages
-(setq
+(setq 
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
    company-mode                         ; complete as you type with overlays
@@ -86,11 +86,11 @@
 (el-get 'sync my:el-get-packages)
 
 ;;(autoload 'gtags-mode "gtags" "" t)
+(load "init-cedet")
 (load "init-web") ;; base settings
 (load "init-base") ;; base settings
 (load "init-tabbar") ;; Tabbar settings
 (load "init-layout") ;; layout settings
-(load "init-cedet")
 (load "init-R")  ;; r-mode settings
 (load "init-org") ;; org-mode settings
 (load "init-markdown") ;; markdown-mode settings
