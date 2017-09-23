@@ -1,4 +1,4 @@
-(require 'cedet)
+(require 'cedet) ;; 已经集成到emacs中，不需要独立安装
 (require 'cedet-global)
 (require 'semantic)
 

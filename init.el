@@ -52,7 +52,7 @@
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    dired+
    auctex
-   ;;polymode
+   polymode
    company-math
    session                              
    color-theme-solarized
