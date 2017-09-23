@@ -1,8 +1,8 @@
 (require 'python)
-(require 'window-purpose)
 (require 'company-jedi)
 ;(require 'virtualenvwrapper)
 (require 'pyenv)
+(elpy-enable)
 
 (global-pyenv-mode)
 
@@ -25,19 +25,15 @@
   (add-to-list 'company-backends 'company-jedi))
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
-(purpose-mode)
-(add-to-list 'purpose-user-mode-purposes '(python-mode . py))
-(add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
-(purpose-compile-user-configuration)
-
-(defun open-python-perspective ()
+(defun open-python ()
   (interactive)
-  (purpose-load-window-layout-file "~/.emacs.d/.Playout")
-  (python-shell-switch-to-shell)
+  (run-python)
+  (perspective-python)
+  ;;(python-shell-switch-to-shell)
   ;;(sr-speedbar-open)
 )
 
 (global-set-key (kbd "C-M-r") 'python-shell-send-region)
-(global-set-key (kbd "C-c p") 'open-python-perspective)
+(global-set-key (kbd "C-c p") 'open-python)
 
 
