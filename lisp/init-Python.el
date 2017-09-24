@@ -28,7 +28,7 @@
 (defun open-python ()
   (interactive)
   (run-python)
-  (perspective-python)
+  (perspective/python)
   ;;(python-shell-switch-to-shell)
   ;;(sr-speedbar-open)
 )

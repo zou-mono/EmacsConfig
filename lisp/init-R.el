@@ -51,7 +51,7 @@
   (setq ess-ask-for-ess-directory nil)
   (setq ess-directory "~/Documents/R_Project/")
   (R)
-  (perspective-R))
+  (perspective/R))
   ;; (purpose-mode)
   ;; (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
   ;; (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))

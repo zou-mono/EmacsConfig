@@ -17,28 +17,28 @@
 (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
 (purpose-compile-user-configuration)
 
-(defun perspective-R()
+(defun perspective/R()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
   (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
 
-(defun perspective-lisp()
+(defun perspective/lisp()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file "~/.emacs.d/layouts/emacs-lisp-layout.window-layout")
   (purpose-load-frame-layout-file "~/.emacs.d/layouts/emacs-lisp-layout.frame-layout"))
 
-(defun perspective-python()
+(defun perspective/python()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file "~/.emacs.d/layouts/python-layout.window-layout")
   (purpose-load-frame-layout-file "~/.emacs.d/layouts/python-layout.frame-layout"))
 
 
-(define-key perspective-map (kbd "R") 'perspective-R)
-(define-key perspective-map (kbd "l") 'perspective-lisp)
-(define-key perspective-map (kbd "p") 'perspective-python)
+(define-key perspective-map (kbd "R") 'perspective/R)
+(define-key perspective-map (kbd "l") 'perspective/lisp)
+(define-key perspective-map (kbd "p") 'perspective/python)
 
 
 
