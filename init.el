@@ -67,7 +67,7 @@
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    ;; company-jedi                      ; Python auto-completion for Emacs
-   elpy
+   elpy                                 ; Python develope environment
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
    web-mode
    company-web
