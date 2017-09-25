@@ -20,20 +20,20 @@
 (defun perspective/R()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
-  (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
+  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/Rlayout.window-layout"))
+  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/Rlayout.frame-layout")))
 
 (defun perspective/lisp()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file "~/.emacs.d/layouts/emacs-lisp-layout.window-layout")
-  (purpose-load-frame-layout-file "~/.emacs.d/layouts/emacs-lisp-layout.frame-layout"))
+  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/emacs-lisp-layout.window-layout"))
+  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/emacs-lisp-layout.frame-layout")))
 
 (defun perspective/python()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file "~/.emacs.d/layouts/python-layout.window-layout")
-  (purpose-load-frame-layout-file "~/.emacs.d/layouts/python-layout.frame-layout"))
+  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/python-layout.window-layout"))
+  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/python-layout.frame-layout")))
 
 
 (define-key perspective-map (kbd "R") 'perspective/R)

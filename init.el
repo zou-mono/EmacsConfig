@@ -1,8 +1,17 @@
 ;; init.el
 ;; 把目录lisp/添加到搜索路径中去
 
-(add-to-list 'load-path "~/.emacs.d/lisp") 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path (concat emacs-conf-path "lisp")) 
+(add-to-list 'load-path (concat emacs-conf-path "el-get/el-get"))
+
+;; ELPA
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+(package-initialize)
+
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -10,20 +19,12 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-;; (when (>= emacs-major-version 24)
-;;   (require 'package)
-;;   (add-to-list
-;;    'package-archives
-;;    '("melpa" . "http://melpa.org/packages/")
-;;    t)
-;;   (package-initialize))
-
 ;; set local recipes
 (setq
  el-get-sources
  '((:name smex				; a better (ido like) M-x
 	  :after (progn
-		 (setq smex-save-file "~/.emacs.d/.smex-items")
+		 (setq smex-save-file (concat emacs-conf-path  ".smex-items"))
 		 (global-set-key (kbd "M-x") 'smex)
 		 (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
    (:name ess
@@ -67,7 +68,7 @@
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    ;; company-jedi                      ; Python auto-completion for Emacs
-   elpy
+   elpy                                 ; Python develope environment
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
    web-mode
    company-web
@@ -75,16 +76,18 @@
    window-numbering))		
 
 ;; add customized recipts
-(add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
+(add-to-list 'el-get-recipe-path (concat emacs-conf-path "recipes"))
 
 ;; Locally defined recipe
 (el-get-bundle nvm)
 (el-get-bundle web-beautify)
+(el-get-bundle dumb-jump)
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
+(add-to-list 'Info-directory-list "")
 
 ;;(autoload 'gtags-mode "gtags" "" t)
 (load "init-cedet")
@@ -99,6 +102,6 @@
 (load "init-tex")  ;;auctex-mode settings
 
 (setq custom-safe-themes t)
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(add-to-list 'custom-theme-load-path (concat emacs-conf-path "themes"))
 (load-theme 'dracula t)
 (sml/setup)

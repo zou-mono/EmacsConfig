@@ -1,0 +1,6 @@
+(:name dumb-jump
+  :website "git@github.com:jacktasia/dumb-jump.git"
+  :description
+  "Dumb Jump is an Emacs \"jump to definition\" package with support for multiple programming languages that favors \"just working\"."
+  :type github
+  :pkgname "jacktasia/dumb-jump")

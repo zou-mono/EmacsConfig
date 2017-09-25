@@ -1,7 +1,7 @@
 ;; (require 'cedet) ;; 已经集成到emacs中，不需要独立安装
 ;; (require 'cedet-global)
 ;; emacs自带的cedet无法识别lisp-mode，所以使用独立安装的
-(load-file "~/.emacs.d/el-get/cedet/cedet-devel-load.el") 
+(load-file (concat emacs-conf-path "el-get/cedet/cedet-devel-load.el")) 
 (require 'semantic)
 
 (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
