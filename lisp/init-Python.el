@@ -29,7 +29,7 @@
   (interactive)
   (run-python)
   (perspective/python)
-  ;;(python-shell-switch-to-shell)
+  (python-shell-switch-to-shell)
   ;;(sr-speedbar-open)
 )
 

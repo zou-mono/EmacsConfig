@@ -3,4 +3,5 @@
   :description
   "Dumb Jump is an Emacs \"jump to definition\" package with support for multiple programming languages that favors \"just working\"."
   :type github
+  :depends popup
   :pkgname "jacktasia/dumb-jump")

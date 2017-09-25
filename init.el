@@ -81,7 +81,7 @@
 ;; Locally defined recipe
 (el-get-bundle nvm)
 (el-get-bundle web-beautify)
-(el-get-bundle dumb-jump)
+;; (el-get-bundle dumb-jump)
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
 
