@@ -48,7 +48,7 @@
 (add-hook 'python-mode-hook 'my-cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-cedet-hook)
 
-(dumb-jump-mode)
+;; (dumb-jump-mode)
 ;;(setq dumb-jump-selector 'helm)
 
 ;; (add-hook 'gtags-mode-hook
