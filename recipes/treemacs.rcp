@@ -1,0 +1,7 @@
+(:name treemacs
+  :website "git@github.com:Alexander-Miller/treemacs.git"
+  :description
+  "a tree layout file explorer for Emacs"
+  :type github
+  :depends ( f s dash ace-window pfuture hydra)
+  :pkgname "Alexander-Miller/treemacs")

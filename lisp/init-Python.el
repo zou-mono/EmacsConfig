@@ -22,7 +22,9 @@
 ;; (setq jedi:setup-keys t)                      ; optional
 ;; (setq jedi:complete-on-dot t)                 ; optional
 (defun my/python-mode-hook ()
-  (add-to-list 'company-backends 'company-jedi))
+  (add-to-list 'company-backends 'company-jedi)
+  (local-set-key (kbd "C-c j") 'elpy-goto-definition))
+
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 (defun open-python ()
@@ -33,7 +35,7 @@
   ;;(sr-speedbar-open)
 )
 
-(global-set-key (kbd "C-M-r") 'python-shell-send-region)
-(global-set-key (kbd "C-c p") 'open-python)
+;; (global-set-key (kbd "C-M-r") 'python-shell-send-region)
+(global-set-key (kbd "C-x p") 'open-python)
 
 
