@@ -56,6 +56,7 @@
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
    company-mode                         ; complete as you type with overlays
+   use-package
    ;; popup
    smart-mode-line
    let-alist                            ; Easily let-bind values of an assoc-list by their names
@@ -70,7 +71,7 @@
    which-key
    company-math
    session                              
-   color-theme-solarized
+   ;; color-theme-solarized
    markdown-mode
    helm
    pyenv
@@ -78,7 +79,7 @@
    sr-speedbar
    virtualenvwrapper
    treemacs
-   ;;speedbar-extension
+   ;; speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    projectile                           ; project navigation and management library for emacs
    elpy                                 ; Python develope environment
