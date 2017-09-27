@@ -57,4 +57,4 @@
   ;; (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
 
 ;; (setq ess-ask-about-transfile nil)
-(global-set-key (kbd "C-c r") 'open-r)
+(global-set-key (kbd "C-x R") 'open-r)

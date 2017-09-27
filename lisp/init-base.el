@@ -50,8 +50,8 @@
 (setq speedbar-directory-unshown-regexp "^$")
 
 ;; 绑定快捷键
-(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
-(global-set-key (kbd "M-r") 'sr-speedbar-refresh-toggle)
+;; (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
+;; (global-set-key (kbd "M-r") 'sr-speedbar-refresh-toggle)
 
 ;; 以 y/n代表 yes/no  
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -86,8 +86,6 @@
 ;;(setenv "PATH" (shell-command-to-string "source ~/.bashrc; echo -n $PATH"))
 ;;(setq shell-file-name "bash")
 ;;(setq shell-command-switch "-c") ;; 设置bash模式，让emacs的bash可以读取~/.bashrc
-
-(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
 
 (require 'dired+)
 

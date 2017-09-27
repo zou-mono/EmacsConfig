@@ -7,11 +7,23 @@
 ;; ELPA
 (when (>= emacs-major-version 24)
   (require 'package)
-  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+  ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
+  ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+)
 (package-initialize)
 
+;; (setq package-list '(treemacs))
+;; ; fetch the list of packages available 
+;; (unless package-archive-contents
+;;   (package-refresh-contents))
+
+;; ; install the missing packages
+;; (dolist (package package-list)
+;;   (unless (package-installed-p package)
+;;     (package-install package)))
+
+;; el-get
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -65,9 +77,10 @@
    window-purpose
    sr-speedbar
    virtualenvwrapper
+   treemacs
    ;;speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
-   ;; company-jedi                      ; Python auto-completion for Emacs
+   projectile                           ; project navigation and management library for emacs
    elpy                                 ; Python develope environment
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
    web-mode
