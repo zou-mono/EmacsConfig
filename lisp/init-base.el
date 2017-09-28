@@ -83,6 +83,8 @@
 
 (global-visual-line-mode t)
 
+;; yasnippet
+(yas-global-mode 1)
 ;;(setenv "PATH" (shell-command-to-string "source ~/.bashrc; echo -n $PATH"))
 ;;(setq shell-file-name "bash")
 ;;(setq shell-command-switch "-c") ;; 设置bash模式，让emacs的bash可以读取~/.bashrc

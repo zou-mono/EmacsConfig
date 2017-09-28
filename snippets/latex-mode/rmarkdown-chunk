@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: rnw-block
+# key: rnw
+# --
+<<$0>>=
+@

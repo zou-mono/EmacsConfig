@@ -77,6 +77,7 @@
    pyenv
    window-purpose
    sr-speedbar
+   yasnippet
    virtualenvwrapper
    treemacs
    ;; speedbar-extension
