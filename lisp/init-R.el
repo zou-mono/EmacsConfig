@@ -8,6 +8,8 @@
 ;;   (if (fboundp 'R-mode)
 ;;       (setq ess-noweb-default-code-mode 'R-mode)))
 
+(setq polymode-display-output-file nil)
+
 (add-to-list 'auto-mode-alist '("\\.R$" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.r$" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.Rd$" . Rd-mode))

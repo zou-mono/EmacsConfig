@@ -85,6 +85,7 @@
    projectile                           ; project navigation and management library for emacs
    elpy                                 ; Python develope environment
    js2-mode                             ; Improved JavaScript editing mode for GNU Emacs
+   pandoc-mode                          ; an Emacs mode for interacting with Pandoc
    web-mode
    company-web
    company-tern
