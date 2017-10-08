@@ -74,6 +74,7 @@
    ;; color-theme-solarized
    markdown-mode
    helm
+   ag
    pyenv
    window-purpose
    sr-speedbar
