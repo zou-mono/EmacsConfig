@@ -28,6 +28,7 @@
       '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
 
 ;(add-hook 'reftex-load-hook 'imenu-add-menubar-index)
-;(add-hook 'reftex-mode-hook 'imenu-add-menubar-index)
+;(add-hook 'reftex-mode-hook 'imenu-add-menubar-index)	
 
-(global-set-key [down-mouse-3] 'imenu)	
+;; (setq ess-ask-about-transfile nil)
+(global-set-key [down-mouse-3] 'imenu)

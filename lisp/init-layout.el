@@ -15,6 +15,9 @@
 ;; python
 (add-to-list 'purpose-user-mode-purposes '(python-mode . py))
 (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
+;; latex
+(add-to-list 'purpose-user-mode-purposes '(tex-mode . latex-mode))
+(add-to-list 'purpose-user-mode-purposes '(TeX-output-mode . tex-output))
 (purpose-compile-user-configuration)
 
 (defun perspective/R()
@@ -35,11 +38,16 @@
   (purpose-load-window-layout-file (concat emacs-conf-path "layouts/python-layout.window-layout"))
   (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/python-layout.frame-layout")))
 
+(defun perspective/tex()
+  (interactive)
+  (purpose-mode)
+  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/tex-layout.window-layout"))
+  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/tex-layout.frame-layout")))
 
 (define-key perspective-map (kbd "R") 'perspective/R)
 (define-key perspective-map (kbd "l") 'perspective/lisp)
 (define-key perspective-map (kbd "p") 'perspective/python)
-
+(define-key perspective-map (kbd "t") 'perspective/tex)
 
 
 
