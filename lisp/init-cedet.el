@@ -12,12 +12,12 @@
 (global-semanticdb-minor-mode 1)
 (global-semantic-highlight-func-mode 1)
 (global-semantic-mru-bookmark-mode 1)
-(global-semantic-idle-completions-mode t)
+;; (global-semantic-idle-completions-mode t) ;;光标放在单词后面会触发补全联想
 ;;(global-semantic-decoration-mode 1)
 ;;(global-semantic-stickyfunc-mode 1)
 ;;(global-semantic-idle-breadcrumbs-mode 1)
 (global-semantic-mru-bookmark-mode 1)
-;;(setq semantic-idle-scheduler-idle-time 3)
+(setq semantic-idle-scheduler-idle-time 3)
 
 ;;gnu global support
 (add-hook 'emacs-lisp-mode-hook 'ggtags-mode)

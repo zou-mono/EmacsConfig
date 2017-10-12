@@ -90,6 +90,7 @@
    web-mode
    company-web
    company-tern
+   company-auctex
    window-numbering))		
 
 ;; add customized recipts
