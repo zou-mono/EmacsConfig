@@ -56,3 +56,5 @@ That is, a string used to represent it on the tab bar."
 (global-set-key [M-down] 'tabbar-forward-group)
 
 (tabbar-mode 1)
+
+(provide 'init-tabbar)

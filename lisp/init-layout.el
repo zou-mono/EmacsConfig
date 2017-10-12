@@ -23,31 +23,33 @@
 (defun perspective/R()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/Rlayout.window-layout"))
-  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/Rlayout.frame-layout")))
+  (purpose-load-window-layout-file (expand-file-name "layouts/Rlayout.window-layout" user-emacs-directory))
+  (purpose-load-frame-layout-file (expand-file-name "layouts/Rlayout.frame-layout" user-emacs-directory)))
 
 (defun perspective/lisp()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/emacs-lisp-layout.window-layout"))
-  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/emacs-lisp-layout.frame-layout")))
+  (purpose-load-window-layout-file (expand-file-name "layouts/emacs-lisp-layout.window-layout" user-emacs-directory))
+  (purpose-load-frame-layout-file (expand-file-name "layouts/emacs-lisp-layout.frame-layout" user-emacs-directory)))
 
 (defun perspective/python()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/python-layout.window-layout"))
-  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/python-layout.frame-layout")))
+  (purpose-load-window-layout-file (expand-file-name "layouts/python-layout.window-layout" user-emacs-directory))
+  (purpose-load-frame-layout-file (expand-file-name "layouts/python-layout.frame-layout" user-emacs-directory)))
 
 (defun perspective/tex()
   (interactive)
   (purpose-mode)
-  (purpose-load-window-layout-file (concat emacs-conf-path "layouts/tex-layout.window-layout"))
-  (purpose-load-frame-layout-file (concat emacs-conf-path "layouts/tex-layout.frame-layout")))
+  (purpose-load-window-layout-file (expand-file-name "layouts/tex-layout.window-layout" user-emacs-directory))
+  (purpose-load-frame-layout-file (expand-file-name "layouts/tex-layout.frame-layout" user-emacs-directory)))
 
 (define-key perspective-map (kbd "R") 'perspective/R)
 (define-key perspective-map (kbd "l") 'perspective/lisp)
 (define-key perspective-map (kbd "p") 'perspective/python)
 (define-key perspective-map (kbd "t") 'perspective/tex)
+
+(provide 'init-layout)
 
 
 

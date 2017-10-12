@@ -1,17 +1,36 @@
 ;; init.el
+;;(package-initialize)
+
+;;(defvar emacs-conf-path "~/.emacs.d/")
+;;(load (concat emacs-conf-path "init.el"))
+(custom-set-variables
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(package-selected-packages (quote (pydoc helm-core cl-generic)))
+ '(resize-mini-windows t))
+ ;; '(session-use-package t nil (session))
+ ;; '(tabbar-separator (quote (0.5))))
+
+(custom-set-faces
+ '(font-latex-sedate-face ((t (:foreground "wheat"))))
+ '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
+
 ;; 把目录lisp/添加到搜索路径中去
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory)) 
+(add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
-(add-to-list 'load-path (concat emacs-conf-path "lisp")) 
-(add-to-list 'load-path (concat emacs-conf-path "el-get/el-get"))
-
+;;----------------------------------------------------------------------------
 ;; ELPA
-(when (>= emacs-major-version 24)
-  (require 'package)
-  ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-  ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-)
-(package-initialize)
+;;----------------------------------------------------------------------------
+;; (when (>= emacs-major-version 24)
+;;   (require 'package)
+;;   ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+;;   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;;   ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+;; )
+;; (package-initialize)
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
@@ -23,7 +42,9 @@
 ;;   (unless (package-installed-p package)
 ;;     (package-install package)))
 
+;;----------------------------------------------------------------------------
 ;; el-get
+;;----------------------------------------------------------------------------
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -36,7 +57,7 @@
  el-get-sources
  '((:name smex				; a better (ido like) M-x
 	  :after (progn
-		 (setq smex-save-file (concat emacs-conf-path  ".smex-items"))
+		 (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
 		 (global-set-key (kbd "M-x") 'smex)
 		 (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
    (:name ess
@@ -91,11 +112,11 @@
    company-web
    company-tern
    company-auctex
-   predictive
+   ;; predictive
    window-numbering))		
 
 ;; add customized recipts
-(add-to-list 'el-get-recipe-path (concat emacs-conf-path "recipes"))
+(add-to-list 'el-get-recipe-path (expand-file-name "recipes" user-emacs-directory))
 
 ;; Locally defined recipe
 (el-get-bundle nvm)
@@ -108,19 +129,22 @@
 (el-get 'sync my:el-get-packages)
 (add-to-list 'Info-directory-list "")
 
-;;(autoload 'gtags-mode "gtags" "" t)
-(load "init-cedet")
-(load "init-web") ;; base settings
-(load "init-base") ;; base settings
-(load "init-tabbar") ;; Tabbar settings
-(load "init-layout") ;; layout settings
-(load "init-R")  ;; r-mode settings
-(load "init-org") ;; org-mode settings
-(load "init-markdown") ;; markdown-mode settings
-(load "init-Python") ;; Python-mode settings
-(load "init-tex")  ;;auctex-mode settings
+
+;;----------------------------------------------------------------------------
+;; Load configs for specific features and modes
+;;----------------------------------------------------------------------------
+(require 'init-cedet)
+(require 'init-web) ;; base settings
+(require 'init-base) ;; base settingss
+(require 'init-tabbar)
+(require 'init-layout) ;; layout settings
+(require 'init-R)  ;; r-mode settings
+(require 'init-org) ;; org-mode settings
+(require 'init-markdown) ;; markdown-mode settings
+(require 'init-python) ;; Python-mode settings
+(require 'init-tex)  ;;auctex-mode settings
 
 (setq custom-safe-themes t)
-(add-to-list 'custom-theme-load-path (concat emacs-conf-path "themes"))
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
-(sml/setup)
+(sml/setup) ;; smart-mode-line

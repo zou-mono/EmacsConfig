@@ -94,5 +94,7 @@
   (interactive)
   (async-shell-command (format "cd %s; hexo s --draft" hexo-dir)))
 
+(provide 'init-org)
+
 
 

@@ -36,3 +36,5 @@
 (global-set-key [down-mouse-3] 'imenu)
 
 (company-auctex-init)
+
+(provide 'init-tex)

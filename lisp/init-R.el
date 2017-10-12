@@ -60,3 +60,5 @@
 
 ;; (setq ess-ask-about-transfile nil)
 (global-set-key (kbd "C-x R") 'open-r)
+
+(provide 'init-R)

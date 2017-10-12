@@ -117,7 +117,6 @@
    `(font-latex-match-reference-keywords ((,class (:foreground ,const))))
    `(font-latex-match-variable-keywords ((,class (:foreground ,var))))
    `(font-latex-string-face ((,class (:foreground ,str))))
-   `(font-latex-sedate-face ((t (:foreground "wheat"))))
    ;; gnus-group
    `(gnus-group-mail-1 ((,class (:foreground ,keyword :bold t))))
    `(gnus-group-mail-1-empty ((,class (:inherit gnus-group-mail-1 :bold nil))))

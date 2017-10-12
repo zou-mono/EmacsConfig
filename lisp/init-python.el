@@ -38,4 +38,5 @@
 ;; (global-set-key (kbd "C-M-r") 'python-shell-send-region)
 (global-set-key (kbd "C-x p") 'open-python)
 
+(provide 'init-python)
 

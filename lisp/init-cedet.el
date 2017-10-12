@@ -1,7 +1,7 @@
 ;; (require 'cedet) ;; 已经集成到emacs中，不需要独立安装
 ;; (require 'cedet-global)
 ;; emacs自带的cedet无法识别lisp-mode，所以使用独立安装的
-(load-file (concat emacs-conf-path "el-get/cedet/cedet-devel-load.el")) 
+(load-file (expand-file-name "el-get/cedet/cedet-devel-load.el" user-emacs-directory)) 
 (require 'semantic)
 
 (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
@@ -81,4 +81,6 @@
 (define-key treemacs-map (kbd "f") 'treemacs-find-file)
 (define-key treemacs-map (kbd "p") 'treemacs-projectile-toggle)
 (define-key treemacs-map (kbd "P") 'treemacs-projectile)
+
+(provide 'init-cedet)
 

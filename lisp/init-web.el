@@ -61,3 +61,5 @@
 (defun do-nvm-use (version)
   (interactive "sVersion: ")
   (nvm-use version))
+
+(provide 'init-web)
