@@ -91,6 +91,7 @@
    company-web
    company-tern
    company-auctex
+   predictive
    window-numbering))		
 
 ;; add customized recipts
