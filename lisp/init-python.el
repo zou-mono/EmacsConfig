@@ -1,7 +1,7 @@
-(require 'python)
-(require 'company-jedi)
+;;(require 'python)
+;;(require 'company-jedi)
 ;(require 'virtualenvwrapper)
-(require 'pyenv)
+;;(require 'pyenv)
 (elpy-enable)
 
 (global-pyenv-mode)
@@ -21,19 +21,23 @@
 ;; (add-hook 'python-mode-hook 'jedi:setup)
 ;; (setq jedi:setup-keys t)                      ; optional
 ;; (setq jedi:complete-on-dot t)                 ; optional
-(defun my/python-mode-hook ()
-  (add-to-list 'company-backends 'company-jedi)
-  (local-set-key (kbd "C-c j") 'elpy-goto-definition))
 
-(add-hook 'python-mode-hook 'my/python-mode-hook)
+;; (defun my/python-mode-hook ()
+;;   (add-to-list 'company-backends 'company-jedi)
+;;   (local-set-key (kbd "C-c j") 'elpy-goto-definition))
 
+(add-hook 'python-mode-hook
+          (lambda ()
+             (require 'company-jedi)
+             (add-to-list 'company-backends 'company-jedi)
+             (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+
+;;;###autoload
 (defun open-python ()
   (interactive)
   (run-python)
   (perspective/python)
-  (python-shell-switch-to-shell)
-  ;;(sr-speedbar-open)
-)
+  (python-shell-switch-to-shell))
 
 ;; (global-set-key (kbd "C-M-r") 'python-shell-send-region)
 (global-set-key (kbd "C-x p") 'open-python)

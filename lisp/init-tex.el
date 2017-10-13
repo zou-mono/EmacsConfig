@@ -1,6 +1,6 @@
-(load "auctex.el" nil t t)
-(load "preview-latex.el" nil t t)
-(require 'company-auctex)
+;;(load "auctex.el" nil t t)
+;;(load "preview-latex.el" nil t t)
+;;(require 'company-auctex)
 
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)

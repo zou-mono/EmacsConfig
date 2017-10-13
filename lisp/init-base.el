@@ -1,10 +1,5 @@
-;; customized theme
-;;(load-theme 'solarized t)
-
-;;(set-frame-parameter nil 'background-mode 'dark)
-;;;;(enable-theme 'solarized)
 (set-fontset-font (frame-parameter nil 'font)
-                  'han (font-spec :family "WenQuanYi Micro Hei Mono"))
+                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
 ;; undo-tree
 (global-undo-tree-mode)
@@ -40,18 +35,14 @@
 
 ;;tree file browser
 ;;(autoload 'speedbar-extension "speedbar-extension.el" "speed-extension" t)
-(custom-set-variables
- '(sr-speedbar-right-side nil)
- '(sr-speedbar-skip-other-window-p t)
- '(sr-speedbar-max-width 20)
- '(sr-speedbar-width-x 10)
- ;; minibuffer窗口随显示内容改变
- '(resize-mini-windows t))
-(setq speedbar-directory-unshown-regexp "^$")
-
-;; 绑定快捷键
-;; (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
-;; (global-set-key (kbd "M-r") 'sr-speedbar-refresh-toggle)
+;; (custom-set-variables
+;;  '(sr-speedbar-right-side nil)
+;;  '(sr-speedbar-skip-other-window-p t)
+;;  '(sr-speedbar-max-width 20)
+;;  '(sr-speedbar-width-x 10)
+;;  ;; minibuffer窗口随显示内容改变
+;;  '(resize-mini-windows t))
+;; (setq speedbar-directory-unshown-regexp "^$")
 
 ;; 以 y/n代表 yes/no  
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -81,6 +72,16 @@
 
 ;;保存会话状态
 (desktop-save-mode 1)
+(setq desktop-buffers-not-to-save
+        (concat "\\("
+                "^nn\\.a[0-9]+\\|\\.log\\|(ftp)\\|^tags\\|^TAGS"
+                "\\|\\.emacs.*\\|\\.diary\\|\\.newsrc-dribble\\|\\.bbdb"
+	        "\\)$"))
+(add-to-list 'desktop-modes-not-to-save 'dired-mode)
+(add-to-list 'desktop-modes-not-to-save 'Info-mode)
+(add-to-list 'desktop-modes-not-to-save 'info-lookup-mode)
+(add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
+(add-to-list 'desktop-modes-not-to-save 'treemacs-mode)
 
 (global-visual-line-mode t)
 
@@ -92,9 +93,11 @@
 
 (require 'dired+)
 
-(helm-mode 1)
-
-(add-hook 'after-init-hook 'global-company-mode)
+;; (add-hook 'after-init-hook 'helm-mode)
+;; (add-hook 'after-init-hook
+;;           (lambda ()
+;;             (when (memq window-system '(mac ns x))
+;;              (exec-path-from-shell-initialize))))
 
 ;;自动保存
 (require 'auto-save)            ;; 加载自动保存模块

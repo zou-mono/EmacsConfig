@@ -2,9 +2,9 @@
 ;; (require 'cedet-global)
 ;; emacs自带的cedet无法识别lisp-mode，所以使用独立安装的
 (load-file (expand-file-name "el-get/cedet/cedet-devel-load.el" user-emacs-directory)) 
-(require 'semantic)
+;; (require 'semantic)
 
-(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+;; (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 
 ;; basic configuration
 (semantic-mode 1)

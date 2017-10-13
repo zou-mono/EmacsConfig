@@ -20,24 +20,28 @@
 (add-to-list 'purpose-user-mode-purposes '(TeX-output-mode . tex-output))
 (purpose-compile-user-configuration)
 
+;;;###autoload
 (defun perspective/R()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file (expand-file-name "layouts/Rlayout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/Rlayout.frame-layout" user-emacs-directory)))
 
+;;;###autoload
 (defun perspective/lisp()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file (expand-file-name "layouts/emacs-lisp-layout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/emacs-lisp-layout.frame-layout" user-emacs-directory)))
 
+;;;###autoload
 (defun perspective/python()
   (interactive)
   (purpose-mode)
   (purpose-load-window-layout-file (expand-file-name "layouts/python-layout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/python-layout.frame-layout" user-emacs-directory)))
 
+;;;###autoload
 (defun perspective/tex()
   (interactive)
   (purpose-mode)

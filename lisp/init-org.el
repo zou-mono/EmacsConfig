@@ -28,9 +28,9 @@
          (scale "100") 
          (align "center") 
          (indent "2em")
-         (mathml nil))
-       )
+         (mathml nil)))
 
+;;;###autoload
 (defun org-insert-src-block (src-code-type)
   "Insert a `SRC-CODE-TYPE' type source code block in org-mode."
   (interactive
@@ -58,6 +58,7 @@
 ;; 	 :html-postamble (concat "INSERT HTML CODE HERE FOR POSTAMBLE"))
 ;; 	("site" :components ("site-content"))))
 
+;;;###autoload
 (defun hexo/auto-deploy (commit-msg)
   (format "cd %s; git add --all & git commit & git push & hexo d -g" hexo-dir)
   (interactive "sInput commit message:")
@@ -65,6 +66,7 @@
 			 hexo-dir
 			 commit-msg)))
 
+;;;###autoload
 (defun hexo/org-new-blog-draft (post-name)
   "create a hexo org draft"
   (interactive "sInput draft name:")
@@ -81,15 +83,18 @@
 #+BIND: org-html-postamble \"<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %%a - Last Updated %%C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %%c</div>\"
 "  post-name (format-time-string "%Y-%m-%d %H:%M:%S"))))
 
+;;;###autoload
 (defun hexo/publish (post-name)
   "overwrite hexo publish in org-mode."
   (interactive "f")
   (copy-file post-name (replace-regexp-in-string "_drafts" "_posts" (diredp-parent-dir post-name)) 1))
 
+;;;###autoload
 (defun hexo/server ()
   (interactive)
   (async-shell-command (format "cd %s; hexo g; hexo s" hexo-dir)))
 
+;;;###autoload
 (defun hexo/test ()
   (interactive)
   (async-shell-command (format "cd %s; hexo s --draft" hexo-dir)))

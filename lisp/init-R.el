@@ -48,6 +48,7 @@
      (ess-R-fl-keyword:F&T . t)
      (ess-R-fl-keyword:%op% . t)))))
 
+;;;###autoload
 (defun open-r()
   (interactive)
   (setq ess-ask-for-ess-directory nil)

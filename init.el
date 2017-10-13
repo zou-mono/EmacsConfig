@@ -3,6 +3,38 @@
 
 ;;(defvar emacs-conf-path "~/.emacs.d/")
 ;;(load (concat emacs-conf-path "init.el"))
+
+;; Function to collect information of packages.
+(defvar missing-packages-list nil
+  "List of packages that `try-require' can't find.")
+
+(defvar package-init-statistic nil "Package loading statistics")
+
+;; attempt to load a feature/library, failing silently
+(defun try-require (feature &optional click)
+  "Attempt to load a library or module. Return true if the
+library given as argument is successfully loaded. If not, instead
+of an error, just add the package to a list of missing packages."
+  (condition-case err
+      ;; protected form
+      (let ((timestamp (current-time))
+            (package (if (stringp feature) feature (symbol-name feature))))
+        (if (stringp feature)
+            (load-library feature)
+          (require feature))
+        (if click
+            (add-to-list 'package-init-statistic
+                         (cons (if (stringp feature) feature (symbol-name feature))
+                               (float-time (time-since timestamp)))))
+        (message "Checking for library `%s'... Found, cost %.2f seconds"
+                 feature (float-time (time-since timestamp))))
+    ;; error handler
+    (file-error  ; condition
+     (progn
+       (message "Checking for library `%s'... Missing" feature)
+       (add-to-list 'missing-packages-list feature 'append))
+     nil)))
+
 (custom-set-variables
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
@@ -68,7 +100,7 @@
 		    (autoload 'session-initialize "session" nil t)
 		    (autoload 'session-jump-to-last-change "session" nil t))
 	  :after (progn
-		   (add-hook 'after-init-hook 'session-initialize)))
+               (add-hook 'after-init-hook 'session-initialize)))
    (:name helm
 	  :features (helm-config))))
 
@@ -129,20 +161,48 @@
 (el-get 'sync my:el-get-packages)
 (add-to-list 'Info-directory-list "")
 
+(load (expand-file-name "lisp/loaddefs.el" user-emacs-directory) nil t t)
+
+(let ((ts-init (current-time)))
+  (setq missing-packages-list nil
+        package-init-statistic nil)
+  (try-require 'init-R t)
+  (try-require 'init-base t)
+  (try-require 'init-cedet t)
+  (try-require 'init-layout t)
+  (try-require 'init-lisp t)
+  (try-require 'init-markdown t)
+  (try-require 'init-org t)
+  (try-require 'init-python t)
+  (try-require 'init-tabbar t)
+  (try-require 'init-tex t)
+  ;; Report package statistics.
+
+  (message "\n\nShowing package initialization statistics:\n%s"
+           (mapconcat (lambda (x)
+                        (format "package %s cost %.2f seconds" (car x) (cdr x)))
+                      (reverse package-init-statistic)
+                      "\n"
+                      ))
+  (message "Finished startup in %.2f seconds,  %d packages missing%s\n\n"
+           (float-time (time-since ts-init)) (length missing-packages-list)
+           (if missing-packages-list
+               ". Refer to `missing-packages-list` for missing packages."
+             ".")))
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
-(require 'init-cedet)
-(require 'init-web) ;; base settings
-(require 'init-base) ;; base settingss
-(require 'init-tabbar)
-(require 'init-layout) ;; layout settings
-(require 'init-R)  ;; r-mode settings
-(require 'init-org) ;; org-mode settings
-(require 'init-markdown) ;; markdown-mode settings
-(require 'init-python) ;; Python-mode settings
-(require 'init-tex)  ;;auctex-mode settings
+;; (require 'init-base) ;; base settings
+;; (require 'init-tabbar)
+;; (require 'init-layout) ;; layout settings
+;; (require 'init-cedet)
+;; (require 'init-web) ;; base settings
+;; (require 'init-R)  ;; r-mode settings
+;; (require 'init-org) ;; org-mode settings
+;; (require 'init-markdown) ;; markdown-mode settings
+;; (require 'init-python) ;; Python-mode settings
+;; (require 'init-tex)  ;;auctex-mode settings
 
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
