@@ -1,6 +1,5 @@
-;;(require 'window-purpose)
 (require 'ess-site)
-(require 'ess-r-mode) 
+;;(require 'ess-r-mode) 
 (require 'poly-R)
 
 ;; (defun Rnw-mode ()
@@ -23,30 +22,28 @@
 (add-to-list 'auto-mode-alist '("\\.Rcpp$" . poly-r+c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cppR$" . poly-c++r-mode))
 
-;; 取消输入"_"变为"<-"的设定
-(ess-toggle-underscore nil)
+(add-hook 'R-mode-hook
+          (lambda ()
+            (message "r-mode-hook la la la")
+            ;; 取消输入"_"变为"<-"的设定
+            (ess-toggle-underscore nil)
+            (setq ess-swv-pdflatex-commands (quote ("xelatex" "texi2pdf" "pdflatex" "make")))
+            (setq ess-R-font-lock-keywords
+                  (quote
+                   ((ess-R-fl-keyword:modifiers . t)
+                    (ess-R-fl-keyword:fun-defs . t)
+                    (ess-R-fl-keyword:keywords . t)
+                    (ess-R-fl-keyword:assign-ops . t)
+                    (ess-R-fl-keyword:constants . t)
+                    (ess-fl-keyword:fun-calls . t)
+                    (ess-fl-keyword:numbers . nil)
+                    (ess-fl-keyword:operators . t)
+                    (ess-fl-keyword:delimiters . t)
+                    (ess-fl-keyword:= . t)
+                    (ess-R-fl-keyword:F&T . t)
+                    (ess-R-fl-keyword:%op% . t))))
+            ))
 
-;;设置knitr的编译器为xelatex
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ess-swv-pdflatex-commands (quote ("xelatex" "texi2pdf" "pdflatex" "make")))
- '(ess-R-font-lock-keywords
-   (quote
-    ((ess-R-fl-keyword:modifiers . t)
-     (ess-R-fl-keyword:fun-defs . t)
-     (ess-R-fl-keyword:keywords . t)
-     (ess-R-fl-keyword:assign-ops . t)
-     (ess-R-fl-keyword:constants . t)
-     (ess-fl-keyword:fun-calls . t)
-     (ess-fl-keyword:numbers . nil)
-     (ess-fl-keyword:operators . t)
-     (ess-fl-keyword:delimiters . t)
-     (ess-fl-keyword:= . t)
-     (ess-R-fl-keyword:F&T . t)
-     (ess-R-fl-keyword:%op% . t)))))
 
 ;;;###autoload
 (defun open-r()
