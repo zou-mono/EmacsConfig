@@ -1,5 +1,6 @@
 ;;(require 'window-purpose)
 (require 'ess-site)
+(require 'ess-r-mode) 
 (require 'poly-R)
 
 ;; (defun Rnw-mode ()
@@ -33,7 +34,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ess-swv-pdflatex-commands (quote ("xelatex" "texi2pdf" "pdflatex" "make")))
-  '(ess-R-font-lock-keywords
+ '(ess-R-font-lock-keywords
    (quote
     ((ess-R-fl-keyword:modifiers . t)
      (ess-R-fl-keyword:fun-defs . t)
@@ -55,9 +56,9 @@
   (setq ess-directory "~/Documents/R_Project/")
   (R)
   (perspective/R))
-  ;; (purpose-mode)
-  ;; (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
-  ;; (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
+;; (purpose-mode)
+;; (purpose-load-window-layout-file "~/.emacs.d/layouts/Rlayout.window-layout")
+;; (purpose-load-frame-layout-file "~/.emacs.d/layouts/Rlayout.frame-layout"))
 
 ;; (setq ess-ask-about-transfile nil)
 (global-set-key (kbd "C-x R") 'open-r)

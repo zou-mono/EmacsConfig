@@ -1,15 +1,14 @@
 ;;(require 'python)
-;;(require 'company-jedi)
-;(require 'virtualenvwrapper)
+(require 'company-jedi)
+                                        ;(require 'virtualenvwrapper)
 ;;(require 'pyenv)
-(elpy-enable)
-
-(global-pyenv-mode)
 
 ;; (venv-initialize-interactive-shells) ;; if you want interactive shell support
 ;; (if (eq nil (file-directory-p "/home/mono/.virtualenvs/"))
 ;;     (make-directory "/home/mono/.virtualenvs/"))
 ;; (setq venv-location "/home/mono/.virtualenvs/")
+
+(elpy-enable)
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
 (setq python-shell-interpreter "python"
@@ -28,14 +27,15 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
-             (require 'company-jedi)
-             (add-to-list 'company-backends 'company-jedi)
-             (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+            (add-to-list 'company-backends 'company-jedi)
+            (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+
 
 ;;;###autoload
 (defun open-python ()
   (interactive)
   (run-python)
+  (global-pyenv-mode)
   (perspective/python)
   (python-shell-switch-to-shell))
 

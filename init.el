@@ -4,16 +4,27 @@
 (require 'init-utils)
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ ;;'(blink-matching-paren (quote jump-offscreen))
+ '(ielm-dynamic-return nil)
  '(package-selected-packages (quote (pydoc helm-core cl-generic)))
- '(resize-mini-windows t))
- ;; '(session-use-package t nil (session))
- ;; '(tabbar-separator (quote (0.5))))
+ '(resize-mini-windows t)
+ '(tabbar-separator (quote (0.5))))
+;; '(session-use-package t nil (session))
+;; '(tabbar-separator (quote (0.5))))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(font-latex-sedate-face ((t (:foreground "wheat"))))
  '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
 
@@ -56,21 +67,21 @@
 (setq
  el-get-sources
  '((:name smex				; a better (ido like) M-x
-	  :after (progn
-		 (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
-		 (global-set-key (kbd "M-x") 'smex)
-		 (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
+          :after (progn
+                   (setq smex-save-file (expand-file-name ".smex-items" user-emacs-directory))
+                   (global-set-key (kbd "M-x") 'smex)
+                   (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
    (:name ess
-	  :before (progn
-		 (autoload 'R "ess-site.el" "ESS" t)))
+          :before (progn
+                    (autoload 'R-mode "ess-site.el" "ESS" t)))
    (:name session
-	  :before (progn
-		    (autoload 'session-initialize "session" nil t)
-		    (autoload 'session-jump-to-last-change "session" nil t))
-	  :after (progn
-               (add-hook 'after-init-hook 'session-initialize)))
+          :before (progn
+                    (autoload 'session-initialize "session" nil t)
+                    (autoload 'session-jump-to-last-change "session" nil t))
+          :after (progn
+                   (add-hook 'after-init-hook 'session-initialize)))
    (:name helm
-	  :features (helm-config))))
+          :features (helm-config))))
 
 ;; now set our own packages
 (setq 
@@ -141,7 +152,6 @@
   (try-require 'init-base t)
   (try-require 'init-cedet t)
   (try-require 'init-layout t)
-  (try-require 'init-lisp t)
   (try-require 'init-markdown t)
   (try-require 'init-org t)
   (try-require 'init-python t)

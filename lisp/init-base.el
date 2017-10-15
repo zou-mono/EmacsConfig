@@ -64,7 +64,7 @@
 ;;圆括号配对提示
 (show-paren-mode 1)
 (setq show-paren-delay 0)
- 
+
 ;;窗口编号，可以用M-1,M-2...切换
 (window-numbering-mode 1)
 

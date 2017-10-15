@@ -5,25 +5,16 @@
   (define-prefix-command 'perspective-map))
 (global-set-key (kbd "C-p") perspective-map)
 
-;; 设置Purpose
-;; R
-(add-to-list 'purpose-user-mode-purposes '(ess-mode . r))
-(add-to-list 'purpose-user-mode-purposes '(inferior-ess-mode . r-repl))
-;; lisp
-(add-to-list 'purpose-user-mode-purposes '(lisp-interaction-mode . lisp-interaction))
-(add-to-list 'purpose-user-mode-purposes '(emacs-lisp-mode . lisp))
-;; python
-(add-to-list 'purpose-user-mode-purposes '(python-mode . py))
-(add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
-;; latex
-(add-to-list 'purpose-user-mode-purposes '(tex-mode . latex-mode))
-(add-to-list 'purpose-user-mode-purposes '(TeX-output-mode . tex-output))
-(purpose-compile-user-configuration)
 
 ;;;###autoload
 (defun perspective/R()
   (interactive)
   (purpose-mode)
+  ;; R
+  (add-to-list 'purpose-user-mode-purposes '(ess-mode . r))
+  (add-to-list 'purpose-user-mode-purposes '(inferior-ess-mode . r-repl))
+  (purpose-compile-user-configuration)
+
   (purpose-load-window-layout-file (expand-file-name "layouts/Rlayout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/Rlayout.frame-layout" user-emacs-directory)))
 
@@ -31,6 +22,11 @@
 (defun perspective/lisp()
   (interactive)
   (purpose-mode)
+  ;; lisp
+  (add-to-list 'purpose-user-mode-purposes '(lisp-interaction-mode . lisp-interaction))
+  (add-to-list 'purpose-user-mode-purposes '(emacs-lisp-mode . lisp))
+  (purpose-compile-user-configuration)
+
   (purpose-load-window-layout-file (expand-file-name "layouts/emacs-lisp-layout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/emacs-lisp-layout.frame-layout" user-emacs-directory)))
 
@@ -38,6 +34,11 @@
 (defun perspective/python()
   (interactive)
   (purpose-mode)
+  ;; python
+  (add-to-list 'purpose-user-mode-purposes '(python-mode . py))
+  (add-to-list 'purpose-user-mode-purposes '(inferior-python-mode . py-repl))
+  (purpose-compile-user-configuration)
+
   (purpose-load-window-layout-file (expand-file-name "layouts/python-layout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/python-layout.frame-layout" user-emacs-directory)))
 
@@ -45,6 +46,11 @@
 (defun perspective/tex()
   (interactive)
   (purpose-mode)
+  ;; latex
+  (add-to-list 'purpose-user-mode-purposes '(tex-mode . latex-mode))
+  (add-to-list 'purpose-user-mode-purposes '(TeX-output-mode . tex-output))
+  (purpose-compile-user-configuration)
+  
   (purpose-load-window-layout-file (expand-file-name "layouts/tex-layout.window-layout" user-emacs-directory))
   (purpose-load-frame-layout-file (expand-file-name "layouts/tex-layout.frame-layout" user-emacs-directory)))
 

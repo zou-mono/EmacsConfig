@@ -71,7 +71,6 @@
   (interactive)
   ;; run-with-idle-timer 函数的意思就是在 auto-save-idle 定义的描述以后自动执行 auto-save-buffers 函数
   ;; #' 的意思就是在 runtime 执行的时候再展开 auto-save-buffers 函数
-  (run-with-idle-timer auto-save-idle t #'auto-save-buffers)
-  )
+  (run-with-idle-timer auto-save-idle t #'auto-save-buffers))
 
 (provide 'auto-save)
