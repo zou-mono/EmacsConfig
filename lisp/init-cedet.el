@@ -25,7 +25,7 @@
 (add-hook 'js2-mode-hook 'ggtags-mode)
 (add-hook 'web-mode-hook 'ggtags-mode)
 (add-hook 'java-mode-hook 'ggtags-mode)
-(add-hook 'R-mode-hook 'ggtags-mode)
+(add-hook 'R-mode-hook (lambda () (ggtags-mode -1)))
 
 (setq cedet-global-command "global") ; Change to path of global as needed
      (when (cedet-gnu-global-version-check t)  ; Is it ok?

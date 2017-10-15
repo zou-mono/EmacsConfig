@@ -7,6 +7,28 @@
 
 (add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(highlight-nonselected-windows t)
+ '(ielm-dynamic-return nil)
+ '(resize-mini-windows t)
+ '(tabbar-separator (quote (0.5))))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(font-latex-sedate-face ((t (:foreground "wheat"))))
+ '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
+
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
@@ -161,27 +183,3 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
 (sml/setup) ;; smart-mode-line
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
- '(highlight-nonselected-windows t)
- '(ielm-dynamic-return nil)
- '(resize-mini-windows t)
- '(tabbar-separator (quote (0.5))))
-;; '(session-use-package t nil (session))
-;; '(tabbar-separator (quote (0.5))))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(font-latex-sedate-face ((t (:foreground "wheat"))))
- '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
