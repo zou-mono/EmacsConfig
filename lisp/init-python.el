@@ -11,8 +11,7 @@
 (elpy-enable)
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
-(setq python-shell-interpreter "python"
-      python-shell-interpreter-args "-i")
+
 
 ;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 ;; (setq ein:use-auto-complete t)
@@ -28,7 +27,9 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (add-to-list 'company-backends 'company-jedi)
-            (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+            (local-set-key (kbd "C-c j") 'elpy-goto-definition))
+          (setq python-shell-interpreter "python"
+                python-shell-interpreter-args "-i"))
 
 
 ;;;###autoload

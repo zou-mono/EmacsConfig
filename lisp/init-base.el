@@ -30,8 +30,11 @@
 (scroll-bar-mode nil)
 (set-scroll-bar-mode nil)
 
+;; (advice-add 'mwheel-scroll :before (lambda (arg) (if (not (eq last-command 'mwheel-scroll)) (setq point-before-mwheel-scroll (window-point)))))
+;; (defun jump-back () (goto-char point-before-mwheel-scroll))
+
 ;; 非持久性标记模式
-(transient-mark-mode t)  
+(transient-mark-mode t)
 
 ;;tree file browser
 ;;(autoload 'speedbar-extension "speedbar-extension.el" "speed-extension" t)
@@ -51,7 +54,7 @@
 (auto-image-file-mode t)
 
 ;;光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。  
-(setq mouse-avoidance-mode 'animate)  
+(mouse-avoidance-mode 'animate)  
 
 ;; whenever an external process changes a file underneath emacs, and there
 ;; was no unsaved changes in the corresponding buffer, just revert its

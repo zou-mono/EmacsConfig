@@ -23,7 +23,6 @@
 (add-to-list 'auto-mode-alist '("\\.Rcpp$" . poly-r+c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cppR$" . poly-c++r-mode))
 
-
 ;; 取消输入"_"变为"<-"的设定
 (ess-toggle-underscore nil)
 
