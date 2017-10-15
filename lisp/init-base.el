@@ -30,8 +30,15 @@
 (scroll-bar-mode nil)
 (set-scroll-bar-mode nil)
 
-;; (advice-add 'mwheel-scroll :before (lambda (arg) (if (not (eq last-command 'mwheel-scroll)) (setq point-before-mwheel-scroll (window-point)))))
-;; (defun jump-back () (goto-char point-before-mwheel-scroll))
+;; 不需要移动光标就滚屏
+(defun gcm-scroll-down ()
+  (interactive)
+  (scroll-up 1))
+(defun gcm-scroll-up ()
+  (interactive)
+  (scroll-down 1))
+(global-set-key [(control down)] 'gcm-scroll-down)
+(global-set-key [(control up)]   'gcm-scroll-up)
 
 ;; 非持久性标记模式
 (transient-mark-mode t)
