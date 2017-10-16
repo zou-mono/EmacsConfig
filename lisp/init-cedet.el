@@ -19,14 +19,14 @@
 (global-semantic-mru-bookmark-mode 1)
 (setq semantic-idle-scheduler-idle-time 3)
 
-;;gnu global support
 (add-hook 'emacs-lisp-mode-hook 'ggtags-mode)
 (add-hook 'python-mode-hook 'ggtags-mode)
 (add-hook 'js2-mode-hook 'ggtags-mode)
 (add-hook 'web-mode-hook 'ggtags-mode)
 (add-hook 'java-mode-hook 'ggtags-mode)
-(add-hook 'R-mode-hook (lambda () (ggtags-mode -1)))
+(add-hook 'R-mode-hook 'ggtags-mode)  ; ggtags会自动打开eldoc和ess有冲突
 
+;;gnu global support
 (setq cedet-global-command "global") ; Change to path of global as needed
      (when (cedet-gnu-global-version-check t)  ; Is it ok?
        ;; Configurations for GNU Global and CEDET

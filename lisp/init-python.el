@@ -27,21 +27,21 @@
 (add-hook 'python-mode-hook
           (lambda ()
             (add-to-list 'company-backends 'company-jedi)
-            (local-set-key (kbd "C-c j") 'elpy-goto-definition))
-          (setq python-shell-interpreter "python"
-                python-shell-interpreter-args "-i"))
+            (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
 
 
 ;;;###autoload
 (defun open-python ()
   (interactive)
   (run-python)
+  (setq python-shell-interpreter "python"
+        python-shell-interpreter-args "-i")
   (global-pyenv-mode)
   (perspective/python)
   (python-shell-switch-to-shell))
 
 ;; (global-set-key (kbd "C-M-r") 'python-shell-send-region)
-(global-set-key (kbd "C-x p") 'open-python)
+;;(global-set-key (kbd "C-x p") 'open-python)
 
 (provide 'init-python)
 
