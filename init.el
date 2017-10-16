@@ -16,6 +16,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
  '(resize-mini-windows t)
@@ -113,7 +114,8 @@
    company-tern
    company-auctex
    ;; predictive
-   window-numbering))		
+   window-numbering
+   mic-paren))		
 
 ;; add customized recipts
 (add-to-list 'el-get-recipe-path (expand-file-name "recipes" user-emacs-directory))

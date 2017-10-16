@@ -26,6 +26,8 @@
 
 (add-hook 'python-mode-hook
           (lambda ()
+            (setq python-shell-interpreter "python")       
+            (setq python-shell-interpreter-args "-i")
             (add-to-list 'company-backends 'company-jedi)
             (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
 
@@ -34,8 +36,6 @@
 (defun open-python ()
   (interactive)
   (run-python)
-  (setq python-shell-interpreter "python"
-        python-shell-interpreter-args "-i")
   (global-pyenv-mode)
   (perspective/python)
   (python-shell-switch-to-shell))

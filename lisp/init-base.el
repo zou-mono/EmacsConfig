@@ -1,5 +1,5 @@
 (set-fontset-font (frame-parameter nil 'font)
-                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
+                  'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
 ;; undo-tree
 (global-undo-tree-mode)
@@ -73,7 +73,18 @@
 
 ;;圆括号配对提示
 (show-paren-mode 1)
-(setq show-paren-delay 0)
+(paren-activate)
+;; (defadvice show-paren-function
+;;     (after show-matching-paren-offscreen activate)
+;;   "If the matching paren is offscreen, show the matching line in the
+;;         echo area. Has no effect if the character before point is not of
+;;         the syntax class ')'."
+;;   (interactive)
+;;   (let* ((cb (char-before (point)))
+;;          (matching-text (and cb
+;;                              (char-equal (char-syntax cb) ?\) )
+;;                              (blink-matching-open))))
+;;     (when matching-text (message matching-text))))
 
 ;;窗口编号，可以用M-1,M-2...切换
 (window-numbering-mode 1)
@@ -83,10 +94,10 @@
 ;;保存会话状态
 (desktop-save-mode 1)
 (setq desktop-buffers-not-to-save
-        (concat "\\("
-                "^nn\\.a[0-9]+\\|\\.log\\|(ftp)\\|^tags\\|^TAGS"
-                "\\|\\.emacs.*\\|\\.diary\\|\\.newsrc-dribble\\|\\.bbdb"
-	        "\\)$"))
+      (concat "\\("
+              "^nn\\.a[0-9]+\\|\\.log\\|(ftp)\\|^tags\\|^TAGS"
+              "\\|\\.emacs.*\\|\\.diary\\|\\.newsrc-dribble\\|\\.bbdb"
+              "\\)$"))
 (add-to-list 'desktop-modes-not-to-save 'dired-mode)
 (add-to-list 'desktop-modes-not-to-save 'Info-mode)
 (add-to-list 'desktop-modes-not-to-save 'info-lookup-mode)
