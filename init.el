@@ -1,5 +1,8 @@
 ;; init.el
 ;; 把目录lisp/添加到搜索路径中去
+;; (setq debug-on-error t)
+;; (setq debug-init t)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'init-utils)
@@ -179,7 +182,6 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
- '(resize-mini-windows t)
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 
