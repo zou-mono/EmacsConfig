@@ -1,0 +1,7 @@
+(:name ido-grid-mode
+  :website "git@github.com:larkery/ido-grid-mode.el.git"
+  :description
+  "an enhancement to ido mode which displays the ido prospects in a grid in the minibuffer"
+  :type github
+  :depends (cl-lib)
+  :pkgname "larkery/ido-grid-mode.el")

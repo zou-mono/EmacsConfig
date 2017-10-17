@@ -1,4 +1,4 @@
-;;(require 'python)
+(require 'python)
 (require 'company-jedi)
                                         ;(require 'virtualenvwrapper)
 ;;(require 'pyenv)
@@ -24,10 +24,11 @@
 ;;   (add-to-list 'company-backends 'company-jedi)
 ;;   (local-set-key (kbd "C-c j") 'elpy-goto-definition))
 
+(setq python-shell-interpreter "python")       
+(setq python-shell-interpreter-args "-i")
+
 (add-hook 'python-mode-hook
           (lambda ()
-            (setq python-shell-interpreter "python")       
-            (setq python-shell-interpreter-args "-i")
             (add-to-list 'company-backends 'company-jedi)
             (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
 

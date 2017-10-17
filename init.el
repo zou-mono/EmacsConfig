@@ -87,6 +87,7 @@
    ;; color-theme-solarized
    markdown-mode
    helm
+   ido-grid-mode
    ag
    pyenv
    window-purpose
@@ -118,6 +119,7 @@
 ;; (el-get-bundle dumb-jump)
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
+(el-get-bundle ido-grid-mode)
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
@@ -182,6 +184,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
+ '(package-selected-packages (quote (ido-grid-mode cl-generic)))
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 

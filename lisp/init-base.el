@@ -126,6 +126,7 @@
 (ido-mode t)
 (ido-everywhere)
 (setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
+(ido-grid-mode)
 
 ;; dired-plus
 (require 'dired+)
