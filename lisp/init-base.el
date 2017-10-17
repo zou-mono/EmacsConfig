@@ -114,6 +114,14 @@
 ;;(setq shell-file-name "bash")
 ;;(setq shell-command-switch "-c") ;; 设置bash模式，让emacs的bash可以读取~/.bashrc
 
+;;comapany-quickhelp
+(company-quickhelp-mode)
+(setq company-quickhelp-delay nil)
+(eval-after-load 'company
+  '(define-key company-active-map (kbd "C-h") #'company-quickhelp-manual-begin))
+(setq company-quickhelp-color-background "black")
+(setq company-quickhelp-color-foreground "cyan")
+
 (require 'dired+)
 
 ;; (add-hook 'after-init-hook 'helm-mode)
