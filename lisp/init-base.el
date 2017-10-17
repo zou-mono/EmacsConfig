@@ -1,6 +1,8 @@
 (set-fontset-font (frame-parameter nil 'font)
                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
+;;(global-eldoc-mode -1)
+
 ;; undo-tree
 (global-undo-tree-mode)
 ;; make ctrl-z undo
@@ -73,7 +75,7 @@
 
 ;;圆括号配对提示
 (show-paren-mode 1)
-(paren-activate)
+(paren-activate) ;; mic-paren
 ;; (defadvice show-paren-function
 ;;     (after show-matching-paren-offscreen activate)
 ;;   "If the matching paren is offscreen, show the matching line in the

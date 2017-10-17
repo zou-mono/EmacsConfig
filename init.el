@@ -1,5 +1,4 @@
 ;; init.el
-(global-eldoc-mode -1)
 ;; 把目录lisp/添加到搜索路径中去
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -16,7 +15,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
- '(eldoc-print-after-edit t)
+ ;;'(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
  '(resize-mini-windows t)
@@ -71,7 +70,10 @@
           :after (progn
                    (add-hook 'after-init-hook 'session-initialize)))
    (:name helm
-          :features (helm-config))))
+          :features (helm-config))
+   (:name company-mode
+          :after (progn
+                   (add-hook 'after-init-hook 'global-company-mode)))))
 
 ;; now set our own packages
 (setq 
@@ -129,6 +131,7 @@
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
+
 (add-to-list 'Info-directory-list "")
 
 (load (expand-file-name "lisp/loaddefs.el" user-emacs-directory) nil t t)
