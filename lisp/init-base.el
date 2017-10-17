@@ -114,7 +114,7 @@
 ;;(setq shell-file-name "bash")
 ;;(setq shell-command-switch "-c") ;; 设置bash模式，让emacs的bash可以读取~/.bashrc
 
-;;comapany-quickhelp
+;; comapany-quickhelp
 (company-quickhelp-mode)
 (setq company-quickhelp-delay nil)
 (eval-after-load 'company
@@ -122,6 +122,11 @@
 (setq company-quickhelp-color-background "black")
 (setq company-quickhelp-color-foreground "cyan")
 
+;; ido-mode
+(ido-mode t)
+(setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
+
+;; dired-plus
 (require 'dired+)
 
 ;; (add-hook 'after-init-hook 'helm-mode)
