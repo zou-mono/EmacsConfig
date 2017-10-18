@@ -201,3 +201,16 @@ to R, put them in the variable `inferior-R-args'." t)))
  ;; If there is more than one, they won't work right.
  '(font-latex-sedate-face ((t (:foreground "wheat"))))
  '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
+
+(when (member "Monaco" (font-family-list))
+  ;;(set-face-attribute 'default nil :font "Monaco" :height 11))
+    (add-to-list 'initial-frame-alist '(font . "Monaco-11"))
+    (add-to-list 'default-frame-alist '(font . "Monaco-11")))
+
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;   (set-fontset-font (frame-parameter nil 'font)
+;;                     charset
+;;                     (font-spec :family "WenQuanYi Micro Hei" :size 12)))
+
+(set-fontset-font "fontset-default" 'han
+                  (font-spec :family "WenQuanYi Micro Hei" :size 16))
