@@ -1,4 +1,5 @@
-(require 'python)
+;; (require 'python)
+(autoload 'python-mode "python.el" "python-mode" t)
 (require 'company-jedi)
                                         ;(require 'virtualenvwrapper)
 ;;(require 'pyenv)
@@ -12,7 +13,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
 
-
 ;; (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 ;; (setq ein:use-auto-complete t)
 
@@ -23,14 +23,17 @@
 ;; (defun my/python-mode-hook ()
 ;;   (add-to-list 'company-backends 'company-jedi)
 ;;   (local-set-key (kbd "C-c j") 'elpy-goto-definition))
+(eval-after-load "python"
+  '(progn 
+          (setq python-shell-interpreter "python")       
+          (setq python-shell-interpreter-args "-i")
+          
+          (add-to-list 'company-backends 'company-jedi)
 
-(setq python-shell-interpreter "python")       
-(setq python-shell-interpreter-args "-i")
+          (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
 
-(add-hook 'python-mode-hook
-          (lambda ()
-            (add-to-list 'company-backends 'company-jedi)
-            (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+;; (add-hook 'python-mode-hook
+;;           (lambda ()))
 
 
 ;;;###autoload

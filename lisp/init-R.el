@@ -1,5 +1,5 @@
-(require 'ess-site)
-(require 'ess-r-mode) 
+;;(require 'ess-site)
+;;(require 'ess-r-mode) 
 (require 'poly-R)
 
 ;; (defun Rnw-mode ()
@@ -22,11 +22,9 @@
 (add-to-list 'auto-mode-alist '("\\.Rcpp$" . poly-r+c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cppR$" . poly-c++r-mode))
 
-(add-hook 'R-mode-hook
-          (lambda ()
-            (message "r-mode la la la")
-            ;; 取消输入"_"变为"<-"的设定
-            (ess-toggle-underscore nil))
+(eval-after-load "ess-site"
+  '(progn 
+          (ess-toggle-underscore nil)  ;; 取消输入"_"变为"<-"的设定)
           (setq ess-R-font-lock-keywords
                 (quote
                  ((ess-R-fl-keyword:modifiers . t)
@@ -40,7 +38,12 @@
                   (ess-fl-keyword:delimiters . t)
                   (ess-fl-keyword:= . t)
                   (ess-R-fl-keyword:F&T . t)
-                  (ess-R-fl-keyword:%op% . t)))))
+                  (ess-R-fl-keyword:%op% . t))))))
+
+;; (add-hook 'R-mode-hook
+;;           (lambda ()
+;;             (message "r-mode la la la"))
+
 
 ;; (custom-set-variables
 ;;  ;;设置knitr的编译器为xelatex

@@ -12,13 +12,13 @@
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-;; (when (>= emacs-major-version 24)
-;;   (require 'package)
-;;   ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-;;   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-;;   ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-;; )
-;; (package-initialize)
+(when (>= emacs-major-version 24)
+  (require 'package)
+  ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+)
+(package-initialize)
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
@@ -50,7 +50,13 @@
                    (global-set-key (kbd "M-X") 'smex-major-mode-commands)))
    (:name ess
           :before (progn
-                    (autoload 'R-mode "ess-site.el" "ESS" t)))
+                    (autoload 'R-mode "ess-site.el" "ESS" t)
+          (autoload 'r-mode "ess-site.el" "Major mode for editing R source." t)
+          (autoload 'R "ess-site" "Call 'R', the 'GNU S' system from the R Foundation.
+Optional prefix (C-u) allows to set command line arguments, such as
+--vsize.  This should be OS agnostic.
+If you have certain command line arguments that should always be passed
+to R, put them in the variable `inferior-R-args'." t)))
    (:name session
           :before (progn
                     (autoload 'session-initialize "session" nil t)
@@ -182,9 +188,9 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
- '(package-selected-packages (quote (ido-grid-mode cl-generic)))
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 
