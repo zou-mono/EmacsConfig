@@ -1,3 +1,4 @@
+(set-frame-font "Monaco-12" nil t)
 (set-fontset-font (frame-parameter nil 'font)
                   'han (font-spec :family "WenQuanYi Micro Hei Mono"))
 
