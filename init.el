@@ -188,6 +188,8 @@ to R, put them in the variable `inferior-R-args'." t)))
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(eldoc-echo-area-use-multiline-p t)
+ '(eldoc-minor-mode-string " eldoc")
  '(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
