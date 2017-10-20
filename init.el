@@ -85,6 +85,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    tabbar                               ; an emacs minor mode that displays a tab bar at the top, similar to the idea of web browser’s tabs
    dired+
    auctex
+   latex-preview-pane
    polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
    undo-tree                            ; treats undo history as a branching tree of changes
    which-key

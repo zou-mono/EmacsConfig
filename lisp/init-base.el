@@ -17,10 +17,21 @@
 
 ;; on to the visual settings
 (setq inhibit-splash-screen t)		; no splash screen, thanks
-(global-linum-mode 1)			; have line numbers and
 (column-number-mode 1)			; column numbers in the mode line
-
 (tool-bar-mode -1)                      ; no tool bar with icons
+
+;; global-linum-mode在某些mode不启用,否则速度太慢,例如docview-mode
+(global-linum-mode)			; have line numbers and
+(defcustom linum-disabled-modes-list '(dired-mode doc-view-mode treemacs-mode)
+  "* List of modes disabled when global linum mode is on"
+  :type '(repeat (sexp :tag "Major mode"))
+  :tag " Major modes where linum is disabled: "
+  :group 'linum)
+(defun linum-on ()
+  "* When linum is running globally, disable line number in modes defined in `linum-disabled-modes-list'. Changed by linum-off. Also turns off numbering in starred modes like *scratch*"
+  (unless (or (minibufferp)
+              (member major-mode linum-disabled-modes-list))
+    (linum-mode 1)))
 
 ;; copy/paste with C-c and C-v and C-x, check out C-RET too
 (cua-mode)
@@ -67,10 +78,10 @@
 ;; content to reflect what's on-disk.
 (global-auto-revert-mode 1)
 
-;;语法高亮
+;; 语法高亮
 (global-font-lock-mode t)
 
-;;圆括号配对提示
+;; 圆括号配对提示
 (show-paren-mode 1)
 (paren-activate) ;; mic-paren
 ;; (defadvice show-paren-function
@@ -85,9 +96,10 @@
 ;;                              (blink-matching-open))))
 ;;     (when matching-text (message matching-text))))
 
-;;窗口编号，可以用M-1,M-2...切换
+;; 窗口编号，可以用M-1,M-2...切换
 (window-numbering-mode 1)
 
+;; 可以用c-x left,c-x right在同一个frame中切换buffer
 (winner-mode t)
 
 ;;保存会话状态
@@ -102,6 +114,7 @@
 (add-to-list 'desktop-modes-not-to-save 'info-lookup-mode)
 (add-to-list 'desktop-modes-not-to-save 'fundamental-mode)
 (add-to-list 'desktop-modes-not-to-save 'treemacs-mode)
+(add-to-list 'desktop-modes-not-to-save 'doc-view-mode)
 
 (global-visual-line-mode t)
 

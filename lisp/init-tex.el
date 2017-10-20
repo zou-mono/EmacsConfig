@@ -6,7 +6,6 @@
 (setq TeX-parse-self t)
 (setq-default TeX-master nil)
 
-
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
@@ -23,6 +22,9 @@
             (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
             (setq TeX-save-query nil)
             (imenu-add-menubar-index)
+            (latex-preview-pane-mode)
+            (setq latex-preview-pane-multifile-mode (quote auctex))
+            (setq pdf-latex-command "xelatex")
             (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
 
 (setq reftex-file-extensions
