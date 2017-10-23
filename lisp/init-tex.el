@@ -22,9 +22,9 @@
             (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
             (setq TeX-save-query nil)
             (imenu-add-menubar-index)
-            (latex-preview-pane-mode)
-            (setq latex-preview-pane-multifile-mode (quote auctex))
-            (setq pdf-latex-command "xelatex")
+            ;;(latex-preview-pane-mode nil)
+            ;;(setq latex-preview-pane-multifile-mode (quote auctex))
+            ;;(setq pdf-latex-command "xelatex")
             (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
 
 (setq reftex-file-extensions

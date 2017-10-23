@@ -22,7 +22,7 @@
 
 ;; global-linum-mode在某些mode不启用,否则速度太慢,例如docview-mode
 (global-linum-mode)			; have line numbers and
-(defcustom linum-disabled-modes-list '(dired-mode doc-view-mode treemacs-mode)
+(defcustom linum-disabled-modes-list '(dired-mode doc-view-mode treemacs-mode Custom-mode)
   "* List of modes disabled when global linum mode is on"
   :type '(repeat (sexp :tag "Major mode"))
   :tag " Major modes where linum is disabled: "
