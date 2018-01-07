@@ -13,6 +13,7 @@
 
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
+(auctex-latexmk-setup)
 
 (add-hook 'LaTeX-mode-hook
           (lambda ()
@@ -22,6 +23,7 @@
             (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
             (setq TeX-save-query nil)
             (imenu-add-menubar-index)
+            (electric-indent-local-mode 0)
             ;;(latex-preview-pane-mode nil)
             ;;(setq latex-preview-pane-multifile-mode (quote auctex))
             ;;(setq pdf-latex-command "xelatex")
