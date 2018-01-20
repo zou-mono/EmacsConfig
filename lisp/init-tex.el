@@ -34,6 +34,8 @@
 (setq TeX-file-extensions
       '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
 
+(eval-after-load 'latex
+  '(add-to-list 'LaTeX-verbatim-environments "rcode"))
 ;(add-hook 'reftex-load-hook 'imenu-add-menubar-index)
 ;(add-hook 'reftex-mode-hook 'imenu-add-menubar-index)	
 
