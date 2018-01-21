@@ -7,6 +7,8 @@
 (defun down-slightly () (interactive) (scroll-down 3))
 (global-set-key [mouse-4] 'down-slightly)
 (global-set-key [mouse-5] 'up-slightly)
+;;把鼠标变为竖线
+(setq-default cursor-type 'bar)
 
 ;; undo-tree
 (global-undo-tree-mode)
@@ -58,7 +60,7 @@
 (global-set-key [(control down)] 'gcm-scroll-down)
 (global-set-key [(control up)]   'gcm-scroll-up)
 
-;; 非持久性标记模式
+;; 非持久性标记模式,高亮显示要拷贝的区域
 (transient-mark-mode t)
 
 ;;tree file browser
