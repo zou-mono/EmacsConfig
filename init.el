@@ -2,6 +2,7 @@
 ;; 把目录lisp/添加到搜索路径中去
 ;; (setq debug-on-error t)
 ;; (setq debug-init t)
+(setenv "LC_CTYPE" "zh_CN.utf-8")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
