@@ -13,13 +13,13 @@
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-(when (>= emacs-major-version 24)
-  (require 'package)
+;;(when (>= emacs-major-version 24)
+;;  (require 'package)
   ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+  ;;(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
   ;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-)
-(package-initialize)
+;;)
+;;(package-initialize)
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
@@ -77,6 +77,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-mode                         ; complete as you type with overlays
    use-package
    pos-tip
+   hide-comnt              ; hide/show comment codes.
    ;; popup
    smart-mode-line
    let-alist                            ; Easily let-bind values of an assoc-list by their names
@@ -87,6 +88,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    dired+
    auctex
    auctex-latexmk
+   latex-extra
    latex-preview-pane
    polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
    undo-tree                            ; treats undo history as a branching tree of changes
