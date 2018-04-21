@@ -13,18 +13,18 @@
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-;;(when (>= emacs-major-version 24)
-;; (require 'package)
-;;  (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-;;  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-;;  (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-;;)
-;;(package-initialize)
+(when (>= emacs-major-version 24)
+(require 'package)
+ ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+ (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+ ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+)
+(package-initialize)
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
 ;; (unless package-archive-contents
-;;   (package-refresh-contents))
+;;   (package-refresh-contdents))
 
 ;; ; install the missing packages
 ;; (dolist (package package-list)
@@ -88,8 +88,8 @@ to R, put them in the variable `inferior-R-args'." t)))
    dired+
    auctex
    auctex-latexmk
-   latex-extra
-   latex-preview-pane
+   ;;latex-extra
+   ;;latex-preview-pane
    polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
    undo-tree                            ; treats undo history as a branching tree of changes
    which-key
