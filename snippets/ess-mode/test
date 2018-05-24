@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test
+# key: tt
+# --
+
+`(current-time-string)`
+`(make-string (- fill-column 3) ?\-)`
+$0

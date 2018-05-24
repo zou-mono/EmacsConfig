@@ -52,6 +52,9 @@
   (R)
   (perspective/R))
 
+(defun my-ess-settings ()
+   (setq ess-indent-with-fancy-comments nil))
+(add-hook 'ess-mode-hook #'my-ess-settings)
 ;;(global-set-key (kbd "C-x R") 'open-r)
 
 (provide 'init-R)

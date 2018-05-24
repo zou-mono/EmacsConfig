@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: comment block
+# key: cb
+# --
+
+### `(make-string (- fill-column 3) ?\-)`
+### $0
+### `(make-string (- fill-column 3) ?\-)`
