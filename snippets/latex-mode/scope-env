@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: scope environment
+# key: scope
+# --
+
+\begin{scope}
+$0
+\end{scope}

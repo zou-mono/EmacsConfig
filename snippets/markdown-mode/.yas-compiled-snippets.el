@@ -5,4 +5,4 @@
                      '(("rb" "\\`\\`\\`{r}\n$0\n\\`\\`\\`" "rmd-block" nil nil nil "/home/mono/.emacs.d/snippets/markdown-mode/rmarkdown-chunk" nil nil)))
 
 
-;;; Do not edit! File generated at Thu May 24 18:37:09 2018
+;;; Do not edit! File generated at Wed May 30 09:57:37 2018

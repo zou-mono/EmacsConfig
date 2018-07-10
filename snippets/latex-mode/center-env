@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: centering environment
+# key: center
+# --
+
+\begin{center}
+$0
+\end{center}
