@@ -147,6 +147,11 @@
 (ido-everywhere)
 (setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
 (ido-grid-mode)
+(put 'dired-do-copy   'ido nil) ; use ido there
+(put 'dired-do-rename 'ido nil) ; 
+(add-hook 'dired-mode-hook
+              '(lambda ()
+                 (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
 
 ;; dired-plus
 (require 'dired+)
