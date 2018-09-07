@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: common table environment
+# key: ctbl
+# --
+
+\begin{table}[!ht]\centering 
+\begin{tabular}{|c|l|}
+\hline
+ $0 & \\\\
+\hline
+\end{tabular}
+\caption{\label{tbl:}}
+\end{table}

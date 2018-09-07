@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: book table environment
+# key: btbl
+# --
+
+\begin{table} \centering 
+  \begin{tabular}{|c|c|}
+    \toprule
+    \rowcolor{LightCyan}
+    \multicolumn{1}{|c|}{\textbf{参数名称}} & \multicolumn{1}{c|}{\textbf{作用}} \\\\ \hline
+$0 & \\\\ \hline
+& \\\\
+    \bottomrule
+  \end{tabular}
+  \caption{{\label{tbl:}}}
+\end{table}
