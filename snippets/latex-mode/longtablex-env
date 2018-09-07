@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: longtabu environment
+# key: ltblx
+# --
+
+\begin{longtabu} to \textwidth {|c|X[1,c]|}
+\caption{\label{tbl:}}
+\hline
+\multicolumn{1}{|c|}{\bfseries $0} & \multicolumn{1}{c|}{\bfseries $1}\\\\\hline
+  & \\\\
+\hline
+\end{longtabu}
+

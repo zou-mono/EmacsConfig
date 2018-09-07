@@ -15,4 +15,4 @@
                        ("F" "FALSE" "FALSE" nil nil nil "/home/mono/.emacs.d/snippets/ess-mode/FALSE" nil nil)))
 
 
-;;; Do not edit! File generated at Wed May 30 09:57:37 2018
+;;; Do not edit! File generated at Fri Sep  7 17:39:45 2018

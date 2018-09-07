@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: tabularx environment
+# key: tblx
+# --
+
+\begin{table}[!ht]\centering
+\caption{\label{tbl:}} 
+\begin{tabularx}{\textwidth}{|X|X|}\\\\\hline
+\multicolumn{1}{|c|}{\bfseries $0} & \multicolumn{1}{c|}{\bfseries $1}\\\\\hline
+  & \\\\
+\hline
+\end{tabularx}
+\end{table}
