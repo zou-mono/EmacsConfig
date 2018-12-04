@@ -1,5 +1,5 @@
 (require 'ess-site) 
-(require 'poly-R)
+;; (require 'poly-R)
 
 ;; (defun Rnw-mode ()
 ;;   (require 'ess-noweb)

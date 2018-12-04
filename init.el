@@ -16,7 +16,8 @@
 (when (>= emacs-major-version 24)
 (require 'package)
  ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
- (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+    ;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+    (add-to-list 'package-archives '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
  ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 )
 (package-initialize)
@@ -90,13 +91,13 @@ to R, put them in the variable `inferior-R-args'." t)))
    auctex-latexmk
    ;;latex-extra
    ;;latex-preview-pane
-   polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
+   ;;polymode                             ; an emacs package that offers generic support for multiple major modes inside a single emacs buffer.
    undo-tree                            ; treats undo history as a branching tree of changes
    which-key
    company-math
    session                              
    ;; color-theme-solarized
-   markdown-mode
+   ;; markdown-mode
    helm
    ido-grid-mode
    ag
@@ -117,6 +118,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-tern
    company-auctex
    company-quickhelp
+   indium
    ;; predictive
    window-numbering
    mic-paren))		
@@ -135,7 +137,7 @@ to R, put them in the variable `inferior-R-args'." t)))
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
 
-(add-to-list 'Info-directory-list "")
+;;(add-to-list 'Info-directory-list "")
 
 (load (expand-file-name "lisp/loaddefs.el" user-emacs-directory) nil t t)
 
@@ -198,6 +200,7 @@ to R, put them in the variable `inferior-R-args'." t)))
  '(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
+ '(package-selected-packages (quote (poly-R polymode)))
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 
