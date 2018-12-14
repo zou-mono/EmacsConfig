@@ -1,3 +1,5 @@
+(require 'cl)
+
 ;; Function to collect information of packages.
 (defvar missing-packages-list nil
   "List of packages that `try-require' can't find.")
@@ -28,5 +30,24 @@ of an error, just add the package to a list of missing packages."
        (message "Checking for library `%s'... Missing" feature)
        (add-to-list 'missing-packages-list feature 'append))
      nil)))
+
+(defun ensure-packages-package-installed-p (p)
+  (cond ((package-installed-p p) t)
+	(t nil)))
+  
+(defun ensure-packages-installed-p (p)
+  (mapcar 'ensure-packages-package-installed-p p))
+  
+(defun ensure-packages-install-missing (ensure-packages)
+  (interactive)
+  (unless (every 'identity (ensure-packages-installed-p ensure-packages))
+  ;; check for new packages (package versions)
+  (message "%s" "Emacs is now refreshing its package database...")
+  (package-refresh-contents)
+  (message "%s" " done.")
+  ;; install the missing packages
+  (dolist (p ensure-packages)
+    (when (not (package-installed-p p))
+      (package-install p)))))
 
 (provide 'init-utils)

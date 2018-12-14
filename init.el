@@ -32,6 +32,7 @@
 ;;   (unless (package-installed-p package)
 ;;     (package-install package)))
 
+;; (ensure-packages-install-missing my:packages)
 ;;----------------------------------------------------------------------------
 ;; el-get
 ;;----------------------------------------------------------------------------
