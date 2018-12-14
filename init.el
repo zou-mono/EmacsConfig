@@ -13,14 +13,14 @@
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-(when (>= emacs-major-version 24)
-(require 'package)
- ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-    ;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-    (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
- ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-)
-(package-initialize)
+;; (when (>= emacs-major-version 24)
+;; (require 'package)
+;;  ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+;;     ;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;;     (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
+;;  ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
+;; )
+;; (package-initialize)
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
@@ -97,9 +97,8 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-math
    session                              
    ;; color-theme-solarized
-   ;; markdown-mode
+   markdown-mode
    helm
-   ido-grid-mode
    ag
    pyenv
    window-purpose
@@ -133,6 +132,11 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
 (el-get-bundle ido-grid-mode)
+(el-get-bundle treemacs)
+(el-get-bundle polymode)
+(el-get-bundle poly-R)
+(el-get-bundle poly-markdown)
+(el-get-bundle poly-org)
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
@@ -170,17 +174,6 @@ to R, put them in the variable `inferior-R-args'." t)))
            (if missing-packages-list
                ". Refer to `missing-packages-list` for missing packages."
              ".")))
-
-;; (require 'init-base) ;; base settings
-;; (require 'init-tabbar)
-;; (require 'init-layout) ;; layout settings
-;; (require 'init-cedet)
-;; (require 'init-web) ;; base settings
-;; (require 'init-R)  ;; r-mode settings
-;; (require 'init-org) ;; org-mode settings
-;; (require 'init-markdown) ;; markdown-mode settings
-;; (require 'init-python) ;; Python-mode settings
-;; (require 'init-tex)  ;;auctex-mode settings
 
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))

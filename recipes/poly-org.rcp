@@ -1,0 +1,7 @@
+(:name poly-org
+  :website "git@github.com:polymode/poly-org.git"
+  :description
+  "Polymodes for org-mode."
+  :type github
+  :pkgname "polymode/poly-org"
+  :depends (polymode))

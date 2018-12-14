@@ -1,0 +1,7 @@
+(:name poly-markdown
+  :website "git@github.com:polymode/poly-markdown.git"
+  :description
+  "Polymode for markdown-mode."
+  :type github
+  :pkgname "polymode/poly-markdown"
+  :depends (markdown-mode polymode))

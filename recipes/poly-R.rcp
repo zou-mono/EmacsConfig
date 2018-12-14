@@ -1,0 +1,7 @@
+(:name poly-R
+  :website "git@github.com:polymode/poly-R.git"
+  :description
+  "Polymodes for the R language."
+  :type github
+  :pkgname "polymode/poly-R"
+  :depends (poly-markdown poly-noweb polymode))

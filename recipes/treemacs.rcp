@@ -3,5 +3,8 @@
   :description
   "a tree layout file explorer for Emacs"
   :type github
-  :depends ( f s dash ace-window pfuture hydra)
-  :pkgname "Alexander-Miller/treemacs")
+  :depends ( f s dash ace-window pfuture hydra ht)
+  :pkgname "Alexander-Miller/treemacs"
+  :load-path ("./src/elisp" "./src/scripts")
+  :load "src/elisp/treemacs.el")
+

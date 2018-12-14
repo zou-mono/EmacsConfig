@@ -1,0 +1,7 @@
+(:name polymode
+  :website "git@github.com:polymode/polymode.git"
+  :description
+  "Framework for Multiple Major Modes in Emacs (core library)."
+  :type github
+  :pkgname "polymode/polymode"
+  :depends (cl-lib))

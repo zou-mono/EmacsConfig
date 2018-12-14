@@ -1,0 +1,7 @@
+(:name poly-noweb
+  :website "git@github.com:polymode/poly-noweb.git"
+  :description
+  "Polymode for noweb."
+  :type github
+  :pkgname "polymode/poly-noweb"
+  :depends (polymode))
