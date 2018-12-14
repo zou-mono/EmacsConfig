@@ -1,0 +1,6 @@
+(:name indium
+       :description ""
+       :website "https://github.com/NicolasPetton/Indium"
+       :type github
+       :depends (websocket js2-mode undercover buttercup js2-refactor assess exec-path-from-shell)
+       :pkgname "NicolasPetton/Indium")

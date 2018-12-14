@@ -1,0 +1,6 @@
+(:name undercover
+  :website "git@github.com:sviridov/undercover.el.git"
+  :description
+  "A test coverage library for Emacs."
+  :type github
+  :pkgname "sviridov/undercover.el")

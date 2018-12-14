@@ -17,7 +17,7 @@
 (require 'package)
  ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
     ;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-    (add-to-list 'package-archives '("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))
+    (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
  ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 )
 (package-initialize)
@@ -155,6 +155,7 @@ to R, put them in the variable `inferior-R-args'." t)))
   (try-require 'init-org t)
   (try-require 'init-python t)
   (try-require 'init-tabbar t)
+  (try-require 'init-web t)
   (try-require 'init-tex t)
   ;; Report package statistics.
 
@@ -224,3 +225,6 @@ to R, put them in the variable `inferior-R-args'." t)))
 
 (set-fontset-font "fontset-default" 'han
                   (font-spec :family "WenQuanYi Micro Hei" :size 16))
+
+;; (when (memq window-system '(mac ns x))
+;;   (exec-path-from-shell-initialize))

@@ -1,0 +1,6 @@
+(:name assess
+  :website "git@github.com:phillord/assess.git"
+  :description
+  "Test support functions for Emacs."
+  :type github
+  :pkgname "phillord/assess")
