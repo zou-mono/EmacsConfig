@@ -1,5 +1,7 @@
 ;;(global-eldoc-mode -1)
 
+(sml/setup) ;; smart-mode-line
+
 ;; 鼠标不要闪烁
 (blink-cursor-mode -1)
 ;;鼠标滚轮，默认的滚动太快，这里改为3行

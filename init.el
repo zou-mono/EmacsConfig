@@ -3,9 +3,6 @@
 ;; 把目录lisp/添加到搜索路径中去
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;; (setq debug-on-error t)
-;; (setq debug-init t)
-
 (require 'init-utils)
 (require 'init-font)
 
@@ -182,7 +179,6 @@ to R, put them in the variable `inferior-R-args'." t)))
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
-(sml/setup) ;; smart-mode-line
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
