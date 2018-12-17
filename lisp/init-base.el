@@ -177,6 +177,10 @@
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
+
+;; (add-hook 'treemacs-mode-hook '(lambda ()
+;;                                 (treemacs--setup-icon-background-colors "#282a36")))
+
 (sml/setup) ;; smart-mode-line
 
 (provide 'init-base)

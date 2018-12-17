@@ -25,7 +25,7 @@
   ;;                                 ("Microsoft_Yahei" . ,chinese-fonts-scale)
   ;;                                 ("微软雅黑" . ,chinese-fonts-scale)
   ;;                                 ("WenQuanYi Zen Hei" . ,chinese-fonts-scale)))
-  (setq face-font-rescale-alist '((chinese-fonts . ,chinese-fonts-scale)))
+  (setq face-font-rescale-alist '((chinese-fonts . chinese-fonts-scale)))
   "english-font-size could be set to \":pixelsize=18\" or a integer.
 If set/leave chinese-font-size to nil, it will follow english-font-size"
   (require 'cl)                         ; for find if

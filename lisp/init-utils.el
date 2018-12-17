@@ -42,7 +42,7 @@ of an error, just add the package to a list of missing packages."
   (interactive)
   (unless (every 'identity (ensure-packages-installed-p ensure-packages))
   ;; check for new packages (package versions)
-  (message "%s" "Emacs is now refreshing its package database...")
+  (message "%s" "Emacs is now refreshivng its package database...")
   (package-refresh-contents)
   (message "%s" " done.")
   ;; install the missing packages

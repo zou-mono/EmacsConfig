@@ -2,13 +2,12 @@
 
 ;; 把目录lisp/添加到搜索路径中去
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
 (require 'init-utils)
 (require 'init-font)
 
 (setenv "LC_CTYPE" "zh_CN.utf-8") 
-
-(add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
 ;;----------------------------------------------------------------------------
 ;; ELPA
@@ -25,7 +24,7 @@
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
 ;; (unless package-archive-contents
-;;   (package-refresh-contdents))
+;;   (package-refresh-contents))
 
 ;; ; install the missing packages
 ;; (dolist (package package-list)
@@ -106,7 +105,6 @@ to R, put them in the variable `inferior-R-args'." t)))
    sr-speedbar
    yasnippet
    virtualenvwrapper
-   treemacs
    ;; speedbar-extension
    ggtags                               ; Emacs frontend to GNU Global source code tagging system
    projectile                           ; project navigation and management library for emacs
@@ -118,7 +116,6 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-tern
    company-auctex
    company-quickhelp
-   indium
    ;; predictive
    window-numbering
    mic-paren))		
@@ -129,12 +126,13 @@ to R, put them in the variable `inferior-R-args'." t)))
 ;; Locally defined recipe
 (el-get-bundle nvm)
 (el-get-bundle web-beautify)
-;; (el-get-bundle dumb-jump)
+(el-get-bundle dumb-jump)
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
 (el-get-bundle ido-grid-mode)
 (el-get-bundle treemacs)
 (el-get-bundle polymode)
+(el-get-bundle indium)
 (el-get-bundle poly-R)
 (el-get-bundle poly-markdown)
 (el-get-bundle poly-org)
@@ -143,7 +141,6 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get 'sync my:el-get-packages)
 
 ;;(add-to-list 'Info-directory-list "")
-
 (load (expand-file-name "lisp/loaddefs.el" user-emacs-directory) nil t t)
 
 ;;----------------------------------------------------------------------------
@@ -185,6 +182,9 @@ to R, put them in the variable `inferior-R-args'." t)))
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ '(custom-safe-themes
+   (quote
+    ("c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" "f8cf128fa0ef7e61b5546d12bb8ea1584c80ac313db38867b6e774d1d38c73db" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" default)))
  '(eldoc-echo-area-use-multiline-p t)
  '(eldoc-minor-mode-string " eldoc")
  '(eldoc-print-after-edit t)
