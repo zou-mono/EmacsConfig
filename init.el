@@ -176,10 +176,6 @@ to R, put them in the variable `inferior-R-args'." t)))
                ". Refer to `missing-packages-list` for missing packages."
              ".")))
 
-(setq custom-safe-themes t)
-(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
-(load-theme 'dracula t)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

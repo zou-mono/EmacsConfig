@@ -1,7 +1,5 @@
 ;;(global-eldoc-mode -1)
 
-(sml/setup) ;; smart-mode-line
-
 ;; 鼠标不要闪烁
 (blink-cursor-mode -1)
 ;;鼠标滚轮，默认的滚动太快，这里改为3行
@@ -174,5 +172,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
+
+
+(setq custom-safe-themes t)
+(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
+(load-theme 'dracula t)
+(sml/setup) ;; smart-mode-line
 
 (provide 'init-base)
