@@ -1,12 +1,15 @@
 ;; init.el
-;; 把目录lisp/添加到搜索路径中去
-;; (setq debug-on-error t)
-;; (setq debug-init t)
-(setenv "LC_CTYPE" "zh_CN.utf-8")
 
+;; 把目录lisp/添加到搜索路径中去
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+;; (setq debug-on-error t)
+;; (setq debug-init t)
+
 (require 'init-utils)
+(require 'init-font)
+
+(setenv "LC_CTYPE" "zh_CN.utf-8") 
 
 (add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
@@ -207,18 +210,16 @@ to R, put them in the variable `inferior-R-args'." t)))
  '(font-latex-sedate-face ((t (:foreground "wheat"))))
  '(markdown-code-face ((t (:inherit fixed-pitch :background "gray25")))))
 
-(when (member "Monaco" (font-family-list))
-  ;;(set-face-attribute 'default nil :font "Monaco" :height 11))
-    (add-to-list 'initial-frame-alist '(font . "Monaco-11"))
-    (add-to-list 'default-frame-alist '(font . "Monaco-11")))
+;; ;; 设置英文字体
+;; (when (member "Monaco" (font-family-list))
+;;   ;;(set-face-attribute 'default nil :font "Monaco" :height 11))
+;;     (add-to-list 'initial-frame-alist '(font . "Monaco-11"))
+;;     (add-to-list 'default-frame-alist '(font . "Monaco-11")))
 
+;; ;; 设置中文字体
 ;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;   (set-fontset-font (frame-parameter nil 'font)
+;;   (set-fontset-font "fontset-default"
 ;;                     charset
-;;                     (font-spec :family "WenQuanYi Micro Hei" :size 12)))
+;;                     (font-spec :family "WenQuanYi Micro Hei")))
 
-(set-fontset-font "fontset-default" 'han
-                  (font-spec :family "WenQuanYi Micro Hei" :size 16))
 
-;; (when (memq window-system '(mac ns x))
-;;   (exec-path-from-shell-initialize))

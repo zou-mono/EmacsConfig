@@ -31,7 +31,7 @@
 
 ;; Change padding of the tabs
 ;; we also need to set separator to avoid overlapping tabs by highlighted tabs
-(setq tabbar-separator '0.5)
+;; (setq tabbar-separator '0.5)
 
 (defun tabbar-buffer-groups ()
    "Return the list of group names the current buffer belongs to.
