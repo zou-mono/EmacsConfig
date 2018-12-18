@@ -1,3 +1,4 @@
+(require 'dired+)
 ;;(global-eldoc-mode -1)
 
 ;; 鼠标不要闪烁
@@ -153,8 +154,7 @@
               '(lambda ()
                  (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
 
-;; dired-plus
-(require 'dired+)
+(setq ido-show-dot-for-dired t)
 
 ;; (add-hook 'after-init-hook 'helm-mode)
 ;; (add-hook 'after-init-hook
