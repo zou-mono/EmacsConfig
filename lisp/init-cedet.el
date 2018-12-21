@@ -6,6 +6,8 @@
 
 ;; (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 
+(setenv "GTAGSLABEL" "pygments")
+
 ;; basic configuration
 (semantic-mode 1)
 (global-ede-mode 1)

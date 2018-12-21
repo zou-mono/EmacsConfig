@@ -12,14 +12,7 @@
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-;; (when (>= emacs-major-version 24)
-;; (require 'package)
-;;  ;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-;;     ;; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-;;     (add-to-list 'package-archives '("melpa" . "http://elpa.emacs-china.org/melpa/"))
-;;  ;;(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-;; )
-;; (package-initialize)
+;; 
 
 ;; (setq package-list '(treemacs))
 ;; ; fetch the list of packages available 
@@ -190,7 +183,7 @@ to R, put them in the variable `inferior-R-args'." t)))
  '(eldoc-print-after-edit t)
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
- '(package-selected-packages (quote (poly-R polymode)))
+ '(package-selected-packages (quote (indium poly-R polymode)))
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 
