@@ -2,6 +2,7 @@
 *.log
 *~*
 /el-get
+eshell/
 *#*
 *%*
 .smex-items
