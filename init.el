@@ -7,15 +7,15 @@
 (require 'init-utils)
 (require 'init-font)
 
-(setenv "LC_CTYPE" "zh_CN.utf-8") 
+(setenv "LC_CTYPE" "zh_CN.utf-8")
 
 ;;----------------------------------------------------------------------------
 ;; ELPA
 ;;----------------------------------------------------------------------------
-;; 
+;;
 
 ;; (setq package-list '(treemacs))
-;; ; fetch the list of packages available 
+;; ; fetch the list of packages available
 ;; (unless package-archive-contents
 ;;   (package-refresh-contents))
 
@@ -46,8 +46,8 @@
    (:name ess
           :before (progn
                     (autoload 'R-mode "ess-site.el" "ESS" t)
-          (autoload 'r-mode "ess-site.el" "Major mode for editing R source." t)
-          (autoload 'R "ess-site" "Call 'R', the 'GNU S' system from the R Foundation.
+                    (autoload 'r-mode "ess-site.el" "Major mode for editing R source." t)
+                    (autoload 'R "ess-site" "Call 'R', the 'GNU S' system from the R Foundation.
 Optional prefix (C-u) allows to set command line arguments, such as
 --vsize.  This should be OS agnostic.
 If you have certain command line arguments that should always be passed
@@ -65,7 +65,7 @@ to R, put them in the variable `inferior-R-args'." t)))
                    (add-hook 'after-init-hook 'global-company-mode)))))
 
 ;; now set our own packages
-(setq 
+(setq
  my:el-get-packages
  '(el-get			       	; el-get is self-hosting
    company-mode                         ; complete as you type with overlays
@@ -88,7 +88,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    undo-tree                            ; treats undo history as a branching tree of changes
    which-key
    company-math
-   session                              
+   session
    ;; color-theme-solarized
    markdown-mode
    helm
@@ -111,7 +111,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-quickhelp
    ;; predictive
    window-numbering
-   mic-paren))		
+   mic-paren))
 
 ;; add customized recipts
 (add-to-list 'el-get-recipe-path (expand-file-name "recipes" user-emacs-directory))
@@ -129,6 +129,7 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle poly-R)
 (el-get-bundle poly-markdown)
 (el-get-bundle poly-org)
+(el-get-bundle format-all)
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
@@ -206,5 +207,3 @@ to R, put them in the variable `inferior-R-args'." t)))
 ;;   (set-fontset-font "fontset-default"
 ;;                     charset
 ;;                     (font-spec :family "WenQuanYi Micro Hei")))
-
-

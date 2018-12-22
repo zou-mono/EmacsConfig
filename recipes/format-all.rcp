@@ -1,0 +1,6 @@
+(:name format-all
+  :website "git@github.com:lassik/emacs-format-all-the-code.git"
+  :description
+  "Auto-format source code in many languages with one command."
+  :type github
+  :pkgname "lassik/emacs-format-all-the-code")
