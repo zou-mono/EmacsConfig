@@ -48,9 +48,10 @@
 (defun open-r()
   (interactive)
   (setq ess-ask-for-ess-directory nil)
-  (setq ess-directory "~/Documents/R_Project/")
+  ;;(setq ess-directory "~/Documents/R_Project/")
+  (R)
   (perspective/R)
-  (ess-switch-to-inferior-or-script-buffer))
+  (ess-switch-to-inferior-or-script-buffer nil))
 
 (defun my-ess-settings ()
    (setq ess-indent-with-fancy-comments nil))
