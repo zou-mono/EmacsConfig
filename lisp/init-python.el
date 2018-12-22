@@ -9,6 +9,9 @@
 ;;     (make-directory "/home/mono/.virtualenvs/"))
 ;; (setq venv-location "/home/mono/.virtualenvs/")
 
+;; fix a warning "Disabling backend flymake-proc-legacy-flymake because (error Can’t find a suitable init function)"
+(setq flymake-start-syntax-check-on-find-file nil)
+
 (elpy-enable)
 
 (add-to-list 'auto-mode-alist '("\\.[pP][yY]$" . python-mode))
@@ -24,13 +27,13 @@
 ;;   (add-to-list 'company-backends 'company-jedi)
 ;;   (local-set-key (kbd "C-c j") 'elpy-goto-definition))
 (eval-after-load "python"
-  '(progn 
-          (setq python-shell-interpreter "python")       
-          (setq python-shell-interpreter-args "-i")
-          
-          (add-to-list 'company-backends 'company-jedi)
+  '(progn
+     (setq python-shell-interpreter "python")
+     (setq python-shell-interpreter-args "-i -u")
 
-          (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
+     (add-to-list 'company-backends 'company-jedi)
+
+     (local-set-key (kbd "C-c j") 'elpy-goto-definition)))
 
 ;; (add-hook 'python-mode-hook
 ;;           (lambda ()))
@@ -48,4 +51,3 @@
 ;;(global-set-key (kbd "C-x p") 'open-python)
 
 (provide 'init-python)
-

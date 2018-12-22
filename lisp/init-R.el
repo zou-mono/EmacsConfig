@@ -49,8 +49,8 @@
   (interactive)
   (setq ess-ask-for-ess-directory nil)
   (setq ess-directory "~/Documents/R_Project/")
-  (R)
-  (perspective/R))
+  (perspective/R)
+  (ess-switch-to-inferior-or-script-buffer))
 
 (defun my-ess-settings ()
    (setq ess-indent-with-fancy-comments nil))
