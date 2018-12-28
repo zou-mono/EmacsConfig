@@ -7,6 +7,7 @@
 ;; (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 
 (setenv "GTAGSLABEL" "pygments")
+(setenv "GTAGSCONF" "/opt/global/share/gtags/gtags.conf")
 
 ;; basic configuration
 (semantic-mode 1)
