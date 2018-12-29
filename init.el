@@ -91,6 +91,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    session
    ;; color-theme-solarized
    markdown-mode
+   flycheck
    helm
    ag
    pyenv
@@ -106,7 +107,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    pandoc-mode                          ; an Emacs mode for interacting with Pandoc
    web-mode
    company-web
-   company-tern
+   ;; company-tern
    company-auctex
    company-quickhelp
    ;; predictive
@@ -130,6 +131,10 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle poly-markdown)
 (el-get-bundle poly-org)
 (el-get-bundle format-all)
+(el-get-bundle spinner)
+(el-get-bundle lsp-mode)
+(el-get-bundle lsp-ui)
+(el-get-bundle company-lsp)
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
@@ -143,12 +148,12 @@ to R, put them in the variable `inferior-R-args'." t)))
 (let ((ts-init (current-time)))
   (setq missing-packages-list nil
         package-init-statistic nil)
-  (try-require 'init-R t)
   (try-require 'init-base t)
   (try-require 'init-cedet t)
   (try-require 'init-layout t)
   (try-require 'init-markdown t)
   (try-require 'init-org t)
+  (try-require 'init-R t)
   (try-require 'init-python t)
   (try-require 'init-tabbar t)
   (try-require 'init-web t)

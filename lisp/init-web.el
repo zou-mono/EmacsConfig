@@ -5,7 +5,7 @@
 ;; and/or
 (require 'company-web-jade)                          ; load company mode jade backend
 (require 'company-web-slim)                          ; load company mode slim backend
-(require 'company-tern)
+;;(require 'company-tern)
 (require 'indium)
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -37,27 +37,31 @@
 (defun my-web-mode-hook ()
   "Hook for `web-mode js2-mode'."
   (eval-after-load 'company
-    '(add-to-list 'company-backends 'company-tern 'company-web-html)))
+    '(add-to-list 'company-backends 'company-web-html)))
 
 (add-hook 'web-mode-hook 'my-web-mode-hook)
+(add-hook 'web-mode-hook #'lsp)
+(add-hook 'web-mode-hook 'flycheck-mode)
 (define-key web-mode-map (kbd "C-'") 'company-web-html)
 
 ;;(add-hook 'js2-mode-hook 'company-tern)
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+;; (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'js2-mode-hook #'lsp)
+(add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook #'indium-interaction-mode)
 
 ;; Enable JavaScript completion between <script>...</script> etc.
-(defadvice company-tern (before web-mode-set-up-ac-sources activate)
-  (message "advise")
-  "Set `tern-mode' based on current language before running company-tern."
-  (if (equal major-mode 'web-mode)
-      (let ((web-mode-cur-language
-             (web-mode-language-at-pos)))
-        (if (or (string= web-mode-cur-language "javascript")
-                (string= web-mode-cur-language "jsx")
-                )
-            (unless tern-mode (tern-mode))
-          (if tern-mode (tern-mode -1))))))
+;; (defadvice company-tern (before web-mode-set-up-ac-sources activate)
+;;   (message "advise")
+;;   "Set `tern-mode' based on current language before running company-tern."
+;;   (if (equal major-mode 'web-mode)
+;;       (let ((web-mode-cur-language
+;;              (web-mode-language-at-pos)))
+;;         (if (or (string= web-mode-cur-language "javascript")
+;;                 (string= web-mode-cur-language "jsx")
+;;                 )
+;;             (unless tern-mode (tern-mode))
+;;           (if tern-mode (tern-mode -1))))))
 
 ;; node.js
 ;; (setq exec-path (append exec-path '("~/.emacs.d/node_modules/.bin")))

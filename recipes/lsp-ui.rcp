@@ -1,0 +1,6 @@
+(:name lsp-ui
+       :description ""
+       :website "git@github.com:emacs-lsp/lsp-ui.git"
+       :type github 
+       :depends lsp-mode
+       :pkgname "emacs-lsp/lsp-ui")

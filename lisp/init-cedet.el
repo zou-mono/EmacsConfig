@@ -1,10 +1,15 @@
 ;; (require 'cedet) ;; 已经集成到emacs中，不需要独立安装
 (require 'cedet-global)
+(require 'lsp-mode)
 ;; emacs自带的cedet无法识别lisp-mode，所以使用独立安装的
 ;;(load-file (expand-file-name "el-get/cedet/cedet-devel-load.el" user-emacs-directory)) 
 ;; (require 'semantic)
 
 ;; (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+(require 'company-lsp)
+(require 'lsp-ui)
+(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(push 'company-lsp company-backends)
 
 (setenv "GTAGSLABEL" "pygments")
 (setenv "GTAGSCONF" "/opt/global/share/gtags/gtags.conf")

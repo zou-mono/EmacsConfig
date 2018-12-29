@@ -1,0 +1,6 @@
+(:name lsp-mode
+       :description "Emacs client/library for the Language Server Protocol"
+       :website "git@github.com:emacs-lsp/lsp-mode.git"
+       :type github 
+       :depends (ht dash spinner)
+       :pkgname "emacs-lsp/lsp-mode")

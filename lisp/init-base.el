@@ -183,4 +183,6 @@
 
 (sml/setup) ;; smart-mode-line
 
+(global-flycheck-mode)
+
 (provide 'init-base)
