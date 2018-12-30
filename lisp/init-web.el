@@ -7,6 +7,14 @@
 (require 'company-web-slim)                          ; load company mode slim backend
 ;;(require 'company-tern)
 (require 'indium)
+(require 'lsp-ui)
+(require 'web-beautify)
+
+;;; Code:
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-stdio-connection '("typescript-language-server" "--stdio"))
+                  :major-modes '(typescript-mode js-mode js2-mode rjsx-mode)
+                  :server-id 'ts_ls))
 
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
@@ -18,8 +26,7 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-;; re-format web files 
-(require 'web-beautify) 
+;; re-format web files
 (eval-after-load 'js2-mode
   '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
 (eval-after-load 'json-mode
@@ -37,18 +44,24 @@
 (defun my-web-mode-hook ()
   "Hook for `web-mode js2-mode'."
   (eval-after-load 'company
-    '(add-to-list 'company-backends 'company-web-html)))
+    (lambda()
+       (setq ggtags-mode nil)
+       (add-to-list 'company-backends 'company-web-html)
+       (define-key web-mode-map (kbd "C-'") 'company-web-html)))
+  (eval-after-load 'lsp
+    (lambda()
+       (define-key lsp-ui-mode-map (kbd "M-.") 'lsp-ui-peek-find-definitions)
+       (define-key lsp-ui-mode-map (kbd "M-?") 'lsp-ui-peek-find-references))))
 
-(add-hook 'web-mode-hook 'my-web-mode-hook)
 (add-hook 'web-mode-hook #'lsp)
 (add-hook 'web-mode-hook 'flycheck-mode)
-(define-key web-mode-map (kbd "C-'") 'company-web-html)
-
+(add-hook 'web-mode-hook 'my-web-mode-hook)
 ;;(add-hook 'js2-mode-hook 'company-tern)
 ;; (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook #'lsp)
 (add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook #'indium-interaction-mode)
+(add-hook 'js2-mode-hook 'my-web-mode-hook)
 
 ;; Enable JavaScript completion between <script>...</script> etc.
 ;; (defadvice company-tern (before web-mode-set-up-ac-sources activate)

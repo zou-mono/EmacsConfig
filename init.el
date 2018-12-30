@@ -91,7 +91,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    session
    ;; color-theme-solarized
    markdown-mode
-   flycheck
+   ;; flycheck
    helm
    ag
    pyenv
@@ -131,6 +131,7 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle poly-markdown)
 (el-get-bundle poly-org)
 (el-get-bundle format-all)
+(el-get-bundle flycheck)
 (el-get-bundle spinner)
 (el-get-bundle lsp-mode)
 (el-get-bundle lsp-ui)

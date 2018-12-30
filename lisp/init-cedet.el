@@ -2,12 +2,14 @@
 (require 'cedet-global)
 (require 'lsp-mode)
 ;; emacs自带的cedet无法识别lisp-mode，所以使用独立安装的
-;;(load-file (expand-file-name "el-get/cedet/cedet-devel-load.el" user-emacs-directory)) 
+;;(load-file (expand-file-name "el-get/cedet/cedet-devel-load.el" user-emacs-directory))
 ;; (require 'semantic)
 
 ;; (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 (require 'company-lsp)
 (require 'lsp-ui)
+
+;;; Code:
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (push 'company-lsp company-backends)
 
@@ -29,8 +31,8 @@
 
 (add-hook 'emacs-lisp-mode-hook 'ggtags-mode)
 (add-hook 'python-mode-hook 'ggtags-mode)
-(add-hook 'js2-mode-hook 'ggtags-mode)
-(add-hook 'web-mode-hook 'ggtags-mode)
+;;(add-hook 'js2-mode-hook 'ggtags-mode)
+;;(add-hook 'web-mode-hook 'ggtags-mode)
 (add-hook 'java-mode-hook 'ggtags-mode)
 (add-hook 'R-mode-hook 'ggtags-mode)  ; ggtags会自动打开eldoc和ess有冲突
 
@@ -39,8 +41,8 @@
      (when (cedet-gnu-global-version-check t)  ; Is it ok?
        ;; Configurations for GNU Global and CEDET
        (semanticdb-enable-gnu-global-databases 'python-mode)
-       (semanticdb-enable-gnu-global-databases 'js2-mode)
-       (semanticdb-enable-gnu-global-databases 'web-mode)
+       ;;(semanticdb-enable-gnu-global-databases 'js2-mode)
+       ;;(semanticdb-enable-gnu-global-databases 'web-mode)
        (semanticdb-enable-gnu-global-databases 'emacs-lisp-mode)
        (semanticdb-enable-gnu-global-databases 'java-mode)
        (semanticdb-enable-gnu-global-databases 'R-mode))
@@ -51,12 +53,9 @@
 (defun my-cedet-hook ()
   (local-set-key (kbd "C-c s b") 'semantic-mrub-switch-tags))
 
-(add-hook 'js2-mode-hook 'my-cedet-hook)
+;;(add-hook 'js2-mode-hook 'my-cedet-hook)
 (add-hook 'python-mode-hook 'my-cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-cedet-hook)
-
-;; (dumb-jump-mode)
-;;(setq dumb-jump-selector 'helm)
 
 ;; (add-hook 'gtags-mode-hook
 ;;   '(lambda ()
