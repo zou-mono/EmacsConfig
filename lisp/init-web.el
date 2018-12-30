@@ -9,6 +9,7 @@
 (require 'indium)
 (require 'lsp-ui)
 (require 'web-beautify)
+(require 'typescript-mode)
 
 ;;; Code:
 (lsp-register-client
@@ -25,6 +26,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts?\\'" . typescript-mode))
 
 ;; re-format web files
 (eval-after-load 'js2-mode
@@ -58,6 +60,7 @@
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 ;;(add-hook 'js2-mode-hook 'company-tern)
 ;; (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'typescript-mode-hook #'lsp)
 (add-hook 'js2-mode-hook #'lsp)
 (add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook #'indium-interaction-mode)

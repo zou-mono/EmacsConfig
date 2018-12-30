@@ -136,6 +136,7 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle lsp-mode)
 (el-get-bundle lsp-ui)
 (el-get-bundle company-lsp)
+(el-get-bundle typescript-mode)
 
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
