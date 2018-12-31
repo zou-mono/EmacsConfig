@@ -73,7 +73,8 @@ to R, put them in the variable `inferior-R-args'." t)))
    pos-tip
    ;; hide-comnt              ; hide/show comment codes.
    ;; popup
-   smart-mode-line
+   ;; smart-mode-line
+   spaceline
    let-alist                            ; Easily let-bind values of an assoc-list by their names
    exec-path-from-shell
    ess                                  ; Emacs Speaks Statistics

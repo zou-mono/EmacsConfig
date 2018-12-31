@@ -1,4 +1,7 @@
 (require 'tabbar)
+(require 'spaceline-config)
+
+(spaceline-spacemacs-theme)
 ;; Tabbar settings
 (set-face-attribute
  'tabbar-default nil
@@ -84,4 +87,18 @@
 
 (tabbar-mode 1)
 
+;; ido-mode
+(ido-mode t)
+(ido-everywhere)
+(setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
+(ido-grid-mode)
+(put 'dired-do-copy   'ido nil) ; use ido there
+(put 'dired-do-rename 'ido nil) ; 
+(add-hook 'dired-mode-hook
+              '(lambda ()
+                 (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
+
+(setq ido-show-dot-for-dired t)
+
 (provide 'init-tabbar)
+

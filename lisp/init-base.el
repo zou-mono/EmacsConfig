@@ -143,19 +143,6 @@
 (setq company-quickhelp-color-background "black")
 (setq company-quickhelp-color-foreground "cyan")
 
-;; ido-mode
-(ido-mode t)
-(ido-everywhere)
-(setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
-(ido-grid-mode)
-(put 'dired-do-copy   'ido nil) ; use ido there
-(put 'dired-do-rename 'ido nil) ; 
-(add-hook 'dired-mode-hook
-              '(lambda ()
-                 (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
-
-(setq ido-show-dot-for-dired t)
-
 ;; (add-hook 'after-init-hook 'helm-mode)
 ;; (add-hook 'after-init-hook
 ;;           (lambda ()
@@ -181,7 +168,7 @@
 ;; (add-hook 'treemacs-mode-hook '(lambda ()
 ;;                                 (treemacs--setup-icon-background-colors "#282a36")))
 
-(sml/setup) ;; smart-mode-line
+;;(sml/setup) ;; smart-mode-line
 
 (global-flycheck-mode)
 
