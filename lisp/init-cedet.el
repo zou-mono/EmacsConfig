@@ -41,22 +41,24 @@
 
 ;;gnu global support
 (setq cedet-global-command "global") ; Change to path of global as needed
-     (when (cedet-gnu-global-version-check t)  ; Is it ok?
-       ;; Configurations for GNU Global and CEDET
-       (semanticdb-enable-gnu-global-databases 'python-mode)
-       ;;(semanticdb-enable-gnu-global-databases 'js2-mode)
-       ;;(semanticdb-enable-gnu-global-databases 'web-mode)
-       (semanticdb-enable-gnu-global-databases 'emacs-lisp-mode)
-       (semanticdb-enable-gnu-global-databases 'java-mode)
-       (semanticdb-enable-gnu-global-databases 'R-mode))
+(when (cedet-gnu-global-version-check t)  ; Is it ok?
+  ;; Configurations for GNU Global and CEDET
+  (semanticdb-enable-gnu-global-databases 'python-mode)
+  ;;(semanticdb-enable-gnu-global-databases 'js2-mode)
+  ;;(semanticdb-enable-gnu-global-databases 'web-mode)
+  (semanticdb-enable-gnu-global-databases 'emacs-lisp-mode)
+  (semanticdb-enable-gnu-global-databases 'java-mode)
+  (semanticdb-enable-gnu-global-databases 'R-mode))
 
 ;;(setq gtags-suggested-key-mapping t)
 
 ;; key binding
 (defun my-cedet-hook ()
-  (local-set-key (kbd "C-c s b") 'semantic-mrub-switch-tags))
+  (lambda()
+    (setq flymake-mode nil)
+    (local-set-key (kbd "C-c s b") 'semantic-mrub-switch-tags)))
 
-;;(add-hook 'js2-mode-hook 'my-cedet-hook)
+(add-hook 'js2-mode-hook 'my-cedet-hook)
 (add-hook 'python-mode-hook 'my-cedet-hook)
 (add-hook 'emacs-lisp-mode-hook 'my-cedet-hook)
 
@@ -68,17 +70,17 @@
 
 ;; treemacs
 (setq treemacs-follow-after-init          t
-          treemacs-width                      35
-          treemacs-indentation                2
-          treemacs-git-integration            t
-          treemacs-collapse-dirs              3
-          treemacs-silent-refresh             nil
-          treemacs-change-root-without-asking nil
-          treemacs-sorting                    'alphabetic-desc
-          treemacs-show-hidden-files          t
-          treemacs-never-persist              nil
-          treemacs-is-never-other-window      nil
-          treemacs-goto-tag-strategy          'refetch-index)
+      treemacs-width                      35
+      treemacs-indentation                2
+      treemacs-git-integration            t
+      treemacs-collapse-dirs              3
+      treemacs-silent-refresh             nil
+      treemacs-change-root-without-asking nil
+      treemacs-sorting                    'alphabetic-desc
+      treemacs-show-hidden-files          t
+      treemacs-never-persist              nil
+      treemacs-is-never-other-window      nil
+      treemacs-goto-tag-strategy          'refetch-index)
 (setq treemacs-follow-mode t)
 (setq treemacs-filewatch-mode t)
 ;; (setq treemacs-header-function 'treemacs-projectile-create-header)
@@ -93,4 +95,3 @@
 (define-key treemacs-map (kbd "P") 'treemacs-projectile)
 
 (provide 'init-cedet)
-
