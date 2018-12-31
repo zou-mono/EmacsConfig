@@ -164,9 +164,19 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
 
-;; (add-hook 'treemacs-mode-hook '(lambda ()
-;;                                 (treemacs--setup-icon-background-colors "#282a36")))
-
 ;;(sml/setup) ;; smart-mode-line
+
+;; ido-mode
+(ido-mode t)
+(ido-everywhere)
+(setq ido-enable-flex-matching t)  ;; show any name that has the chars you typed
+(ido-grid-mode)
+(put 'dired-do-copy   'ido nil) ; use ido there
+(put 'dired-do-rename 'ido nil) ; 
+(add-hook 'dired-mode-hook
+              '(lambda ()
+                 (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
+
+(setq ido-show-dot-for-dired t)
 
 (provide 'init-base)
