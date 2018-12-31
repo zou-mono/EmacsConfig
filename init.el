@@ -1,6 +1,13 @@
 ;; init.el
 
 ;; 把目录lisp/添加到搜索路径中去
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "el-get/el-get" user-emacs-directory))
 
@@ -74,7 +81,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    ;; hide-comnt              ; hide/show comment codes.
    ;; popup
    ;; smart-mode-line
-   spaceline
+   ;; spaceline
    let-alist                            ; Easily let-bind values of an assoc-list by their names
    exec-path-from-shell
    ess                                  ; Emacs Speaks Statistics
@@ -95,6 +102,7 @@ to R, put them in the variable `inferior-R-args'." t)))
    ;; flycheck
    helm
    ag
+   anzu
    pyenv
    window-purpose
    sr-speedbar
@@ -122,6 +130,8 @@ to R, put them in the variable `inferior-R-args'." t)))
 (el-get-bundle nvm)
 (el-get-bundle web-beautify)
 (el-get-bundle dumb-jump)
+(el-get-bundle minions)
+(el-get-bundle doom-modeline)
 (el-get-bundle company-jedi :depends (jedi-core company-mode))
 (el-get-bundle company-web :depends (web-completion-data company-mode))
 (el-get-bundle ido-grid-mode)

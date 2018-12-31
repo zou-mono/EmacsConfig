@@ -1,0 +1,5 @@
+(:name doom-modeline
+  :description "A minimal and modern mode-line."
+  :type github
+  :depends (all-the-icons dash eldoc-eval shrink-path)
+  :pkgname "seagle0128/doom-modeline")

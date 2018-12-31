@@ -12,6 +12,9 @@
 ;;; Code:
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (push 'company-lsp company-backends)
+(setq lsp-prefer-flymake nil)
+
+(global-flycheck-mode)
 
 (setenv "GTAGSLABEL" "pygments")
 (setenv "GTAGSCONF" "/opt/global/share/gtags/gtags.conf")

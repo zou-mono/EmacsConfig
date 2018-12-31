@@ -1,7 +1,17 @@
 (require 'tabbar)
-(require 'spaceline-config)
+;;(require 'spaceline-config)
+;; (spaceline-spacemacs-theme)
+(require 'minions)
+(require 'doom-modeline)
 
-(spaceline-spacemacs-theme)
+(require 'anzu)
+(global-anzu-mode +1)
+
+(doom-modeline-init)
+(setq doom-modeline-minor-modes t)
+(minions-mode 1)
+(global-set-key [S-down-mouse-3] 'minions-minor-modes-menu)
+
 ;; Tabbar settings
 (set-face-attribute
  'tabbar-default nil
@@ -99,6 +109,7 @@
                  (set (make-local-variable 'ido-enable-replace-completing-read) nil)))
 
 (setq ido-show-dot-for-dired t)
+
 
 (provide 'init-tabbar)
 

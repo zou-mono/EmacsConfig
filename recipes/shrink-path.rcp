@@ -1,0 +1,4 @@
+(:name shrink-path
+  :description "fish-style path."
+  :type github
+  :pkgname "emacsmirror/shrink-path")

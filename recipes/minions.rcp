@@ -1,0 +1,5 @@
+(:name minions
+  :description "A minor-mode menu for the mode line."
+  :type github
+  :depends dash
+  :pkgname "tarsius/minions")

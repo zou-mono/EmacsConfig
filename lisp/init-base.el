@@ -160,7 +160,6 @@
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
 
-
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 (load-theme 'dracula t)
@@ -169,7 +168,5 @@
 ;;                                 (treemacs--setup-icon-background-colors "#282a36")))
 
 ;;(sml/setup) ;; smart-mode-line
-
-(global-flycheck-mode)
 
 (provide 'init-base)
