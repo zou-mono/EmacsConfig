@@ -108,7 +108,7 @@
 ;;     (when matching-text (message matching-text))))
 
 ;; 窗口编号，可以用M-1,M-2...切换
-(window-numbering-mode 1)
+;; (window-numbering-mode 1)
 
 ;; 可以用c-x left,c-x right在同一个frame中切换buffer
 (winner-mode t)
@@ -180,6 +180,7 @@
 (setq ido-show-dot-for-dired t)
 
 ;; winum
+;; (winum-set-keymap-prefix (kbd "C-x w"))
 (setq winum-keymap
     (let ((map (make-sparse-keymap)))
       (define-key map (kbd "C-w") 'winum-select-window-by-number)
