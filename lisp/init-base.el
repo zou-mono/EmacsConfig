@@ -192,12 +192,10 @@
       (define-key map (kbd "M-6") 'winum-select-window-6)
       (define-key map (kbd "M-7") 'winum-select-window-7)
       (define-key map (kbd "M-8") 'winum-select-window-8)
-      (define-key map (kbd "M-9") 'winum-select-window-9)
+      (define-key map (kbd "M-9") 'winum-select-window-9)      
       map))
 
 (require 'winum)
-(with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
 (winum-mode)
 
 (provide 'init-base)

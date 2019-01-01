@@ -5,5 +5,5 @@
   :type github
   :depends ( f s dash ace-window pfuture hydra ht)
   :pkgname "Alexander-Miller/treemacs"
-  :load-path ("./src/elisp/" "./src/scripts/"))
+  :load-path ("./src/elisp/" "./src/scripts/" "./src/extra/"))
 

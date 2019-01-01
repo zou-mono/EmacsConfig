@@ -165,6 +165,7 @@ to R, put them in the variable `inferior-R-args'." t)))
   (try-require 'init-base t)
   (try-require 'init-cedet t)
   (try-require 'init-layout t)
+  (try-require 'init-treemacs t)
   (try-require 'init-modeline t)
   (try-require 'init-markdown t)
   (try-require 'init-org t)
@@ -227,3 +228,5 @@ to R, put them in the variable `inferior-R-args'." t)))
 ;;   (set-fontset-font "fontset-default"
 ;;                     charset
 ;;                     (font-spec :family "WenQuanYi Micro Hei")))
+
+;;; init.el ends here
