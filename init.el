@@ -120,7 +120,8 @@ to R, put them in the variable `inferior-R-args'." t)))
    company-auctex
    company-quickhelp
    ;; predictive
-   window-numbering
+   ;; window-numbering
+   winum
    mic-paren))
 
 ;; add customized recipts
