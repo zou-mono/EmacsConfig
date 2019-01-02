@@ -7,7 +7,6 @@
 (require 'company-web-slim)                          ; load company mode slim backend
 ;;(require 'company-tern)
 (require 'indium)
-(require 'lsp-ui)
 (require 'web-beautify)
 (require 'typescript-mode)
 
@@ -40,20 +39,21 @@
 
 ;; auto-completion for html and css
 (setq web-mode-ac-sources-alist
-  '(("css" . (ac-source-css-property))
-    ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+      '(("css" . (ac-source-css-property))
+        ("html" . (ac-source-words-in-buffer ac-source-abbrev))))
 
 (defun my-web-mode-hook ()
   "Hook for `web-mode js2-mode'."
   (eval-after-load 'company
     (lambda()
-       (setq ggtags-mode nil)
-       (add-to-list 'company-backends 'company-web-html)
-       (define-key web-mode-map (kbd "C-'") 'company-web-html)))
+      (setq ggtags-mode nil)
+      (add-to-list 'company-backends 'company-web-html)
+      (define-key web-mode-map (kbd "C-'") 'company-web-html)))
   (eval-after-load 'lsp
     (lambda()
-       (define-key lsp-ui-mode-map (kbd "M-.") 'lsp-ui-peek-find-definitions)
-       (define-key lsp-ui-mode-map (kbd "M-?") 'lsp-ui-peek-find-references))))
+      (define-key lsp-ui-mode-map (kbd "M-.") 'lsp-ui-peek-find-definitions)
+      (define-key lsp-ui-mode-map (kbd "M-?") 'lsp-ui-peek-find-references)))
+  (setq lsp-ui-doc-enable nil))
 
 (add-hook 'web-mode-hook #'lsp)
 (add-hook 'web-mode-hook 'flycheck-mode)
@@ -65,6 +65,9 @@
 (add-hook 'js2-mode-hook 'flycheck-mode)
 (add-hook 'js2-mode-hook #'indium-interaction-mode)
 (add-hook 'js2-mode-hook 'my-web-mode-hook)
+
+;; (eval-after-load 'js2
+;;   (setq lsp-ui-doc-enable nil))
 
 ;; Enable JavaScript completion between <script>...</script> etc.
 ;; (defadvice company-tern (before web-mode-set-up-ac-sources activate)

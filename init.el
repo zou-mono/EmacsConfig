@@ -206,6 +206,9 @@ to R, put them in the variable `inferior-R-args'." t)))
  '(highlight-nonselected-windows t)
  '(ielm-dynamic-return nil)
  '(package-selected-packages (quote (indium poly-R polymode)))
+ '(safe-local-variable-values
+   (quote
+    ((ggtags-process-environment "GTAGSLABEL=pygments"))))
  '(session-use-package t nil (session))
  '(tabbar-separator (quote (0.5))))
 
