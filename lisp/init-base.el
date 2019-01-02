@@ -183,7 +183,7 @@
 ;; (winum-set-keymap-prefix (kbd "C-x w"))
 (setq winum-keymap
     (let ((map (make-sparse-keymap)))
-      (define-key map (kbd "C-w") 'winum-select-window-by-number)
+      (define-key map (kbd "C-x C-w") 'winum-select-window-by-number)
       (define-key map (kbd "M-0") 'winum-select-window-0-or-10)
       (define-key map (kbd "M-1") 'winum-select-window-1)
       (define-key map (kbd "M-2") 'winum-select-window-2)
