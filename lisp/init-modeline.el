@@ -4,7 +4,7 @@
 (require 'anzu)
 (global-anzu-mode +1)
 
-(doom-modeline-init)
+(doom-modeline-mode 1)
 (setq doom-modeline-minor-modes t)
 (minions-mode 1)
 (global-set-key [S-down-mouse-3] 'minions-minor-modes-menu)
