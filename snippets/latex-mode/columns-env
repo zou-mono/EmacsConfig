@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: column environment
+# key: col
+# --
+
+\begin{columns}
+   \begin{column}{.5\textwidth}
+
+    \end{column}
+    \begin{column}{.5\textwidth}
+
+    \end{column}
+\end{columns}
