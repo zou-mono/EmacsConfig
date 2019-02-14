@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: overlayarea environment
+# key: ov
+# --
+
+\begin{overlayarea}{\textwidth}{\textheight}
+\only<${1:1}>{
+$2
+}
+\end{overlayarea}

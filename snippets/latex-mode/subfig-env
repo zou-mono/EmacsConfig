@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: subfig environment
+# key: subfig
+# --
+
+\begin{figure}\centering
+    \subfloat[$1]
+    {\includegraphics[width=0.48\textwidth]{$2}}\vspace{1pt} 
+    \subfloat[$3]
+    {\includegraphics[width=0.48\textwidth]{$4}}
+    \caption{$5}
+\end{figure}

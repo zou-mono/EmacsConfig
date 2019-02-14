@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: frame environment
+# key: fr
+# --
+
+\begin{frame}[t]{$0}
+$1
+\end{frame}

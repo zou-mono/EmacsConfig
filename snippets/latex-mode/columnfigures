@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: column figures
+# key: colfig
+# --
+
+\begin{columns}
+   \begin{column}{.5\textwidth}
+       \begin{figure}\flushright
+           \includegraphics[height=0.3\textheight]{}
+           \caption{}
+       \end{figure}
+    \end{column}
+    \begin{column}{.5\textwidth}
+       \begin{figure}\flushleft
+           \includegraphics[height=0.3\textheight]{}
+           \caption{}
+       \end{figure}
+    \end{column}
+\end{columns}
