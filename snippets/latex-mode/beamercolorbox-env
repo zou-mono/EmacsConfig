@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: beamercolorbox environment
+# key: bcolbox
+# --
+
+\begin{beamercolorbox}
+$0
+\end{beamercolorbox}

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: commonbox environment
+# key: combox
+# --
+
+\begin{commonbox}{$1} 
+$2
+\end{commonbox}

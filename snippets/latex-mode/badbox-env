@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: badbox environment
+# key: badbox
+# --
+
+\begin{badbox}{$1} 
+$2
+\end{badbox}
